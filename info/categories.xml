@@ -1,0 +1,15 @@
+<categories>
+    <category name="app-shell">This category contains that various UNIX shell implementations.</category>
+    <category name="dev-utils">Developer utils.</category>
+    <category name="sys-kernel">Kernel images, sources and related tools.</category>
+    <category name="net-im">Instant messengers.</category>
+    <category name="net-irc">IRC clients.</category>
+    <category name="dev-python">Python modules and various bindings.</category>
+    <category name="dev-lang">Programming languges and their interpreters or compilers.</category>
+    <category name="sys-apps">Core system applications.</category>
+    <category name="sys-libs">Essential system libraries.</category>
+    <category name="x11-base">Core X server applicatiıons.</category>
+    <categoty name="x11-terms">X11 terminal applications.</category>
+    <category name="app-misc">Various applications.</category>
+    <category name="gnome-utils">Thirdy party applications for GNOME.</category>
+</categories>
