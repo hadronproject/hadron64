@@ -7,16 +7,34 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc sys-libs/pam 
+runtime @ sys-libs/glibc dev-libs/pcre
+        sys-apps/attr
         sys-apps/acl dev-libs/gmp 
-        sys-apps/shadow
 """
 
-def configure():
+def prepare():
+    patch(level=1)
     autoreconf("-v")
+
+def configure():
     conf("--enable-install-program=su",
-         "--enable-no-install-program=groups,hostname,kill,uptime"
-         )
+         "--enable-no-install-program=groups,hostname,kill,uptime",
+         "--enable-pam")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    
+    fhs = ('cat', 'chgrp', 'chmod', 'chown', 'cp', 'date', 'dd', 'df', 'echo', 
+            'false', 'ln', 'ls', 'mkdir', 'mknod', 'mv', 'pwd', 'rm', 'rmdir', 
+            'stty', 'su', 'sync', 'true', 'uname')
+    for f in fhs:
+        move("%s/usr/bin/%s" % (install_dir, f), "/bin/%s" %  f)
+
+    bins = ('cut', 'dir', 'dircolors', 'du', 'install', 'mkfifo', 'readlink', 
+            'shred', 'sleep', 'touch', 'tr', 'vdir')
+    for b in bins:
+        move("%s/usr/bin/%s" % (install_dir, b), "/bin/%s" %  b)
+
+    makesym("%s/bin/sleep", "/usr/bin/sleep")
+
+

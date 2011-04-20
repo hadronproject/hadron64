@@ -24,4 +24,5 @@ def python_utils_build():
     shelltools.system("python setup.py build")
 
 def python_utils_install():
+    makedirs("lib/harman")
     shelltools.system("python setup.py install --root=%s" % install_dir)

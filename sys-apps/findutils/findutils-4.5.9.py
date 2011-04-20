@@ -6,8 +6,6 @@ src_url @ ftp://alpha.gnu.org/gnu/findutils/findutils-4.5.9.tar.gz
 arch @ ~x86
 """
 
-depends = """runtime @ sys-libs/glibc"""
-
 def configure():
     append_cflags('-D_GNU_SOURCE')
     conf()

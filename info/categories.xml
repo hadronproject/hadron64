@@ -9,7 +9,7 @@
     <category name="sys-apps">Core system applications.</category>
     <category name="sys-libs">Essential system libraries.</category>
     <category name="x11-base">Core X server applicatiıons.</category>
-    <categoty name="x11-terms">X11 terminal applications.</category>
+    <category name="x11-terms">X11 terminal applications.</category>
     <category name="app-misc">Various applications.</category>
     <category name="gnome-utils">Thirdy party applications for GNOME.</category>
 </categories>

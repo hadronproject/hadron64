@@ -12,13 +12,13 @@ runtime @ >=dev-lang/python-2.7 (sqlite xml)
 
 build @ dev-lang/python(sqlite)
 """
-PyVer = "2.7"
+
 standart_procedure = False
 
 srcdir = "lpms"
 
 def install():
-    install_path = "/usr/lib/python%s/site-packages/lpms" % PyVer
+    install_path = "/usr/lib/python2.7/site-packages/lpms"
     
     makedirs(install_path[1:])
 

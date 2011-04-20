@@ -2,7 +2,7 @@ metadata = """
 summary @ Sources for time zone and daylight saving time data
 homepage @ http://www.twinsun.com/tz/tz-link.htm
 license @ BSD public-domain
-src_url @ ftp://elsie.nci.nih.gov/pub/tzdata$version.tar.gz ftp://elsie.nci.nih.gov/pub/tzcode$version.tar.gz
+src_url @ ftp://elsie.nci.nih.gov/pub/tzdata2011f.tar.gz ftp://elsie.nci.nih.gov/pub/tzcode$version.tar.gz
 arch @ ~x86
 """
 

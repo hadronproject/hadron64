@@ -16,7 +16,6 @@ def configure():
     if not opt("nls"):
         myconf += " --disable-nls"
 
-    conf("--without-bash-malloc")
     conf(config_with("afs"),
         config_enable("mem-scramble"),
         config_with("mem-scramble", "bash-malloc"),
@@ -25,25 +24,14 @@ def configure():
         "--disable-profiling",
         "--without-installed-readline",
         "--without-lispdir",
+        "--without-bash-malloc",
         myconf)
 
 def install():
     if opt("plugins"):
         make("-C examples/loadables all others")
     
-    # install bash
     raw_install("DESTDIR=%s install" % install_dir)
-    
-    # postinstall
     makedirs("/bin")
     move("%s/usr/bin/bash" % install_dir, "/bin/bash")
-    makesym("/bin/bash", "/bin/sh")
-
-    makedirs("/etc/skel")
-    insfile(joinpath(filesdir, "system.bashrc"), "/etc/bash.bashrc")
-    insfile(joinpath(filesdir, "system.bash_logout"), "/etc/bash.bash_logout")
-    insfile(joinpath(filesdir, "dot.bashrc"), "/etc/skel/.bashrc")
-    insfile(joinpath(filesdir, "dot.bash_profile"), "/etc/skel/.bash_profile")
-    insfile(joinpath(filesdir, "dot.bash_logout"), "/etc/skel/.bash_logout")
-
     insdoc("README", "NEWS", "AUTHORS", "CHANGES", "COMPAT", "Y2K", "doc/FAQ", "doc/INTRO")

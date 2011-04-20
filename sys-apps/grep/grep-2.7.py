@@ -7,10 +7,6 @@ options @ nls
 arch @ ~x86
 """
 
-depends = """
-runtime @ sys-libs/glibc
-"""
-
 def configure():
     conf("--bindir=/bin",
         "--without-included-regex",

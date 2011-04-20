@@ -7,8 +7,6 @@ options @ nls static-libs
 arch @ ~x86
 """
 
-depends = """runtime @ sys-libs/glibc"""
-
 def configure():
     if opt('static-libs'): append-ldflags('-static')
     conf("--with-packager='Hadron'",
