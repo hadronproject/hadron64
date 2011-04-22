@@ -11,37 +11,37 @@ runtime @ sys-libs/glibc
 """
 
 def configure():
-    makedirs("../ncursesw-build"); cd("../ncursesw-build")
-    conf("--with-shared",
-        "--without-debug",
-        "--with-normal",
-        "--without-ada",
-        "--with-install-prefix=%s" % install_dir,
+    conf("--without-debug",
+        "--without-profile",
+        "--disable-rpath",
+        "--enable-const",
+        "--enable-largefile",
         "--enable-widec",
-        run_dir=build_dir)
-
-    makedirs("../ncurses-build"); cd("../ncurses-build")
-    conf("--with-shared",
-        "--with-normal",
-        "--without-debug",
+        "--with-terminfo-dirs='/etc/terminfo:/usr/share/terminfo'",
+        "--disable-termcap",
+        "--enable-hard-tabs",
+        "--enable-xmc-glitch",
+        "--enable-colorfgbg",
+        "--with-shared",
+        "--with-rcs-ids",
+        "--with-chtype='long'",
+        "--with-mmask-t='long'",
         "--without-ada",
-        "--with-install-prefix=%s" % install_dir,
-        run_dir=build_dir)
-
-def build():
-    cd("ncursesw-build")
-    make()
-    
-    cd("ncurses-build")
-    make()
+        "--enable-symlinks")
 
 def install():
-    cd("ncursesw-build")
-    linstall()
-
-    makedirs("/lib")
-    move("%s/usr/lib/libncursesw.so.5*" % install_dir, "/lib")
-    makesym("./../lib/libncursesw.so.5", "/usr/lib/libncursesw.so")
-
-    #raw_install("DESTDIR=%s" % install_dir)
-    insdoc("../AUTHORS", "../ANNOUNCE", "../NEWS", "../README*", "../TO-DO")
+    raw_install("DESTDIR=%s" % install_dir)
+    
+    for lib in ls("%s/usr/lib/*w.*" % install_dir):
+        target = basename(lib).replace("w.", ".")
+        makesym(basename(lib), joinpath("/usr/lib", target))
+        
+    terminfo = ["ansi", "console", "dumb", "linux", "rxvt", "screen", "sun", \
+            "vt52", "vt100", "vt102", "vt200", "vt220", "xterm", "xterm-color", "xterm-xfree86"]
+    
+    for f in terminfo:
+        termfile = f[0] + "/" + f
+        if isexists("%s/usr/share/terminfo/%s" % (install_dir, termfile)):
+            makedirs("/etc/terminfo/%s" % f[0])
+            move("%s/usr/share/terminfo/%s" % (install_dir, termfile), "/etc/terminfo/%s" % f[0])
+            makesym("/etc/terminfo/%s/%s" % (f[0], f), "/usr/share/terminfo/%s/%s" % (f[0], f))
