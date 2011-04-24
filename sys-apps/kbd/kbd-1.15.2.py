@@ -11,6 +11,9 @@ def prepare():
 
 def configure():
     raw_configure("--prefix=/usr",
-            "--datadir=/lib/kbd")
+            "--datadir=/usr/share/kbd")
 
+def install():
+    raw_install("DESTDIR=%s" % install_dir)
+    insdoc("AUTHORS", "ChangeLog", "COPYING", "README")
 
