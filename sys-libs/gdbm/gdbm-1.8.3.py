@@ -13,9 +13,13 @@ runtime @ sys-libs/glibc
 def prepare():
     patch(level=1)
 
-    system("libtoolize --force --copy")
-    aclocal()
-    autoconf()
+    #system("libtoolize --force --copy")
+    #aclocal()
+    #autoconf()
+
+def configure():
+    conf("--disable-static")
 
 def install():
-    linstall(arg="install install-compat")
+    raw_install("INSTALL_ROOT=%s" % install_dir)
+    raw_install("INSTALL_ROOT=%s includedir=/usr/include/gdbm" % install_dir, "install-compat")
