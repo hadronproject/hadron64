@@ -6,6 +6,10 @@ src_url @ http://www.kernel.org/pub/linux/libs/pam/library/Linux-PAM-$version.ta
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc sys-devel/flex sys-libs/cracklib
+"""
+
 srcdir = "Linux-PAM-%s" % version
 
 def configure():

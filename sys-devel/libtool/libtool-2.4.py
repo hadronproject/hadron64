@@ -6,5 +6,9 @@ src_url @ ftp://ftp.gnu.org/pub/gnu/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+build @ sys-devel/autoconf sys-devel/automake
+"""
+
 def install():
     raw_install("DESTDIR=%s install" % install_dir)

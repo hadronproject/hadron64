@@ -6,6 +6,10 @@ src_url @ http://www.kernel.org/pub/linux/utils/kernel/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
+depends = """ 
+runtime @ sys-libs/glibc
+"""
+
 def prepare():
     echo(".so man5/modprobe.conf.5", "modprobe.d.5")
 

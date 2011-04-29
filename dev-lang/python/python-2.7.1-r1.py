@@ -8,10 +8,10 @@ slot @ 2.7
 """
 srcdir = "Python-2.7.1"
 
-#depends = """
-#runtime @ sqlite(dev-db/sqlite)
-#build @ sqlite(dev-db/sqlite)
-#"""
+depends = """
+runtime @ dev-db/sqlite dev-libs/expat sys-libs/gdbm
+          dev-libs/openssl sys-libs/zlib app-arch/bzip2
+"""
 
 def configure():
     #export("OPT", "%s -fPIC -fwrapv" % get_env('CFLAGS'))

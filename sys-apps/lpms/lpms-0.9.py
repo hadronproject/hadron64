@@ -7,10 +7,9 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ >=dev-lang/python-2.7 (sqlite xml)
-        dev-python/catbox
+runtime @ dev-lang/python dev-python/catbox
 
-build @ dev-lang/python(sqlite)
+build @ dev-lang/python
 """
 
 standart_procedure = False
@@ -28,8 +27,8 @@ def install():
     makedirs("etc/lpms")
     insinto("data/*", "/etc/lpms")
 
-    for directories in ('var/db/lpms', 'var/cache/lpms/sources', 
-            'var/tmp/lpms', 'var/lib/lpms'):
+    for directories in ('/var/db/lpms', '/var/cache/lpms/sources', 
+            '/var/tmp/lpms', '/var/lib/lpms', '/var/tmp/merge-conf'):
         makedirs(directories)
 
     insdoc("COPYING", "AUTHORS", "README", "TODO")

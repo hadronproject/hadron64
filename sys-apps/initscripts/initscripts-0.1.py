@@ -6,6 +6,10 @@ src_url @ http://hadronproject.org/distfiles/initscripts/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-apps/baselayout sys-fs/udev
+"""
+
 standart_procedure = False
 
 srcdir = "initscripts"

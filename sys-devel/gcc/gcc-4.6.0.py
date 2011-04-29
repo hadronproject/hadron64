@@ -1,9 +1,15 @@
 metadata = """
 summary @ The GNU Compiler Collection
 homepage @ http://gcc.gnu.org/
-license @ GPL-3
+license @ GPL-3 LGPL-3
 src_url @ ftp://gcc.gnu.org/pub/gcc/snapshots/4.6-20110408/gcc-4.6.0.tar.bz2
 arch @ ~x86
+"""
+
+depends = """
+build @ sys-devel/binutils dev-libs/mpc sys-devel/bison sys-apps/sed
+
+runtime @ sys-devel/binutils dev-libs/mpc dev-libs/mpfr sys-apps/sed
 """
 
 def configure():

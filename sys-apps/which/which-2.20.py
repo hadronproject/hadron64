@@ -6,6 +6,10 @@ src_url @ http://www.xs4all.nl/~carlo17/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 

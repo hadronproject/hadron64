@@ -6,6 +6,10 @@ src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc sys-libs/zlib
+"""
+
 def configure():
     conf("--without-python")
 

@@ -9,7 +9,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc sys-libs/zlib
-build @ sys-libs/glibc
+build @ sys-libs/glibc sys-devel/flex
 """
 
 def configure():
@@ -45,7 +45,7 @@ def install():
         if isexists("%s/usr/lib/%s.so" % (install_dir, lib)):
             rmfile("/usr/lib/%s.so" % lib)
 
-    echo(joinpath(install_dir, "usr/lib/libbfd.so"),
-            "INPUT ( /usr/lib/libbfd.a -liberty -lz )")
-    echo(joinpath(install_dir, "usr/lib/libopcodes.so"),
-            "INPUT ( /usr/lib/libopcodes.a -lbfd )")
+    echo("INPUT ( /usr/lib/libbfd.a -liberty -lz )", 
+            joinpath(install_dir, "usr/lib/libbfd.so"))
+    echo("INPUT ( /usr/lib/libopcodes.a -lbfd )", 
+            joinpath(install_dir, "usr/lib/libopcodes.so"))

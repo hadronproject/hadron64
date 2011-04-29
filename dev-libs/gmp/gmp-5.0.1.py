@@ -6,6 +6,10 @@ src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-devel/gcc
+"""
+
 def configure():
     if arch == "x86":
         export("ABI", "32")

@@ -11,6 +11,8 @@ build @ sys-kernel/linux-api-headers
         sys-libs/timezone-data
 """
 
+bdir = "glibc-build"
+
 def prepare():
     patch(level=1)
 
@@ -29,17 +31,13 @@ def configure():
         run_dir = build_dir)
 
 def build():
-    cd("../glibc-build")
-    make("CFLAGS='%s -U_FORTIFY_SOURCE'" % get_env("CFLAGS"))
+    makedirs("../glibc-build"); cd("../glibc-build")
+    make()
 
 def install():
-    cd("../glibc-build")
+    makedirs("../glibc-build"); cd("../glibc-build")
     raw_install("install_root=%s install" % install_dir)
-    
-    # this is necessary for locale-def
-    makedirs("/usr/lib/locale")
 
-    # these files from ArchLinux and Gentoo
     insfile("%s/nscd.conf" % filesdir, "/etc/nscd.conf")
     insexe("%s/locale-gen" % filesdir, "/usr/sbin/locale-gen")
     insexe("%s/nscd" % filesdir, "/etc/rc.d/nscd")

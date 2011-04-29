@@ -7,6 +7,10 @@ options @ static
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def prepare():
     patch(level=1)
 

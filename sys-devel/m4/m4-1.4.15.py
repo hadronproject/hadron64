@@ -5,3 +5,10 @@ license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.gz
 arch @ ~x86
 """
+
+depends = """
+
+runtime @ sys-libs/glibc app-shells/bash
+
+"""
+

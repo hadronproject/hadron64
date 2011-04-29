@@ -8,7 +8,8 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/gdbm sys-libs/db sys-libs/glibc sys-apps/coreutils
+runtime @ sys-libs/gdbm sys-libs/glibc sys-apps/coreutils
+        sys-apps/groff sys-libs/zlib
 """
 
 def configure():

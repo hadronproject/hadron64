@@ -6,6 +6,10 @@ src_url @ ftp://ftp.gnu.org/pub/gnu/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def configure():
     export("DEFS", "NO_ASM")
     conf()

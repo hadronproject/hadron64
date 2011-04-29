@@ -8,7 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc dev-libs/pcre
-        sys-apps/attr
+        sys-apps/attr sys-libs/pam
         sys-apps/acl dev-libs/gmp 
 """
 

@@ -6,6 +6,10 @@ src_url @ http://download.savannah.gnu.org/releases-noredirect/$name/$fullname.s
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def prepare():
     patch(level=1)
 

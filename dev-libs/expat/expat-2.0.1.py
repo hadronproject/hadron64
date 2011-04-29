@@ -6,6 +6,10 @@ src_url @ http://downloads.sourceforge.net/sourceforge/expat/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def prepare():
     patch(level=1)
 

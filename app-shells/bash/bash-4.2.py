@@ -16,6 +16,7 @@ def configure():
     if not opt("nls"):
         myconf += " --disable-nls"
 
+    conf("--without-bash-malloc")
     conf(config_with("afs"),
         config_enable("mem-scramble"),
         config_with("mem-scramble", "bash-malloc"),
@@ -23,7 +24,7 @@ def configure():
         "--with-curses",
         "--disable-profiling",
         "--without-installed-readline",
-        "--without-bash-malloc",
+        "--without-lispdir",
         myconf)
 
 def install():

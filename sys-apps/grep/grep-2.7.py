@@ -7,6 +7,11 @@ options @ nls
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc dev-libs/pcre
+build @ sys-apps/texinfo
+"""
+
 def configure():
     conf("--bindir=/bin",
         "--without-included-regex",

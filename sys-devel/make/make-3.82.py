@@ -8,7 +8,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc
+runtime @ sys-libs/glibc sys-devel/patch sys-devel/gettext
 """
 
 def configure():

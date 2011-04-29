@@ -6,6 +6,10 @@ src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.bz2
 options @ nls static
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def configure():
     export("FORCE_UNSAFE_CONFIGURE", "1")
     if opt("static"): append-ldflags("-static")
