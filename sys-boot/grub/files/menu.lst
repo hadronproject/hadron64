@@ -26,7 +26,6 @@
 # general configuration:
 timeout   5
 default   0
-color light-blue/black light-cyan/blue
 
 # boot sections follow
 # each is implicitly numbered from 0 in the order of appearance below
@@ -35,14 +34,8 @@ color light-blue/black light-cyan/blue
 #
 #-*
 
-# (0) Arch Linux
-title  Arch Linux  [/boot/vmlinuz26]
+title  Hadron GNU/Linux
 root   (hd0,0)
-kernel /vmlinuz26 root=/dev/sda3 ro
-initrd /kernel26.img
+kernel /boot/vmlinuz-2.6.38-hadron-r1 root=/dev/sda1 ro 
+initrd /boot/initrd-2.6.38-hadron-r1
 
-# (1) Windows
-#title Windows
-#rootnoverify (hd0,0)
-#makeactive
-#chainloader +1
