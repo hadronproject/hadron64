@@ -7,8 +7,8 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-lang/perl dev-perl/perl-Error
-build @ dev-lang/perl dev-perl/perl-Error
+runtime @ dev-lang/perl dev-perl/Error
+build @ dev-lang/perl dev-perl/Error
 """
 
 def build():
