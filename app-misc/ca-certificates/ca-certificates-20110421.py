@@ -11,20 +11,19 @@ runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils
           sys-apps/findutils sys-apps/coreutils sys-apps/sed
 """
 
-import os
 import glob
 
 def install():
-	for i in ("/etc/ca-certificates/update.d", "/usr/sbin", 
-			"/usr/share/ca-certificates", "/etc/ssl/certs"):
-		makedirs(i)
-
-	raw_install("DESTDIR=%s" % install_dir)
-
-	mycontent = ""
-	for d in ls("%s/usr/share/ca-certificates" % install_dir):
-		for crt in glob.glob("%s/usr/share/ca-certificates/%s/*.crt" % (install_dir, d)):
-			mycontent += crt.split(install_dir)[1]+"\n"
+    for i in ("/etc/ca-certificates/update.d", "/usr/sbin", 
+            "/usr/share/ca-certificates", "/etc/ssl/certs"):
+        makedirs(i)
+        
+    raw_install("DESTDIR=%s" % install_dir)
     
-	# FIXME: UnicodeEncodeError
-	system('echo "%s" > %s/etc/ca-certificates.conf' % (mycontent, install_dir))
+    mycontent = ""
+    for d in ls("%s/usr/share/ca-certificates" % install_dir):
+        for crt in glob.glob("%s/usr/share/ca-certificates/%s/*.crt" % (install_dir, d)):
+            mycontent += crt.split(install_dir)[1]+"\n"
+
+    # FIXME: UnicodeEncodeError
+    system('echo "%s" > %s/etc/ca-certificates.conf' % (mycontent, install_dir))
