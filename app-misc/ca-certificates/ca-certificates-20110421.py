@@ -11,6 +11,7 @@ runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils
           sys-apps/findutils sys-apps/coreutils sys-apps/sed
 """
 
+import os
 import glob
 
 def install():
