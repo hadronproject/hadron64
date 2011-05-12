@@ -13,7 +13,7 @@ build @ x11-libs/pixman media-libs/mesa x11-proto/xf86vidmodeproto x11-proto/xex
         x11-libs/libXxf86vm x11-libs/libXi x11-libs/libXdmcp x11-libs/libXrandr x11-libs/libXau x11-libs/libXtst x11-libs/libXrender x11-libs/libXmu 
         x11-libs/libXcomposite x11-libs/libXext x11-libs/libXinerama x11-libs/libX11 x11-libs/libXfixes x11-libs/libxcb x11-libs/libXv x11-libs/libXt 
         x11-libs/libXxf86dga x11-libs/libXfont x11-libs/libXdamage x11-proto/xf86driproto x11-proto/xcmiscproto x11-proto/bigreqsproto x11-proto/scrnsaverproto 
-        x11-proto/resourceproto x11-libs/libXkbfile x11-libs/libXaw x11-libs/libXres x11-libs/libpciaccess x11-libs/libdmx
+        x11-proto/resourceproto x11-libs/libxkbfile x11-libs/libXaw x11-libs/libXres x11-libs/libpciaccess x11-libs/libdmx
 """
 
 def prepare():
