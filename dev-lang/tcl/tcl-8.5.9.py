@@ -6,14 +6,17 @@ src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name$version-src.t
 options @ debug threads
 """
 
-srcdir = "tcl8.5.9/tcl8.5.9/unix"
+srcdir = "tcl8.5.9"
 
 def configure():
+    cd("unix")
     conf(config_enable('threads'),
         config_enable('debug', 'symbols'))
 
-#def build():
-#    make()
+def build():
+    cd("unix")
+    make()
 
 def install():
+    cd("unix")
     raw_install('DESTDIR=%s install install-private-headers' % install_dir)
