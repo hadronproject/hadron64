@@ -6,7 +6,7 @@ src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name$version-src.t
 options @ debug threads
 """
 
-srcdir = "tcl8.5.9/unix"
+srcdir = "tcl8.5.9/tcl8.5.9/unix"
 
 def configure():
     conf(config_enable('threads'),
