@@ -7,13 +7,13 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc
+build @ dev-lang/python
 """
 
 def configure():
-	conf(
-	"--with-pythonlibs=\"-lpthread -lm -ldl -lpython2.7\" --with-pythonincludes=-I/usr/include/python2.7")
+    conf('--with-pythonlibs="-lpthread -lm -ldl -lpython2.7"',
+            '--with-pythonincludes=-I/usr/include/python2.7')
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
