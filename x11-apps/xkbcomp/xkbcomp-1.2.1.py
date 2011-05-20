@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/libXkbfile
+runtime @ x11-libs/libxkbfile
 build @ x11-misc/util-macros
 """
 
