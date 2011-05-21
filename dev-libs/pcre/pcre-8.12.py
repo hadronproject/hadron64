@@ -12,6 +12,6 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
-    makedirs("lib")
-    move("%s/usr/lib/libpcre.so.*" % install_dir, "lib/")
+    #makedirs("lib")
+    #move("%s/usr/lib/libpcre.so.*" % install_dir, "lib/")
     #makesym("%s/lib/libpcre.so.0" % install_dir, "usr/lib/libpcre.so")
