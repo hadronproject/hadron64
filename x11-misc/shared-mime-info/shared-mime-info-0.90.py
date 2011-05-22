@@ -19,7 +19,7 @@ def configure():
     conf("--disable-update-mimedb")
 
 def build():
-    make("-j1")
+    make(j=1)
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ xfce-base/libxfce4util sys-apps/dbus x11-libs/gtk+
+runtime @ xfce-base/libxfce4util sys-apps/dbus-glib x11-libs/gtk+
 """
 
 def configure():

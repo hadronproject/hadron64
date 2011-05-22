@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glib
+runtime @ sys-libs/glib dev-util/intltool
 """
 
 def configure():
