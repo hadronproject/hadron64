@@ -28,3 +28,7 @@ def install():
     
     cd("liblvm")
     raw_install("DESTDIR=%s" % install_dir)
+
+    cd("..")
+    raw_install("DESTDIR=%s install_device-mapper" % install_dir)
+
