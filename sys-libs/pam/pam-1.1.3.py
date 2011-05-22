@@ -13,9 +13,6 @@ runtime @ sys-libs/glibc sys-devel/flex sys-libs/cracklib
 srcdir = "Linux-PAM-%s" % version
 
 def configure():
-    append_cflags("-fPIC -D_GNU_SOURCE")
-    libtoolize("-f")
-    autoreconf()
     raw_configure("--disable-prelude",
             "--disable-dependency-tracking",
             "--enable-audit",
@@ -25,4 +22,10 @@ def configure():
             "--enable-isadir=/lib/security")
 
 def install():
-    raw_install("DESTDIR=%s" % install_dir)
+    raw_install("INSTALL=/bin/install DESTDIR=%s" % install_dir)
+
+    insfile("%s/other" % filesdir, "/etc/pam.d/other")
+
+def post_install():
+    system("/sbin/ldconfig -r /")
+    system("chmod +s /sbin/unix_chkpwd")
