@@ -18,9 +18,9 @@ def configure():
         "--sysconfdir=/etc", 
         "--sbindir=/sbin",
         "--with-rootlibdir=/lib", 
-        "--libexecdir=/lib/udev",
-        "--disable-extras", 
-        "--disable-introspection")
+        "--libexecdir=/lib/udev", 
+        "--disable-introspection",
+        "--enable-extras")
 
 def install():
     raw_install('DESTDIR=%s' % install_dir)
