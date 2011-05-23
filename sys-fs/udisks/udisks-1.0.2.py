@@ -6,6 +6,13 @@ src_url @ http://hal.freedesktop.org/releases/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime  @ sys-fs/udev sys-apps/sg3_utils sys-libs/glib dev-libs/dbus-glib
+           sys-auth/polkit sys-block/parted dev-libs/libatasmart sys-process/lsof
+           sys-fs/lvm sys-block/eject
+build @ dev-util/intltool
+"""
+
 def prepare():
     patch(level=1)
 
