@@ -18,7 +18,7 @@ def configure():
 
 def build():
     make("depend")
-    make("-j1")
+    make(j=1)
     make("rehash")
 
 def install():
