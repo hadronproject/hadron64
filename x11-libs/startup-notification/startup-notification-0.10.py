@@ -12,7 +12,7 @@ runtime @ x11-libs/libX11 x11-misc/xcb-util
 
 def configure():
     system("sed -i -e '/AC_PATH_XTRA/d' configure.in")
-    autoreconf()
+    autoreconf("--force --install")
     conf()
 
 def install():
