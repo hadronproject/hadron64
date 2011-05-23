@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ xfce-base/xfce4-panel sys-power/upower sys-power/udisks 
+runtime @ xfce-base/xfce4-panel sys-power/upower sys-fs/udisks 
           x11-themes/hicolor-icon-theme gnome-base/librsvg x11-libs/libnotify
 """
 
