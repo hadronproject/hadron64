@@ -16,7 +16,7 @@ def configure():
             "--disable-build-docs")
 
 def build():
-    make(j="-j1")
+    make(j=1)
 
 def install():
 	raw_install("DESTDIR=%s" % install_dir)
