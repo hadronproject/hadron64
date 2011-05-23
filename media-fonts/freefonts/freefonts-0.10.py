@@ -10,6 +10,10 @@ standart_procedure = False
 
 srcdir = "freefont"
 
+depends = """
+runtime @ x11-apps/mkfontdir x11-apps/mkfontscale
+"""
+
 def install():
     insinto("*.pfb", "/usr/share/doc/freefonts-%s" % version)
 

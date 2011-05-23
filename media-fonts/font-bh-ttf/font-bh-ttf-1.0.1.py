@@ -8,7 +8,8 @@ arch @ ~x86
 
 depends = """
 runtime @ media-fonts/font-alias media-fonts/font-util media-libs/fontconfig
-          media-fonts/encodings
+          media-fonts/encodings x11-apps/mkfontdir x11-apps/mkfontscale
+
 """
 
 def configure():
