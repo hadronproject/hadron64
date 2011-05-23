@@ -11,6 +11,11 @@ depends = """
 runtime @ x11-libs/gtk+ dev-cpp/pangomm dev-cpp/cairomm
 """
 
+def configure():
+    conf("--enable-api-atkmm",
+            "--disable-maintainer-mode",
+            "--disable-documentation")
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
