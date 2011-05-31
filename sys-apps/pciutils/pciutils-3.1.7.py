@@ -18,6 +18,7 @@ def build():
 
 def install():
     raw_install('DESTDIR="%s" \
+            PREFIX=/usr \
             SHARED="yes" \
             IDSDIR="/usr/share/misc" \
             MANDIR="/usr/share/man" \
