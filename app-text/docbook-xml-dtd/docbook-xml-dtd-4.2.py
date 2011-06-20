@@ -8,7 +8,8 @@ slot @ 4.2
 """
 
 depends = """
-runtime @ dev-libs/libxml2
+runtime @ dev-util/libxml2
+build @ app-text/sgml-common
 """
 
 srcdir = ""
