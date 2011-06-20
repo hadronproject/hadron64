@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-util/libxml2 sys-libs/glib
+runtime @ dev-libs/libxml2 sys-libs/glib
 """
 
 def configure():
