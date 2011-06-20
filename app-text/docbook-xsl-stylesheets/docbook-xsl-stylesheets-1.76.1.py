@@ -23,3 +23,6 @@ def install():
     insinto("*", pkgroot)
     insdoc("AUTHORS", "BUGS", "COPYING", "NEWS", "README", 
             "RELEASE-NOTES.txt", "TODO", "VERSION")
+
+def post_install():
+    system("/usr/bin/build-docbook-catalog")
