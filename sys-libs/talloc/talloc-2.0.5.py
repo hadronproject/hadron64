@@ -1,3 +1,5 @@
+get("waf")
+
 metadata = """
 summary @ A hierarchical pool based memory allocator with destructors
 homepage @ http://talloc.samba.org/
@@ -17,7 +19,3 @@ def configure():
 	raw_configure("--prefix=/usr --sysconfdir=/etc/samba \
 	   --localstatedir=/var \
 	   --enable-talloc-compat1")
-
-def install():
-    raw_install("DESTDIR=%s install" % install_dir)
-
