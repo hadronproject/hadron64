@@ -15,11 +15,15 @@ def waf_build(*args, **kwargs):
     if "j" in kwargs:
         export("JOBS", kwargs["j"])
 
-    if not system("./waf build"):
+    if not system("./waf build %s" % " ".join(args)):
         out.error("waf build failed.")
         lpms.terminate()
 
-def waf_install():
-    if not system("./waf install --destdir=%s" %  install_dir):
+def waf_install(*args, **kwargs):
+    if "j" in kwargs:
+        export("JOBS", kwargs["j"])
+
+    if not system("./waf install --destdir=%s %s" %  (install_dir, \
+            " ".join(args))):
         out.error("waf install failed.")
         lpms.terminate()
