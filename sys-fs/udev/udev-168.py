@@ -7,7 +7,7 @@ src_url @ http://www.kernel.org/pub/linux/utils/kernel/hotplug/$fullname.tar.bz2
 
 depends = """
 runtime @ sys-libs/glibc sys-apps/coreutils sys-apps/module-init-tools
-          sys-apps/util-linux sys-libs/glib dev-util/gperf sys-apps/usbutils
+          sys-apps/util-linux sys-libs/glib dev-util/gperf dev-libs/libusb:0
 """
 
 #def prepare():
