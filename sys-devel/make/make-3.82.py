@@ -16,6 +16,7 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    makesym("gmake", "/usr/bin/make")
     insdoc("AUTHORS", "ChangeLog", "NEWS", "README")
 
 
