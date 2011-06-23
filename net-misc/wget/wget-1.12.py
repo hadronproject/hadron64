@@ -9,6 +9,7 @@ arch @ ~x86
 depends = """
 runtime @ sys-libs/glibc
         dev-libs/openssl
+        net-dns/libidn
 """
 
 def prepare():
