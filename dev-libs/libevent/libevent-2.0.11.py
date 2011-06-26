@@ -12,7 +12,5 @@ runtime @ dev-libs/openssl
 
 srcdir = name+"-"+version+"-stable"
 
-print srcdir
-
 def install():
     raw_install("DESTDIR=%s" % install_dir)
