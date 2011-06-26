@@ -57,3 +57,4 @@ def install():
     insfile("%s/syslog-ng.conf" % filesdir, "/etc/syslog-ng/syslog-ng.conf")
     insfile("%s/syslog-ng.logrotate" % filesdir, "/etc/logrotate.d/syslog-ng")
     insexe("%s/syslog-ng.rc" % filesdir, "/etc/logrotate.d/syslog-ng")
+    makedirs("/var/lib/syslog-ng")
