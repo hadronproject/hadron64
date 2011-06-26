@@ -8,8 +8,6 @@ src_url @ http://samba.org/ftp/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
-export("JOBS", "1")
-
 depends = """
 runtime @ sys-libs/glibc
 build @ dev-lang/python
