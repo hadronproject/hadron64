@@ -2,7 +2,8 @@ metadata = """
 summary @ GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team
 homepage @ http://git-scm.com
 license @ GPL-2
-src_url @ http://kernel.org/pub/software/scm/git/$fullname.tar.bz2
+src_url @ http://kernel.org/pub/software/scm/git/$fullname.tar.bz2 http://kernel.org/pub/software/scm/git/git-manpages-$version.tar.bz2
+options @ man
 arch @ ~x86
 """
 
@@ -24,4 +25,11 @@ def install():
     # git daemon script for ArchLinux
     insexe("%s/git-daemon" % filesdir, "/etc/rc.d/git-daemon")
     insfile("%s/git-daemon.conf" % filesdir, "/etc/conf.d/git-daemon.conf")
+
+    if opt("man"):
+        for mansect in ('man1', 'man5', 'man7'):
+            for manpage in ls("%s/%s" % (dirname(build_dir), mansect)):
+                insfile("%s/%s/%s" % (dirname(build_dir), mansect, manpage), \
+                        "/usr/share/man/%s/%s" % (mansect, basename(manpage)))
+
 
