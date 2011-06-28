@@ -11,6 +11,17 @@ build @ sys-libs/ncurses
 runtime @ sys-libs/ncurses
 """
 
+# from Pardus GNU/Linux
+# BEGIN
+cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\' \
+                 -DSTANDARD_UTILS_PATH=\'\"/bin:/usr/bin:/sbin:/usr/sbin\"\' \
+                 -DSYS_BASHRC=\'\"/etc/bash/bashrc\"\' \
+                 -DNON_INTERACTIVE_LOGIN_SHELLS \
+                 -DSSH_SOURCE_BASHRC"""
+
+append_cflags("-D_GNU_SOURCE -DRECYCLES_PIDS %s" % cfgsettings)
+# END
+
 def configure():
     myconf = ""
     if not opt("nls"):
@@ -23,7 +34,6 @@ def configure():
         "--with-curses",
         "--disable-profiling",
         "--without-installed-readline",
-        "--without-lispdir",
         myconf)
 
 def install():
@@ -39,7 +49,7 @@ def install():
     makesym("/bin/bash", "/bin/sh")
 
     makedirs("/etc/skel")
-    insfile(joinpath(filesdir, "system.bashrc"), "/etc/bash.bashrc")
+    insexe(joinpath(filesdir, "system.bashrc"), "/etc/bash/bashrc")
     insfile(joinpath(filesdir, "system.bash_logout"), "/etc/bash.bash_logout")
     insfile(joinpath(filesdir, "dot.bashrc"), "/etc/skel/.bashrc")
     insfile(joinpath(filesdir, "dot.bash_profile"), "/etc/skel/.bash_profile")
