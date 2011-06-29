@@ -19,7 +19,6 @@ cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sb
                  -DNON_INTERACTIVE_LOGIN_SHELLS \
                  -DSSH_SOURCE_BASHRC"""
 
-append_cflags("-D_GNU_SOURCE -DRECYCLES_PIDS %s" % cfgsettings)
 # END
 
 def configure():
@@ -35,6 +34,10 @@ def configure():
         "--disable-profiling",
         "--without-installed-readline",
         myconf)
+
+def build():
+    append_cflags("-D_GNU_SOURCE -DRECYCLES_PIDS %s" % cfgsettings)
+    make()
 
 def install():
     if opt("plugins"):
