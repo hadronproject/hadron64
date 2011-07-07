@@ -9,9 +9,11 @@ arch @ ~x86
 depends = """
 build @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes 
         x11-libs/libXxf86vm x11-libs/libdrm sys-libs/talloc x11-proto/dri2proto
+        x11-proto/glproto x11-libs/libXt x11-misc/makedepend
 
 runtime @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes 
         x11-libs/libXxf86vm x11-libs/libdrm sys-libs/talloc
+        x11-proto/glproto x11-libs/libXt x11-misc/makedepend
 """
 
 srcdir = "Mesa-%s" % version
