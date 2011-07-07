@@ -1,0 +1,10 @@
+--- colors/lingodirector.vim	2007-07-07 12:34:06.000000000 +0200
++++ colors/lingodirector.vim	2006-03-21 22:59:52.000000000 +0100
+@@ -16,6 +16,7 @@
+ 
+ hi Normal  guifg=black	guibg=white   ctermfg=Black  ctermbg=white
+ hi Title   guifg=black	guibg=white   ctermfg=Black  ctermbg=white  gui=BOLD
++hi Visual  guifg=black	guibg=gray
+ hi lCursor guibg=Cyan   guifg=NONE
+ 
+ hi LineNr	 guifg=white  guibg=#8c9bfa
