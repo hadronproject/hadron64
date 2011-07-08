@@ -1,6 +1,7 @@
 " Begin /etc/vimrc
 set nocompatible
 set backspace=2
+set bs=2
 syntax on
 if (&term == "iterm") || (&term == "putty")
 set background=dark

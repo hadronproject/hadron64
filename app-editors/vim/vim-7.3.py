@@ -17,14 +17,15 @@ def prepare():
     echo('#define SYS_VIMRC_FILE "/etc/vimrc"', "src/feature.h")
 
 def configure():
-    conf("--enable-multibyte",
-        "--enable-pythoninterp",
-        "--enable-perlinterp",
-        "--with-features=huge",
-        "--with-tlib=ncurses",
-        "--enable-gui=no")
+    conf("--with-modified-by=Hadron",
+            "--with-compiledby=Hadron",
+            "--enable-multibyte",
+            "--enable-pythoninterp",
+            "--enable-perlinterp",
+            "--with-features=huge",
+            "--with-tlib=ncurses",
+            "--enable-gui=no")
 
 def install():
     raw_install("VIMRCLOC=/etc DESTDIR=%s install" % install_dir)
     copy("%s/vimrc" % filesdir, "/etc/vimrc")
-
