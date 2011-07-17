@@ -3,11 +3,19 @@ summary @ Linux dynamic and persistent device naming support
 homepage @ http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
 license @ GPL-2
 src_url @ http://www.kernel.org/pub/linux/utils/kernel/hotplug/$fullname.tar.bz2
+options @ extras introspection gudev keymap
 """
 
 depends = """
 runtime @ sys-libs/glibc sys-apps/coreutils sys-apps/module-init-tools
-          sys-apps/util-linux sys-libs/glib dev-util/gperf dev-libs/libusb:0
+          sys-apps/util-linux
+"""
+
+opt_runtime = """
+gudev @ sys-libs/glib
+introspection @ dev-libs/gobject-introspection
+extras @ sys-apps/acl sys-libs/glib dev-libs/gobject-introspection dev-libs/libusb:0 dev-util/gperf
+keymap @ dev-util/gperf
 """
 
 #def prepare():
@@ -19,20 +27,25 @@ def configure():
         "--with-rootlibdir=/lib", 
         "--libexecdir=/lib/udev",
         "--with-systemdsystemunitdir=/lib/systemd/system",
-        "--disable-introspection",
+        config_enable("introspection"),
         "--enable-logging",
         "--enable-rule_generator",
         "--enable-hwdb",
         "--with-pci-ids-path=/usr/share/misc/pci.ids",
         "--with-usb-ids-path=/usr/share/misc/usb.ids",
         "--enable-udev_acl",
-        "--enable-gudev",
-        "--enable-keymap",
+        config_enable("gudev"),
+        config_enable("keymap"),
         "--enable-floppy",
         "--enable-edd",
         "--enable-action_modeswitch")
 
+def build():
+    export("HOME", build_dir)
+    make()
+
 def install():
+    export("HOME", build_dir)
     raw_install('DESTDIR=%s' % install_dir)
     
     #insfile("%s/80-drivers.rules" % filesdir, "/lib/udev/rules.d/80-drivers.rules")

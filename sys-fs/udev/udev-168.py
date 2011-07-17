@@ -49,3 +49,4 @@ def post_install():
         system("mknod -m 0666 /lib/udev/devices/%s c %s &>/dev/null" % (i, nodes[i]))
 
 
+

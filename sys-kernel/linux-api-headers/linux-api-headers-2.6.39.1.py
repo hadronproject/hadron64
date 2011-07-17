@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 standart_procedure = False
-srcdir = "linux-2.6.38"
+srcdir = "linux-2.6.39.1"
 
 def build():
     make("mrproper")

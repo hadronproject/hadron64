@@ -4,6 +4,7 @@ homepage @ http://www.xfce.org/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/xfce/$name/4.8/$fullname.tar.bz2
 arch @ ~x86
+options @ debug
 """
 
 depends = """
@@ -15,7 +16,7 @@ def configure():
             "--disable-static",
             "--disable-gtk-doc",
             '--with-perl-options=INSTALLDIRS="vendor"',
-            "--disable-debug")
+            use_enable("debug"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
