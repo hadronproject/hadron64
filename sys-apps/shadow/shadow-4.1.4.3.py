@@ -2,7 +2,7 @@ metadata = """
 summary @ Shadow password file utilities
 homepage @ http://pkg-shadow.alioth.debian.org/
 license @ custom
-src_url @ ftp://pkg-shadow.alioth.debian.org/pub/pkg-shadow/$fullname.tar.bz2
+src_url @ http://mir0.gentoo-fr.org/distfiles/$fullname.tar.bz2
 arch @ ~x86
 """
 

@@ -24,6 +24,7 @@ def configure():
             "--disable-static",
             "--disable-gtk-doc",
             "--disable-man-pages")
+    system("sed -i -e 's|profile.d|bash_completion.d|' tools/Makefile")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

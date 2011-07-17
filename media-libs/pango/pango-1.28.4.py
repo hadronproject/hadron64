@@ -16,7 +16,12 @@ build @ x11-libs/libXt
 def configure():
     conf("--with-included-modules=basic-fc")
 
+def build():
+    export("HOME", build_dir)
+    make()
+
 def install():
+	export("HOME", build_dir)
 	raw_install("DESTDIR=%s" % install_dir)
 
 def post_install():

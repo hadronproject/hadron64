@@ -36,7 +36,7 @@ def configure():
             --enable-gles2 \
             --enable-egl \
             --disable-gallium-egl")
-    sed("configs/autoconf", "(PYTHON_FLAGS) = .*", r"\1 = -t")
+    #LOLWUT# sed("configs/autoconf", "(PYTHON_FLAGS) = .*", r"\1 = -t")
 
     #autoreconf("-vif")
     #conf("--enable-pic \

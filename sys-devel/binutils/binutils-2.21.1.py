@@ -2,7 +2,7 @@ metadata = """
 summary @ The GNU Binutils are a collection of binary tools.
 homepage @ http://www.gnu.org/software/binutils/
 license @ GPL-2
-src_url @ ftp://ftp.archlinux.org/other/binutils/binutils-2.21.tar.gz
+src_url @ ftp://ftp.archlinux.org/other/binutils/$fullname_20110627.tar.bz2
 options @ nls
 arch @ ~x86
 """
@@ -11,6 +11,8 @@ depends = """
 runtime @ sys-libs/glibc sys-libs/zlib
 build @ sys-libs/glibc sys-devel/flex
 """
+
+srcdir = "binutils"
 
 def configure():
     makedirs("../binutils-build"); cd("../binutils-build")

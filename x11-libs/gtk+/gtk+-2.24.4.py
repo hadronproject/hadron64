@@ -25,7 +25,12 @@ def configure():
             --enable-silent-rules \
             --disable-papi")
 
+def build():
+    export("HOME", build_dir)
+    make()
+
 def install():
+    export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("AUTHORS", "README*", "HACKING", "ChangeLog*", "NEWS*")
