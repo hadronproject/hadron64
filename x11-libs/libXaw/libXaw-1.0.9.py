@@ -4,6 +4,7 @@ homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/libXaw-$version.tar.bz2
 arch @ ~x86
+options @ doc
 """
 
 depends = """
@@ -11,11 +12,17 @@ runtime @ sys-libs/glibc x11-libs/libXmu x11-libs/libXpm
 build @ x11-misc/util-macros
 """
 
+opt_runtime = """
+doc @ app-text/xmlto
+"""
+
 #srcdir = "libXaw-%s" % version
 
 def configure():
 	conf(
-	"--disable-static")
+	"--disable-static",
+	config_enable("doc", "specs"),
+	config_with("doc", "xmlto"))
 
 def install():
 	raw_install("DESTDIR=%s" % install_dir)
