@@ -4,26 +4,31 @@ homepage @ http://www.gtk.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/$fullname.tar.bz2
 arch @ ~x86
+options @ xinerama
 """
 
 depends = """
-build @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXinerama x11-libs/libXrandr 
+build @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr 
         x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo 
         x11-libs/gdk-pixbuf
 
-runtime @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXinerama x11-libs/libXrandr 
+runtime @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr 
           x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo 
           x11-libs/gdk-pixbuf
 """
 
+opt_runtime = """
+xinerama @ x11-libs/libXinerama
+"""
+
 def configure():
     conf("--with-gdktarget=x11 \
-            --enable-xinerama \
             --with-xinput=yes \
             --enable-xkb \
             --enable-shm \
             --enable-silent-rules \
-            --disable-papi")
+            --disable-papi",
+            config_enable("xinerama"))
 
 def build():
     export("HOME", build_dir)
