@@ -2,7 +2,7 @@ metadata = """
 summary @ Lightweight, GTK2-based advanced audio player focused on audio quality
 homepage @ http://audacious-media-player.org/
 license @ GPL3
-src_url @ http://distfiles.atheme.org/$fullname.tgz
+src_url @ http://distfiles.atheme.org/$fullname.tar.bz2
 arch @ ~x86
 options @ altivec chardet nls session sse2
 """
@@ -28,3 +28,5 @@ def configure():
 def install():
 	raw_install("DESTDIR=%s" % install_dir)
 
+def post_install():
+    notify(">>>   Do not forget to install audacious-plugins   <<<")
