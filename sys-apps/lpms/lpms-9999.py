@@ -11,7 +11,7 @@ runtime @ dev-lang/python dev-python/catbox
 build @ dev-lang/python
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def prepare():
     notify("cloning git://gitorious.org/hadron/lpms.git")

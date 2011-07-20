@@ -12,7 +12,7 @@ runtime @ dev-lang/python
 
 srcdir = fullname+"/src/urwid-%s" % version
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     system("python setup.py install --prefix=/usr --root=%s" % install_dir)

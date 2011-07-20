@@ -6,7 +6,7 @@ src_url @ http://kernel.org/pub/linux/kernel/v2.6/linux-$version.tar.bz2
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 srcdir = "linux-2.6.39.1"
 
 def build():

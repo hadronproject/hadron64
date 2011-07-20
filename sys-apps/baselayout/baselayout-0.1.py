@@ -5,7 +5,7 @@ license @ GPL-3
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     for d in ('bin', 'boot', 'dev', 'etc', 'home', 

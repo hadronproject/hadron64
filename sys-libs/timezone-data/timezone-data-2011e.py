@@ -6,7 +6,7 @@ src_url @ ftp://elsie.nci.nih.gov/pub/tzdata2011f.tar.gz ftp://elsie.nci.nih.gov
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def prepare():
     cd(dirname(build_dir))

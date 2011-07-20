@@ -6,7 +6,7 @@ src_url @ http://faenza-icon-theme.googlecode.com/files/$name_$version.tar.gz
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     cd("..")

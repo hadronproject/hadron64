@@ -6,7 +6,7 @@ src_url @ http://download2.berlios.de/xfce-goodies/$fullname.tar.gz
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     cd("backdrops")

@@ -6,7 +6,7 @@ src_url @ http://distfiles.gentoo.org/distfiles/freefonts-0.10.tar.gz
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 srcdir = "freefont"
 
