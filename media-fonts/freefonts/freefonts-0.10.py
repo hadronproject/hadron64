@@ -15,13 +15,12 @@ runtime @ x11-apps/mkfontdir x11-apps/mkfontscale
 """
 
 def install():
-    insinto("*.pfb", "/usr/share/doc/freefonts-%s" % version)
+    insinto("*.pfb", "/usr/share/fonts/freefonts")
 
 def post_install():
     notify("updating font cache... ")
     system("fc-cache -f > /dev/null")
-    system("mkfontscale /usr/share/fonts/freefonts")
-    system("mkfontdir /usr/share/fonts/Type1")
+    system("mkfontdir /usr/share/fonts/freefonts")
     #    system("xset fp+ /usr/share/doc/freefonts-%s" % version)
 #    system("xset fp rehash")
 

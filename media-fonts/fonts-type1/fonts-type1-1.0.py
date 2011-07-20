@@ -6,3 +6,23 @@ src_url @ http://xorg.freedesktop.org//releases/individual/font/font-adobe-utopi
 arch @ ~x86
 """
 
+def configure():
+    for pack in ("font-adobe-utopia-type1-1.0.2",  "font-bitstream-type1-1.0.1",  "font-bh-type1-1.0.1", "font-ibm-type1-1.0.1", "font-xfree86-type1-1.0.2"):
+       cd("../%s" % pack)
+       conf("--with-fontdir=/usr/share/fonts/Type1")
+       make()
+       raw_install("DESTDIR=%s" % install_dir)
+    pass
+
+def build():
+    pass
+
+def install():
+    pass
+
+def post_install():
+    notify("Updating font cache...")
+    system("fc-cache -f > /dev/null")
+    system("mkfontscale /usr/share/fonts/Type1")
+    system("mkfontdir /usr/share/fonts/Type1")
+
