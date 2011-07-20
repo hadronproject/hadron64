@@ -7,7 +7,7 @@ arch @ ~x86
 """
 depends = """runtime @ sys-libs/glibc"""
 
-standart_procedure = False
+standard_procedure = False
 
 def build():
     make('CC=%s AR=%s RANLIB=%s CFLAGS="%s -D_FILE_OFFSET_BITS=64 -fPIC"' % (binutils_cmd("gcc"), binutils_cmd('ar'), binutils_cmd('ranlib'), get_env('CFLAGS')))

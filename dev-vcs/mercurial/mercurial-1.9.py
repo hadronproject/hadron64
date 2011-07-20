@@ -10,7 +10,7 @@ arch @ ~x86
 
 get("python_utils")
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     python_utils_install()

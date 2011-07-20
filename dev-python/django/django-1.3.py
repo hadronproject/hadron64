@@ -13,7 +13,7 @@ build @ dev-lang/python
 
 srcdir = "Django-%s" % version
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     system("python setup.py install --root=%s --optimize=1" % install_dir)

@@ -10,7 +10,7 @@ depends = """
 runtime @ net-misc/wget
 """
 
-standart_procedure=False
+standard_procedure=False
 
 def install():
     insexe("%s/wgetpaste" % build_dir, "/usr/bin/wgetpaste")

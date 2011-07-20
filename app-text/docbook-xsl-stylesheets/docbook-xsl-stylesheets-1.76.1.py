@@ -12,7 +12,7 @@ runtime @ dev-libs/libxml2 dev-libs/libxslt app-text/docbook-xml-dtd
 
 srcdir = "docbook-xsl-"+version
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     pkgroot = "/usr/share/sgml/docbook/xsl-stylesheets"

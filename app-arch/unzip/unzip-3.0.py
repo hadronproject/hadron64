@@ -17,7 +17,7 @@ runtime @ app-arch/bzip2 app-shells/bash
 
 srcdir = "unzip60"
 
-standart_procedure = False
+standard_procedure = False
 
 def build():
     make('-f unix/Makefile LOCAL_UNZIP="%s" prefix=/usr LF2="" D_USE_BZ2=-DUSE_BZIP2 L_BZ2=-lbz2 unzips' % get_env("CFLAGS"))

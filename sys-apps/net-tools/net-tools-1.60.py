@@ -6,7 +6,7 @@ src_url @ http://www.tazenda.demon.co.uk/phil/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def prepare():
     patch(level=1)

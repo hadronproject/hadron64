@@ -10,7 +10,7 @@ depends = """
 build @ dev-libs/icu dev-lang/python app-arch/bzip2 sys-libs/zlib
 """
 
-standart_procedure = False
+standard_procedure = False
 
 srcdir = "boost_1_46_1"
 

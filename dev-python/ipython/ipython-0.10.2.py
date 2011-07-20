@@ -6,7 +6,7 @@ src_url @ http://ipython.scipy.org/dist/$version/$fullname.tar.gz
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 get("python_utils")
 

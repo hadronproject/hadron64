@@ -13,7 +13,7 @@ runtime @ dev-lang/python
 build @ dev-lang/python
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     python_utils_install()

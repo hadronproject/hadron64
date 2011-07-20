@@ -8,7 +8,7 @@ arch @ ~x86
 
 srcdir = "dejavu-fonts-ttf-%s" % version
 
-standart_procedure = False
+standard_procedure = False
 #def build():
 #    export("HOME", build_dir)
 #    make()

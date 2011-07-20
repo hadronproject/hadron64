@@ -10,7 +10,7 @@ depends = """
 runtime @ app-editors/vim
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def prepare():
     patch()

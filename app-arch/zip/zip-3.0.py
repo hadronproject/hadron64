@@ -6,7 +6,7 @@ src_url @ ftp://ftp.info-zip.org/pub/infozip/src/$name30.zip
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 srcdir = "zip30"
 

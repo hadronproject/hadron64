@@ -14,7 +14,7 @@ build @ app-text/sgml-common
 
 srcdir = ""
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     insinto("*.dtd", "/usr/share/sgml/docbook/xml-dtd-%s" % version)

@@ -8,7 +8,7 @@ arch @ ~x86
 
 srcdir = "video-quirks"
 
-standart_procedure = False
+standard_procedure = False
 
 def install():
     makedirs("/usr/lib/pm-utils/video-quirks")

@@ -6,7 +6,7 @@ src_url @ http://gd.tuwien.ac.at/hci/kde/devel/docbook/SOURCES/sgml-common-0.6.3
 arch @ ~x86
 """
 
-standart_procedure = False
+standard_procedure = False
 
 def prepare():
     patch(level=1)

@@ -9,7 +9,7 @@ depends = """
 runtime @ sys-apps/baselayout sys-fs/udev
 """
 
-standart_procedure = False
+standard_procedure = False
 
 #srcdir = "initscripts"
 
