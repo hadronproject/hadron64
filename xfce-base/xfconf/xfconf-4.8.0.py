@@ -16,7 +16,7 @@ def configure():
             "--disable-static",
             "--disable-gtk-doc",
             '--with-perl-options=INSTALLDIRS="vendor"',
-            use_enable("debug"))
+            config_enable("debug"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
