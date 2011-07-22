@@ -19,6 +19,7 @@ libnotify @ x11-libs/libnotify
 pcre @ dev-libs/pcre
 startup-notification @ x11-libs/startup-notification
 udev @ sys-fs/udev
+pcre @ dev-libs/pcre
 """
 
 
