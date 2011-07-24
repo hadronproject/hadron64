@@ -59,9 +59,9 @@ def configure():
 	#    --with-dri-drivers=i810,i915,i965,mach64,nouveau,r128,r200,r600,radeon,sis,tdfx \
 	#    --with-state-trackers=dri,glx")
 
-#def build():
-#    amake("-C src/glsl glsl_lexer.cpp")
-#    make()
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
