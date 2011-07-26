@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime  @ sys-fs/udev sys-apps/sg3_utils sys-libs/glib dev-libs/dbus-glib
+runtime  @ sys-fs/udev[gudev] sys-apps/sg3_utils sys-libs/glib dev-libs/dbus-glib
            sys-auth/polkit sys-block/parted dev-libs/libatasmart sys-process/lsof
            sys-fs/lvm sys-block/eject
 build @ dev-util/intltool
