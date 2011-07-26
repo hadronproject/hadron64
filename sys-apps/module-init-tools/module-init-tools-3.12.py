@@ -19,4 +19,7 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
+    system("mkdir -p %s/etc/modprobe.d" % install_dir)
+    #insfile("%s/modprobe.conf" % filesdir, "%s/etc/modprobe.d/modprobe.conf" % install_dir)
+    insinto("%s/*" % filesdir, "%s/etc/modprobe.d" % install_dir)
 
