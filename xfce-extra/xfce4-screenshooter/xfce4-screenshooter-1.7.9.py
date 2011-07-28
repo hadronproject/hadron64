@@ -6,6 +6,10 @@ src_url @ http://archive.xfce.org/src/apps/$name/1.7/$fullname.tar.bz2
 arch @ ~x86
 """
 
+depends = """
+runtime @ net-libs/libsoup
+"""
+
 def prepare():
     patch(level=1)
 
