@@ -4,6 +4,7 @@ homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/xserver/$fullname.tar.bz2
 arch @ ~x86
+options @ doc ipv6
 """
 
 depends = """
@@ -16,6 +17,10 @@ build @ x11-libs/pixman media-libs/mesa x11-proto/xf86vidmodeproto x11-proto/xex
         x11-proto/resourceproto x11-libs/libxkbfile x11-libs/libXaw x11-libs/libXres x11-libs/libpciaccess x11-libs/libdmx
 """
 
+opt_build = """
+doc @ app-text/xmlto
+"""
+
 def prepare():
     patch("xorg-redhat-die-ugly-pattern-die-die-die.patch", level=3)
     patch("glx-pixmap-crash.patch", level=1)
@@ -23,8 +28,9 @@ def prepare():
     patch("xserver-1.10-pointer-barriers.patch", level=1)
 
 def configure():
-    conf("--enable-ipv6 \
-            --enable-dri \
+    conf(
+            config_enable("ipv6"),
+            "--enable-dri \
             --enable-dmx \
             --enable-xvfb \
             --enable-xnest \
@@ -47,7 +53,9 @@ def configure():
             --with-xkb-output=/var/lib/xkb \
             --with-fontrootdir=/usr/share/fonts \
             --with-os-name=\"Hadron GNU/Linux\" \
-            --with-os-vendor=\"Hadron Project\"")
+            --with-os-vendor=\"Hadron Project\"",
+            config_enable("doc", "specs"),
+            config_with("doc", "xmlto"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

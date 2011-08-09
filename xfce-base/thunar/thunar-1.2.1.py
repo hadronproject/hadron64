@@ -4,21 +4,36 @@ homepage @ http://thunar.xfce.org
 license @ GPL2 LGPL2.1
 src_url @ http://archive.xfce.org/src/xfce/$name/1.2/Thunar-$version.tar.bz2
 arch @ ~x86
+options @ dbus libnotify pcre startup-notification udev
 """
 
-srcdir = "Thunar-%s" % version
+depends = """
+runtime @ xfce-base/exo sys-libs/glib x11-libs/gtk+ xfce-base/libxfce4util xfce-base/libxfce4ui
+    dev-lang/perl x11-misc/shared-mime-info dev-util/desktop-file-utils
+build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
+"""
 
-#FIXME: bagimliliklari yaz
+opt_runtime = """
+dbus @ dev-libs/dbus-glib
+libnotify @ x11-libs/libnotify
+pcre @ dev-libs/pcre
+startup-notification @ x11-libs/startup-notification
+udev @ sys-fs/udev
+pcre @ dev-libs/pcre
+"""
+
+
+srcdir = "Thunar-%s" % version
 
 def configure():
     conf("--disable-static",
             "--enable-gio-unix",
-            "--enable-dbus",
-            "--enable-startup-notification",
-            "--enable-gudev",
-            "--enable-notifications",
+            config_enable("dbus"),
+            config_enable("startup-notification"),
+            config_enable("udev", "gudev"),
+            config_enable("libnotify", "notifications"),
             "--enable-exif",
-            "--enable-pcre",
+            config_enable("pcre"),
             "--disable-gtk-doc",
             "--disable-debug")
 

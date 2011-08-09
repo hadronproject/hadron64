@@ -4,6 +4,7 @@ homepage @  http://www.gnu.org/software/ncurses/
 license @ MIT
 src_url @ http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.gz
 arch @ ~x86
+options @ debug
 """
 
 depends = """
@@ -11,7 +12,7 @@ runtime @ sys-libs/glibc
 """
 
 def configure():
-    conf("--without-debug",
+    conf(config_with("debug"),
         "--without-profile",
         "--disable-rpath",
         "--enable-const",

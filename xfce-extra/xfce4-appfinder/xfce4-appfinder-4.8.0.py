@@ -4,6 +4,7 @@ homepage @ http://www.xfce.org/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/xfce/$name/4.8/$fullname.tar.bz2
 arch @ ~x86
+options @ debug
 """
 
 
@@ -13,7 +14,7 @@ runtime @ xfce-base/libxfce4ui xfce-base/garcon x11-themes/hicolor-icon-theme
 
 def configure():
     conf("--disable-static",
-            "--disable-debug")
+    config_enable("debug"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

@@ -4,6 +4,7 @@ homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/libXtst-$version.tar.bz2
 arch @ ~x86
+options @ doc
 """
 
 depends = """
@@ -11,10 +12,19 @@ runtime @ sys-libs/glibc x11-libs/libXext x11-proto/recordproto x11-proto/inputp
 build @ x11-misc/util-macros
 """
 
-#srcdir = "libXtst-%s" % version
+opt_build = """
+doc @ app-text/xmlto
+"""
 
 def configure():
-    conf("--disable-static")
+    conf(
+    config_enable("doc", "specs"),
+    config_with("doc", "xmlto"),
+    "--without-fop",
+    "--disable-static")
+
+
+#srcdir = "libXtst-%s" % version
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

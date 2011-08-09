@@ -4,11 +4,16 @@ homepage @ http://projects.gnome.org/gconf/
 license @ LGPL2
 src_url @ http://ftp.gnome.org/pub/gnome/sources/GConf/2.32/GConf-$version.tar.bz2
 arch @ ~x86
+options @ debug policykit
 """
 
 depends = """
 runtime @ gnome-base/orbit dev-libs/libxml2 sys-apps/dbus x11-libs/gtk+
 build @ dev-libs/gobject-introspection
+"""
+
+opt_build = """
+policykit @ sys-auth/polkit
 """
 
 srcdir = "GConf-%s" % version
@@ -22,6 +27,8 @@ def configure():
             "--enable-gsettings-backend",
             "--with-gtk=2.0",
             "--without-openldap",
+            config_enable("policykit", "defaults-service"),
+            config_enable("debug"),
             "--enable-defaults-service")
 
 def build():

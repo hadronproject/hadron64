@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-util/libtool media-libs/freetype x11-libs/libXext x11-libs/libXt 
+runtime @ sys-devel/libtool media-libs/freetype x11-libs/libXext x11-libs/libXt 
           x11-libs/libICE x11-libs/libSM dev-libs/libxml2 media-libs/libpng gnome-base/librsvg
 """
 

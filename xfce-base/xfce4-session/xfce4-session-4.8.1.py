@@ -4,12 +4,19 @@ homepage @ http://www.xfce.org/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/xfce/$name/4.8/$fullname.tar.bz2
 arch @ ~x86
+options @ consolekit policykit debug udev
 """
 
 depends = """
-runtime @ xfce-base/xfce4-panel x11-libs/libSM x11-libs/libwnck sys-power/upower sys-auth/consolekit
+runtime @ xfce-base/xfce4-panel x11-libs/libSM x11-libs/libwnck 
           x11-themes/hicolor-icon-theme x11-apps/iceauth gnome-base/libgnome-keyring gnome-base/gconf
 build @ dev-util/intltool
+"""
+
+opt_runtime = """
+consolekit @ sys-auth/consolekit
+policykit @ sys-auth/polkit
+udev @ sys-power/upower
 """
 
 def configure():
@@ -22,11 +29,11 @@ def configure():
             "--enable-gnome",
             "--enable-libgnome-keyring",
             "--enable-session-screenshots",
-            "--enable-upower",
-            "--enable-consolekit",
-            "--enable-polkit",
+            config_enable("udev", "upower"),
+            config_enable("consolekit"),
+            config_enable("policykit", "polkit"),
             "--enable-panel-plugin",
-            "--disable-debug")
+            config_enable("debug"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

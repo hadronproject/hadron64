@@ -4,19 +4,26 @@ homepage @ http://www.xfce.org/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/xfce/$name/4.8/$fullname.tar.bz2
 arch @ ~x86
+options @ libnotify thunar debug
 """
 
 depends = """
-runtime @ xfce-base/libxfce4ui xfce-base/thunar x11-themes/hicolor-icon-theme x11-libs/libwnck
-build @ xfce-base/xfce4-panel dev-util/intltool"""
+runtime @ xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
+build @ xfce-base/xfce4-panel dev-util/intltool
+"""
+
+opt_runtime = """
+thunar @ xfce-base/thunar dev-libs/dbus-glib xfce-base/exo
+libnotify @ x11-libs/libnotify
+"""
 
 def configure():
     conf("--disable-static",
             "--enable-gio-unix",
-            "--enable-thunarx",
+            config_enable("thunar", "thunarx"),
             "--enable-exo",
-            "--enable-notifications",
-            "--disable-debug")
+            config_enable("notify", "notifications"),
+            config_enable("debug"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

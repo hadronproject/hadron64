@@ -12,11 +12,17 @@ runtime @ sys-libs/glibc sys-libs/glib media-libs/libpng media-libs/tiff
 """
 
 def configure():
+    export("HOME", build_dir)
     conf("--without-libjasper",
             "--with-included-loaders=png")
 
 
+def build():
+    export("HOME", build_dir)
+    make()
+
 def install():
+    export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)
     
     insdoc("COPYING")

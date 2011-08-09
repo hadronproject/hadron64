@@ -21,5 +21,10 @@ def configure():
             config_enable("test", "tests"),
             config_enable("introspection"))
 
+def build():
+    export("HOME", build_dir)
+    make()
+    
 def install():
+    export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)

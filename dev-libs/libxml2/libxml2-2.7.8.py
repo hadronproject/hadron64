@@ -4,10 +4,16 @@ homepage @ http://www.xmlsoft.org/
 license @ custom
 src_url @ ftp://ftp.xmlsoft.org/libxml2/$fullname.tar.gz
 arch @ ~x86
+options @ icu debug ipv6 readline
 """
 
 depends = """
-runtime @ sys-libs/glibc sys-apps/readline sys-libs/ncurses sys-libs/zlib
+runtime @ sys-libs/glibc sys-libs/ncurses sys-libs/zlib
+"""
+
+opt_runtime = """
+readline @ sys-apps/readline
+icu @ dev-libs/icu
 """
 
 def prepare():
@@ -15,8 +21,14 @@ def prepare():
 
 def configure():
     autoreconf("-fi")
-    conf("--with-threads --with-history \
-            --with-python=/usr/bin/python2.7")
+    conf(
+        "--with-threads",
+        config_enable("ipv6"),
+        "--with-python=/usr/bin/python2.7",
+        config_with("readline"),
+        config_with("readline", "history"),
+        config_with("debug", "run-debug"),
+        config_with("icu"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

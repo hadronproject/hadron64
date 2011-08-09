@@ -4,6 +4,7 @@ homepage @ http://xfce-goodies.berlios.de/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/apps/$name/1.0/$fullname.tar.bz2
 arch @ ~x86
+options @ policykit debug
 """
 
 depends = """
@@ -11,14 +12,18 @@ runtime @ xfce-base/xfce4-panel sys-power/upower sys-fs/udisks
           x11-themes/hicolor-icon-theme gnome-base/librsvg x11-libs/libnotify
 """
 
+opt_runtime = """
+policykit @ sys-auth/polkit
+"""
+
 def prepare():
     patch(level=1)
 
 def configure():
     conf("--disable-network-manager", 
-            "--enable-polkit",
+            config_enable("policykit", "polkit"),
             "--enable-dpms",
-            "--disable-debug")
+            config_enable("debug"))
 
 
 def install():
