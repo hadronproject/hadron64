@@ -19,7 +19,7 @@ python @ dev-python/pygtk
 def prepare():
     rmfile("py-compile")
     makesym("/bin/true", "py-compile")
-    print system("intltoolize --force --copy --automake")
+    system("intltoolize --force --copy --automake")
     #libtoolize()
 
 def configure():
