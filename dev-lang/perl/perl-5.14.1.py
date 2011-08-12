@@ -10,13 +10,8 @@ arch @ ~x86
 # FIXME: build, doc and debug options will be added.
 
 depends = """
-runtime @ sys-libs/glibc sys-apps/coreutils
-        sys-apps/groff sys-libs/zlib app-arch/bzip2
-"""
-
-opt_runtime = """
-berkdb @ sys-libs/db
-gdbm @ sys-libs/gdbm
+runtime @ sys-libs/gdbm sys-libs/glibc sys-apps/coreutils
+        sys-apps/groff sys-libs/zlib
 """
 
 def configure():
@@ -50,9 +45,10 @@ def configure():
     -Dcf_by='Hadron' \
     -Dman1ext=1perl -Dman3ext=3perl" % (get_env("CFLAGS"), get_env("LDFLAGS"), get_env("LDFLAGS")))
 
+def build():
+    patch(level=1)
+    make()
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
-    makedirs("/etc/ld.so.conf.d")
-    echo("/usr/lib/perl5/core_perl/CORE", "%s/etc/ld.so.conf.d/perl.conf" % install_dir)
 

@@ -7,7 +7,6 @@ arch @ ~x86
 
 depends = """
 runtime @ dev-lang/python dev-python/catbox
-sys-apps/file
 
 build @ dev-lang/python
 """
