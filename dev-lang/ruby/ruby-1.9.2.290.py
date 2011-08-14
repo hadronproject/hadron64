@@ -1,13 +1,12 @@
 metadata = """
 summary @ An object oriented language for quick and easy programming
 homepage @ http://www.ruby-lang.org/en
-src_url @ ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2
+src_url @ ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-1.9.2-p290.tar.bz2
 license @ GPL-2
 options @ doc
 """
 
-version = "-".join(version.split("_"))
-srcdir = name+"-"+version
+srcdir = name+"-"+".".join(version.split(".")[:-1])+"-"+"p"+version.split(".")[-1]
 
 def configure():
     conf("--enable-shared",
