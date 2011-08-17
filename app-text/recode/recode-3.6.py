@@ -1,6 +1,6 @@
 metadata ="""
 summary @ File character set converter
-homepage @ http://www.gnu.org/software/recode/
+homepage @ http://recode.progiciels-bpi.ca/index.html
 license @ GPL-2
 src_url @ http://sourceforge.net/projects/hadron-sources/files/recode-3.6.tar.gz
 options @ nls static-libs
