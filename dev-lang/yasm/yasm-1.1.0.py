@@ -1,0 +1,28 @@
+metadata = """
+summary @ A rewrite of NASM to allow for multiple syntax supported (NASM, TASM, GAS, etc.)
+homepage @ http://www.tortall.net/projects/yasm/
+license @ custom
+src_url @ http://www.tortall.net/projects/yasm/releases/$fullname.tar.gz
+arch @ ~x86
+options @ nls
+"""
+
+depends = """
+runtime @ sys-libs/glibc
+"""
+
+opt_build = """
+nls @ sys-devel/gettext
+"""
+
+def configure():
+	conf(
+	config_enable("nls"),
+	"--disable-dependency-tracking")
+
+def install():
+	raw_install("DESTDIR=%s" % install_dir)
+
+	insdoc("AUTHORS")
+
+#TODO add python option via cython package: http://gpo.zugaina.org/AJAX/Ebuild/2238441/View
