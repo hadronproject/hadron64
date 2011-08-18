@@ -32,7 +32,7 @@ def configure():
                 "--disable-dependency-tracking",
                 config_enable("ogg"),
                 config_enable("sse"),
-                config_enable("static_libs static"))
+                config_enable("static_libs", "static"))
     system("sed -i 's:^hardcode_libdir_flag_spec=.*:hardcode_libdir_flag_spec=\"\":' libtool")
     system("sed -i 's:^runpath_var=LD_RUN_PATH:runpath_var=DIE_RPATH_DIE:' libtool")
 
