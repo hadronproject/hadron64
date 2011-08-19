@@ -29,3 +29,5 @@ def install():
 
     if opt("doc"):
         insdoc("doc/latex/refman.ps")
+
+#TODO: doc flags needs doxygen, which is in seq repo, which needs shitload of work beceuse of QT + LaTeX
