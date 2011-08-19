@@ -34,9 +34,13 @@ def build():
     else:
         myconf += " -DBUILD_EXAMPLES=OFF "
 
+    if opt("debug"):
+        myconf += " -DCMAKE_BUILD_TYPE=Debug "
+    else:
+        myconf += " -DCMAKE_BUILD_TYPE=Release "
+
     system("cmake ../ \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-	    -DCMAKE_BUILD_TYPE=Release %s " % myconf)
+        -DCMAKE_INSTALL_PREFIX=/usr %s " % myconf)
     make()
 
 def install():
