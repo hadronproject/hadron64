@@ -49,8 +49,8 @@ def install():
 
 def post_install():
     if not opt("asf"):
-        notify("WARNING: You've chosen to disable the asf option, thus taglib won't include support for Microsoft's 'advanced systems format' media container")
+        warn("WARNING: You've chosen to disable the asf option, thus taglib won't include support for Microsoft's 'advanced systems format' media container")
 
     if not opt("mp4"):
-        notify("WARNING: You've chosen to disable the mp4 option, thus taglib won't include support for the MPEG-4 part 14 / MP4 media container")
+        warn("WARNING: You've chosen to disable the mp4 option, thus taglib won't include support for the MPEG-4 part 14 / MP4 media container")
 
