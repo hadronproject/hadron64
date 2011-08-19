@@ -2,15 +2,14 @@ metadata = """
 summary @ Library for applications dealing with netlink sockets
 homepage @ http://www.infradead.org/~tgr/libnl/
 license @ GPL
-src_url @ http://www.infradead.org/~tgr/libnl/files/$fullname.tar.gz
+src_url @ http://www.infradead.org/~tgr/libnl/files/$name-$version.tar.gz
 arch @ ~x86
-slot @ 2.0
+slot @ 1.1
 """
 
 depends = """
 runtime @ sys-libs/glibc
 """
 
-def install():
-    raw_install("DESTDIR=%s" % install_dir)
-
+def prepare():
+    patch(level=1)
