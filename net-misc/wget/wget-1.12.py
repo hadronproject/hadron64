@@ -1,4 +1,4 @@
- = """
+metadata = """
 summary @ A network utility to retrieve files from the Web
 homepage @ http://www.gnu.org/software/wget/wget.html
 license @ GPL-3
