@@ -4,7 +4,7 @@ homepage @ http://www.speex.org/
 license @ BSD
 src_url @ http://downloads.us.xiph.org/releases/$name/$fullnamerc1.tar.gz
 arch @ ~x86
-options @ ogg
+options @ ogg sse static-libs
 """
 
 opt_runtime = """
