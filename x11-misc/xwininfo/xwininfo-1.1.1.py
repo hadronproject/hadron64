@@ -10,6 +10,7 @@ depends = """
 runtime @ sys-libs/glibc x11-libs/libX11 x11-libs/libXv
 """
 
+srcdir = "xvinfo-"+version
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
