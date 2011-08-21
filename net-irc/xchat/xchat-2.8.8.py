@@ -2,7 +2,7 @@ metadata = """
 summary @ A GTK+ based IRC client
 homepage @ http://www.xchat.org/
 license @ GPL
-src_url @ ttp://www.xchat.org/files/source/2.8/$fullname.tar.bz2
+src_url @ http://www.xchat.org/files/source/2.8/$fullname.tar.bz2
 arch @ ~x86
 options @ gtk ssl perl python tcl dbus spell libnotify ipv6 fastscroll mmx
 """
