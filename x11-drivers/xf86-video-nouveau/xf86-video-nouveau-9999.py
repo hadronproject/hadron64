@@ -28,4 +28,4 @@ def build():
 def install():
     cd("down")
     raw_install("DESTDIR=%s" % install_dir)
-
+    insfile("%s/30-nouveau.conf" % filesdir, "/etc/X11/xorg.conf.d/")
