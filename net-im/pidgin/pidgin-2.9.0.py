@@ -53,3 +53,6 @@ def configure():
 def install():
 	export("GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL", "1")
 	raw_install("DESTDIR=%s" % install_dir)
+
+def post_install():
+    gnome2_icon_cache_update()
