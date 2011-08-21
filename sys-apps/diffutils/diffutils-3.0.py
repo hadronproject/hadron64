@@ -8,7 +8,7 @@ arch @ ~x86
 """
 
 def configure():
-    if opt('static-libs'): append-ldflags('-static')
+    if opt('static-libs'): append_ldflags('-static')
     conf("--with-packager='Hadron'",
         config_enable("nls"))
 

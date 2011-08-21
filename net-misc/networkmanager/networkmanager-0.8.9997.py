@@ -46,6 +46,9 @@ def configure():
     config_with("dhcpcd"),
     config_enable("introspection"), myconf)
 
+def build():
+    export("HOME", build_dir)
+    make()
 
 def install():
     export("HOME", build_dir)

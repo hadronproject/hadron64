@@ -23,7 +23,6 @@ doc @ app-text/xmlto
 
 def prepare():
     patch("xorg-redhat-die-ugly-pattern-die-die-die.patch", level=3)
-    patch("glx-pixmap-crash.patch", level=1)
     patch("bg-none-revert.patch", level=1)
     patch("xserver-1.10-pointer-barriers.patch", level=1)
 

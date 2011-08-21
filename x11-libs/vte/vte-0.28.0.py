@@ -23,6 +23,7 @@ def configure():
         config_enable("introspection"))
 
 def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     export("HOME", build_dir)
     append_cflags("-fno-strict-aliasing")
     make()
