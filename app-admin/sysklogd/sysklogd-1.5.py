@@ -10,5 +10,5 @@ def install():
     for i in ("man8", "man5"):
         makedirs("/usr/share/man/%s" % i)
     makedirs("/usr/sbin")
-    raw_install("prefix=%s" % install_dir)
+    raw_install("INSTALL=/bin/install prefix=%s" % install_dir)
     copy("%s/syslog.conf" % filesdir, "/etc/syslog.conf")
