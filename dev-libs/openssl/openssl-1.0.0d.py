@@ -6,7 +6,9 @@ src_url @ http://www.openssl.org/source/$fullname.tar.gz
 arch @ ~x86
 """
 
-depends = """runtime @ dev-lang/perl"""
+depends = """
+runtime @ dev-lang/perl sys-apps/gawk
+"""
 
 def prepare():
     patch("fix-manpages.patch", level=1)
@@ -23,5 +25,4 @@ def build():
 
 def install():
     raw_install("INSTALL_PREFIX=%s MANDIR=%s install" % (install_dir, "/usr/share/man"))
-
-
+    
