@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-build @ media-libs/gstreamer x11-libs/libXv media-libs/alsa-lib media-libs/libvorbis media-libs/pango 
+build @ >media-libs/gstreamer-0.10.34 x11-libs/libXv media-libs/alsa-lib media-libs/libvorbis media-libs/pango 
 	dev-libs/gobject-introspection dev-util/pkg-config dev-lang/orc
 """
 
