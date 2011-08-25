@@ -12,9 +12,8 @@ build @ x11-proto/trapproto
 """
 
 def configure():
-	conf(
-	"--disable-static")
+    conf(
+    "--disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

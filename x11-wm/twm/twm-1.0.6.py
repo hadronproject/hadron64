@@ -12,6 +12,6 @@ build @ sys-devel/bison
 """
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

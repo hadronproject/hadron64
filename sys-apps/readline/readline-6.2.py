@@ -15,7 +15,7 @@ def prepare():
     system("sed -i 's|-Wl,-rpath,$(libdir) ||g' support/shobj-conf")
 
 def configure():
-    raw_configure("--prefix=/usr", 
+    raw_configure("--prefix=/usr",
             "--libdir=/lib")
 
 def build():
@@ -35,4 +35,3 @@ def install():
 
     makesym("/lib/libreadline.so.6", "/usr/lib/libreadline.so")
     makesym("/lib/libhistory.so.6", "/usr/lib/libhistory.so")
-

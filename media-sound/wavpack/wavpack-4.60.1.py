@@ -12,11 +12,11 @@ runtime @ sys-libs/glibc
 """
 
 def configure():
-	conf(
-	"--disable-static",
-	config_enable("mmx"))
+    conf(
+    "--disable-static",
+    config_enable("mmx"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("license.txt")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("license.txt")

@@ -1,4 +1,4 @@
-metadata = """ 
+metadata = """
 summary @ Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)
 license @ GPL-3
 homepage @ http://www.gnu.org/software/coreutils/
@@ -24,18 +24,16 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
-    fhs = ('cat', 'chgrp', 'chmod', 'chown', 'cp', 'date', 'dd', 'df', 'echo', 
-            'false', 'ln', 'ls', 'mkdir', 'mknod', 'mv', 'pwd', 'rm', 'rmdir', 
+
+    fhs = ('cat', 'chgrp', 'chmod', 'chown', 'cp', 'date', 'dd', 'df', 'echo',
+            'false', 'ln', 'ls', 'mkdir', 'mknod', 'mv', 'pwd', 'rm', 'rmdir',
             'stty', 'su', 'sync', 'true', 'uname')
     for f in fhs:
         move("%s/usr/bin/%s" % (install_dir, f), "/bin/%s" %  f)
 
-    bins = ('cut', 'dir', 'dircolors', 'du', 'install', 'mkfifo', 'readlink', 
+    bins = ('cut', 'dir', 'dircolors', 'du', 'install', 'mkfifo', 'readlink',
             'shred', 'sleep', 'touch', 'tr', 'vdir')
     for b in bins:
         move("%s/usr/bin/%s" % (install_dir, b), "/bin/%s" %  b)
 
     makesym("%s/bin/sleep", "/usr/bin/sleep")
-
-

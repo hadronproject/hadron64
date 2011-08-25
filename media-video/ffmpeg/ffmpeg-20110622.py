@@ -1,7 +1,7 @@
 metadata = """
-summary @ Complete and free Internet live audio and video broadcasting solution for Linux/Unix 
-homepage @ http://ffmpeg.org/ 
-license @ GPL 
+summary @ Complete and free Internet live audio and video broadcasting solution for Linux/Unix
+homepage @ http://ffmpeg.org/
+license @ GPL
 src_url @ http://www.ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
 arch @ ~x86
 options @ lame rtmp vdpau vorbis xvid x264 vpx theora amr schroedinger jpeg2k cpudetection ieee1394 X vaapi
@@ -9,8 +9,8 @@ options @ lame rtmp vdpau vorbis xvid x264 vpx theora amr schroedinger jpeg2k cp
 
 depends = """
 runtime @ x11-libs/libXfixes media-libs/alsa-lib app-arch/bzip2
-	sys-libs/zlib
-	media-libs/SDL_image media-libs/SDL
+        sys-libs/zlib
+        media-libs/SDL_image media-libs/SDL
 """
 
 opt_runtime = """
@@ -33,35 +33,35 @@ vdpau @ x11-libs/libvdpau
 srcdir = "ffmpeg"
 
 def configure():
-	raw_configure(
-	"--prefix=/usr",
-    "--enable-postproc",
-    "--enable-shared",
-    "--enable-gpl",
-    "--enable-version3",
-    "--disable-debug",
-    config_enable("vdpau"),
-    config_enable("vaapi"),
-    config_enable("rtmp", "librtmp"),
-    config_enable("X", "x11grab"),
-    config_enable("ieee1394", "libdc1394"),
-    config_enable("cpudetection", "runtime-cpudetect"),
-    config_enable("xvid", "libxvid"),
-    config_enable("vorbis", "libvorbis"),
-    config_enable("theora", "libtheora"),
-    config_enable("amr", "libopencore_amrwb"),
-    config_enable("amr", "libopencore_amrnb"),
-    config_enable("lame", "libmp3lame"))
+    raw_configure(
+    "--prefix=/usr",
+"--enable-postproc",
+"--enable-shared",
+"--enable-gpl",
+"--enable-version3",
+"--disable-debug",
+config_enable("vdpau"),
+config_enable("vaapi"),
+config_enable("rtmp", "librtmp"),
+config_enable("X", "x11grab"),
+config_enable("ieee1394", "libdc1394"),
+config_enable("cpudetection", "runtime-cpudetect"),
+config_enable("xvid", "libxvid"),
+config_enable("vorbis", "libvorbis"),
+config_enable("theora", "libtheora"),
+config_enable("amr", "libopencore_amrwb"),
+config_enable("amr", "libopencore_amrnb"),
+config_enable("lame", "libmp3lame"))
 
 def build():
-	make()
-	make("tools/qt-faststart")
-	make("doc/ff{mpeg,play,server}.1")
+    make()
+    make("tools/qt-faststart")
+    make("doc/ff{mpeg,play,server}.1")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
-	insexe("tools/qt-faststart", "/usr/bin/qt-faststart")
+    insexe("tools/qt-faststart", "/usr/bin/qt-faststart")
 
 
 # more options, install-man etc

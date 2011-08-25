@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 def configure():
-    raw_configure("--libexecdir=/usr/lib/dhcpcd", 
+    raw_configure("--libexecdir=/usr/lib/dhcpcd",
             "--dbdir=/var/lib/dhcpcd")
 
 def install():

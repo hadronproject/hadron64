@@ -8,4 +8,3 @@ options @ doc
 
 def prepare():
     patch("dejagnu-1.4.4-consolidated-1.patch", level=1)
-

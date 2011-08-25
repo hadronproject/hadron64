@@ -8,10 +8,10 @@ arch @ ~x86
 
 def configure():
     autoreconf("-fi")
-    raw_configure("--prefix=/usr", 
-            "--sysconfdir=/etc", 
+    raw_configure("--prefix=/usr",
+            "--sysconfdir=/etc",
             "--localstatedir=/var",
-            "--libexecdir=/usr/lib/upower", 
+            "--libexecdir=/usr/lib/upower",
             "--disable-static",
             "--disable-man-pages",
             "--disable-gtk-doc")

@@ -13,7 +13,7 @@ build @ dev-util/cmake dev-util/pkg-config
 """
 
 def configure():
-	pass
+    pass
 
 def build():
     system("mkdir build")
@@ -28,7 +28,7 @@ def build():
         myconf += " -DWITH_ASF=ON "
     else:
         myconf += " -DWITH_ASF=OFF "
-    
+
     if opt("examples"):
         myconf += " -DBUILD_EXAMPLES=ON "
     else:
@@ -44,8 +44,8 @@ def build():
     make()
 
 def install():
-	cd("./build")
-	raw_install("DESTDIR=%s" % install_dir)
+    cd("./build")
+    raw_install("DESTDIR=%s" % install_dir)
 
 def post_install():
     if not opt("asf"):
@@ -53,4 +53,3 @@ def post_install():
 
     if not opt("mp4"):
         warn("WARNING: You've chosen to disable the mp4 option, thus taglib won't include support for the MPEG-4 part 14 / MP4 media container")
-

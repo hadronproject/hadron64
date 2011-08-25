@@ -35,6 +35,3 @@ def configure():
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
     insdoc("AUTHORS", "BACKLOG", "ChangeLog", "NEWS", "README", "THANKS", "TODO")
-    
- 
- 

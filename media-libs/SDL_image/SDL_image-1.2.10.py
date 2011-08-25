@@ -17,7 +17,7 @@ tiff @ media-libs/tiff
 """
 
 def prepare():
-	patch()
+    patch()
 
 def configure():
     conf(
@@ -42,4 +42,3 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("CHANGES", "README")
-

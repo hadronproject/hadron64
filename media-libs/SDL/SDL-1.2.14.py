@@ -24,7 +24,7 @@ X @ x11-proto/xextproto x11-proto/xproto
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
 
@@ -35,23 +35,23 @@ def configure():
     if not opt("pulseaudio-shared"):
         myconf += " --disable-pulseaudio-shared "
 
-	conf(
-	"--disable-rpath",
-	"--disable-arts",
-	"--disable-esd",
-	"--enable-events",
-	"--enable-cdrom",
-	"--enable-threads",
-	"--enable-timers",
-	"--enable-file",
-	"--enable-cpuinfo",
-	"--disable-esd-shared",
-	"--disable-arts-shared",
-	"--disable-nas-shared",
-	"--disable-osmesa-shared",
-	"--disable-video-x11-xme",
-	config_enable("alsa"),
-	config_enable("X", "video-x11"),
+        conf(
+        "--disable-rpath",
+        "--disable-arts",
+        "--disable-esd",
+        "--enable-events",
+        "--enable-cdrom",
+        "--enable-threads",
+        "--enable-timers",
+        "--enable-file",
+        "--enable-cpuinfo",
+        "--disable-esd-shared",
+        "--disable-arts-shared",
+        "--disable-nas-shared",
+        "--disable-osmesa-shared",
+        "--disable-video-x11-xme",
+        config_enable("alsa"),
+        config_enable("X", "video-x11"),
     config_enable("nas"),
     config_enable("pulseaudio"),
     config_enable("dga"),
@@ -65,5 +65,3 @@ def configure():
 def install():
     raw_install("DESTDIR=%s" % install_dir)
     insdoc("BUGS", "CREDITS", "README", "README-SDL.txt", "README.CVS", "TODO", "WhatsNew")
-
-

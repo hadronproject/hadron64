@@ -8,7 +8,7 @@ options @ doc ipv6
 """
 
 depends = """
-runtime @ sys-libs/glibc media-libs/freetype x11-libs/libfontenc x11-proto/xproto 
+runtime @ sys-libs/glibc media-libs/freetype x11-libs/libfontenc x11-proto/xproto
           x11-proto/fontsproto x11-libs/xtrans
 build @ x11-misc/util-macros x11-libs/xtrans
 """
@@ -25,5 +25,5 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

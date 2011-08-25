@@ -27,9 +27,9 @@ def configure():
     conf()
 
 def install():
-    
+
     raw_install("DESTDIR=%s/usr" % install_dir)
-    
+
     for bu in ("ip-down", "ip-down.d.dns.sh", "ip-up", "ip-up.d.dns.sh", "options"):
         insfile("%s/%s" % (filesdir, bu), "/etc/ppp/%s" % bu)
 

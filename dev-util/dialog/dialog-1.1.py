@@ -13,11 +13,11 @@ runtime @ sys-libs/glibc sys-libs/ncurses
 srcdir = "%s-20110302" % fullname
 
 def configure():
-	conf(
-	"--with-ncursesw --enable-nls")
+    conf(
+    "--with-ncursesw --enable-nls")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
 #hatali noluyu amq http://projects.archlinux.org/svntogit/packages.git/tree/dialog/trunk/PKGBUILD
 #install bölümüne bi el atılacak ayrıca

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glib x11-libs/cairo x11-libs/libXft dev-libs/libthai 
+runtime @ sys-libs/glib x11-libs/cairo x11-libs/libXft dev-libs/libthai
           media-libs/freetype
 
 build @ x11-libs/libXt
@@ -21,8 +21,8 @@ def build():
     make()
 
 def install():
-	export("HOME", build_dir)
-	raw_install("DESTDIR=%s" % install_dir)
+    export("HOME", build_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
 def post_install():
     system("/sbin/ldconfig -r / &>/dev/null")

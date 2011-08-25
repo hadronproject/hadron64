@@ -7,14 +7,14 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils 
+runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils
           sys-apps/findutils sys-apps/coreutils sys-apps/sed
 """
 
 import glob
 
 def install():
-    for i in ("/etc/ca-certificates/update.d", "/usr/sbin", 
+    for i in ("/etc/ca-certificates/update.d", "/usr/sbin",
             "/usr/share/ca-certificates", "/etc/ssl/certs"):
         makedirs(i)
 

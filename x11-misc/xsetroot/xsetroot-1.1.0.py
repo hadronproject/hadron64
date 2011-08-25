@@ -12,6 +12,5 @@ build @ x11-misc/util-macros x11-misc/xbitmaps
 """
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	insdoc("COPYING")
-
+    raw_install("DESTDIR=%s" % install_dir)
+    insdoc("COPYING")

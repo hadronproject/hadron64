@@ -15,7 +15,7 @@ def prepare():
 
 def install():
     raw_install("DESTDIR=%s ldconfig=/bin/true" % install_dir)
-    
+
     insfile("%s/sysctl.conf" % filesdir, "/etc/sysctl.conf")
-    
+
     insdoc("BUGS", "NEWS", "TODO", "ps/HACKING")

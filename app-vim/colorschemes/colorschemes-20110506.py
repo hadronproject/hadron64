@@ -18,4 +18,3 @@ def prepare():
 def install():
     cd("colors")
     insinto("*.vim", "/usr/share/vim/vimfiles/colors")
-

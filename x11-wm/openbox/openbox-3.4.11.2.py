@@ -8,7 +8,7 @@ options @ startup-notification nls
 """
 
 depends = """
-runtime @ dev-libs/libxml2 x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXcursor 
+runtime @ dev-libs/libxml2 x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXcursor
     media-libs/pango x11-libs/libXft x11-libs/libXt sys-libs/glib
 build @ dev-util/pkg-config x11-proto/xextproto x11-proto/xf86vidmodeproto x11-proto/xineramaproto
 """
@@ -19,15 +19,14 @@ nls @ sys-devel/gettext
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
-	conf(
-	"--with-x",
-    config_enable("startup-notification"),
-    config_enable("nls"),
-    "--sysconfdir=/etc")
+    conf(
+    "--with-x",
+config_enable("startup-notification"),
+config_enable("nls"),
+"--sysconfdir=/etc")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

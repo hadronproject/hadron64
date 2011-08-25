@@ -25,4 +25,3 @@ def build():
 
 def install():
     raw_install("INSTALL_PREFIX=%s MANDIR=%s install" % (install_dir, "/usr/share/man"))
-    

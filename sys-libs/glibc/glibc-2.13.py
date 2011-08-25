@@ -19,11 +19,11 @@ def configure():
     echo("slibdir=/lib", "configparms")
     conf("--enable-add-ons=nptl,libidn",
         "--enable-kernel=2.6.27",
-        "--with-tls", 
+        "--with-tls",
         "--with-__thread",
-        "--enable-bind-now", 
+        "--enable-bind-now",
         "--without-gd",
-        "--without-cvs", 
+        "--without-cvs",
         "--disable-profile",
         "--disable-multi-arch",
         run_dir = build_dir)
@@ -45,4 +45,3 @@ def install():
     #insfile("%s/gai.conf" % filesdir, "/etc/gai.conf")
 
     insfile("%s/locale.gen" % filesdir,  "/etc/locale.gen")
-

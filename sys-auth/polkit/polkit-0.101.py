@@ -26,5 +26,5 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insfile("%s/polkit.pam" % filesdir, "/etc/pam.d/polkit-1")

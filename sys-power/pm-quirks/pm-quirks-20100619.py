@@ -14,4 +14,3 @@ def install():
     makedirs("/usr/lib/pm-utils/video-quirks")
 
     insinto("*.quirkdb", "/usr/lib/pm-utils/video-quirks")
-

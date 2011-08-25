@@ -8,7 +8,7 @@ options @ debug
 """
 
 depends = """
-runtime @ xfce-base/libxfce4ui dev-util/desktop-file-utils 
+runtime @ xfce-base/libxfce4ui dev-util/desktop-file-utils
           x11-themes/hicolor-icon-theme media-libs/libexif
 """
 

@@ -13,9 +13,9 @@ runtime @ sys-devel/gcc
 def configure():
     cd("build_unix")
     conf("--enable-compat185",
-        "--enable-shared", 
-        "--enable-static", 
-        "--enable-cxx", 
+        "--enable-shared",
+        "--enable-static",
+        "--enable-cxx",
         "--enable-dbm",
         run_dir=joinpath(build_dir, "dist"))
 

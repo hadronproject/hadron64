@@ -19,19 +19,19 @@ tcpd @ sys-apps/tcp-wrappers
 """
 
 def configure():
-    raw_configure("--prefix=/usr", 
+    raw_configure("--prefix=/usr",
     "--libexecdir=/usr/lib/ssh",
-	"--sysconfdir=/etc/ssh --with-privsep-user=nobody",
-	"--with-md5-passwords --with-pam --with-mantype=man --mandir=/usr/share/man",
-	"--with-xauth=/usr/bin/xauth --with-ssl-engine",
-	"--disable-strip",
-	config_with("libedit"),
-	config_with("tcpd", "tcp-wrappers"))
+        "--sysconfdir=/etc/ssh --with-privsep-user=nobody",
+        "--with-md5-passwords --with-pam --with-mantype=man --mandir=/usr/share/man",
+        "--with-xauth=/usr/bin/xauth --with-ssl-engine",
+        "--disable-strip",
+        config_with("libedit"),
+        config_with("tcpd", "tcp-wrappers"))
 
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insexe("%s/sshd" % filesdir, "/etc/rc.d/sshd")
     system("mkdir -p %s/etc/conf.d %s/etc/pam.d" % (install_dir, install_dir))
     insfile("%s/sshd.confd" % filesdir, "/etc/conf.d/sshd")

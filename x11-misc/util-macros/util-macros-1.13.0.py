@@ -8,8 +8,7 @@ arch @ ~x86
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
-    makedirs("/usr/lib")
-    
-    move("%s/usr/share/pkgconfig" % install_dir, "/usr/lib")
 
+    makedirs("/usr/lib")
+
+    move("%s/usr/share/pkgconfig" % install_dir, "/usr/lib")

@@ -11,6 +11,6 @@ runtime @ sys-libs/glib
 """
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

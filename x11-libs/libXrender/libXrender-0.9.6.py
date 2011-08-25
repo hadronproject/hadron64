@@ -13,10 +13,10 @@ runtime @ x11-proto/renderproto x11-libs/libX11
 #srcdir = "libXrender-%s" % version
 
 def configure():
-	conf(
-	"--prefix=/usr --disable-static")
+    conf(
+    "--prefix=/usr --disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-apps/util-linux 
+runtime @ sys-apps/util-linux
 build @ sys-apps/util-linux
 """
 

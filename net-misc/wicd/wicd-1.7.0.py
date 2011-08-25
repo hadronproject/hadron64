@@ -23,8 +23,8 @@ libnotify @ dev-python/notify-python
 """
 
 def prepare():
-	patch("wicd-scripts-execution.patch")
-	patch("deepcopy+python27-fixes.patch", level=1)
+    patch("wicd-scripts-execution.patch")
+    patch("deepcopy+python27-fixes.patch", level=1)
 
 def configure():
     myconf = ""
@@ -50,16 +50,16 @@ def configure():
     pass
 
 def build():
-	system("python2 setup.py build")
-	pass
+    system("python2 setup.py build")
+    pass
 
 def install():
-	system("python setup.py install --optimize=1 --root=%s" % install_dir)
-	
-	insexe("%s/wicd-daemon" % filesdir, "/etc/rc.d/wicd")
-	insinto("%s/build/lib/wicd/*.py" % build_dir, "/usr/lib/wicd/")
+    system("python setup.py install --optimize=1 --root=%s" % install_dir)
 
-	makesym("/usr/bin/python2.7", "/usr/bin/python2")
+    insexe("%s/wicd-daemon" % filesdir, "/etc/rc.d/wicd")
+    insinto("%s/build/lib/wicd/*.py" % build_dir, "/usr/lib/wicd/")
+
+    makesym("/usr/bin/python2.7", "/usr/bin/python2")
 
 def post_install():
     notify("You may need to restart the dbus service after upgrading wicd.")

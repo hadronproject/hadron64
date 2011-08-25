@@ -11,11 +11,10 @@ runtime @ sys-libs/glibc >dev-libs/libgpg-error-1.9
 """
 
 def configure():
-	conf(
-	"--prefix=/usr",
-	"--disable-static",
-	"--disable-padlock-support")
+    conf(
+    "--prefix=/usr",
+    "--disable-static",
+    "--disable-padlock-support")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

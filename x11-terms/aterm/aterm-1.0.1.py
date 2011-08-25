@@ -11,11 +11,10 @@ runtime @ sys-libs/glibc x11-libs/libXext x11-libs/libSM
 """
 
 def configure():
-	conf(
-	"--enable-transparency=yes \
-	--enable-background-image --enable-fading --enable-menubar \
-	--enable-graphics")
+    conf(
+    "--enable-transparency=yes \
+    --enable-background-image --enable-fading --enable-menubar \
+    --enable-graphics")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

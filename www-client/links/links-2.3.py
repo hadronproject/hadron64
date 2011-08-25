@@ -14,10 +14,10 @@ build @ media-libs/tiff media-libs/libpng x11-libs/libXt
 srcdir = "links-2.3pre2"
 
 def configure():
-	conf("--enable-javascript",
-	        "--disable-graphics", 
-	        "--without-x",  
-	        "--without-fb")
+    conf("--enable-javascript",
+            "--disable-graphics",
+            "--without-x",
+            "--without-fb")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

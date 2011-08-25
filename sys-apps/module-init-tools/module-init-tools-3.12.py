@@ -6,7 +6,7 @@ src_url @ http://www.kernel.org/pub/linux/utils/kernel/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
-depends = """ 
+depends = """
 runtime @ sys-libs/glibc
 """
 
@@ -22,4 +22,3 @@ def install():
     makedirs("/etc/modprobe.d")
     insfile("%s/modprobe.conf" % filesdir, "/etc/modprobe.d/modprobe.conf")
     insinto("%s/*" % filesdir, "/etc/modprobe.d")
-

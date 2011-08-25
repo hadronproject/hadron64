@@ -1,8 +1,8 @@
 metadata = """
-summary @ XviD is an open source MPEG-4 video codec 
-homepage @ http://www.xvid.org/ 
-license @ GPL 
-src_url @ http://downloads.xvid.org/downloads/$name-$version.tar.bz2 
+summary @ XviD is an open source MPEG-4 video codec
+homepage @ http://www.xvid.org/
+license @ GPL
+src_url @ http://downloads.xvid.org/downloads/$name-$version.tar.bz2
 arch @ ~x86
 options @ threads pic
 """
@@ -24,12 +24,11 @@ def configure():
     config_enable("threads", "pthread"), myconf)
 
 def build():
-	cd("build/generic")
-	make()	
+    cd("build/generic")
+    make()
 
 def install():
-	cd("build/generic")
-	raw_install("DESTDIR=%s" % install_dir)
+    cd("build/generic")
+    raw_install("DESTDIR=%s" % install_dir)
 
-#	insdoc("COPYING")
-
+#       insdoc("COPYING")

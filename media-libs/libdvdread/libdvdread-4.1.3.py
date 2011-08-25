@@ -16,11 +16,11 @@ css @ media-libs/libdvdcss
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
-	system("./autogen.sh --prefix=/usr")
-	pass
+    system("./autogen.sh --prefix=/usr")
+    pass
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

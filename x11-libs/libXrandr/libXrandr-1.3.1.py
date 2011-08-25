@@ -14,6 +14,6 @@ build @ x11-misc/util-macros
 #srcdir = "libXrandr-%s" % version
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

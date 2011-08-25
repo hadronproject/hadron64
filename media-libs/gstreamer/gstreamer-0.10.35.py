@@ -12,17 +12,16 @@ build @ dev-util/intltool
 """
 
 def configure():
-	conf(
-	'--prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib \
-    --with-package-name="GStreamer (Hadron GNU/Linux)" \
-    --with-package-origin="http://www.hadronproject.org/" \
-    --disable-gtk-doc --disable-static')
+    conf(
+    '--prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib \
+--with-package-name="GStreamer (Hadron GNU/Linux)" \
+--with-package-origin="http://www.hadronproject.org/" \
+--disable-gtk-doc --disable-static')
 
 def build():
-	export("HOME", build_dir)
-	make()
+    export("HOME", build_dir)
+    make()
 
 def install():
-	export("HOME", build_dir)
-	raw_install("DESTDIR=%s" % install_dir)
-
+    export("HOME", build_dir)
+    raw_install("DESTDIR=%s" % install_dir)

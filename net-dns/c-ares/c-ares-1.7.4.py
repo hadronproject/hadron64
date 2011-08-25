@@ -11,10 +11,10 @@ runtime @ sys-libs/glibc
 """
 
 def configure():
-	conf(
-	"--enable-shared",
-    "--enable-nonblocking",
-    "--enable-symbol-hiding")
+    conf(
+    "--enable-shared",
+"--enable-nonblocking",
+"--enable-symbol-hiding")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

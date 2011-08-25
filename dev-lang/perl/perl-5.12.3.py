@@ -55,4 +55,3 @@ def install():
 
     makedirs("/etc/ld.so.conf.d")
     echo("/usr/lib/perl5/core_perl/CORE", "%s/etc/ld.so.conf.d/perl.conf" % install_dir)
-

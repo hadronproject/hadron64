@@ -21,7 +21,7 @@ def configure():
     myconf = ""
     if not opt("zlib"):
         myconf += " --without-zlib "
-    
+
     conf(
     config_enable("nls"),
     config_enable("xmp"), myconf)

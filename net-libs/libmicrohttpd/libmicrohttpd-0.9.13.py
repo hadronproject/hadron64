@@ -9,7 +9,7 @@ arch @ ~x86
 
 depends = """
 build @ net-misc/curl
-runtime @ net-misc/curl 
+runtime @ net-misc/curl
 """
 
 opt_build = """
@@ -31,4 +31,3 @@ def configure():
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
     insdoc("AUTHORS","NEWS","README","ChangeLog")
-    

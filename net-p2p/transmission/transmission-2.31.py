@@ -1,14 +1,14 @@
 metadata = """
 summary @ Fast, easy, and free BitTorrent client
-homepage @ http://www.transmissionbt.com/ 
-license @ MIT 
-src_url @ http://mirrors.m0k.org/transmission/files/$name-$version.tar.bz2 
+homepage @ http://www.transmissionbt.com/
+license @ MIT
+src_url @ http://mirrors.m0k.org/transmission/files/$name-$version.tar.bz2
 arch @ ~x86
 options @ gtk libnotify libcanberra utp qt nls
 """
 
 depends = """
-runtime @ dev-libs/dbus-glib dev-libs/libevent net-misc/curl dev-util/intltool 
+runtime @ dev-libs/dbus-glib dev-libs/libevent net-misc/curl dev-util/intltool
 build @ sys-devel/gettext dev-util/intltool dev-util/pkg-config sys-apps/sed
 """
 
@@ -21,13 +21,13 @@ nls @ sys-devel/gettext dev-util/intltool
 """
 
 def configure():
-	conf(
-	" --disable-gconf2",
-	config_enable("gtk"),
-	config_enable("utp"),
-	config_enable("libcanberra"),
-	config_enable("libnotify"),
-	config_enable("nls"))
+    conf(
+    " --disable-gconf2",
+    config_enable("gtk"),
+    config_enable("utp"),
+    config_enable("libcanberra"),
+    config_enable("libnotify"),
+    config_enable("nls"))
 
 def build():
     make()
@@ -59,4 +59,3 @@ def post_install():
 
     if opt("gtk") or opt("qt"):
         system("update-desktop-database -q")
-

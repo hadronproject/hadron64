@@ -1,7 +1,7 @@
 metadata = """
 summary @ Plugins for Audacious
 homepage @ http://audacious-media-player.org/
-license @ GPL
+license @ GPL3
 src_url @ http://distfiles.atheme.org/$fullname.tar.bz2
 arch @ ~x86
 options @ aac alsa aqua cdda cue ffmpeg flac gnome ipv6 lame libnotify libsamplerate mp3 nls scrobbler sndfile sse2 vorbis wavpack

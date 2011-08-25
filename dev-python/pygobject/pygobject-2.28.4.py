@@ -16,6 +16,5 @@ def prepare():
     autoreconf("-fi")
 
 def install():
-	linstall()
-	#raw_install("DESTDIR=%s" % install_dir)
-
+    linstall()
+    #raw_install("DESTDIR=%s" % install_dir)

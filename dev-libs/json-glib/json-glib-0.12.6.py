@@ -1,8 +1,8 @@
 metadata = """
-summary @ JSON library built on GLib 
-homepage @ http://live.gnome.org/JsonGlib 
-license @ GPL 
-src_url @ http://ftp.gnome.org/pub/GNOME/sources/$name/0.12/$name-$version.tar.bz2 
+summary @ JSON library built on GLib
+homepage @ http://live.gnome.org/JsonGlib
+license @ GPL
+src_url @ http://ftp.gnome.org/pub/GNOME/sources/$name/0.12/$name-$version.tar.bz2
 arch @ ~x86
 options @ introspection
 """
@@ -19,5 +19,5 @@ def configure():
     conf("--disable-gcov", config_enable("introspection"))
 
 def build():
-	export("HOME", build_dir)
-	make()
+    export("HOME", build_dir)
+    make()

@@ -1,6 +1,6 @@
 metadata = """
 summary @ rints out the capabilities of any video adaptors associated with the display that are accessible through the X-Video extension
-homepage @ http://xorg.freedesktop.org/ 
+homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/archive/individual/app/xvinfo-$version.tar.bz2
 arch @ ~x86
@@ -14,5 +14,5 @@ srcdir = "xvinfo-"+version
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

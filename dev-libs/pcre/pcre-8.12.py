@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 def configure():
-    conf("--enable-utf8", 
+    conf("--enable-utf8",
         "--enable-unicode-properties")
 
 def install():

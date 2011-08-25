@@ -11,4 +11,3 @@ depends = """
 runtime @ sys-libs/glibc app-shells/bash
 
 """
-

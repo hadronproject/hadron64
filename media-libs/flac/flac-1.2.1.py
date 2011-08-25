@@ -16,24 +16,24 @@ ogg @ media-libs/libogg
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
     conf(
     "--enable-shared",
     "--with-pic",
     "--disable-doxygen-docs",
-	"--disable-xmms-plugin ",
-	"--disable-dependency-tracking",
-	config_enable("static-libs", "static"),
-	config_enable("debug"),
-	config_enable("sse"),
-	config_enable("3dnow"),
-	config_enable("altivec"),
-	config_enable("cxx", "cpplibs"),
-	config_enable("ogg"))
+        "--disable-xmms-plugin ",
+        "--disable-dependency-tracking",
+        config_enable("static-libs", "static"),
+        config_enable("debug"),
+        config_enable("sse"),
+        config_enable("3dnow"),
+        config_enable("altivec"),
+        config_enable("cxx", "cpplibs"),
+        config_enable("ogg"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("AUTHORS", "README")

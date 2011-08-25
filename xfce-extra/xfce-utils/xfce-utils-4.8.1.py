@@ -16,7 +16,7 @@ dbus @ dev-libs/dbus-glib
 """
 
 def configure():
-    conf("--disable-static", 
+    conf("--disable-static",
             "--enable-dbus",
             "--disable-debug",
             "--with-vendor-info=Hadron",

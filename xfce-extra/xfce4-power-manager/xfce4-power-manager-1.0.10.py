@@ -8,7 +8,7 @@ options @ policykit debug
 """
 
 depends = """
-runtime @ xfce-base/xfce4-panel sys-power/upower sys-fs/udisks 
+runtime @ xfce-base/xfce4-panel sys-power/upower sys-fs/udisks
           x11-themes/hicolor-icon-theme gnome-base/librsvg x11-libs/libnotify
 """
 
@@ -20,7 +20,7 @@ def prepare():
     patch(level=1)
 
 def configure():
-    conf("--disable-network-manager", 
+    conf("--disable-network-manager",
             config_enable("policykit", "polkit"),
             "--enable-dpms",
             config_enable("debug"))

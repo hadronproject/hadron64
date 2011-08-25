@@ -37,6 +37,5 @@ def install():
     system("./genrpbindings")
     for bind in ("Ratpoison.pm", "ratpoison-cmd.el", "ratpoison.rb", "ratpoison.lisp", "ratpoison.py"):
         insfile(bind, "/usr/share/ratpoison/bindings/")
-    
-    insfile("%s/ratpoison.desktop" % filesdir, "/etc/X11/sessions/")
 
+    insfile("%s/ratpoison.desktop" % filesdir, "/etc/X11/sessions/")

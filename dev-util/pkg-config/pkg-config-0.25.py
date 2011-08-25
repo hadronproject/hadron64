@@ -9,5 +9,3 @@ arch @ ~x86
 depends = """
 runtime @ sys-libs/glibc
 """
-
-

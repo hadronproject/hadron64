@@ -16,13 +16,13 @@ ssl @ dev-libs/openssl
 """
 
 def configure():
-	conf(
-	"--with-proxy \
-    --sysconfdir=/etc \
-    --with-perl-lib=vendor",
-    config_enable("ipv6"),
-    config_enable("ssl"))
+    conf(
+    "--with-proxy \
+--sysconfdir=/etc \
+--with-perl-lib=vendor",
+config_enable("ipv6"),
+config_enable("ssl"))
 
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)

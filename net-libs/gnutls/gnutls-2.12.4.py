@@ -11,13 +11,12 @@ runtime @ sys-libs/glibc dev-libs/libtasn1 sys-apps/readline sys-libs/zlib dev-l
 """
 
 def configure():
-	conf(
-	"--prefix=/usr \
-	--with-zlib \
-	--with-libgcrypt \
-	--disable-static \
-	--disable-guile")
+    conf(
+    "--prefix=/usr \
+    --with-zlib \
+    --with-libgcrypt \
+    --disable-static \
+    --disable-guile")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

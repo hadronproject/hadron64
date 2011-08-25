@@ -31,7 +31,7 @@ def configure():
     myconf += " --with-crypto=gnutls"
 #    else:
 #        myconf += " --with-crypto=nss "
-            
+
     conf(
     "--disable-more-warnings",
     "--disable-static",

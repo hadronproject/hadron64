@@ -15,10 +15,10 @@ build @ x11-proto/resourceproto x11-proto/damageproto x11-proto/compositeproto
 #srcdir = "libXres-%s" % version
 
 def configure():
-	conf(
-	"--disable-static")
+    conf(
+    "--disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

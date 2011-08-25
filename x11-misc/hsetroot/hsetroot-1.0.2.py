@@ -10,4 +10,3 @@ depends = """
 runtime @ sys-libs/glibc media-libs/imlib2[X]
 build @ x11-proto/xproto
 """
-

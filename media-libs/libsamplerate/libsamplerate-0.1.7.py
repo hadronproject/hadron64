@@ -18,10 +18,10 @@ sndfile @ media-libs/libsndfile
 def configure():
     conf(
     "--disable-fftw",
-	config_enable("sndfile"),
-	"--disable-dependency-tracking")
+        config_enable("sndfile"),
+        "--disable-dependency-tracking")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("AUTHORS", "ChangeLog", "NEWS", "README")

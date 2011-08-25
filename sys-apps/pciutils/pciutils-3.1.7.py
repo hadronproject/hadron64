@@ -23,4 +23,3 @@ def install():
             IDSDIR="/usr/share/misc" \
             MANDIR="/usr/share/man" \
             install-lib' % install_dir)
-

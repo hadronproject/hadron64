@@ -32,8 +32,6 @@ def install():
         insfile("%s/%s" % (filesdir, i), "/etc/pam.d/%s" % i)
     insfile("etc/pam.d/groupmems", "/etc/pam.d/groupmems")
 
-    for x in ('chage', 'chfn', 'chsh', 'groupadd', 'groupdel', 'groupmod', 
+    for x in ('chage', 'chfn', 'chsh', 'groupadd', 'groupdel', 'groupmod',
             'shadow', 'useradd', 'usermod', 'userdel'):
         insfile("%s/defaults.pam" % filesdir, "/etc/pam.d/%s" % x)
-
-

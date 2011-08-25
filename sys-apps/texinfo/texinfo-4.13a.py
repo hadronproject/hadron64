@@ -7,7 +7,7 @@ options @ nls static
 """
 
 depends = """
-runtime @ sys-libs/ncurses sys-apps/findutils 
+runtime @ sys-libs/ncurses sys-apps/findutils
           app-arch/gzip
 """
 

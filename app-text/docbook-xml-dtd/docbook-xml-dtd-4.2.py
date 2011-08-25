@@ -24,9 +24,9 @@ def install():
 
 def post_install():
     system("/usr/bin/build-docbook-catalog")
-    
+
     system('/usr/bin/install-catalog --add /etc/sgml/xml-docbook-4.2.cat \
             /etc/sgml/sgml-docbook.cat')
-    
+
     system('/usr/bin/install-catalog --add /etc/sgml/xml-docbook-4.5.cat \
             /usr/share/sgml/docbook/xml-dtd-4.2/docbook.cat')

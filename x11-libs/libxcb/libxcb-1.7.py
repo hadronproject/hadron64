@@ -7,23 +7,23 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc x11-libs/libXdmcp x11-libs/libXau 
+runtime @ sys-libs/glibc x11-libs/libXdmcp x11-libs/libXau
           x11-proto/xcb-proto
 
 build @ dev-util/pkg-config dev-libs/libxslt dev-lang/python
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
-	libtoolize("--force --copy")
-	aclocal()
-	autoconf()
-	automake("--add-missing")
-	conf("--enable-xinput")
+    libtoolize("--force --copy")
+    aclocal()
+    autoconf()
+    automake("--add-missing")
+    conf("--enable-xinput")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

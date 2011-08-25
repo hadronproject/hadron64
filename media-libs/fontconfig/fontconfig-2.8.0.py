@@ -15,9 +15,9 @@ def prepare():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")
-    
+
 def post_install():
     notify("building fonts.cache")
     system("/usr/bin/fc-cache -r")

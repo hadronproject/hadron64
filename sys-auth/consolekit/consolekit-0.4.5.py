@@ -21,10 +21,9 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insexe("%s/pam-foreground-compat.ck" % filesdir,
             "/usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck")
 
-    insfile("%s/consolekit.logrotate" % filesdir, 
+    insfile("%s/consolekit.logrotate" % filesdir,
             "/etc/logrotate.d/consolekit/consolekit.logrotate")
-

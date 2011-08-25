@@ -8,7 +8,7 @@ options @ consolekit policykit debug udev
 """
 
 depends = """
-runtime @ xfce-base/xfce4-panel x11-libs/libSM x11-libs/libwnck 
+runtime @ xfce-base/xfce4-panel x11-libs/libSM x11-libs/libwnck
           x11-themes/hicolor-icon-theme x11-apps/iceauth gnome-base/libgnome-keyring gnome-base/gconf
 build @ dev-util/intltool
 """
@@ -37,12 +37,12 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     makedirs("/etc/polkit-1/localauthority")
     makedirs("/etc/polkit-1/localauthority/50-local.d")
 
-    insfile("%s/org.freedesktop.consolekit.pkla" % filesdir, 
+    insfile("%s/org.freedesktop.consolekit.pkla" % filesdir,
             "/etc/polkit-1/localauthority/50-local.d/org.freedesktop.consolekit.pkla")
 
-    insfile("%s/org.freedesktop.upower.pkla" % filesdir, 
+    insfile("%s/org.freedesktop.upower.pkla" % filesdir,
             "/etc/polkit-1/localauthority/50-local.d/org.freedesktop.upower.pkla")

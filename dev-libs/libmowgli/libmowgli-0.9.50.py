@@ -8,10 +8,10 @@ options @ examples
 """
 
 def configure():
-	conf(
-	config_enable("examples"))
+    conf(
+    config_enable("examples"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("AUTHORS", "README")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("AUTHORS", "README")

@@ -19,12 +19,12 @@ doc @ app-text/xmlto
 #srcdir = "libXaw-%s" % version
 
 def configure():
-	conf(
-	"--disable-static",
-	config_enable("doc", "specs"),
-	config_with("doc", "xmlto"))
+    conf(
+    "--disable-static",
+    config_enable("doc", "specs"),
+    config_with("doc", "xmlto"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

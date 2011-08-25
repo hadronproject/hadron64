@@ -11,10 +11,9 @@ runtime @ sys-libs/glibc sys-libs/zlib
 """
 
 #def prepare():
-#	patch(level=1)
+#       patch(level=1)
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
-    insdoc("LICENSE")
 
+    insdoc("LICENSE")

@@ -14,9 +14,9 @@ runtime @ media-libs/freetype
 opt_runtime = """
 tiff @ media-libs/tiff
 gif @ media-libs/giflib
-bzip2 @ app-arch/bzip2 
+bzip2 @ app-arch/bzip2
 X @ x11-libs/libXext x11-proto/xextproto
-png @ media-libs/libpng 
+png @ media-libs/libpng
 jpeg @ media-libs/jpeg
 mp3 @ media-libs/libid3tag
 zlib @ sys-libs/zlib
@@ -26,20 +26,19 @@ def prepare():
     patch()
 
 def configure():
-	conf(
-	"--prefix=/usr",
-	"--sysconfdir=/etc/imlib2",
-	"--x-libraries=/usr/lib",
-	"--disable-mmx",
-	config_with("X", "x"),
-	config_with("jpeg"),
-	config_with("png"),
-	config_with("tiff"),
-	config_with("gif"),
-	config_with("zlib"),
-	config_with("bzip2"),
-	config_with("mp3", "id3"))
+    conf(
+    "--prefix=/usr",
+    "--sysconfdir=/etc/imlib2",
+    "--x-libraries=/usr/lib",
+    "--disable-mmx",
+    config_with("X", "x"),
+    config_with("jpeg"),
+    config_with("png"),
+    config_with("tiff"),
+    config_with("gif"),
+    config_with("zlib"),
+    config_with("bzip2"),
+    config_with("mp3", "id3"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

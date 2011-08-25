@@ -17,10 +17,10 @@ def prepare():
     patch(level=1)
 
 def configure():
-    raw_configure("--prefix=/usr", 
-            "--sysconfdir=/etc", 
+    raw_configure("--prefix=/usr",
+            "--sysconfdir=/etc",
             "--localstatedir=/var",
-            "--libexecdir=/usr/lib/udisks", 
+            "--libexecdir=/usr/lib/udisks",
             "--disable-static",
             "--disable-gtk-doc",
             "--disable-man-pages")
@@ -28,4 +28,3 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-

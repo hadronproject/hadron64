@@ -12,5 +12,5 @@ runtime @ sys-libs/glibc
 
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
-    insdoc("AUTHORS", "ChangeLog", "FUTURES", "LIMITATIONS", 
+    insdoc("AUTHORS", "ChangeLog", "FUTURES", "LIMITATIONS",
             "NEWS", "PROBLEMS", "POSIX.STD", "README", "README_d/*.*")

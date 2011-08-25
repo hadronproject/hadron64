@@ -9,7 +9,7 @@ arch @ ~x86
 
 depends = """
 runtime @ x11-libs/gdk-pixbuf
-build @ x11-libs/gtk+ 
+build @ x11-libs/gtk+
 """
 
 def prepare():
@@ -24,7 +24,7 @@ def configure():
 def build():
     export("HOME", build_dir)
     make()
-    
+
 def install():
     export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)

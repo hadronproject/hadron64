@@ -13,10 +13,10 @@ runtime @ sys-libs/glibc x11-libs/libXext x11-proto/xf86dgaproto
 #srcdir = "libXxf86dga-%s" % version
 
 def configure():
-	conf(
-	"--disable-static")
+    conf(
+    "--disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

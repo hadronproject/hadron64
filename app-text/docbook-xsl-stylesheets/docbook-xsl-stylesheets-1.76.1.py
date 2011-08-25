@@ -17,11 +17,11 @@ standard_procedure = False
 def install():
     pkgroot = "/usr/share/sgml/docbook/xsl-stylesheets"
     #pkgroot="usr/share/xml/docbook/xsl-stylesheets-%s" % version
-    
+
     makedirs(pkgroot)
-    
+
     insinto("*", pkgroot)
-    insdoc("AUTHORS", "BUGS", "COPYING", "NEWS", "README", 
+    insdoc("AUTHORS", "BUGS", "COPYING", "NEWS", "README",
             "RELEASE-NOTES.txt", "TODO", "VERSION")
 
 def post_install():

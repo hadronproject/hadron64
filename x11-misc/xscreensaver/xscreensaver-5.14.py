@@ -8,7 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ x11-libs/libX11 x11-libs/libXmu x11-libs/libXxf86vm x11-libs/libXrandr x11-libs/libXxf86misc
-x11-libs/libXt x11-libs/libXext x11-libs/libXi x11-apps/appres media-libs/mesa sys-libs/pam 
+x11-libs/libXt x11-libs/libXext x11-libs/libXi x11-apps/appres media-libs/mesa sys-libs/pam
 >=dev-libs/libxml2-2.5 >=x11-libs/gtk+-2:2 >=gnome-base/libglade-1.9
 build @ sys-devel/bc
 """

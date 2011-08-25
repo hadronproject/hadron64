@@ -23,4 +23,3 @@ def post_install():
     system("mkfontdir /usr/share/fonts/freefonts")
     #    system("xset fp+ /usr/share/doc/freefonts-%s" % version)
 #    system("xset fp rehash")
-

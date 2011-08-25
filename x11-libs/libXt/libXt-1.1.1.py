@@ -14,10 +14,10 @@ build @ x11-misc/util-macros
 #srcdir = "libXt-%s" % version
 
 def configure():
-	conf(
-	"--disable-static")
+    conf(
+    "--disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

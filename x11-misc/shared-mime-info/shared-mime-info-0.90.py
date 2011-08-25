@@ -23,4 +23,3 @@ def build():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-

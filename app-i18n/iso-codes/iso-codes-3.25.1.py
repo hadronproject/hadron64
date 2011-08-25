@@ -12,4 +12,3 @@ runtime @ sys-libs/glibc
 
 def install():
     raw_install("pkgconfigdir=/usr/lib/pkgconfig DESTDIR=%s" % install_dir)
-

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-libs/expat app-arch/libarchive net-misc/curl 
+runtime @ dev-libs/expat app-arch/libarchive net-misc/curl
           x11-misc/shared-mime-info
 """
 

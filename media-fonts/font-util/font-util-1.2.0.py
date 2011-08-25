@@ -12,10 +12,10 @@ build @ x11-misc/util-macros
 """
 
 def configure():
-	conf(
-	"--with-mapdir=/usr/share/fonts/util --with-fontrootdir=/usr/share/fonts")
+    conf(
+    "--with-mapdir=/usr/share/fonts/util --with-fontrootdir=/usr/share/fonts")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

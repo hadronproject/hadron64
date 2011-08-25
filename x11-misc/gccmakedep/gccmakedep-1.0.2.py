@@ -9,4 +9,3 @@ arch @ ~x86
 depends = """
 runtime @ x11-proto/xproto
 """
-

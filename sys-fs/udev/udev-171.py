@@ -22,9 +22,9 @@ keymap @ dev-util/gperf
 #    patch(level=1)
 
 def configure():
-    raw_configure("--sysconfdir=/etc", 
+    raw_configure("--sysconfdir=/etc",
         "--sbindir=/sbin",
-        "--with-rootlibdir=/lib", 
+        "--with-rootlibdir=/lib",
         "--libexecdir=/lib/udev",
         "--with-systemdsystemunitdir=/lib/systemd/system",
         config_enable("introspection"),
@@ -47,7 +47,7 @@ def build():
 def install():
     export("HOME", build_dir)
     raw_install('DESTDIR=%s' % install_dir)
-    
+
     #insfile("%s/80-drivers.rules" % filesdir, "/lib/udev/rules.d/80-drivers.rules")
     insfile("%s/81-arch.rules" % filesdir, "/lib/udev/rules.d/81-arch.rules")
     for rule in ("11-media-by-label-auto-mount.rules",  "11-sd-cards-auto-mount.rules"):
@@ -60,9 +60,9 @@ def install():
         makedirs("/lib/udev/devices/%s" % d)
 
     makesym("/lib/udev/scsi_id", "/sbin/scsi_id")
-    
+
     makedirs("/etc/udev/rules.d")
-    
+
     insdoc("COPYING", "ChangeLog", "README", "TODO", "extras/keymap/README.keymap.txt")
 
 def post_install():
@@ -72,10 +72,8 @@ def post_install():
 
     create_node("-m 0600 /lib/udev/devices/console c 5 1 &>/dev/null")
     create_node("-m 0660 /lib/udev/devices/loop0 b 7 0 &>/dev/null")
-    
+
     nodes = {"null": "1 3", "zero": "1 5", "kmsg": "1 11", "net/tun": "10 200",
             "fuse": "10 200", "ppp": "108 0"}
     for i in nodes:
         create_node("-m 0666 /lib/udev/devices/%s c %s &>/dev/null" % (i, nodes[i]))
-
-

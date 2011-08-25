@@ -15,16 +15,16 @@ runtime @ sys-libs/glibc sys-apps/coreutils sys-apps/module-init-tools
 
 def configure():
     raw_configure("--prefix=/usr",
-        "--sysconfdir=/etc", 
+        "--sysconfdir=/etc",
         "--sbindir=/sbin",
-        "--with-rootlibdir=/lib", 
-        "--libexecdir=/lib/udev", 
+        "--with-rootlibdir=/lib",
+        "--libexecdir=/lib/udev",
         "--disable-introspection",
         "--enable-extras")
 
 def install():
     raw_install('DESTDIR=%s' % install_dir)
-    
+
     insfile("%s/80-drivers.rules" % filesdir, "/lib/udev/rules.d/80-drivers.rules")
     insfile("%s/81-arch.rules" % filesdir, "/lib/udev/rules.d/81-arch.rules")
     insfile("%s/load-modules.sh" % filesdir, "/lib/udev/load-modules.sh")
@@ -34,19 +34,16 @@ def install():
         makedirs("/lib/udev/devices/%s" % d)
 
     makesym("/lib/udev/scsi_id", "/sbin/scsi_id")
-    
+
     makedirs("/etc/udev/rules.d")
-    
+
     insdoc("COPYING", "ChangeLog", "README", "TODO", "extras/keymap/README.keymap.txt")
 
 def post_install():
     system("mknod -m 0600 /lib/udev/devices/console c 5 1 &>/dev/null")
     system("mknod -m 0660 /lib/udev/devices/loop0 b 7 0 &>/dev/null")
-    
+
     nodes = {"null": "1 3", "zero": "1 5", "kmsg": "1 11", "net/tun": "10 200",
             "fuse": "10 200", "ppp": "108 0"}
     for i in nodes:
         system("mknod -m 0666 /lib/udev/devices/%s c %s &>/dev/null" % (i, nodes[i]))
-
-
-

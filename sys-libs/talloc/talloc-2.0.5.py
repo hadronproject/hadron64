@@ -14,6 +14,6 @@ build @ dev-lang/python
 """
 
 def configure():
-	raw_configure("--prefix=/usr --sysconfdir=/etc/samba \
-	   --localstatedir=/var \
-	   --enable-talloc-compat1")
+    raw_configure("--prefix=/usr --sysconfdir=/etc/samba \
+       --localstatedir=/var \
+       --enable-talloc-compat1")

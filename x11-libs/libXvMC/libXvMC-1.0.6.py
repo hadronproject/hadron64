@@ -12,11 +12,10 @@ build @ dev-util/pkg-config
 """
 
 def configure():
-	conf(
-	"--prefix=/usr --sysconfdir=/etc --disable-static")
+    conf(
+    "--prefix=/usr --sysconfdir=/etc --disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
-	insdoc("COPYING")
-
+    insdoc("COPYING")

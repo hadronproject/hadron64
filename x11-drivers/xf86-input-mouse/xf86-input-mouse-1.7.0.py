@@ -12,5 +12,5 @@ build @ x11-base/xorg-server
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

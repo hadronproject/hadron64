@@ -17,11 +17,11 @@ gnome @ gnome-base/gconf
 """
 
 def configure():
-	conf(
-	"--disable-kconfig",
-	config_enable("gnome", "gconf"))
+    conf(
+    "--disable-kconfig",
+    config_enable("gnome", "gconf"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("AUTHORS", "README", "TODO")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("AUTHORS", "README", "TODO")

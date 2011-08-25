@@ -13,4 +13,3 @@ build @ dev-util/pkg-config
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-

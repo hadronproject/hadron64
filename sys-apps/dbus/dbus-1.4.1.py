@@ -35,7 +35,7 @@ def configure():
 def install():
     raw_install('DESTDIR=%s' % install_dir)
 
-    for dirpath in ('/var/run/dbus', '/var/lib/dbus', 
+    for dirpath in ('/var/run/dbus', '/var/lib/dbus',
             '/usr/share/dbus-1/services'):
         makedirs(dirpath)
 
@@ -45,7 +45,7 @@ def install():
 
     insexe("%s/dbus" % filesdir, "/etc/rc.d/dbus")
 
-    insdoc("AUTHORS", "ChangeLog", "HACKING", "NEWS", 
+    insdoc("AUTHORS", "ChangeLog", "HACKING", "NEWS",
             "README", "doc/TODO", "doc/*.txt")
 
 def post_install():

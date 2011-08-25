@@ -1,8 +1,8 @@
 metadata = """
-summary @ Open source implementation of the Adaptive Multi Rate (AMR) speech codec 
-homepage @ http://opencore-amr.sourceforge.net/ 
-license @ APACHE 
-src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz 
+summary @ Open source implementation of the Adaptive Multi Rate (AMR) speech codec
+homepage @ http://opencore-amr.sourceforge.net/
+license @ APACHE
+src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
 arch @ ~x86
 """
 
@@ -16,7 +16,6 @@ def configure():
     "--disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
-	insdoc("AUTHORS", "ChangeLog", "README")
-
+    insdoc("AUTHORS", "ChangeLog", "README")

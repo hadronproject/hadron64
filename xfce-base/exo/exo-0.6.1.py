@@ -33,11 +33,11 @@ def configure():
 def build():
     export("PYTHONDONTWRITEBYTECODE", "1")
     make()
-    
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
 def post_install():
     system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")
-    
+
     system("/usr/bin/gio-querymodules /usr/lib/gio/modules")

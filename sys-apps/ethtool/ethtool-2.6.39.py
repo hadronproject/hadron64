@@ -11,9 +11,8 @@ runtime @ sys-libs/glibc
 """
 
 def configure():
-	conf(
-	"--prefix=/usr --mandir=/usr/share/man")
+    conf(
+    "--prefix=/usr --mandir=/usr/share/man")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

@@ -10,4 +10,4 @@ def configure():
     system("perl Makefile.PL PREFIX=/usr INSTALLDIRS=vendor DESTDIR=%s" % install_dir)
 
 def install():
-    raw_install("DESTDIR=%s" % install_dir) 
+    raw_install("DESTDIR=%s" % install_dir)

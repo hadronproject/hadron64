@@ -18,9 +18,9 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     makedirs("/usr/share/gconf/schemas")
-    
+
 
 def post_install():
     system('gconf-merge-schema "/usr/share/gconf/schemas/gnote.schemas" \

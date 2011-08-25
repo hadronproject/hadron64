@@ -18,10 +18,10 @@ def configure():
     conf()
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
-	system("./rtkit-daemon --introspect > org.freedesktop.RealtimeKit1.xml")
-	insfile("org.freedesktop.RealtimeKit1.xml", "/usr/share/dbus-1/interfaces/")
+    system("./rtkit-daemon --introspect > org.freedesktop.RealtimeKit1.xml")
+    insfile("org.freedesktop.RealtimeKit1.xml", "/usr/share/dbus-1/interfaces/")
 
 def post_install():
     system("groupadd rtkit &> /dev/null || true")

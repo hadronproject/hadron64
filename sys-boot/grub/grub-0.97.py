@@ -14,10 +14,10 @@ def prepare():
     patch(level=1)
 
 def configure():
-    raw_configure("--prefix=/usr", 
-            "--bindir=/bin", 
+    raw_configure("--prefix=/usr",
+            "--bindir=/bin",
             "--sbindir=/sbin",
-            "--mandir=/usr/share/man", 
+            "--mandir=/usr/share/man",
             "--infodir=/usr/share/info")
 
 def install():
@@ -25,4 +25,3 @@ def install():
 
     insfile("%s/menu.lst" % filesdir, "/boot/grub/menu.lst")
     insexe("%s/install-grub" % filesdir, "/sbin/install-grub")
-

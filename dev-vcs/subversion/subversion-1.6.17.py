@@ -71,7 +71,7 @@ def install():
     if opt("perl"):
         raw_install("DESTDIR=%s" % install_dir, "install-swig-pl")
 
-    
+
     insexe("%s/svnserve" % filesdir, "/etc/rc.d/svnserve")
     insfile("%s/svn" % filesdir,  "/etc/xinetd.d/svn")
     insfile("%s/svnserve.conf" % filesdir,  "/etc/conf.d/svnserve")
@@ -81,5 +81,3 @@ def install():
             "/etc/bash_completion.d/subversion")
 
     insdoc("COPYING", "README")
-
-

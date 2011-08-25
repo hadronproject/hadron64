@@ -16,13 +16,13 @@ nls @ sys-devel/gettext
 """
 
 def configure():
-	conf(
-	config_enable("nls"),
-	"--disable-dependency-tracking")
+    conf(
+    config_enable("nls"),
+    "--disable-dependency-tracking")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
-	insdoc("AUTHORS")
+    insdoc("AUTHORS")
 
 #TODO add python option via cython package: http://gpo.zugaina.org/AJAX/Ebuild/2238441/View

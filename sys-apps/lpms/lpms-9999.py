@@ -31,7 +31,7 @@ def install():
     makedirs("etc/lpms")
     insinto("data/*", "/etc/lpms")
 
-    for directories in ('/var/db/lpms', '/var/cache/lpms/sources', 
+    for directories in ('/var/db/lpms', '/var/cache/lpms/sources',
             '/var/tmp/lpms', '/var/lib/lpms', '/var/tmp/merge-conf'):
         makedirs(directories)
 

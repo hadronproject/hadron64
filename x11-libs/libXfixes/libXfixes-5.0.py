@@ -18,5 +18,5 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

@@ -13,5 +13,5 @@ build @ media-libs/freeglut x11-libs/libXi x11-libs/libXmu media-libs/mesa
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYRIGHT")

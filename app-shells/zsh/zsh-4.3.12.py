@@ -25,10 +25,10 @@ def configure():
     "--enable-multibyte",
     "--enable-maildir-support",
     "--enable-function-subdirs",
-	config_enable("pcre"),
-	config_enable("caps", "cap"),
-	config_enable("gdbm"),
-	config_enable("maildir", "maildir-support"),
+        config_enable("pcre"),
+        config_enable("caps", "cap"),
+        config_enable("gdbm"),
+        config_enable("maildir", "maildir-support"),
     "--enable-zsh-secure-free",
     "--enable-etcdir=/etc/zsh",
     "--bindir=/bin",
@@ -39,6 +39,6 @@ def configure():
     "--enable-zshrc=/etc/zsh/zshrc", myconf)
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
-	insdoc("LICENCE", "META-FAQ", "NEWS", "README", "config.modules")
+    insdoc("LICENCE", "META-FAQ", "NEWS", "README", "config.modules")

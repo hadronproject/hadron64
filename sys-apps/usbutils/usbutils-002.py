@@ -16,8 +16,8 @@ def prepare():
     copy("%s/usb.ids-2011.04.14" % filesdir, "usb.ids")
 
 def configure():
-    raw_configure("--prefix=/usr", 
-            "--datadir=/usr/share/hwdata", 
+    raw_configure("--prefix=/usr",
+            "--datadir=/usr/share/hwdata",
             "--disable-zlib")
 
 def install():

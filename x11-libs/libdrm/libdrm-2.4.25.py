@@ -11,17 +11,17 @@ runtime @ sys-libs/glibc
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
-	autoreconf("--force --install")
-	conf(
-	"--prefix=/usr",
-	"--enable-udev",
-	"--enable-intel",
-	"--enable-radeon",
-	"--enable-vmwgfx-experimental-api",
-	"--enable-nouveau-experimental-api")
+    autoreconf("--force --install")
+    conf(
+    "--prefix=/usr",
+    "--enable-udev",
+    "--enable-intel",
+    "--enable-radeon",
+    "--enable-vmwgfx-experimental-api",
+    "--enable-nouveau-experimental-api")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)

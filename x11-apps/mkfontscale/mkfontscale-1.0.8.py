@@ -12,5 +12,5 @@ runtime @ sys-libs/glibc x11-libs/libfontenc media-libs/freetype
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

@@ -23,4 +23,3 @@ def configure():
 def install():
     raw_install("DESTDIR=%s" % install_dir)
     insfile("%s/nspr.pc.in" % filesdir, "/usr/lib/pkgconfig/nspr.pc")
-

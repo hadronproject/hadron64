@@ -12,5 +12,3 @@ def install():
     cd("backdrops")
     for suffix in ("png", "jpg"):
         insinto("*.%s" % suffix, "/usr/share/xfce4/backdrops")
-
-

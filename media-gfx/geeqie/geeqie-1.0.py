@@ -18,12 +18,11 @@ lcms @ media-libs/lcms
 """
 
 def configure():
-	export("CPPFLAGS", "-D_FILE_OFFSET_BITS=64")
-	conf(
-	"-disable-dependency-tracking",
-	config_enable("lcms"),
-	config_enable("exif", "exiv2"))
+    export("CPPFLAGS", "-D_FILE_OFFSET_BITS=64")
+    conf(
+    "-disable-dependency-tracking",
+    config_enable("lcms"),
+    config_enable("exif", "exiv2"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

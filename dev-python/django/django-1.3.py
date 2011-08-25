@@ -21,7 +21,3 @@ def install():
     insfile("extras/django_bash_completion", "/etc/bash_completion.d/django")
 
     insdoc("LICENSE")
-
-
-
-

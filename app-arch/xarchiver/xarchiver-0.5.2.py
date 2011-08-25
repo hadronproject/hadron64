@@ -12,7 +12,7 @@ build @ dev-util/intltool
 """
 
 def configure():
-    raw_configure("--prefix=/usr", 
+    raw_configure("--prefix=/usr",
             "--libexecdir=/usr/lib/xfce4")
 
 def install():
@@ -21,4 +21,3 @@ def install():
 def post_install():
     system("update-desktop-database -q")
     system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")
-

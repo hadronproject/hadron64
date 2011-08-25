@@ -19,5 +19,4 @@ def build():
     make(j=1)
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

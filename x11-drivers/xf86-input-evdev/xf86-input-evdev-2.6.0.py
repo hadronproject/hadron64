@@ -12,7 +12,7 @@ build @ x11-base/xorg-server
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insfile("%s/10-evdev.conf" % filesdir, "/etc/X11/xorg.conf.d/10-evdev.conf")
 
     insdoc("COPYING")

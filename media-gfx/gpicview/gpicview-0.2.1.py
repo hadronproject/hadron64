@@ -10,5 +10,3 @@ depends = """
 runtime @ x11-libs/gtk+
 build @ dev-util/pkg-config dev-util/intltool
 """
-
-

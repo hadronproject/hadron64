@@ -12,5 +12,5 @@ runtime @ x11-misc/util-macros
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

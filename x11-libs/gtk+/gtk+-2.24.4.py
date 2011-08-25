@@ -8,12 +8,12 @@ options @ xinerama
 """
 
 depends = """
-build @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr 
-        x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo 
+build @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
+        x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo
         x11-libs/gdk-pixbuf
 
-runtime @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr 
-          x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo 
+runtime @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
+          x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo
           x11-libs/gdk-pixbuf
 """
 
@@ -42,4 +42,3 @@ def install():
 
 def post_install():
     system("/usr/bin/gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules")
-

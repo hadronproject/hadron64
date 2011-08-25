@@ -12,10 +12,9 @@ build @ sys-devel/flex
 """
 
 def configure():
-	system("./autogen.sh --prefix=/usr",
-	config_enable("static-libs", "static"))
-	pass
+    system("./autogen.sh --prefix=/usr",
+    config_enable("static-libs", "static"))
+    pass
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

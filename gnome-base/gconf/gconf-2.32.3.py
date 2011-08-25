@@ -50,7 +50,6 @@ def install():
 
 def post_install():
     system("ldconfig -r /")
-    
+
     system("chmod 755 /etc/gconf/gconf.xml.system")
     system("/usr/bin/gio-querymodules /usr/lib/gio/modules")
-

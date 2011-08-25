@@ -15,6 +15,5 @@ def install():
     insfile("%s/anything" % filesdir, "/etc/acpi/events/anything")
     insexe("%s/handler.sh" % filesdir, "/etc/acpi/handler.sh")
     insfile("%s/acpid.conf.d" % filesdir, "/etc/conf.d/acpid")
-    
-    raw_install("DESTDIR=%s" % install_dir)
 
+    raw_install("DESTDIR=%s" % install_dir)

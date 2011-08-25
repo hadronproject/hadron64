@@ -5,5 +5,3 @@ license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/proto/$fullname.tar.bz2
 arch @ ~x86
 """
-
-

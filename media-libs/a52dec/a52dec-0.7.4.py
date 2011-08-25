@@ -1,7 +1,7 @@
 metadata = """
-summary @ A free library for decoding ATSC A/52 streams 
-homepage @ http://liba52.sourceforge.net/ 
-license @ GPL2 
+summary @ A free library for decoding ATSC A/52 streams
+homepage @ http://liba52.sourceforge.net/
+license @ GPL2
 src_url @ http://liba52.sourceforge.net/files/$name-$version.tar.gz
 arch @ ~x86
 options @ djbfft static-libs

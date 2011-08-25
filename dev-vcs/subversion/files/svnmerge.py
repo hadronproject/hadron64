@@ -352,7 +352,7 @@ class PathIdentifier:
     about it before we know the form that it takes in the properties (its
     external_form).  Objects are referenced in the class variable 'locobjs',
     keyed by all known forms."""
-    
+
     # a map of UUID (or None) to repository root URL.
     repo_hints = {}
 
@@ -1167,7 +1167,7 @@ def get_default_source(branch_target, branch_props):
         err_msg += "Explicit source argument (-S/--source) required.\n"
         err_msg += "The merge sources available are:"
         for prop in props:
-          err_msg += "\n  " + str(prop)
+            err_msg += "\n  " + str(prop)
         error(err_msg)
 
     return props.keys()[0]

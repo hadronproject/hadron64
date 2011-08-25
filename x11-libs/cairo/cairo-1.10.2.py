@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ media-libs/libpng x11-libs/libXrender media-libs/fontconfig  
+runtime @ media-libs/libpng x11-libs/libXrender media-libs/fontconfig
           x11-libs/pixman sys-libs/glib media-libs/freetype sys-libs/zlib
 
 """
@@ -22,4 +22,3 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-

@@ -11,12 +11,12 @@ runtime @ sys-libs/glib dev-util/intltool
 """
 
 def configure():
-	conf(
-	"--libexecdir=/usr/lib \
-	--localstatedir=/var \
-	--disable-static \
-	--disable-gtk-doc \
-	--disable-debug")
+    conf(
+    "--libexecdir=/usr/lib \
+    --localstatedir=/var \
+    --disable-static \
+    --disable-gtk-doc \
+    --disable-debug")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)

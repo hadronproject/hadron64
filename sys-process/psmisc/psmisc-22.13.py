@@ -10,4 +10,3 @@ def install():
     raw_install("DESTDIR=%s install" % install_dir)
     move("%s/usr/bin/killall" % install_dir, "/bin/killall")
     move("%s/usr/bin/fuser" % install_dir, "/bin/fuser")
-

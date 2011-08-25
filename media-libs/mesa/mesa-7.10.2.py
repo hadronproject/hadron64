@@ -7,11 +7,11 @@ arch @ ~x86
 """
 
 depends = """
-build @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes 
+build @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes
         x11-libs/libXxf86vm x11-libs/libdrm sys-libs/talloc x11-proto/dri2proto
         x11-proto/glproto x11-libs/libXt x11-misc/makedepend
 
-runtime @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes 
+runtime @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes
         x11-libs/libXxf86vm x11-libs/libdrm sys-libs/talloc
         x11-proto/glproto x11-libs/libXt x11-misc/makedepend
 """
@@ -40,24 +40,24 @@ def configure():
 
     #autoreconf("-vif")
     #conf("--enable-pic \
-	#    --disable-xcb \
-	#    --enable-glx-tls \
-	#    --disable-gl-osmesa \
-	#    --disable-egl \
-	#    --disable-glw \
-	#    --disable-glut \
-	#    --enable-gallium \
-	#    --enable-gallium-llvm \
-	#    --disable-gallium-svga \
-	#    --disable-gallium-i915 \
-	#    --disable-gallium-i965 \
-	#    --enable-gallium-radeon \
-	#    --enable-gallium-r600 \
-	#    --enable-gallium-nouveau \
-	#    --with-driver=dri \
-	#    --with-dri-driverdir=/usr/lib/xorg/modules/dri \
-	#    --with-dri-drivers=i810,i915,i965,mach64,nouveau,r128,r200,r600,radeon,sis,tdfx \
-	#    --with-state-trackers=dri,glx")
+        #    --disable-xcb \
+        #    --enable-glx-tls \
+        #    --disable-gl-osmesa \
+        #    --disable-egl \
+        #    --disable-glw \
+        #    --disable-glut \
+        #    --enable-gallium \
+        #    --enable-gallium-llvm \
+        #    --disable-gallium-svga \
+        #    --disable-gallium-i915 \
+        #    --disable-gallium-i965 \
+        #    --enable-gallium-radeon \
+        #    --enable-gallium-r600 \
+        #    --enable-gallium-nouveau \
+        #    --with-driver=dri \
+        #    --with-dri-driverdir=/usr/lib/xorg/modules/dri \
+        #    --with-dri-drivers=i810,i915,i965,mach64,nouveau,r128,r200,r600,radeon,sis,tdfx \
+        #    --with-state-trackers=dri,glx")
 
 def build():
     export("PYTHONDONTWRITEBYTECODE", "1")
@@ -65,4 +65,3 @@ def build():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-	

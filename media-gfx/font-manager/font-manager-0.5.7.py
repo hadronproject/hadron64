@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-lang/python dev-python/pygtk dev-python/pygobject 
+runtime @ dev-lang/python dev-python/pygtk dev-python/pygobject
           dev-python/py2cairo dev-libs/libxml2 media-libs/fontconfig
           media-libs/freetype dev-db/sqlite
 build @ dev-lang/python

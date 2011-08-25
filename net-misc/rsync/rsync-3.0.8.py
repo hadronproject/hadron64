@@ -13,7 +13,7 @@ runtime @ sys-apps/acl
 def configure():
     system("prepare-source")
     conf("--with-included-popt",
-            "--enable-acl-support", 
+            "--enable-acl-support",
             "--enable-xattr-support")
 
 def install():
@@ -22,4 +22,3 @@ def install():
     insexe("%s/rsyncd"  % filesdir, "/etc/rc.d/rsyncd")
     insfile("%s/rsyncd.conf" % filesdir, "/etc/rsyncd.conf")
     insfile("%s/rsync.xinetd" % filesdir, "/etc/xinetd.d/rsync")
-

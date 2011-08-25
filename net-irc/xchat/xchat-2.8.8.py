@@ -26,21 +26,20 @@ perl @ dev-lang/perl
 """
 
 def configure():
-	conf(
-	config_enable("mmx"),
-    config_enable("perl"),
-	config_enable("dbus"),
-	config_enable("python"),
-	config_enable("spell"),
-	config_enable("spell", "gtkspell"),
-	config_enable("tcl"),
-	config_enable("gtk", "gtkfe"),
-	config_enable("fastscroll", "xft"),
-	config_enable("ssl", "openssl"), 
-	config_enable("dbus"),
-	config_enable("ipv6"),
-	"--enable-shm")
+    conf(
+    config_enable("mmx"),
+config_enable("perl"),
+    config_enable("dbus"),
+    config_enable("python"),
+    config_enable("spell"),
+    config_enable("spell", "gtkspell"),
+    config_enable("tcl"),
+    config_enable("gtk", "gtkfe"),
+    config_enable("fastscroll", "xft"),
+    config_enable("ssl", "openssl"),
+    config_enable("dbus"),
+    config_enable("ipv6"),
+    "--enable-shm")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

@@ -16,4 +16,3 @@ def prepare():
 def install():
     linstall()
     insfile(joinpath(filesdir, "lex.sh"), "/usr/bin/lex")
-

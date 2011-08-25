@@ -11,12 +11,11 @@ runtime @ sys-libs/glibc sys-apps/texinfo
 """
 
 #def configure():
-#	conf(
-#	'./configure --prefix=/usr \
+#       conf(
+#       './configure --prefix=/usr \
 #      --with-packager=Archlinux \
 #      --with-packager-bug-reports="http://hadronproject.org/" \
 #      --with-packager-version=$version')
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

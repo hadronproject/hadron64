@@ -7,7 +7,7 @@ options @ net nls afs mem-scramble plugins
 arch @ ~x86
 """
 depends = """
-build @ sys-libs/ncurses 
+build @ sys-libs/ncurses
 runtime @ sys-libs/ncurses
 """
 
@@ -42,10 +42,10 @@ def build():
 def install():
     if opt("plugins"):
         make("-C examples/loadables all others")
-    
+
     # install bash
     raw_install("DESTDIR=%s install" % install_dir)
-    
+
     # postinstall
     makedirs("/bin")
     move("%s/usr/bin/bash" % install_dir, "/bin/bash")

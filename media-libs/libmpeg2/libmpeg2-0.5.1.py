@@ -18,16 +18,16 @@ X @ x11-proto/xextproto
 """
 
 def configure():
-	conf(
-	"--enable-shared",
-	"--disable-dependency-tracking",
-	config_enable("X", "x"),
-	config_enable("sdl"))
+    conf(
+    "--enable-shared",
+    "--disable-dependency-tracking",
+    config_enable("X", "x"),
+    config_enable("sdl"))
 
 def build():
-	make('OPT_CFLAGS="${CFLAGS}" \
-	MPEG2DEC_CFLAGS="${CFLAGS}" \
-	LIBMPEG2_CFLAGS=""')
+    make('OPT_CFLAGS="${CFLAGS}" \
+    MPEG2DEC_CFLAGS="${CFLAGS}" \
+    LIBMPEG2_CFLAGS=""')
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

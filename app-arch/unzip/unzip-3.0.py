@@ -26,4 +26,3 @@ def install():
     raw_install("-f unix/Makefile prefix=%s/usr INSTALL_PROGRAM='install'" % install_dir)
 
     insdoc("LICENSE")
-

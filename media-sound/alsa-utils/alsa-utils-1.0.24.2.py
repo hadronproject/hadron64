@@ -12,11 +12,11 @@ build @ app-text/xmlto
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
-	conf(
-	"--prefix=/usr --disable-xmlto")
+    conf(
+    "--prefix=/usr --disable-xmlto")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

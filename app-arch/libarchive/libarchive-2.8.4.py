@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/zlib app-arch/bzip2 app-arch/xz sys-apps/acl 
+runtime @ sys-libs/zlib app-arch/bzip2 app-arch/xz sys-apps/acl
           dev-libs/openssl dev-libs/expat
 """
 
@@ -16,4 +16,3 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-

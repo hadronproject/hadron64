@@ -19,13 +19,13 @@ def configure():
 
 def build():
     make('LIBDJBFFT="libdjbfft.so.%s" LIBPERMS="0755"' % ver)
-    
+
 def install():
     insinto("libdjbfft.so.%s" % ver, "/usr/lib")
     makesym("/usr/lib/libdjbfft.so.%s" % ver,"/usr/lib/libdjbfft.so")
     makesym("/usr/lib/libdjbfft.so.%s" % ver,"/usr/lib/libdjbfft.so.0")
-    
+
     for header in ["fftc4.h", "complex4.h", "real4.h"]:
         insinto(header, "/usr/include")
-        
+
     insdoc("CHANGES","README","TODO")

@@ -18,16 +18,15 @@ alsa @ media-libs/alsa-lib
 
 def configure():
     conf(
-	config_enable("sqlite"),
-	config_enable("static-libs", "static"),
-	config_enable("alsa"),
-	"--enable-external-libs",
-	"--disable-octave",
-	"--disable-gcc-werror",
-	"--disable-gcc-pipe")
+        config_enable("sqlite"),
+        config_enable("static-libs", "static"),
+        config_enable("alsa"),
+        "--enable-external-libs",
+        "--disable-octave",
+        "--disable-gcc-werror",
+        "--disable-gcc-pipe")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("AUTHORS", "ChangeLog", "NEWS", "README")
-

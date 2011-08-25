@@ -22,8 +22,8 @@ def configure():
     config_enable("debug"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
 
 def post_install():
-	system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")
+    system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")

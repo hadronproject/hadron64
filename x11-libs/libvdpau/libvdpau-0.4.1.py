@@ -12,10 +12,10 @@ build @ x11-libs/libX11
 """
 
 def configure():
-	conf(
-	"--disable-dependency-tracking")
+    conf(
+    "--disable-dependency-tracking")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("AUTHORS", "ChangeLog")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("AUTHORS", "ChangeLog")

@@ -12,5 +12,5 @@ runtime @ sys-libs/glibc x11-apps/mkfontscale
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

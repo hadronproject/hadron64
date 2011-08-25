@@ -11,14 +11,14 @@ runtime @ dev-python/pygtk dev-util/desktop-file-utils
 """
 
 def configure():
-	pass
+    pass
 
 def build():
-	system("python setup.py build")
-	pass
+    system("python setup.py build")
+    pass
 
 def install():
-	system("python setup.py install --root=%s" % install_dir)
+    system("python setup.py install --root=%s" % install_dir)
 
 def post_install():
-	system("update-desktop-database -q")
+    system("update-desktop-database -q")

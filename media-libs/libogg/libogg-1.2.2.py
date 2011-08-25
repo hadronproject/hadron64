@@ -12,11 +12,11 @@ runtime @ sys-libs/glibc
 """
 
 def configure():
-	conf(
-	"--disable-dependency-tracking",
-	config_enable("static-libs", "static"))
+    conf(
+    "--disable-dependency-tracking",
+    config_enable("static-libs", "static"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("AUTHORS", "CHANGES")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("AUTHORS", "CHANGES")

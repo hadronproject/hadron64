@@ -14,14 +14,14 @@ runtime @ sys-libs/glibc
 srcdir = fullname+"b"
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 def configure():
     autoconf()
     conf(
     "--enable-fpm=intel",
-	"--enable-accuracy",
-	config_enable("debug", "debugging"))
+        "--enable-accuracy",
+        config_enable("debug", "debugging"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

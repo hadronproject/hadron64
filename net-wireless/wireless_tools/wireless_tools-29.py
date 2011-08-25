@@ -15,7 +15,7 @@ srcdir = name+"."+version
 def prepare():
     patch()
 
-def install(): 
+def install():
     raw_install('PREFIX=%s/usr \
             INSTALL_DIR="%s/usr/sbin" \
             INSTALL_LIB="%s/usr/lib" \

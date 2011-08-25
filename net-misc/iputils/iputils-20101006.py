@@ -20,6 +20,6 @@ def install():
     for a in ('ping', 'ping6'):
         insexe("%s/%s" % (build_dir, a), target="/bin/%s" % a)
 
-    for b in ("clockdiff", "arping", "rdisc", "tracepath", 
+    for b in ("clockdiff", "arping", "rdisc", "tracepath",
             "tracepath6", "traceroute6"):
         insexe("%s/%s" % (build_dir, b), target="/sbin/%s" % b)

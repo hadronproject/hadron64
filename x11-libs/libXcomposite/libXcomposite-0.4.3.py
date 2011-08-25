@@ -1,6 +1,6 @@
 metadata = """
 summary @ X11 Composite extension library
-homepage @ http://xorg.freedesktop.org/ 
+homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/libXcomposite-$version.tar.bz2
 arch @ ~x86
@@ -13,10 +13,10 @@ runtime @ x11-libs/libXfixes x11-proto/compositeproto
 #srcdir = "libXcomposite-%s" % version
 
 def configure():
-	conf(
-	"--disable-static")
+    conf(
+    "--disable-static")
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-	insdoc("COPYING")
+    raw_install("DESTDIR=%s" % install_dir)
+
+    insdoc("COPYING")

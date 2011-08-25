@@ -12,9 +12,8 @@ build @ sys-apps/gawk dev-util/pkg-config
 """
 
 def prepare():
-	patch(level=1)
+    patch(level=1)
 
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

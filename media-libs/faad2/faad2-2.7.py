@@ -1,7 +1,7 @@
 metadata = """
-summary @ ISO AAC audio decoder 
-homepage @ http://www.audiocoding.com/ 
-license @ custom:GPL 
+summary @ ISO AAC audio decoder
+homepage @ http://www.audiocoding.com/
+license @ custom:GPL
 src_url @ http://downloads.sourceforge.net/sourceforge/faac/$name-$version.tar.bz2
 arch @ ~x86
 options @ digitalradio static-libs

@@ -13,8 +13,8 @@ build @ sys-libs/gdbm sys-libs/libpipeline
 """
 
 def configure():
-    conf("--with-db=gdbm", 
-        "--disable-setuid", 
+    conf("--with-db=gdbm",
+        "--disable-setuid",
         "--enable-mandirs=GNU",
         '--with-sections="1 n l 8 3 0 2 5 4 9 6 7"')
 

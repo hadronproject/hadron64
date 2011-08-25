@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ app-text/rarian app-text/docbook-xml-dtd dev-libs/libxslt 
+runtime @ app-text/rarian app-text/docbook-xml-dtd dev-libs/libxslt
 build @ dev-util/pkg-config dev-util/intltool
 """
 
@@ -16,4 +16,3 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-

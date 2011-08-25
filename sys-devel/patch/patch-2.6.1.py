@@ -18,4 +18,3 @@ def build():
     if opt('static'):
         append-ldflags('-static')
     make()
-

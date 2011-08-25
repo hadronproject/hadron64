@@ -16,14 +16,14 @@ lcms @ media-libs/lcms
 """
 
 def configure():
-	makesym("makefiles/configure.in", "configure.in")
-	makesym("makefiles/Makefile.am", "Makefile.am")
-	autoreconf("-fi")
-	conf(
-	"--disable-dependency-tracking",
-	"--with-jpeg",
-	config_with("lcms"),
-    config_enable("static-libs", "static"))
+    makesym("makefiles/configure.in", "configure.in")
+    makesym("makefiles/Makefile.am", "Makefile.am")
+    autoreconf("-fi")
+    conf(
+    "--disable-dependency-tracking",
+    "--with-jpeg",
+    config_with("lcms"),
+config_enable("static-libs", "static"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

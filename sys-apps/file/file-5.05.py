@@ -22,5 +22,3 @@ def install():
     # install magic library
     cd("python")
     system("python setup.py install --root=%s --no-compile -O0" % install_dir)
-
-

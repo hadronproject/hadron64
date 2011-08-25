@@ -12,5 +12,5 @@ build @ dev-lang/python dev-libs/libxml2
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")

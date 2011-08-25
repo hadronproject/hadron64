@@ -20,6 +20,5 @@ def configure():
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
     makesym("/usr/bin/nano", "/bin/nano")
-    insdoc("ChangeLog*", "README", "doc/nanorc.sample", "AUTHORS", 
+    insdoc("ChangeLog*", "README", "doc/nanorc.sample", "AUTHORS",
             "BUGS", "NEWS", "TODO", "COPYING*", "THANKS", "UPGRADE")
-

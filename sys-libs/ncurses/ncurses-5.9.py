@@ -32,14 +32,14 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     for lib in ls("%s/usr/lib/*w.*" % install_dir):
         target = basename(lib).replace("w.", ".")
         makesym(basename(lib), joinpath("/usr/lib", target))
-        
+
     terminfo = ["ansi", "console", "dumb", "linux", "rxvt", "screen", "sun", \
             "vt52", "vt100", "vt102", "vt200", "vt220", "xterm", "xterm-color", "xterm-xfree86"]
-    
+
     for f in terminfo:
         termfile = f[0] + "/" + f
         if isexists("%s/usr/share/terminfo/%s" % (install_dir, termfile)):

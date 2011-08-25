@@ -30,4 +30,3 @@ def install():
 
 def post_install():
     system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")
-

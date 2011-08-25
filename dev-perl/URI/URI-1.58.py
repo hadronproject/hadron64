@@ -11,10 +11,8 @@ runtime @ dev-lang/perl
 """
 
 def configure():
-	system("perl Makefile.PL INSTALLDIRS=vendor")
-	pass
+    system("perl Makefile.PL INSTALLDIRS=vendor")
+    pass
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-	
-
+    raw_install("DESTDIR=%s" % install_dir)

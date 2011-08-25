@@ -17,12 +17,12 @@ doc @ app-doc/doxygen
 """
 
 def configure():
-	options = " "
-	if opt("doc"):
-		options += "--enable-doxygen=yes"
-	else:
-		options += "--enable-doxygen=no"
-	conf(
-	config_enable("debug"), options)
+    options = " "
+    if opt("doc"):
+        options += "--enable-doxygen=yes"
+    else:
+        options += "--enable-doxygen=no"
+    conf(
+    config_enable("debug"), options)
 
 #todo doc support

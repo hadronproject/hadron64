@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ xfce-base/xfce4-panel 
+runtime @ xfce-base/xfce4-panel
 build @ dev-util/intltool
 """
 

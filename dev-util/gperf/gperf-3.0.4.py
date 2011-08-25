@@ -11,5 +11,4 @@ runtime @ sys-libs/glibc sys-apps/texinfo
 """
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
-
+    raw_install("DESTDIR=%s" % install_dir)

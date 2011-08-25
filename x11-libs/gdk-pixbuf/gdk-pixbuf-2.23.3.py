@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc sys-libs/glib media-libs/libpng media-libs/tiff 
+runtime @ sys-libs/glibc sys-libs/glib media-libs/libpng media-libs/tiff
           media-libs/jpeg x11-libs/libX11
 """
 
@@ -24,7 +24,7 @@ def build():
 def install():
     export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)
-    
+
     insdoc("COPYING")
 
 def post_install():

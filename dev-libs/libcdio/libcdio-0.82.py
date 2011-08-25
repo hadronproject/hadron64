@@ -16,13 +16,13 @@ cddb @ media-libs/libcddb
 """
 
 def configure():
-	conf(
-	"--disable-vcd-info --enable-cpp-progs",
-	config_enable("static-libs", "static"),
-	config_enable("cddb"))
+    conf(
+    "--disable-vcd-info --enable-cpp-progs",
+    config_enable("static-libs", "static"),
+    config_enable("cddb"))
 
 def install():
-	raw_install("DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
 #def post_install():
-#	system("install-info /usr/share/info/libcdio.info.gz /usr/share/info/dir 2> /dev/null")
+#       system("install-info /usr/share/info/libcdio.info.gz /usr/share/info/dir 2> /dev/null")
