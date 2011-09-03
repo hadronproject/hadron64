@@ -35,9 +35,9 @@ def build():
     export("PKG_CONFIG_ALLOW_SYSTEM_CFLAGS", "1")
     export("NSPR_INCLUDE_DIR", "/usr/include/nspr")
 
-    make("-C mozilla/security/coreconf")
-    make("-C mozilla/security/dbm")
-    make("-C mozilla/security/nss")
+    make("-C mozilla/security/coreconf", j=1)
+    make("-C mozilla/security/dbm", j=1)
+    make("-C mozilla/security/nss", j=1)
 
 def install():
     cd("mozilla")
