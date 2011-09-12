@@ -28,6 +28,4 @@ def install():
 
     copytree("Greybird", "/usr/share/themes/Greybird")
 
-    cd("/usr/share/xfce4/backdrops")
-
-    makesym("../../backgrounds/Greybird.png", "Greybird.png")
+    makesym("/usr/share/backgrounds/Greybird.png", "/usr/share/xfce4/backdrops/Greybird.png")

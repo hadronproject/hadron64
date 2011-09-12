@@ -28,6 +28,4 @@ def install():
 
     copytree("Albatross", "/usr/share/themes/Albatross")
 
-    cd("/usr/share/xfce4/backdrops")
-
-    makesym("../../backgrounds/Albatross.png", "Albatross.png")
+    makesym("/usr/share/backgrounds/Albatross.png", "/usr/share/xfce4/backdrops/Albatross.png")
