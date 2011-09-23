@@ -40,6 +40,7 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
     insfile("%s/lxdm.pam" % filesdir, "/etc/pam.d/lxdm")
     insexe("%s/lxdm-daemon" % filesdir, "/etc/rc.d/lxdm")
+    makedirs("/var/run/lxdm")
 
 def post_install():
     system("sh %s/post_ins" % filesdir)
