@@ -1,0 +1,21 @@
+#!/bin/bash
+# make sure the group and user "lxdm" exist on this system and have the correct values
+if grep -q "^lxdm:" /etc/group &> /dev/null ; then
+  groupmod -g 121 -n lxdm lxdm &> /dev/null
+else
+  groupadd -g 121 lxdm &> /dev/null
+fi
+
+if grep -q "^lxdm:" /etc/passwd 2> /dev/null ; then
+  usermod -s /sbin/nologin -c "LXDE Display Manager user" -d /var/lib/lxdm -u 121 -g lxdm lxdm &> /dev/null
+else
+  useradd -s /sbin/nologin -c "LXDE Display Manager user" -d /var/lib/lxdm -u 121 -g lxdm -m -r lxdm &> /dev/null
+fi 
+passwd -l lxdm > /dev/null
+
+#  chown root:lxdm /etc/lxdm/{lxdm.conf,xinitrc} > /dev/null
+chown root:lxdm /etc/lxdm/lxdm.conf > /dev/null || /bin/true
+chown -R root:lxdm /var/lib/lxdm > /dev/null || /bin/true
+chown -R root:lxdm /var/run/lxdm > /dev/null || /bin/true
+
+
