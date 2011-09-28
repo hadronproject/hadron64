@@ -20,4 +20,5 @@ def prepare():
 
 def install():
     cd("initscripts")
-    system("DESTDIR=%s ./install.sh" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
+    #system("DESTDIR=%s ./install.sh" % install_dir)
