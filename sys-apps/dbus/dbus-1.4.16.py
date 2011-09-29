@@ -17,16 +17,17 @@ X @ x11-libs/libX11 x11-libs/libXt
 """
 
 def configure():
-    autoreconf("-vif")
+    #autoreconf("-vif")
     conf("--with-xml=expat \
-            --with-system-pid-file=/var/run/dbus/pid \
+            --with-system-pid-file=/var/run/dbus.pid \
             --with-system-socket=/var/run/dbus/system_bus_socket \
             --with-session-socket-dir=/tmp \
-            --with-dbus-user=messagebus \
+            --with-dbus-user=dbus \
             --disable-selinux \
             --disable-tests \
             --disable-doxygen-docs \
-            --disable-xml-docs",
+            --disable-xml-docs \
+            --enable-shared",
             config_with("X", "x"),
             config_enable("debug", "verbose-mode"),
             config_enable("debug", "asserts"),
@@ -49,7 +50,10 @@ def install():
             "README", "doc/TODO", "doc/*.txt")
 
 def post_install():
-    system("groupadd messagebus &> /dev/null || true")
-    system("useradd -d /var/run/dbus -g messagebus -s /bin/false messagebus &> /dev/null || true")
+    #FIXME: Python Python Python
+    system("getent group dbus >/dev/null || groupadd -g 81 dbus")
+    system("getent passwd dbus >/dev/null || useradd -c 'System message bus' -u 81 -g dbus -d '/' -s /bin/false dbus")
+    system("passwd -l dbus &>/dev/null")
+    system("dbus-uuidgen --ensure")
 
     notify("If somehow you're installing DBus first time, don't forget to add in DAEMONS section of rc.conf")
