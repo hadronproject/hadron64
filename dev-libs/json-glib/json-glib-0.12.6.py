@@ -8,7 +8,7 @@ options @ introspection
 """
 
 depends = """
-runtime @ >=sys-libs/glib-2.16:2
+runtime @ >=sys-libs/glib-2.16
 """
 
 opt_build = """
