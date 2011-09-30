@@ -2,7 +2,8 @@ metadata = """
 summary @ GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team
 homepage @ http://git-scm.com
 license @ GPL-2
-src_url @ http://kernel.org/pub/software/scm/git/$fullname.tar.bz2 http://kernel.org/pub/software/scm/git/git-manpages-$version.tar.bz2
+src_url @ http://git-core.googlecode.com/files/$fullname.tar.gz 
+man(http://git-core.googlecode.com/files/git-manpages-$version.tar.gz)
 options @ man
 arch @ ~x86
 """
