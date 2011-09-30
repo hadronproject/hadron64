@@ -47,7 +47,5 @@ def install():
         if isexists("%s/usr/lib/%s.so" % (install_dir, lib)):
             rmfile("/usr/lib/%s.so" % lib)
 
-    echo("INPUT ( /usr/lib/libbfd.a -liberty -lz )",
-            joinpath(install_dir, "usr/lib/libbfd.so"))
-    echo("INPUT ( /usr/lib/libopcodes.a -lbfd )",
-            joinpath(install_dir, "usr/lib/libopcodes.so"))
+    echo("INPUT ( /usr/lib/libbfd.a -liberty -lz )", "/usr/lib/libbfd.so")
+    echo("INPUT ( /usr/lib/libopcodes.a -lbfd )", "/usr/lib/libopcodes.so")
