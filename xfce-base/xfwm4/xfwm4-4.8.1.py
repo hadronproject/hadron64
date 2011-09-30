@@ -12,7 +12,7 @@ runtime @ xfce-base/libxfce4util xfce-base/libxfce4ui x11-libs/libwnck x11-theme
     xfce-base/xfconf dev-libs/glib x11-libs/gtk+ x11-libs/libICE x11-libs/libSM x11-libs/libX11
     x11-libs/libXext x11-libs/libXrandr x11-libs/libXrender x11-libs/pango
     x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes
-build @ dev-util/intltool dev-util/pkgconfig sys-devel/gettext
+build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
 """
 
 opt_runtime = """
