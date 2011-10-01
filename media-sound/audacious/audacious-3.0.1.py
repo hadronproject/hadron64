@@ -9,7 +9,8 @@ options @ altivec chardet nls session sse2
 
 depends = """
 runtime @ x11-libs/gtk+ dev-libs/libmcs dev-libs/dbus-glib dev-libs/libguess dev-util/desktop-file-utils
-        x11-themes/hicolor-icon-theme media-libs/pango x11-libs/cairo media-plugins/audacious-plugins
+        x11-themes/hicolor-icon-theme media-libs/pango x11-libs/cairo
+postmerge @ media-plugins/audacious-plugins
 """
 
 opt_runtime = """
