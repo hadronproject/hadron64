@@ -1,0 +1,32 @@
+metadata = """
+summary @ A collection of routines used to create PNG format graphics files (ver 1.2)
+homepage @ http://www.libpng.org/pub/png/libpng.html
+license @ custom
+src_url @ http://sourceforge.net/projects/libpng/files/libpng12/$version/libpng-$version.tar.gz
+http://garr.dl.sourceforge.net/project/libpng-apng/libpng-devel/1.5.4/libpng-1.5.4-apng.patch.gz
+options @ apng
+arch @ ~x86
+slot @ 12
+"""
+
+depends = """
+runtime @ sys-libs/glibc sys-libs/zlib
+"""
+
+def prepare():
+    if opt("apng"):
+        patch("libpng-1.5.4-apng.patch", level=1)
+        libtoolize()
+
+def build():
+    make("ECHO=echo")
+
+def install():
+    raw_install("DESTDIR=%s" % install_dir)
+    cd(install_dir)
+    system("rm -fr usr/share")
+    system("rm -fr usr/bin/libpng-config")
+    system("rm -rf usr/lib/{libpng.so,libpng.a}")
+    system("rm -fr usr/lib/pkgconfig/libpng.pc")
+    system("rm -rf usr/include/{pngconf.h,png.h}")
+
