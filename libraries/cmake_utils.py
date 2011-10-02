@@ -21,30 +21,85 @@ import glob
 import lpms
 
 # TODO:
-# enable/with functions will be implemented
-# http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/eclass/cmake-utils.eclass?view=markup
 # raw_install function needed.
-# configure function will be improved
 
-def cmake_utils_configure(*params, **kwargs):
-    installdir = kwargs.get("installdir", install_dir)
+def cmake_decide(function_name):
+    case = "".join(function_name.__name__.split("cmake_config_")).upper()
+    def wrapper(cmake_option):
+        if opt(cmake_option):
+            if case != "DISABLE":
+                return "-D"+case+"_"+cmake_option.upper()+"=ON"
+        return "-D"+case+"_"+cmake_option.upper()+"=OFF"
+    return wrapper
+
+@cmake_decide
+def cmake_config_enable(cmake_option):
+    '''Returns -DENABLE_FOO=ON option is enabled, else -DENABLE_FOO=OFF'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_with(cmake_option):
+    '''Returns -DWITH_FOO=ON option is enable, else -DWITH_FOO=OFF'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_disable(cmake_option):
+    '''Returns -DDISABLE_FOO=OFF option is enable, else -DDISABLE_FOO=ON'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_no(cmake_option):
+    '''Returns -DNO_FOO=OFF option is enable, else -DNO_FOO=ON'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_want(cmake_option):
+    '''Returns -DWANT_FOO=ON option is enable, else -DWANT_FOO=OFF'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_build(cmake_option):
+    '''Returns -DBUILD_FOO=ON option is enable, else -DBUILD_FOO=OFF'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_have(cmake_option):
+    '''Returns -DHAVE_FOO=ON option is enable, else -DHAVE_FOO=OFF'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config_use(cmake_option):
+    '''Returns -DUSE_FOO=ON option is enable, else -DUSE_FOO=OFF'''
+    return cmake_option
+
+@cmake_decide
+def cmake_config(cmake_option):
+    '''Returns -DFOO=ON option is enable, else -DFOO=OFF'''
+    return cmake_option
+
+def cmake_conf(*params, **kwargs):
     '''Configures the package with given parameters'''
+    installdir = kwargs.get("installdir", "/usr")
     if os.access("CMakeLists.txt", os.F_OK):
         args = 'cmake -DCMAKE_INSTALL_PREFIX=%s \
                 -DCMAKE_C_FLAGS="%s" \
                 -DCMAKE_CXX_FLAGS="%s" \
                 -DCMAKE_LD_FLAGS="%s" \
-                -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % ("/usr", 
+                -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % (installdir, 
                         get_env("CFLAGS"),
                         get_env("CXXFLAGS"),
                         get_env("LDFLAGS"), " ".join(params), build_dir)
-                
-        if not system(args):
-            error("configuration failed.")
-            lpms.terminate()
     else:
         error("no configure script found for cmake.")
         lpms.terminate()
+
+    if not system(args):
+        error("configuration failed.")
+        lpms.terminate()
+
+def cmake_utils_configure():              
+    '''Runs cmake command with standard parameters'''
+    cmake_conf()
 
 def cmake_utils_build(*params):
     '''Builds the package with given parameters'''
