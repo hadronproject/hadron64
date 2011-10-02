@@ -22,7 +22,12 @@ src_url = ("http://commondatastorage.googleapis.com/chromium-browser-continuous/
 
 def install():
     insinto("*", "/opt/chromium-browser/")
-    makesym("/opt/chromium-browser/chrome", "/usr/bin/chromium-bin")
+    insexe("%s/chromium-browser.sh" % filesdir, "/usr/bin/chromium-bin")
+    insfile("%s/chromium-browser.default" % filesdir, "/etc/chromium-browser/default")
+    insfile("%s/chromium-browser.desktop" % filesdir, "/usr/share/applications/chromium-browser.desktop")
+    makesym("%s/opt/product_logo_48.png", "/usr/share/pixmaps/product_logo_48.png")
 
 def post_install():
-    system("chmod +x /usr/bin/chromium-bin")
+    system("chmod +x /opt/chromium-browser/chrome")
+    system("chmod +x /opt/chromium-browser/chrome-wrapper")
+    system("update-desktop-database -q")

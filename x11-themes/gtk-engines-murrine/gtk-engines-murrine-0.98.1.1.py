@@ -4,13 +4,16 @@ homepage @ http://cimitan.com/murrine/project/murrine
 license @ LGPL3
 src_url @ http://ftp.gnome.org/pub/GNOME/sources/murrine/0.98/murrine-$version.tar.bz2
 arch @ ~x86
-options @ animation-rtl
+options @ animation-rtl themes
 """
 
 depends = """
 runtime @ x11-libs/gtk+ x11-libs/cairo x11-libs/pixman
 build @ dev-util/intltool sys-devel/gettext dev-util/pkg-config
-postmerge @ x11-themes/murrine-themes
+"""
+
+opt_postmerge = """
+themes @ x11-themes/murrine-themes
 """
 
 srcdir = "murrine-" + version
