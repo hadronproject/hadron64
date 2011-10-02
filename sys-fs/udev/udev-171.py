@@ -7,11 +7,11 @@ options @ extras introspection gudev keymap
 """
 
 depends = """
-runtime @ sys-libs/glibc sys-apps/coreutils sys-apps/module-init-tools
-          sys-apps/util-linux
+common @ sys-libs/glibc sys-apps/coreutils sys-apps/module-init-tools
+          sys-apps/util-linux dev-libs/libusb:0 
 """
 
-opt_runtime = """
+opt_common = """
 gudev @ sys-libs/glib
 introspection @ dev-libs/gobject-introspection
 extras @ sys-apps/acl sys-libs/glib dev-libs/gobject-introspection dev-libs/libusb:0 dev-util/gperf
