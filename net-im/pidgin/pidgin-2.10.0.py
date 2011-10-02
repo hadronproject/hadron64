@@ -3,7 +3,7 @@ summary @ GTK instant messenger
 license @ GPL-2
 homepage @ http://pidgin.im
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tar.bz2
-options @ gstreamer meanwhile tk spell avahi python perl dbus sasl gtk ncurses zeroconf msn myspace networkmanager gnutls
+options @ gstreamer meanwhile tcl spell avahi python perl dbus sasl gtk ncurses zeroconf msn myspace networkmanager gnutls
 """
 
 depends = """
@@ -19,29 +19,33 @@ spell @ app-text/gtkspell
 ncurses @ sys-libs/ncurses
         dbus @ x11-libs/gtk+
                 x11-libs/libSM
-gnutls @ net-libs/gnutls || dev-lang/lua
+gnutls @ net-libs/gnutls
+msn @ net-libs/gnutls
 gtk @ x11-libs/gtk+
 sasl @ dev-libs/cyrus-sasl
 meanwhile @ net-libs/meanwhile
+gstreamer @ media-libs/gstreamer
+networkmanager @ net-misc/networkmanager
+tcl @ dev-lang/tcl
 """
 
-# FIXME: the options and configure function will be improved.
+# FIXME: the options and configure function will be improved. Take a look at msn for example: http://goo.gl/ps05p
 
 get("main/gnome2_utils")
 
 def prepare():
-    patch("nm09-more.patch", level=1)
-    #patch("ticket-14351-multiple-display-of-room-members.patch")
+ #   patch("nm09-more.patch", level=1)
+    patch("pidgin-2.7.4-icq-html-regression.patch")
 
 def configure():
     conf("--disable-mono",
     "--disable-schemas-install",
     "--disable-avahi",
     "--disable-doxygen",
-    "--disable-nm",
+    config_enable("networkmanager", "nm"),
     "--with-system-ssl-certs=/etc/ssl/certs",
     "--disable-vv",
-    "--disable-gstreamer",
+    config_enable("gstreamer"),
     "--disable-tcl",
     config_enable("gtk", "gtkui"),
     config_enable("dbus"),
@@ -49,7 +53,8 @@ def configure():
     config_enable("ncurses", "consoleui"),
     config_enable("meanwhile"),
     config_enable("gnutls"),
-    config_enable("sasl", "cyrus-sasl"))
+    config_enable("sasl", "cyrus-sasl"),
+    config_enable("tcl"))
 
 
 def install():

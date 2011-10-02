@@ -16,7 +16,7 @@ png @ media-libs/libpng
 acl @ sys-apps/acl sys-apps/attr
 pam @ sys-libs/pam
 X @ x11-misc/xdg-utils
-ssl @
+ssl @ 
     gnutls @ net-libs/gnutls
 tiff @ media-libs/tiff
 dbus @ sys-apps/dbus
