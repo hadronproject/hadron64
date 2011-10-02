@@ -14,10 +14,6 @@ arch @ ~x86
 
 standard_procedure = False
 
-depends = """
-runtime @ >=x11-themes/gtk-engines-murrine-0.98.0
-"""
-
 def install():
     makedirs("/usr/share/themes")
     for item in ls(dirname(build_dir)):
