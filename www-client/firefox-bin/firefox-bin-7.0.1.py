@@ -16,10 +16,17 @@ standard_procedure = False
 
 srcdir = "firefox"
 
+get("fdo_mime", "gnome2_utils")
+
 def install():
-    system("mkdir -p %s/opt/firefox" % install_dir)
-    system("mv * %s/opt/firefox/" % install_dir)
+    makedirs("/usr/share/pixmaps")
+    makedirs("/usr/share/applications")
+    makedirs("/opt")
+    insfile("%s/chrome/icons/default/default48.png" % build_dir, "/usr/share/pixmaps/%s.png" % name)
+    insfile("%s/%s.desktop" % (filesdir, name), "/usr/share/applications/%s.desktop" % name)
+    copytree(build_dir, "/opt/firefox")
     insexe("%s/firefox-bin" % filesdir, "/usr/bin/firefox-bin")
 
-#TODO: Lots of shit, http://gpo.zugaina.org/AJAX/Ebuild/2420026/View
-# startup-notification, desktop files and icon
+def post_install():
+    desktop_database_update()
+    gnome2_icon_cache_update()
