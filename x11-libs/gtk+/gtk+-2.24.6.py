@@ -4,6 +4,7 @@ homepage @ http://www.gtk.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/$fullname.tar.bz2
 arch @ ~x86
+slot @ 2
 options @ xinerama
 """
 
@@ -21,6 +22,10 @@ opt_runtime = """
 xinerama @ x11-libs/libXinerama
 """
 
+def prepare():
+    patch(level=1)
+    patch("gtk2-dont-ellipsize-filters.diff", level=1)
+
 def configure():
     conf("--with-gdktarget=x11 \
             --with-xinput=yes \
@@ -29,6 +34,7 @@ def configure():
             --enable-silent-rules \
             --disable-papi",
             config_enable("xinerama"))
+    #system("sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool")
 
 def build():
     export("HOME", build_dir)
