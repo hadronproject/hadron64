@@ -15,4 +15,8 @@ def build():
 
 def install():
     raw_install('PREFIX=%s/usr' % install_dir)
+    insfile("libbz2.so.1.0.6", "/lib/libbz2.so.1.0.6")
+    makesym("/lib/libbz2.so.1.0.6", "/lib/libbz2.so")
+    makesym("/lib/libbz2.so.1.0.6", "/lib/libbz2.so.1")
+    makesym("/lib/libbz2.so.1.0.6", "/lib/libbz2.so.1.0")
     insdoc("README", "CHANGES", "bzip2.txt")
