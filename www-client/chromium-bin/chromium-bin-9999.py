@@ -7,7 +7,7 @@ arch @ ~x86
 
 depends = """
 runtime @ media-libs/alsa-lib dev-util/desktop-file-utils media-libs/libpng gnome-base/gconf
-x11-libs/libXtst x11-misc/libxss media-libs/libpng:12
+x11-libs/libXtst x11-misc/libxss media-libs/libpng:12 net-print/cups
 """
 
 srcdir = "chrome-linux"
