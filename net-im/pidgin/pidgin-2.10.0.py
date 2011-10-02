@@ -3,7 +3,7 @@ summary @ GTK instant messenger
 license @ GPL-2
 homepage @ http://pidgin.im
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tar.bz2
-options @ gstreamer meanwhile tcl spell avahi python perl dbus sasl gtk ncurses zeroconf msn myspace networkmanager gnutls
+options @ gstreamer meanwhile tcl spell avahi python perl dbus sasl gtk ncurses zeroconf msn myspace networkmanager gnutls debug
 """
 
 depends = """
@@ -45,6 +45,7 @@ def configure():
     config_enable("networkmanager", "nm"),
     "--with-system-ssl-certs=/etc/ssl/certs",
     "--disable-vv",
+    config_enable("debug"),
     config_enable("gstreamer"),
     "--disable-tcl",
     config_enable("gtk", "gtkui"),

@@ -13,10 +13,10 @@ x11-libs/libXtst x11-misc/libxss media-libs/libpng:12 net-print/cups
 srcdir = "chrome-linux"
 standard_procedure = False
 
+color("** Determining latest build version **", "green")
 import urllib
 donk = urllib.urlopen("http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/LAST_CHANGE")
 lastver = donk.read()
-
 src_url = ("http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/%s/chrome-linux.zip" % lastver)
 
 
@@ -31,3 +31,4 @@ def post_install():
     system("chmod +x /opt/chromium-browser/chrome")
     system("chmod +x /opt/chromium-browser/chrome-wrapper")
     system("update-desktop-database -q")
+    notify("You've installed revision %s" % lastver)
