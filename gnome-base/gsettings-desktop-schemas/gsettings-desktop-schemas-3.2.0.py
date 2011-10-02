@@ -23,4 +23,4 @@ def post_install():
 	system("/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas")
 
 def post_remove():
-    post_install
+    post_install()
