@@ -29,15 +29,15 @@ import lpms
 def cmake_utils_configure(*params, **kwargs):
     installdir = kwargs.get("installdir", install_dir)
     '''Configures the package with given parameters'''
-    if os.access("CMakeLists.text", os.F_OK):
+    if os.access("CMakeLists.txt", os.F_OK):
         args = 'cmake -DCMAKE_INSTALL_PREFIX=%s \
                 -DCMAKE_C_FLAGS="%s" \
                 -DCMAKE_CXX_FLAGS="%s" \
                 -DCMAKE_LD_FLAGS="%s" \
-                -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % (installdir, 
-                        getenv("CFLAGS"),
-                        getenv("CXXFLAGS"),
-                        getenv("LDFLAGS"), " ".join(params), build_dir)
+                -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % ("/usr", 
+                        get_env("CFLAGS"),
+                        get_env("CXXFLAGS"),
+                        get_env("LDFLAGS"), " ".join(params), build_dir)
                 
         if not system(args):
             error("configuration failed.")
@@ -63,6 +63,7 @@ def cmake_utils_install(*params, **kwargs):
                                      'parameters'   : " ".join(params),
                                      'argument'     : argument,
                                 }
+    
     if not system(args):
         error("installation failed.")
         lpms.terminate()
