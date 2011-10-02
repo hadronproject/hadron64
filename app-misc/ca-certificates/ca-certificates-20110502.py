@@ -2,7 +2,7 @@ metadata = """
 summary @ Common ca-certificates
 homepage @ http://packages.qa.debian.org/c/ca-certificates.html
 license @ MPL
-src_url @ http://ftp.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_$version.tar.gz
+src_url @ http://ftp.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_$version+nmu1.tar.gz
 arch @ ~x86
 """
 
@@ -10,6 +10,8 @@ depends = """
 runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils
           sys-apps/findutils sys-apps/coreutils sys-apps/sed
 """
+
+srcdir = name + "-" + version + "+nmu1"
 
 import glob
 

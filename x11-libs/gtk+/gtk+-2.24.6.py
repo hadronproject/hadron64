@@ -6,6 +6,7 @@ src_url @ http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/$fullname.tar.bz2
 arch @ ~x86
 slot @ 2
 options @ xinerama
+slot @ 2
 """
 
 depends = """
