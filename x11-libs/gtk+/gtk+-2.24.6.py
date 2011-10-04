@@ -24,17 +24,18 @@ xinerama @ x11-libs/libXinerama
 """
 
 def prepare():
-    patch(level=1)
+    patch("xid-collision-debug.patch", level=1)
     patch("gtk2-dont-ellipsize-filters.diff", level=1)
 
 def configure():
-    conf("--with-gdktarget=x11 \
-            --with-xinput=yes \
-            --enable-xkb \
-            --enable-shm \
-            --enable-silent-rules \
-            --disable-papi",
-            config_enable("xinerama"))
+    conf(
+    "--with-gdktarget=x11",
+    "--with-xinput=yes",
+    "--enable-xkb",
+    "--enable-shm",
+    "--enable-silent-rules",
+    "--disable-papi",
+    config_enable("xinerama"))
     #system("sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool")
 
 def build():
