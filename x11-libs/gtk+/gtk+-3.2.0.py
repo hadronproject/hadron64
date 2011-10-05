@@ -11,7 +11,7 @@ options @ xinerama cups introspection
 depends = """
 common @ x11-libs/libXrender x11-libs/libX11 x11-libs/libXi x11-libs/libXt x11-libs/libXext
 >=x11-libs/libXrandr-1.3 x11-libs/libXcursor x11-libs/libXfixes x11-libs/libXcomposite
-x11-libs/libXdamage >=x11-libs/cairo-1.10.0[X,svg] >=x11-libs/gdk-pixbuf-2.23.5:2[X]
+x11-libs/libXdamage >=x11-libs/cairo-1.10.0[X,svg] >=x11-libs/gdk-pixbuf-2.23.5[X]
 >=sys-libs/glib-2.29.14 >=media-libs/pango-1.29.0 >=dev-libs/atk-2.1.5 x11-libs/gtk+:2
 media-libs/fontconfig x11-misc/shared-mime-info
 build @ dev-util/pkg-config
