@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-libs/dbus-glib x11-libs/libXrender x11-libs/libXt x11-libs/libXmu x11-libs/gtk+
+runtime @ dev-libs/dbus-glib x11-libs/libXrender x11-libs/libXt x11-libs/libXmu x11-libs/gtk+:2 
     media-libs/alsa-lib
 build @ app-arch/unzip
 """

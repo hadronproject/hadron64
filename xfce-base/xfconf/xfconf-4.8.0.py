@@ -8,7 +8,7 @@ options @ debug
 """
 
 depends = """
-runtime @ xfce-base/libxfce4util dev-libs/dbus-glib x11-libs/gtk+
+runtime @ xfce-base/libxfce4util dev-libs/dbus-glib x11-libs/gtk+:2 
 """
 
 def configure():

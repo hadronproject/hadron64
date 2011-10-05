@@ -13,7 +13,7 @@ runtime @ media-libs/libvorbis sys-devel/libtool
 
 opt_runtime = """
 gstreamer @ media-libs/gstreamer
-gtk @ x11-libs/gtk+
+gtk @ x11-libs/gtk+:2 
 alsa @ media-libs/alsa-lib
     udev @ sys-fs/udev
 tdb @ dev-db/tdb

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-apps/dbus x11-libs/gtk+
+runtime @ sys-apps/dbus x11-libs/gtk+:2 
 """
 
 def install():

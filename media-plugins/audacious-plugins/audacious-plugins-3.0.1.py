@@ -8,7 +8,7 @@ options @ aac alsa aqua cdda cue ffmpeg flac gnome ipv6 lame libnotify libsample
 """
 
 depends = """
-runtime @ app-arch/unzip dev-libs/dbus-glib dev-libs/libxml2 media-sound/audacious net-libs/neon x11-libs/gtk+
+runtime @ app-arch/unzip dev-libs/dbus-glib dev-libs/libxml2 media-sound/audacious net-libs/neon x11-libs/gtk+:2 
 build @ dev-util/pkg-config
 """
 

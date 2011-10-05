@@ -12,7 +12,7 @@ runtime @ sys-libs/glibc
 """
 
 opt_runtime = """
-gtk @ x11-libs/gtk+
+gtk @ x11-libs/gtk+:2 
 ssl @ dev-libs/openssl
 dbus @ dev-libs/dbus-glib
 spell @ app-text/gtkspell

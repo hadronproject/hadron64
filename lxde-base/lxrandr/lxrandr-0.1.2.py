@@ -9,7 +9,7 @@ arch @ ~x86
 #FIXME: slot needed for gtk+
 
 depends = """
-commons @ x11-libs/gtk+
+commons @ x11-libs/gtk+:2 
 x11-libs/libXrandr
 x11-apps/xrandr
 build @ x11-proto/randrproto

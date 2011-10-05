@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glib gnome-base/gconf x11-libs/libwnck gnome-base/libgtop x11-libs/gtk+
+runtime @ sys-libs/glib gnome-base/gconf x11-libs/libwnck gnome-base/libgtop x11-libs/gtk+:2 
           x11-themes/gnome-icon-theme dev-cpp/gtkmm dev-cpp/glibmm dev-libs/libxml2
           gnome-base/librsvg dev-libs/dbus-glib
 

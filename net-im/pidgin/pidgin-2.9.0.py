@@ -17,10 +17,10 @@ dbus @ sys-apps/dbus
         dev-libs/dbus-glib
 spell @ app-text/gtkspell
 ncurses @ sys-libs/ncurses
-        dbus @ x11-libs/gtk+
+        dbus @ x11-libs/gtk+:2 
                 x11-libs/libSM
 gnutls @ net-libs/gnutls || dev-lang/lua
-gtk @ x11-libs/gtk+
+gtk @ x11-libs/gtk+:2 
 sasl @ dev-libs/cyrus-sasl
 meanwhile @ net-libs/meanwhile
 """

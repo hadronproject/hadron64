@@ -8,7 +8,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ >=dev-libs/libindicator-0.3.0 x11-libs/gtk+
+runtime @ >=dev-libs/libindicator-0.3.0 x11-libs/gtk+:2 
 >=xfce-base/libxfce4util-4.3.99.2
 >=xfce-base/xfce4-panel-4.3.99.2
 """

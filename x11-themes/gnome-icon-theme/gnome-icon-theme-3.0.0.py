@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-themes/hicolor-icon-theme x11-misc/icon-naming-utils x11-libs/gtk+
+runtime @ x11-themes/hicolor-icon-theme x11-misc/icon-naming-utils x11-libs/gtk+:2 
 """
 
 def install():

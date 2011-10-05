@@ -9,7 +9,7 @@ arch @ ~x86
 # FIXME: gtk+ slot needed!
 
 depends = """
-commons @ sys-libs/glib x11-libs/gtk+
+commons @ sys-libs/glib x11-libs/gtk+:2 
 """
 
 def install():

@@ -8,7 +8,7 @@ options @ debug policykit
 """
 
 depends = """
-runtime @ gnome-base/orbit dev-libs/libxml2 sys-apps/dbus x11-libs/gtk+
+runtime @ gnome-base/orbit dev-libs/libxml2 sys-apps/dbus x11-libs/gtk+:2 
 build @ dev-libs/gobject-introspection
 """
 

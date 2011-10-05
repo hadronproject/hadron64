@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-common @ x11-libs/gtk+
+common @ x11-libs/gtk+:2 
 build @ dev-util/pkg-config
 """
 

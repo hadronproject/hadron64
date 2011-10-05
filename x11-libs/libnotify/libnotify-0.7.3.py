@@ -9,7 +9,7 @@ arch @ ~x86
 
 depends = """
 runtime @ x11-libs/gdk-pixbuf
-build @ x11-libs/gtk+
+build @ x11-libs/gtk+:2 
 """
 
 def prepare():

@@ -7,6 +7,6 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/gtk+
+runtime @ x11-libs/gtk+:2 
 build @ dev-util/pkg-config dev-util/intltool
 """
