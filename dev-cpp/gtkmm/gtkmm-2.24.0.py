@@ -8,7 +8,7 @@ arch @ ~x86
 
 
 depends = """
-runtime @ x11-libs/gtk+ dev-cpp/pangomm dev-cpp/cairomm dev-cpp/atkmm
+runtime @ x11-libs/gtk+:2 dev-cpp/pangomm dev-cpp/cairomm dev-cpp/atkmm
 """
 
 def configure():

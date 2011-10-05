@@ -8,7 +8,7 @@ options @ exif lcms
 """
 
 depends = """
-runtime @ x11-libs/gtk+ dev-util/desktop-file-utils
+runtime @ x11-libs/gtk+:2 dev-util/desktop-file-utils
 build @ dev-util/intltool
 """
 

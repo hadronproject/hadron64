@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ xfce-base/libxfce4util x11-libs/gtk+ xfce-base/xfconf x11-libs/startup-notification
+runtime @ xfce-base/libxfce4util x11-libs/gtk+:2 xfce-base/xfconf x11-libs/startup-notification
 """
 
 def configure():

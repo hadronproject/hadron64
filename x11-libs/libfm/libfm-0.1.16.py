@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-common @ dev-libs/dbus-glib >=lxde-base/menu-cache-0.3.2 x11-libs/gtk+ sys-libs/glib
+common @ dev-libs/dbus-glib >=lxde-base/menu-cache-0.3.2 x11-libs/gtk+:2 sys-libs/glib
 runtime @ x11-misc/shared-mime-info sys-fs/udisks
 """
 

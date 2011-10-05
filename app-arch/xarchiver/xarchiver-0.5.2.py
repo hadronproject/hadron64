@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/gtk+ dev-util/desktop-file-utils x11-themes/hicolor-icon-theme
+runtime @ x11-libs/gtk+:2 dev-util/desktop-file-utils x11-themes/hicolor-icon-theme
 build @ dev-util/intltool
 """
 

@@ -7,7 +7,7 @@ options @ vte
 """
 
 depend =  """
-runtime @ x11-libs/gtk+  dev-libs/glib x11-libs/vte
+runtime @ x11-libs/gtk+:2  dev-libs/glib x11-libs/vte
 builr @ dev-util/pkg-config dev-util/intltool
 """
 

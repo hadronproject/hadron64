@@ -11,7 +11,7 @@ arch @ ~x86
 
 
 depends = """
-common @ x11-libs/gtk+ sys-libs/glib
+common @ x11-libs/gtk+:2 sys-libs/glib
 build @ dev-util/pkg-config
 """
 

@@ -13,7 +13,7 @@ build @ sys-devel/gettext dev-util/intltool dev-util/pkg-config sys-apps/sed
 """
 
 opt_runtime = """
-gtk @ x11-libs/gtk+ dev-libs/dbus-glib
+gtk @ x11-libs/gtk+:2 dev-libs/dbus-glib
     libnotify @ x11-libs/libnotify
     libcanberra @ media-libs/libcanberra
 qt @ x11-libs/qt

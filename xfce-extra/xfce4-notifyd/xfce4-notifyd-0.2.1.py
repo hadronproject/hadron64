@@ -8,7 +8,7 @@ options @ debug
 """
 
 depends = """
-runtime @ xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/gtk+ sys-apps/dbus dev-libs/dbus-glib
+runtime @ xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/gtk+:2 sys-apps/dbus dev-libs/dbus-glib
 build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
 """
 

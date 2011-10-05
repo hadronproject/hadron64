@@ -7,7 +7,7 @@ options @ debug dbus
 """
 
 depends = """
-runtime @ x11-libs/gtk+ sys-libs/glib x11-libs/libX11 x11-libs/vte xfce-base/exo
+runtime @ x11-libs/gtk+:2 sys-libs/glib x11-libs/libX11 x11-libs/vte xfce-base/exo
 build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
 """
 

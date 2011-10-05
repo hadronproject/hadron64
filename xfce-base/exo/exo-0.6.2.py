@@ -8,7 +8,7 @@ options @ debug python
 """
 
 depends = """
-runtime @ xfce-base/libxfce4util x11-libs/gtk+ x11-themes/hicolor-icon-theme
+runtime @ xfce-base/libxfce4util x11-libs/gtk+:2 x11-themes/hicolor-icon-theme
 build @ dev-util/intltool x11-apps/iceauth dev-perl/URI
 """
 

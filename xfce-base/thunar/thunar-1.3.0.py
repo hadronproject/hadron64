@@ -8,7 +8,7 @@ options @ dbus libnotify pcre startup-notification udev
 """
 
 depends = """
-runtime @ xfce-base/exo sys-libs/glib x11-libs/gtk+ xfce-base/libxfce4util xfce-base/libxfce4ui
+runtime @ xfce-base/exo sys-libs/glib x11-libs/gtk+:2 xfce-base/libxfce4util xfce-base/libxfce4ui
     dev-lang/perl x11-misc/shared-mime-info dev-util/desktop-file-utils
 build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
 """

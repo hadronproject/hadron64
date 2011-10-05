@@ -9,7 +9,7 @@ options @ startup-notification
 
 depends = """
 runtime @ xfce-base/libxfce4util xfce-base/libxfce4ui x11-libs/libwnck x11-themes/hicolor-icon-theme
-    xfce-base/xfconf sys-libs/glib x11-libs/gtk+ x11-libs/libICE x11-libs/libSM x11-libs/libX11
+    xfce-base/xfconf sys-libs/glib x11-libs/gtk+:2 x11-libs/libICE x11-libs/libSM x11-libs/libX11
     x11-libs/libXext x11-libs/libXrandr x11-libs/libXrender media-libs/pango
     x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes
 build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext

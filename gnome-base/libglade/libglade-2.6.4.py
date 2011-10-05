@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/gtk+ dev-libs/libxml2
+runtime @ x11-libs/gtk+:2 dev-libs/libxml2
 build @ dev-lang/python dev-util/pkg-config
 """
 

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/gtk+ dev-util/intltool
+runtime @ x11-libs/gtk+:2 dev-util/intltool
 """
 
 def install():

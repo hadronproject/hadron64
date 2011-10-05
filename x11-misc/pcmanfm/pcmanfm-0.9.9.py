@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-common @ sys-libs/glib x11-libs/gtk+ >=lxde-base/menu-cache-0.3.2
+common @ sys-libs/glib x11-libs/gtk+:2 >=lxde-base/menu-cache-0.3.2
 x11-libs/libfm
 """
 
