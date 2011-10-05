@@ -10,7 +10,7 @@ arch @ ~x86
 depends = """
 common @ >=dev-libs/libical-0.43
 dev-libs/popt
->=x11-libs/gtk+-2.10
+>=x11-libs/gtk+-2.10:2
 """
 
 opt_common = """

@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ >=x11-libs/gtk+-2.18 >=sys-libs/glib-2.22
+runtime @ >=x11-libs/gtk+-2.18:2 >=sys-libs/glib-2.22
 >=dev-libs/dbus-glib-0.76
 """
 
