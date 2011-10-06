@@ -12,8 +12,9 @@ build @ sys-apps/gawk dev-util/pkg-config
 """
 
 def prepare():
-    patch(level=1)
-
+    patch("gdk_resources.patch", level=1)
+    patch("tilda-0.9.6-palette.patch")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    insdoc("AUTHORS", "ChangeLog", "README", "TODO")
