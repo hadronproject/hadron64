@@ -25,7 +25,7 @@ def extract():
         warning("Couldn't read the version info, this is going to fail.")
     lastver = donk.read()
     notify("Revision %s" % lastver)
-    rmfile(joinpath("/var/cache/lpms/sources", "chrome-linux.zip"))
+    system("rm -fr chrome-linux.zip")
     fetch("http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/%s/chrome-linux.zip" % lastver)
     unpack("chrome-linux.zip")
 
