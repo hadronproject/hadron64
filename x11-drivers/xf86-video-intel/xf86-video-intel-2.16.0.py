@@ -9,13 +9,17 @@ options @ dri
 
 depends = """
 build @ x11-libs/libXext x11-libs/libXfixes x11-libs/libXvMC >=x11-libs/libxcb-1.5
-    x11-base/xorg-server x11-proto/fontsproto x11-proto/xf86driproto
+    x11-base/xorg-server x11-proto/fontsproto x11-proto/xf86driproto x11-libs/libdrm
+    >=x11-proto/dri2proto-2.6
 """
 
 def configure():
     conf(
     config_enable("dri"),
     "--enable-xvmc")
+
+def build():
+    make(j=1)
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
