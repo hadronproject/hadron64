@@ -10,3 +10,5 @@ depends = """
 runtime @ x11-proto/xproto
 """
 
+def install():
+    raw_install("DESTDIR=%s" % install_dir)
