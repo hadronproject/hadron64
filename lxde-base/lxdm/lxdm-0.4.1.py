@@ -4,16 +4,17 @@ homepage @ http://sourceforge.net/projects/lxdm/
 license @ GPL
 src_url @ http://downloads.sourceforge.net/lxde/$name-$version.tar.gz
 arch @ ~x86
-options @ nls debug
+options @ nls debug gtk3
 """
 
 depends = """
 common @ sys-libs/pam sys-auth/consolekit x11-libs/libxcb
-build @ dev-util/intltool dev-util/pkg-config
+build @ dev-util/pkg-config >=dev-util/intltool-0.40
 """
 
 opt_runtime = """
 nls @ sys-devel/gettext
+gtk3 @ x11-libs/gtk+:3
 """
 
 def prepare():
@@ -30,7 +31,8 @@ def configure():
     "--with-x",
     "--with-xconn=xcb",
     config_enable("debug"),
-    config_enable("nls"))
+    config_enable("nls"),
+    config_enable("gtk3"))
 
 def build():
     system("rm data/lxdm.conf")
@@ -48,6 +50,8 @@ def post_install():
     #Check if exists in new version
     #http://projects.archlinux.org/svntogit/community.git/tree/trunk/PKGBUILD?h=packages/lxdm
     system("sed -i -e \"s/local\/libexec/lib\/lxdm/\" /etc/lxdm/lxdm.conf")
+
+    notify("LXDM in the early stages of development!")
 
 def post_remove():
     system("getent passwd lxdm >/dev/null 2>&1 && userdel lxdm")
