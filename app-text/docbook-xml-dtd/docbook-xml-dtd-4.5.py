@@ -8,7 +8,7 @@ slot @ 4.5
 """
 
 depends = """
-runtime @ dev-libs/libxml2 app-text/build-docbook-catalog
+runtime @ dev-libs/libxml2 app-text/build-docbook-catalog app-text/docbook-xml-dtd:4.2
 build @ app-text/sgml-common
 """
 
