@@ -4,7 +4,7 @@ homepage @ http://www.zsh.org/
 license @ ZSH
 src_url @ ftp://ftp.zsh.org/pub/$fullname.tar.bz2
 arch @ ~x86
-options @ gdbm pcre maildir caps debug
+options @ gdbm pcre maildir caps debug lpms-completion
 """
 
 depends = """
@@ -42,3 +42,6 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("LICENCE", "META-FAQ", "NEWS", "README", "config.modules")
+
+    if opt("lpms-completion"):
+        insfile("%s/_lpms" % filesdir, "/usr/share/zsh/%s/functions/Completion/Linux/_lpms" % version)
