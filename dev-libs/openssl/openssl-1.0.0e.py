@@ -14,9 +14,13 @@ def prepare():
     patch("fix-manpages.patch", level=1)
     patch("no-rpath.patch")
     patch("ca-dir.patch")
+    patch("openssl-1.0.0d-fbsd-amd64.patch")
+    patch("openssl-1.0.0d-windres.patch")
+
 
 def configure():
-    system("./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib enable-md2 -Wa,--noexecstack")
+    system("./config --prefix=/usr --openssldir=/etc/ssl \
+            --libdir=lib shared zlib enable-md2 -Wa,--noexecstack")
 
 def build():
     make("depend")

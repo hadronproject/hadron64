@@ -13,6 +13,7 @@ runtime @ sys-libs/glibc
 
 opt_runtime = """
 gdbm @ sys-libs/gdbm
+pcre @ dev-libs/pcre
 """
 
 def configure():
@@ -25,10 +26,10 @@ def configure():
     "--enable-multibyte",
     "--enable-maildir-support",
     "--enable-function-subdirs",
-        config_enable("pcre"),
-        config_enable("caps", "cap"),
-        config_enable("gdbm"),
-        config_enable("maildir", "maildir-support"),
+    config_enable("pcre"),
+    config_enable("caps", "cap"),
+    config_enable("gdbm"),
+    config_enable("maildir", "maildir-support"),
     "--enable-zsh-secure-free",
     "--enable-etcdir=/etc/zsh",
     "--bindir=/bin",
