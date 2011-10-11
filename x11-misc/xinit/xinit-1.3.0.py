@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/libX11 x11-misc/xauth
+runtime @ x11-libs/libX11 x11-apps/xauth
 """
 
 #srcdir = "xinit-%s" % version
