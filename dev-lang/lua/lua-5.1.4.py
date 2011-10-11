@@ -6,11 +6,7 @@ src_url @ http://www.lua.org/ftp/$fullname.tar.gz
 """
 
 depends = """
-runtime @ sys-apps/which
-"""
-
-opt_runtime = """
-shell @ app-shells/bash[gtk]
+runtime @ sys-apps/readline
 """
 
 def prepare():
