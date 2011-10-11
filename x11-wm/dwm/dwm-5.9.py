@@ -25,7 +25,7 @@ def prepare():
 
 def build():
     if opt("xinerama"):
-        make("X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 XINERAMAFLAGS="" XINERAMALIBS=""")
+        make('X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 XINERAMAFLAGS="" XINERAMALIBS=""')
     else:
         make("X11INC=/usr/include/X11 X11LIB=/usr/lib/X11")
 
