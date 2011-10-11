@@ -34,6 +34,11 @@ case ${TERM} in
 esac
 
 use_color=false
+#BSD#@# BSD doesn't typically come with dircolors so we need
+#BSD#@# to hardcode some terminals in here.
+#BSD#@case ${TERM} in
+#BSD#@	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|screen|cons25) use_color=true;;
+#BSD#@esac
 
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
@@ -65,7 +70,8 @@ if ${use_color} ; then
 		PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 	fi
 
-	alias ls='ls --color=auto'
+	#BSD#@export CLICOLOR=1
+	#GNU#@alias ls='ls --color=auto'
 	alias grep='grep --colour=auto'
 else
 	if [[ ${EUID} == 0 ]] ; then

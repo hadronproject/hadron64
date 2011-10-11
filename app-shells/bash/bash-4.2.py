@@ -6,9 +6,9 @@ src_url @ http://ftp.gnu.org/gnu/$name/$fullname.tar.gz
 options @ net nls afs mem-scramble plugins
 arch @ ~x86
 """
+
 depends = """
-build @ sys-libs/ncurses
-runtime @ sys-libs/ncurses
+common @ sys-libs/ncurses
 """
 
 # from Pardus GNU/Linux
@@ -16,6 +16,7 @@ runtime @ sys-libs/ncurses
 cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\' \
                  -DSTANDARD_UTILS_PATH=\'\"/bin:/usr/bin:/sbin:/usr/sbin\"\' \
                  -DSYS_BASHRC=\'\"/etc/bash/bashrc\"\' \
+                 -DSYS_BASH_LOGOUT=\'\"/etc/bash/bash_logout\"\' \
                  -DNON_INTERACTIVE_LOGIN_SHELLS \
                  -DSSH_SOURCE_BASHRC"""
 
@@ -43,19 +44,17 @@ def install():
     if opt("plugins"):
         make("-C examples/loadables all others")
 
-    # install bash
     raw_install("DESTDIR=%s install" % install_dir)
 
-    # postinstall
     makedirs("/bin")
     move("%s/usr/bin/bash" % install_dir, "/bin/bash")
     makesym("/bin/bash", "/bin/sh")
 
     makedirs("/etc/skel")
-    insexe(joinpath(filesdir, "system.bashrc"), "/etc/bash/bashrc")
-    insfile(joinpath(filesdir, "system.bash_logout"), "/etc/bash.bash_logout")
-    insfile(joinpath(filesdir, "dot.bashrc"), "/etc/skel/.bashrc")
-    insfile(joinpath(filesdir, "dot.bash_profile"), "/etc/skel/.bash_profile")
-    insfile(joinpath(filesdir, "dot.bash_logout"), "/etc/skel/.bash_logout")
+    insexe(joinpath(filesdir, "bashrc"), "/etc/bash/bashrc")
+    insfile(joinpath(filesdir, "bash_logout"), "/etc/bash/bash_logout")
+    insfile(joinpath(filesdir, "dot-bashrc"), "/etc/skel/.bashrc")
+    insfile(joinpath(filesdir, "dot-bash_profile"), "/etc/skel/.bash_profile")
+    insfile(joinpath(filesdir, "dot-bash_logout"), "/etc/skel/.bash_logout")
 
     insdoc("README", "NEWS", "AUTHORS", "CHANGES", "COMPAT", "Y2K", "doc/FAQ", "doc/INTRO")
