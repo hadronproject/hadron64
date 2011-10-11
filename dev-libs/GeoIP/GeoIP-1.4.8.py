@@ -27,3 +27,5 @@ def install():
     if opt("ipv6"):
         insfile("GeoIPv6.dat", "/usr/share/GeoIP/GeoIPv6.dat")
     insdoc("AUTHORS", "ChangeLog", "README", "TODO", "conf/GeoIP.conf.default")
+
+    raw_install("DESTDIR=%s install" % install_dir)
