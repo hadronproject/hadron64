@@ -4,12 +4,15 @@ homepage @ http://www.suckless.org/dwm/
 license @ MIT
 src_url @ http://dl.suckless.org/dwm/$fullname.tar.gz
 arch @ ~x86
+options @ xinerama
 """
 
-# FIXME: add xinerama option 
-
 depends = """
-common @ x11-libs/libXinerama
+common @ x11-libs/libX11
+"""
+
+opt_build = """
+xinerama @ x11-libs/libXinerama x11-proto/xineramaproto
 """
 
 def prepare():
@@ -21,7 +24,10 @@ def prepare():
     sed("-i 's/^#LDFLAGS = -s/LDFLAGS += -s/g' config.mk")
 
 def build():
-    make("X11INC=/usr/include/X11 X11LIB=/usr/lib/X11")
+    if opt("xinerama"):
+        make("X11INC=/usr/include/X11 X11LIB=/usr/lib/X11 XINERAMAFLAGS="" XINERAMALIBS=""")
+    else:
+        make("X11INC=/usr/include/X11 X11LIB=/usr/lib/X11")
 
 def install():
     raw_install("PREFIX=/usr DESTDIR=%s" % install_dir)
