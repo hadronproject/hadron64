@@ -1,0 +1,7 @@
+/var/log/nginx/*log {
+   create 640 http log
+   compress
+   postrotate
+      /bin/kill -USR1 `cat /var/run/nginx.pid 2>/dev/null` 2> /dev/null || true
+   endscript
+}
