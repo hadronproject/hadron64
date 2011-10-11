@@ -17,7 +17,7 @@ acl @ sys-apps/acl sys-apps/attr
 pam @ sys-libs/pam
 X @ x11-misc/xdg-utils
 ssl @ 
-    gnutls @ net-libs/gnutls
+    gnutls @ net-libs/gnutls || dev-libs/openssl
 tiff @ media-libs/tiff
 dbus @ sys-apps/dbus
 jpeg @ media-libs/jpeg

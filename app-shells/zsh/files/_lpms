@@ -1,0 +1,49 @@
+#compdef lpms
+
+local arguments packages curcontext="$curcontext" stat line
+declare -A opt_args
+
+arguments=(
+      "(- *)"{--pretend,-p}"[Shows operation steps]"
+      "(- *)"{--ask,-a}"[Asks to the user before operation.]"
+      "(- *)"{--fetch-only,-F}"[Only fetches packages, do not install.(not yet)]"
+      "(- *)"{--search,-s}"[Searches given keyword in database.]"
+      "(- *)"{--category-install,-C}"[Installs packages that's in given repo/category]"
+      "(- *)"{--use-new-opts,-N}"[Applies new global options for installed packages.]"
+      "--resume[Resumes previous installation operation. Use '--skip-first' to skip the first package.]"
+      "--add-repo[Adds new repository(not yet).]"
+      "--ignore-depends[Ignores dependencies.]"
+      "--ignore-conflicts[Ignore file conflicts if conflict protect is enabled.]"
+      "--ignore-sandbox[Disables sandbox facility.]"
+      "--enable-sandbox[Enables sandbox facilitiy.]"
+      "--ignore-reserve-files[Ignores local files.]"
+      "--no-configure[Does not run configuration functions.]"
+      "--resume-build[Resumes the most recent build operation.]"
+      "--change-root[Changes installation target.]"
+      "--no-merge[Does not merge the package.]"
+      "--ask-repo[Shows repo selection dialog if necessary.]"
+      "--show-opts[Shows available options for given packages.]"
+      "--opts[Determines options of the package.]"
+      "(- *)"{--help,-h}"[Shows this message.]"
+      "(- *)"{--version,-v}"[Shows version.]"
+      "(- *)"{--no-color,-n}"[Disables color output.]"
+      "(- *)"{--remove,-r}"[Removes given package.]"
+      "(- *)"{--update,-u}"[Updates all repositories or given repository.]"
+      "(- *)"{--search,-s}"[Searches given package in database.]"
+      "(- *)"{--belong,-b}"[Queries the package that owns given keyword.]"
+      "(- *)"{--content,-c}"[Lists files of given package.]"
+      "--list-repos[Lists all repositories.]"
+      "--force-upgrade[Forces lpms to use latest versions.]"
+      "--configure-pending[Configures pending packages if they were not configured at installation time.]"
+      "--reload-previous-repodb[Reloads previous repository database backup.]"
+      "--verbose[Prints more output if possible.]"
+      "--quiet[Hides outputs if possible.]"
+      "*:package name:->package"
+)
+
+_arguments -C $arguments
+
+if [[ -n $state ]] ; then
+    packages=( ${(f)"$((ls /var/lib/lpms/*/* -1 | grep -Ev ":|\.conf|\.py" | sed 's#/##g' | sed '/^$/d') 2>/dev/null)"} )
+    compadd -a - packages
+fi

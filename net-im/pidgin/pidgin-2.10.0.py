@@ -3,7 +3,7 @@ summary @ GTK instant messenger
 license @ GPL-2
 homepage @ http://pidgin.im
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tar.bz2
-options @ gstreamer meanwhile tcl spell avahi python perl dbus sasl gtk ncurses zeroconf msn myspace networkmanager gnutls debug
+options @ gstreamer meanwhile tcl spell avahi python perl dbus sasl gtk ncurses zeroconf msn myspace networkmanager gnutls debug zephyr
 """
 
 depends = """
@@ -20,7 +20,8 @@ ncurses @ sys-libs/ncurses
         dbus @ x11-libs/gtk+:2 
                 x11-libs/libSM
 gnutls @ net-libs/gnutls
-msn @ net-libs/gnutls
+msn @
+    gnutls @ net-libs/gnutls ||  >=dev-libs/nss-3.11
 gtk @ x11-libs/gtk+:2 
 sasl @ dev-libs/cyrus-sasl
 meanwhile @ net-libs/meanwhile
@@ -38,16 +39,33 @@ def prepare():
     patch("pidgin-2.7.4-icq-html-regression.patch")
 
 def configure():
+    prpls = ""
+    if opt("silc"):
+        prpls += ",silc"
+    if opt("meanwhile"):
+        prpls += ",sametime"
+    if opt("msn"):
+        prpls += ",msn"
+    if opt("groupwise"):
+        prpls += ",novell"
+    if opt("zephyr"):
+        prpls += ",zephyr"
+    if opt("myspace"):
+        prpls += ",myspace"
+    if opt("zeroconf") or opt("avahi"):
+        notify("we still don't have a avahi package, so disabling zeroconf/bonjour support for now")
+#        prpls += ",bonjour"
+    
     conf("--disable-mono",
     "--disable-schemas-install",
     "--disable-avahi",
     "--disable-doxygen",
+    "--with-dynamic-prpls=%s" % prpls,
     config_enable("networkmanager", "nm"),
     "--with-system-ssl-certs=/etc/ssl/certs",
     "--disable-vv",
     config_enable("debug"),
     config_enable("gstreamer"),
-    "--disable-tcl",
     config_enable("gtk", "gtkui"),
     config_enable("dbus"),
     config_enable("spell", "gtkspell"),

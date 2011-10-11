@@ -4,7 +4,7 @@ homepage @ http://www.zsh.org/
 license @ ZSH
 src_url @ ftp://ftp.zsh.org/pub/$fullname.tar.bz2
 arch @ ~x86
-options @ gdbm pcre maildir caps debug
+options @ gdbm pcre maildir caps debug lpms-completion
 """
 
 depends = """
@@ -13,6 +13,7 @@ runtime @ sys-libs/glibc
 
 opt_runtime = """
 gdbm @ sys-libs/gdbm
+pcre @ dev-libs/pcre
 """
 
 def configure():
@@ -25,10 +26,10 @@ def configure():
     "--enable-multibyte",
     "--enable-maildir-support",
     "--enable-function-subdirs",
-        config_enable("pcre"),
-        config_enable("caps", "cap"),
-        config_enable("gdbm"),
-        config_enable("maildir", "maildir-support"),
+    config_enable("pcre"),
+    config_enable("caps", "cap"),
+    config_enable("gdbm"),
+    config_enable("maildir", "maildir-support"),
     "--enable-zsh-secure-free",
     "--enable-etcdir=/etc/zsh",
     "--bindir=/bin",
@@ -42,3 +43,6 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("LICENCE", "META-FAQ", "NEWS", "README", "config.modules")
+
+    if opt("lpms-completion"):
+        insfile("%s/_lpms" % filesdir, "/usr/share/zsh/%s/functions/Completion/Linux/_lpms" % version)
