@@ -30,6 +30,8 @@ def prepare():
 
 def configure():
     myconf = ""
+    mail_enabled = 0
+    http_enabled = 0
     
     if opt("aio"):
         myconf += " --with-file-aio --with-aio_module "
