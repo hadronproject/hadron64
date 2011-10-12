@@ -24,9 +24,9 @@ def configure():
     pass
 
 def build():
-    make("-j1")
+    make(j=1)
 
 def install():
     raw_install("INSTALL='/bin/install -c' mandir=/usr/share/man DESTDIR=%s" % install_dir)
-    insfile("%s/cpufreq.confd" % filesdir, "/etc/conf.d/cpufrequtils")
+    insfile("%s/cpufreq.confd" % filesdir, "/etc/conf.d/cpufreq")
     insexe("%s/cpufreq.rcd" % filesdir, "/etc/rc.d/cpufrequtils")
