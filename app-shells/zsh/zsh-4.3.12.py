@@ -45,4 +45,4 @@ def install():
     insdoc("LICENCE", "META-FAQ", "NEWS", "README", "config.modules")
 
     if opt("lpms-completion"):
-        insfile("%s/_lpms" % filesdir, "/usr/share/zsh/%s/functions/Completion/Linux/_lpms" % version)
+        insfile("%s/_lpms" % filesdir, "/usr/share/zsh/site-functions/_lpms")
