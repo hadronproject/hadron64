@@ -27,7 +27,8 @@ def install():
         for crt in glob.glob("%s/usr/share/ca-certificates/%s/*.crt" % (install_dir, d)):
             mycontent += crt.split(install_dir)[1]+"\n"
 
-    echo("%s" % mycontent, '%s/etc/ca-certificates.conf' % install_dir)
+    #echo("%s" % mycontent, '%s/etc/ca-certificates.conf' % install_dir)
+    system("echo \"%s\" >> %s/etc/ca-certificates.conf" % (mycontent, install_dir))
 
 def post_install():
     system("lpms -c ca-certificates | grep crt | sed 's#/usr/share/ca-certificates/##g' > /etc/ca-certificates.conf")
