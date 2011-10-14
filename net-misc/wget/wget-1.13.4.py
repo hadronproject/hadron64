@@ -15,6 +15,7 @@ idn @ net-dns/libidn
 nls @ sys-devel/gettext
 ssl @
     gnutls @ net-libs/gnutls || dev-libs/openssl
+    ntlm @ dev-libs/openssl
 """
 
 def configure():
@@ -27,6 +28,11 @@ def configure():
     else:
         notify("*** ssl option is highly recommended but you disabled it ***")
         myconf += " --without-ssl "
+    
+    if opt("ntlm"):
+        if opt("gnutls"):
+            import lpms
+            lpms.terminate("*** You can not use ntlm and gnutls options together, compilation is going to fail ***")
 
     conf(
     config_enable("ssl", "opie"),
