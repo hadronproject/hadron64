@@ -30,6 +30,8 @@ def prepare():
 
 def configure():
     myconf = ""
+    mail_enabled = 0
+    http_enabled = 0
     
     if opt("aio"):
         myconf += " --with-file-aio --with-aio_module "
@@ -57,7 +59,7 @@ def configure():
 
     #optionals    
     for modop in ("http_gzip_static", "http_image_filter",
-            "http_perl",
+            "http_perl", "http_geoip",
             "http_secure_link", "http_xslt",
             "http_addition", "http_dav",
             "http_degradation", "http_flv",

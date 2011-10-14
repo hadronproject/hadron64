@@ -4,6 +4,7 @@ homepage @ http://www.freedesktop.org/
 license @ LGPL
 src_url @ http://www.freedesktop.org/software/startup-notification/releases/$fullname.tar.gz
 arch @ ~x86
+options @ static-libs
 """
 
 depends = """
@@ -17,3 +18,4 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    insdoc("AUTHORS", "ChangeLog", "NEWS", "doc/startup-notification.txt")
