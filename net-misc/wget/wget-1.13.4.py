@@ -29,13 +29,12 @@ def configure():
         myconf += " --without-ssl "
 
     conf(
-    "--enable-opie",
-    "--enable-digest",
-    "--enable-ntlm",
-    config_enable("ntlm"),
+    config_enable("ssl", "opie"),
+    config_enable("ssl", "digest"),
     config_enable("debug"),
     config_enable("ipv6"),
     config_enable("idn", "iri"),
+    config_enable("ntlm"),
     config_enable("nls"), myconf)
 
 def install():
