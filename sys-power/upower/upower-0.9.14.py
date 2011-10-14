@@ -2,9 +2,9 @@ metadata = """
 summary @ Abstraction for enumerating power devices, listening to device events and querying history and statistics
 homepage @ http://upower.freedesktop.org
 license @ GPL
-src_url @ http://upower.freedesktop.org/releases/$fullname.tar.bz2
+src_url @ http://upower.freedesktop.org/releases/$fullname.tar.xz
 arch @ ~x86
-options @ introspection
+options @ introspection debug
 """
 
 depends = """
