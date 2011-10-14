@@ -41,8 +41,6 @@ def configure():
         if not opt("threads"):
             notify('*** "gnutls" option also needs "threads" option, enabling "threads" ***')
             myconf += " --enable-threads "
-        else:
-            myconf += " --disable-threads "
     
     aclocal("-I config-scripts")
     autoconf("-I config-scripts")

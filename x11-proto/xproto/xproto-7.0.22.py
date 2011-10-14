@@ -16,10 +16,14 @@ doc @ app-text/xmlto
 """
 
 def configure():
+    export("HOME", build_dir)
     conf(
-    config_enable("doc", "xmlto"),
     config_enable("doc", "specs"),
     "--without-fop")
+
+def build():
+    export("HOME", build_dir)
+    make()
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

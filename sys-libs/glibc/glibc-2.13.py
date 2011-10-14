@@ -45,3 +45,6 @@ def install():
     #insfile("%s/gai.conf" % filesdir, "/etc/gai.conf")
 
     insfile("%s/locale.gen" % filesdir,  "/etc/locale.gen")
+
+def post_install():
+    warn("Please don't forget to edit /etc/locale.gen and run locale-gen")
