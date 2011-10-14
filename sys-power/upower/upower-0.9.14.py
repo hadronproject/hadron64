@@ -18,12 +18,7 @@ introspection @ dev-libs/gobject-introspection
 """
 
 def configure():
-    autoreconf("-fi")
-    raw_configure("--prefix=/usr",
-            "--sysconfdir=/etc",
-            "--localstatedir=/var",
-            "--libexecdir=/usr/lib/upower",
-            "--disable-static",
+    conf("--disable-static",
             "--disable-man-pages",
             "--disable-gtk-doc",
             "--disable-tests",
