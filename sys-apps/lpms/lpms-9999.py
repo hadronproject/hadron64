@@ -13,6 +13,8 @@ build @ dev-lang/python
 
 standard_procedure = False
 
+reserve_files = ["/etc/lpms/lpms.conf", "/etc/lpms/repo.conf"]
+
 def prepare():
     notify("cloning git://gitorious.org/hadron/lpms.git")
     if not system("git clone git://gitorious.org/hadron/lpms.git"):
