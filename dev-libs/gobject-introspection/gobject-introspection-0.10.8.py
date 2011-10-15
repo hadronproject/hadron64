@@ -17,6 +17,8 @@ def configure():
         "--disable-static",
         "--disable-tests")
 
+#TODO: tests needs cairo, should add some flags to fix that
+
 def build():
     export("HOME", build_dir)
     make()
