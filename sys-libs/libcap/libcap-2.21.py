@@ -2,7 +2,7 @@ metadata = """
 summary @ POSIX 1003.1e capabilities
 homepage @ http://www.kernel.org/pub/linux/libs/security/linux-privs/
 license @ GPL
-src_url @ http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/$fullname.tar.gz
+src_url @ http://ftp.eu.openbsd.org/pub/mirrors/ftp.kernel.org/linux/libs/security/linux-privs/libcap2/$fullname.tar.gz
 arch @ ~x86
 """
 
