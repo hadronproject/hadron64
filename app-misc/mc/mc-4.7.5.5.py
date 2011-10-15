@@ -44,10 +44,10 @@ def configure():
     "--enable-vfs-undelfs",
     "--enable-charset",
     "--with-subshell",
+    "--with-edit",
     config_with("X", "x"),
     config_with("debug"),
-    config_with("gpm", "gpm-mouse"),
-    config_with("edit"), myscreen)
+    config_with("gpm", "gpm-mouse"), myscreen)
 
 def install():
     insdoc("AUTHORS", "README")
