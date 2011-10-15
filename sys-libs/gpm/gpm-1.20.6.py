@@ -14,3 +14,10 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("BUGS", "Changes", "README", "TODO")
+
+    insexe("%s/gpm" % filesdir, "/etc/rc.d/gpm")
+    insfile("%s/gpm.confd" % filesdir, "/etc/conf.d/gpm")
+    insexe("%s/gpm.sh" % filesdir, "/etc/profile.d/gpm.sh")
+
+    cd("%s/usr/lib" % install_dir)
+    system("ln -s libgpm.so.2.* libgpm.so")
