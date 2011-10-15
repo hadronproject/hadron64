@@ -25,7 +25,7 @@ nls @ sys-devel/gettext
 
 
 def configure():
-
+    myscreen = ""
     if opt("slang") and opt("ncurses"):
         import lpms
         lpms.terminate("You have to choose only one option: \"slang\" or \"ncurses\". Can't open both.")
