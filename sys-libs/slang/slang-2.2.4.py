@@ -29,4 +29,4 @@ def build():
 
 def install():
     raw_install("DESTDIR=%s install-all" % install_dir)
-    insdoc("NEWS", "README", "*.txt", "doc/{,internal,text}/*.txt")
+    insdoc("NEWS", "README", "*.txt")
