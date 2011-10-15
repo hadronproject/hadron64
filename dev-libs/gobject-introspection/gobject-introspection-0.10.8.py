@@ -13,7 +13,9 @@ runtime @ sys-libs/glib dev-libs/libffi dev-lang/python
 def configure():
     export("HOME", build_dir)
     autoreconf("-fi")
-    conf("--disable-static")
+    conf(
+        "--disable-static",
+        "--disable-tests")
 
 def build():
     export("HOME", build_dir)
