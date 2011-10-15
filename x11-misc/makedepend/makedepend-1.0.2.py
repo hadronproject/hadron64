@@ -8,6 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc
+build @ x11-proto/xproto
 """
 
 def install():
