@@ -8,6 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ dev-lang/perl sys-apps/gawk
+build @ x11-misc/makedepend
 """
 
 def prepare():
