@@ -21,6 +21,7 @@ def install():
     insinto("*.mod", "/usr/share/xml/docbook/xml-dtd-%s" % version)
     insinto("docbook.cat", "/usr/share/xml/docbook/xml-dtd-%s" % version)
     insinto("ent/*.ent", "/usr/share/xml/docbook/xml-dtd-%s/ent" % version)
+    makedirs("/etc/xml")
 
 def post_install():
     system("/usr/bin/build-docbook-catalog")
