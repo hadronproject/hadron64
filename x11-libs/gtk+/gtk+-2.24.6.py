@@ -5,8 +5,7 @@ license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/$fullname.tar.bz2
 arch @ ~x86
 slot @ 2
-options @ xinerama
-slot @ 2
+options @ xinerama engines
 """
 
 depends = """
@@ -21,6 +20,10 @@ runtime @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
 
 opt_runtime = """
 xinerama @ x11-libs/libXinerama
+"""
+
+opt_postmerge = """
+engines @ x11-themes/gtk-engines
 """
 
 def prepare():

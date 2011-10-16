@@ -7,7 +7,7 @@ arch @ ~x86
 
 depends = """
 runtime @ media-libs/alsa-lib dev-util/desktop-file-utils gnome-base/gconf
-x11-libs/libXtst x11-misc/libxss media-libs/libpng:1.2 net-print/cups
+x11-libs/libXtst x11-misc/libxss media-libs/libpng:1.2 net-print/cups dev-libs/nss
 """
 
 get("fdo_mime", "gnome2_utils")
