@@ -55,7 +55,7 @@ def build():
     pass
 
 def install():
-    system("python setup.py install --optimize=1 --root=%s" % install_dir)
+    system("python2 setup.py install --optimize=1 --root=%s" % install_dir)
 
     insexe("%s/wicd-daemon" % filesdir, "/etc/rc.d/wicd")
     insinto("%s/build/lib/wicd/*.py" % build_dir, "/usr/lib/wicd/")
