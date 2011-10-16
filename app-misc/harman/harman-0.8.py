@@ -8,4 +8,4 @@ src_url @ http://istihza.com/$name/$name-$version/anakaynak/$name-$version.tar.g
 """
 
 def post_install():
-    notify("Burak Sezer")
+    notify("Packaged by Burak Sezer")
