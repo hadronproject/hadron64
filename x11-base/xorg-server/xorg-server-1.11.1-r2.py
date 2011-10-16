@@ -4,7 +4,7 @@ homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/xserver/$fullname.tar.bz2
 arch @ ~x86
-options @ doc ipv6
+options @ doc ipv6 vesa nv synaptics intel nouveau vesa
 """
 
 depends = """
@@ -28,10 +28,20 @@ x11-proto/xf86rushproto >=x11-proto/xf86vidmodeproto-2.2.99.1
 >=x11-proto/xineramaproto-1.1.3 >=x11-proto/xproto-7.0.22
 >=x11-proto/dmxproto-2.2.99.1
 >=x11-proto/xf86driproto-2.1.0 >=x11-proto/dri2proto-2.6 >=x11-libs/libdrm-2.4.20
+postmerge @ x11-drivers/xf86-input-mouse x11-drivers/xf86-input-keyboard x11-drivers/xf86-input-evdev
+media-fonts/fonts-type1 media-fonts/dejavu media-fonts/freefonts
 """
 
 opt_build = """
 doc @ app-text/xmlto www-client/links
+"""
+
+opt_runtime = """
+intel @ x11-drivers/xf86-video-intel
+synaptics @ x11-drivers/xf86-input-synaptics
+nv @ x11-drivers/xf86-video-nv
+nouveau @ x11-drivers/xf86-video-nouveau
+vesa @ x11-drivers/xf86-video-vesa
 """
 
 def prepare():

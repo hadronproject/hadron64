@@ -14,3 +14,6 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("COPYING")
+
+def post_install():
+    warn("*** Don't forget to add ' Driver \"nv\" ' under xorg.conf.d ***")
