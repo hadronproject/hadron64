@@ -39,14 +39,15 @@ def configure():
         myconf += " --no-install-gtk "
 
     system("find . -type f -exec sed -i 's@#!/usr.*python@#!/usr/bin/python2@' {} \;")
+    
+    export("PYTHON", "python2")
 
-    system("python2 setup.py configure \
-    --no-install-docs \
-    --no-install-init \
-    --resume=/usr/share/wicd/scripts/ \
-    --suspend=/usr/share/wicd/scripts/ \
-    --python=/usr/bin/python2 \
-    --verbose %s" % myconf)
+    system("python2 setup.py configure --no-install-docs \
+            --no-install-init \
+            --resume=/usr/share/wicd/scripts/ \
+            --suspend=/usr/share/wicd/scripts/ \
+            --python=/usr/bin/python2 \
+            --verbose %s" % myconf)
     pass
 
 def build():
