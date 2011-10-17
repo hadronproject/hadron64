@@ -33,6 +33,9 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s altinstall maninstall" % install_dir)
+    
+    #workaround
+    system("mv %s/usr/bin/2to3 %s/usr/bin/2to3.2" % (install_dir, install_dir))
 
     insdoc("LICENSE", "README")
     for doc in ('ACKS', 'HISTORY', 'NEWS'):
