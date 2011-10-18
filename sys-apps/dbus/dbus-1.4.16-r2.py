@@ -63,6 +63,7 @@ def install():
 
 def post_install():
     #FIXME: Python Python Python
+    system("getent group 81 >/dev/null && userdel messagebus >/dev/null || true")
     system("getent group dbus >/dev/null || groupadd -g 81 dbus")
     system("getent passwd dbus >/dev/null || useradd -c 'System message bus' -u 81 -g dbus -d '/' -s /bin/false dbus")
     system("passwd -l dbus &>/dev/null")
