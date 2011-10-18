@@ -16,7 +16,7 @@ build @ >=sys-devel/flex-2.5.4a sys-devel/m4
 opt_common = """
 zlib @ >=sys-libs/zlib-1.2.2.3
 bzip2 @ app-arch/bzip2
-lzma @ app-arch/xz-utils
+lzma @ app-arch/xz
 """
 
 def configure():
