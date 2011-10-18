@@ -8,7 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ <dev-lang/python-3
-built @ <dev-lang/python-3
+build @ <dev-lang/python-3
 """
 
 get("python_utils")
