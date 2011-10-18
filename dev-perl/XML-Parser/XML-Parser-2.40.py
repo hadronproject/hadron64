@@ -2,7 +2,7 @@ metadata = """
 summary @ Expat-based XML parser module for perl
 homepage @ http://search.cpan.org/dist/XML-Parser
 license @ GPL PerlArtistic
-src_url @ http://search.cpan.org/CPAN/authors/id/C/CH/CHORNY/$fullname.tar.gz
+src_url @ http://cpan.org/CPAN/authors/id/C/CH/CHORNY/$fullname.tar.gz
 arch @ ~x86
 """
 
