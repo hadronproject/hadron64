@@ -36,7 +36,7 @@ opt_build = """
 doc @ app-text/xmlto www-client/links
 """
 
-opt_runtime = """
+opt_postmerge = """
 intel @ x11-drivers/xf86-video-intel
 synaptics @ x11-drivers/xf86-input-synaptics
 nv @ x11-drivers/xf86-video-nv
