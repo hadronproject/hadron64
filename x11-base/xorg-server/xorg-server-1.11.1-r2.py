@@ -36,7 +36,7 @@ opt_build = """
 doc @ app-text/xmlto www-client/links
 """
 
-opt_runtime = """
+opt_postmerge = """
 intel @ x11-drivers/xf86-video-intel
 synaptics @ x11-drivers/xf86-input-synaptics
 nv @ x11-drivers/xf86-video-nv
@@ -49,6 +49,7 @@ def prepare():
     patch("xorg-server-1.9-nouveau-default.patch", level=1)
     patch("xorg-redhat-die-ugly-pattern-die-die-die.patch", level=3)
 def configure():
+    export("HOME", build_dir)
     conf(
             config_enable("ipv6"),
             "--enable-dri \
@@ -75,7 +76,6 @@ def configure():
             --with-fontrootdir=/usr/share/fonts \
             --with-os-name=\"Hadron GNU/Linux\" \
             --with-os-vendor=\"Hadron Project\"",
-            config_enable("doc", "specs"),
             config_with("doc", "xmlto"))
 
 def install():

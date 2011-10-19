@@ -4,7 +4,7 @@ homepage @ http://www.oasis-open.org/docbook/
 license @ MIT
 src_url @ http://www.docbook.org/xml/$version/docbook-xml-$version.zip
 arch @ ~x86
-slot @ 4.2
+slot @ 4.4
 """
 
 depends = """

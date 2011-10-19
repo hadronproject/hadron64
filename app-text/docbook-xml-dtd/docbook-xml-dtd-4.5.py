@@ -2,13 +2,14 @@ metadata = """
 summary @ A widely used XML scheme for writing documentation and help
 homepage @ http://www.oasis-open.org/docbook/
 license @ MIT
-src_url @ http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip
+src_url @ http://www.docbook.org/xml/$version/docbook-xml-$version.zip
 arch @ ~x86
 slot @ 4.5
 """
 
 depends = """
 runtime @ dev-libs/libxml2 app-text/build-docbook-catalog app-text/docbook-xml-dtd:4.2
+app-text/docbook-xml-dtd:4.3 app-text/docbook-xml-dtd:4.4
 build @ app-text/sgml-common
 """
 

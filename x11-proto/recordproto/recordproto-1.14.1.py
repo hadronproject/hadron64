@@ -16,6 +16,7 @@ doc @ app-text/xmlto
 """
 
 def configure():
+    export("HOME", build_dir)
     conf(
     config_enable("doc", "specs"),
     config_with("doc", "xmlto"),
