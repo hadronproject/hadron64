@@ -49,6 +49,7 @@ def prepare():
     patch("xorg-server-1.9-nouveau-default.patch", level=1)
     patch("xorg-redhat-die-ugly-pattern-die-die-die.patch", level=3)
 def configure():
+    export("HOME", build_dir)
     conf(
             config_enable("ipv6"),
             "--enable-dri \
