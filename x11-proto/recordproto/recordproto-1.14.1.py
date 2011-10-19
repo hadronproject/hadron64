@@ -12,7 +12,7 @@ runtime @ x11-misc/util-macros
 """
 
 opt_build = """
-doc @ app-text/xmlto app-text/docbook-xml-dtd:4.5
+doc @ app-text/xmlto
 """
 
 def configure():

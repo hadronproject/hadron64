@@ -8,4 +8,5 @@ arch @ ~x86
 
 depends = """
 runtime @ dev-libs/libxslt dev-perl/Test-Pod dev-perl/YAML-Syck
+build @ app-text/docbook-xsl-stylesheets
 """
