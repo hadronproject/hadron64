@@ -76,7 +76,6 @@ def configure():
             --with-fontrootdir=/usr/share/fonts \
             --with-os-name=\"Hadron GNU/Linux\" \
             --with-os-vendor=\"Hadron Project\"",
-            config_enable("doc", "specs"),
             config_with("doc", "xmlto"))
 
 def install():
