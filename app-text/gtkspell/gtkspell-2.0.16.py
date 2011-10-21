@@ -8,6 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc dev-util/intltool
+build @ app-text/enchant
 """
 
 
