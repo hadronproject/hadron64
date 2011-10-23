@@ -13,11 +13,6 @@ depends = """
 runtime @ sys-libs/glibc sys-libs/zlib
 """
 
-def prepare():
-    if opt("apng"):
-        patch("libpng-1.5.4-apng.patch", level=1)
-        libtoolize()
-
 def build():
     make("ECHO=echo")
 

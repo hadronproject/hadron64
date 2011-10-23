@@ -8,6 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ dev-libs/libxml2 sys-libs/glib
+build @ gnome-base/libgnome-keyring
 """
 
 def configure():
