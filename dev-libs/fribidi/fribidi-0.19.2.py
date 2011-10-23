@@ -11,7 +11,7 @@ runtime @ sys-libs/glibc
 """
 
 def build():
-    conf("--prefix=/usr")
+    conf()
     
 def install():
     raw_install("DESTDIR=%s" % install_dir) 
