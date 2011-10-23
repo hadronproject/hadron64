@@ -19,6 +19,11 @@ tiff @ media-libs/tiff
 introspection @ dev-libs/gobject-introspection
 """
 
+def prepare():
+    patch("gdk-pixbuf-2.21.4-fix-automagic-x11.patch")
+    sed("-i -e 's:libpng15:libpng libpng15:' configure.ac")
+    libtoolize(); autoreconf()
+
 def configure():
     export("HOME", build_dir)
     myconf = ""
