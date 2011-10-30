@@ -14,5 +14,9 @@ build @ dev-util/pkg-config dev-util/intltool
 def configure():
     conf("--disable-scrollkeeper")
 
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
