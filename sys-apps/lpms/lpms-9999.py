@@ -29,6 +29,10 @@ def install():
 
     insinto("src/*", install_path)
     insinto("bin/*", "/usr/bin")
+    insinto("scripts/*", "/usr/sbin")
+    
+    setmod("+x %s/usr/sbin/create_file_relationsdb.py" % build_dir)
+    setmod("+x %s/usr/sbin/create_reverse_dependsdb.py" % build_dir)
 
     makedirs("etc/lpms")
     insinto("data/*", "/etc/lpms")
