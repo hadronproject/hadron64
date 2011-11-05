@@ -4,11 +4,11 @@ license @ GPL-3
 homepage @ http://www.gnu.org/software/coreutils/
 src_url @ http://ftp.gnu.org/gnu/coreutils/$fullname.tar.gz
 arch @ ~x86
-options @ caps gmp xattr nls acl
+options @ caps gmp xattr nls acl pam
 """
 
 depends = """
-runtime @ sys-libs/glibc dev-libs/pcre
+common @ sys-libs/glibc dev-libs/pcre sys-apps/shadow
 """
 
 opt_runtime = """
@@ -17,6 +17,7 @@ gmp @ dev-libs/gmp
 acl @ sys-apps/acl
 xattr @ sys-apps/attr
 nls @ >=sys-devel/gettext-0.15
+pam @ sys-libs/pam
 """
 
 def prepare():
@@ -25,7 +26,7 @@ def prepare():
     autoreconf("-v")
 
 def configure():
-    conf("--with-packager='Hadron'",
+    conf("--with-packager='Hadron Project'",
             "--with-packager-bug-reports='http://trac.seqizz.net'",
             "--enable-install-program=su",
             "--enable-no-install-program=groups,hostname,kill,uptime",
@@ -34,7 +35,8 @@ def configure():
             config_enable('nls'),
             config_enable('acl'),
             config_enable('xattr'),
-            config_with('gmp')
+            config_with('gmp'),
+            config_enable('pam')
         )
 
 def install():
