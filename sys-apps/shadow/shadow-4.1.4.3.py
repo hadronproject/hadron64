@@ -6,6 +6,10 @@ src_url @ http://mir0.gentoo-fr.org/distfiles/$fullname.tar.bz2
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-apps/acl app-shells/bash sys-libs/pam
+"""
+
 def prepare():
     patch(level=1)
 
