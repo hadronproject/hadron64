@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc
+runtime @ sys-libs/glibc app-shells/bash
 """
 
 def install():
