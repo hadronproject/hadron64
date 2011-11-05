@@ -6,8 +6,8 @@ src_url @ ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
 """
 
 depends = """
-runtime @ sys-devel/m4 dev-lang/perl
-        sys-apps/texinfo
+runtime @ sys-devel/m4 dev-lang/perl sys-apps/diffutils
+        sys-apps/texinfo app-shells/bash sys-apps/gawk
 """
 
 def install():
