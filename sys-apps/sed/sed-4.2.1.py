@@ -6,7 +6,9 @@ src_url @ ftp://ftp.gnu.org/pub/gnu/$name/$fullname.tar.gz
 options @ acl nls
 arch @ ~x86
 """
-depends = """runtime @ sys-apps/acl"""
+depends = """
+runtime @ sys-apps/acl app-shells/bash
+"""
 
 def configure():
     conf("--bindir=/bin",
