@@ -8,7 +8,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc dev-libs/pcre
+runtime @ sys-libs/glibc dev-libs/pcre app-shells/bash
 build @ sys-apps/texinfo
 """
 
