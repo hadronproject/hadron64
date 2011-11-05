@@ -5,6 +5,10 @@ license @ GPL-3
 arch @ ~x86
 """
 
+depends = """
+common @ app-misc/iana-etc app-shells/bash sys-apps/coreutils
+"""
+
 standard_procedure = False
 
 reserve_files = ["/etc/passwd", "/etc/hosts", "/etc/group", "/etc/fstab", \
