@@ -7,6 +7,10 @@ options @ nls static-libs
 arch @ ~x86
 """
 
+depends = """
+common @ sys-libs/glibc app-shells/bash
+"""
+
 def configure():
     if opt('static-libs'): append_ldflags('-static')
     conf("--with-packager='Hadron'",
