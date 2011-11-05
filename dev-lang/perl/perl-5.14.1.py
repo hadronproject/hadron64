@@ -11,7 +11,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/gdbm sys-libs/glibc sys-apps/coreutils
-        sys-apps/groff sys-libs/zlib
+        sys-apps/groff sys-libs/zlib sys-apps/bash
 """
 
 def configure():
