@@ -7,7 +7,8 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-apps/shadow sys-apps/util-linux sys-apps/coreutils sys-libs/glibc
+runtime @ sys-apps/gawk sys-apps/shadow sys-apps/util-linux 
+sys-apps/coreutils sys-libs/glibc
 """
 srcdir = fullname+"dsf"
 
