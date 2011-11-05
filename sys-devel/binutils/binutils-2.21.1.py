@@ -8,8 +8,9 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc sys-libs/zlib
-build @ sys-libs/glibc sys-devel/flex
+common @ sys-libs/glibc
+runtime @ sys-libs/zlib
+build @ sys-devel/flex
 """
 
 srcdir = "binutils"
