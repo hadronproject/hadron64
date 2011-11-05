@@ -7,9 +7,9 @@ arch @ ~x86
 """
 
 depends = """
-build @ sys-devel/binutils dev-libs/mpc sys-devel/bison sys-apps/sed
-
-runtime @ sys-devel/binutils dev-libs/mpc dev-libs/mpfr sys-apps/sed
+common @ sys-devel/binutils dev-libs/mpc sys-apps/sed
+build @ sys-devel/bison
+runtime @ dev-libs/mpfr
 """
 
 def configure():
