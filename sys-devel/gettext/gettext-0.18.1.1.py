@@ -7,9 +7,12 @@ options @ nls git static-libs openmp emacs
 arch @ ~x86
 """
 
+# FIXME: Check options and depends
+
 depends = """
 runtime @ sys-apps/acl
         sys-libs/ncurses
+        sys-devel/gcc
 """
 
 def configure():
