@@ -6,6 +6,10 @@ src_url @ http://www.tazenda.demon.co.uk/phil/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
+depends = """
+common @ sys-libs/glibc
+"""
+
 standard_procedure = False
 
 def prepare():
