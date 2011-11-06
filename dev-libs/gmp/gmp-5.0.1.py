@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-devel/gcc
+runtime @ sys-devel/m4
 """
 
 def configure():

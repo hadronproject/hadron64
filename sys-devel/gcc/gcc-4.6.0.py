@@ -7,9 +7,9 @@ arch @ ~x86
 """
 
 depends = """
-common @ sys-devel/binutils dev-libs/mpc sys-apps/sed
-build @ sys-devel/bison
-runtime @ dev-libs/mpfr
+common @ sys-devel/binutils dev-libs/mpc sys-apps/sed >=sys-libs/zlib-1.1.4 
+>=dev-libs/mpfr-2.4.2
+build @ >=sys-apps/texinfo-4.8 >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4
 """
 
 def configure():
