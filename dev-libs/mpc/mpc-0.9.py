@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ >=dev-libs/mpfr-3.0.0 >=dev-libs/gmp-4.3.2
+common @ >=dev-libs/mpfr-3.0.0 >=dev-libs/gmp-4.3.2
 """
 
 def prepare():
