@@ -6,6 +6,10 @@ src_url @ ftp://ftp.altlinux.org/pub/people/legion/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def prepare():
     patch(level=1)
 
