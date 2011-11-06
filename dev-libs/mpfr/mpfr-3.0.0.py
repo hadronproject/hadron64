@@ -6,8 +6,9 @@ src_url @ http://www.mpfr.org/$fullname/$fullname.tar.bz2
 arch @ ~x86
 """
 
-#depends = """
-#runtime @
+depends = """
+runtime @ dev-libs/gmp
+"""
 
 def prepare():
     patch(level=1)
