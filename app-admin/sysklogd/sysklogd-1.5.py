@@ -6,6 +6,11 @@ src_url @ http://www.infodrom.org/projects/sysklogd/download/$fullname.tar.gz
 arch @ ~x86
 """
 
+# FIXME: logrotate will be added 
+depends = """
+runtime @ sys-libs/glibc
+"""
+
 def install():
     for i in ("man8", "man5"):
         makedirs("/usr/share/man/%s" % i)
