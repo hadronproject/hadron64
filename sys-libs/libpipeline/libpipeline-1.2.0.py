@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-apps/texinfo
+runtime @ sys-libs/glibc  dev-util/pkg-config
 """
 
 def install():
