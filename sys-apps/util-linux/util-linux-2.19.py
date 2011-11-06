@@ -6,6 +6,8 @@ src_url @ ftp://ftp.kernel.org/pub/linux/utils/$name/v2.19/$fullname.tar.bz2
 arch @ ~x86
 """
 
+# FIXME: update, add options and dependencies
+
 def configure():
     system("sed -e 's@etc/adjtime@var/lib/hwclock/adjtime@g' \
             -i $(grep -rl '/etc/adjtime' .)")
