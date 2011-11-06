@@ -10,6 +10,8 @@ depends = """
 runtime @ sys-libs/glibc
 """
 
+# FIXME: add options
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
     insdoc("COPYING")
