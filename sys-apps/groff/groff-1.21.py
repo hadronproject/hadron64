@@ -7,8 +7,7 @@ arch @ x86
 """
 
 depends = """
-runtime @ sys-apps/texinfo
-build @ sys-apps/texinfo
+common @ sys-apps/texinfo
 """
 
 def configure():
