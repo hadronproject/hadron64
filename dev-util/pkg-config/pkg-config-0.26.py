@@ -7,5 +7,5 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc
+common @ sys-libs/glib >=dev-libs/popt-1.15
 """
