@@ -8,6 +8,10 @@ arch @ ~x86
 
 # FIXME: update, add options and dependencies
 
+depends = """
+runtime @ sys-apps/baselayout
+"""
+
 def configure():
     system("sed -e 's@etc/adjtime@var/lib/hwclock/adjtime@g' \
             -i $(grep -rl '/etc/adjtime' .)")
