@@ -12,6 +12,8 @@ common @ sys-devel/binutils dev-libs/mpc sys-apps/sed >=sys-libs/zlib-1.1.4
 build @ >=sys-apps/texinfo-4.8 >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4
 """
 
+srcdir = name+"-4.6-20110408"
+
 def configure():
     system("sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in")
     system("sed -i 's@\./fixinc\.sh@-c true@' gcc/Makefile.in")
