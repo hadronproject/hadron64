@@ -2,7 +2,7 @@ metadata = """
 summary @ The GNU Compiler Collection
 homepage @ http://gcc.gnu.org/
 license @ GPL-3 LGPL-3
-src_url @ ftp://gcc.gnu.org/pub/gcc/snapshots/4.6-20110408/gcc-4.6.0.tar.bz2
+src_url @ ftp://gcc.gnu.org/pub/gcc/snapshots/4.6-20110408/gcc-4.6-20110408.tar.bz2
 arch @ ~x86
 """
 
