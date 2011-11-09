@@ -19,6 +19,10 @@ def prepare():
 def configure():
     conf("--with-python")
 
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 

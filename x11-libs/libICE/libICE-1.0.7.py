@@ -8,7 +8,6 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc x11-proto/xproto
-
 build @ x11-libs/xtrans
 """
 
