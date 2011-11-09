@@ -20,6 +20,7 @@ def configure():
 #TODO: tests needs cairo, should add some flags to fix that
 
 def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     export("HOME", build_dir)
     make()
 
