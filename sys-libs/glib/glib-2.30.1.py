@@ -22,5 +22,9 @@ def configure():
         config_enable("xattr"),
         config_enable("static-libs", "static"))
 
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
+
 def install():
     raw_install('DESTDIR=%s' % install_dir)
