@@ -27,4 +27,5 @@ def build():
     make()
 
 def install():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install('DESTDIR=%s' % install_dir)
