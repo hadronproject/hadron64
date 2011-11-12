@@ -2,7 +2,7 @@ metadata = """
 summary @ Miscellaneous system utilities for Linux
 homepage @ http://userweb.kernel.org/~kzak/util-linux-ng/
 license @ GPL-2
-src_url @ ftp://ftp.kernel.org/pub/linux/utils/$name/v2.19/$fullname.tar.bz2
+src_url @ http://ftp.cc.uoc.gr/mirrors/ftp.kernel.org/pub/linux/utils/util-linux/v$version/$fullname.tar.bz2
 arch @ ~x86
 """
 

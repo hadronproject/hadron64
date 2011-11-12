@@ -17,6 +17,7 @@ def prepare():
     patch(level=1)
 
 def install():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install('DESTDIR=%s' % install_dir)
     insdoc("README", "ChangeLog", "MAINT")
     # install magic library

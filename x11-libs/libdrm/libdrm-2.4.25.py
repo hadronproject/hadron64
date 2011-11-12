@@ -8,6 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc
+build @ dev-lang/perl[ithreads] sys-devel/libtool
 """
 
 def prepare():

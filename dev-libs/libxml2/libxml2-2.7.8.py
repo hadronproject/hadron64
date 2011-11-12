@@ -30,6 +30,10 @@ def configure():
         config_with("debug", "run-debug"),
         config_with("icu"))
 
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 

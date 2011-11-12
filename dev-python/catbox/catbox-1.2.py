@@ -16,5 +16,6 @@ build @ dev-lang/python
 standard_procedure = False
 
 def install():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     python_utils_install()
     insdoc("README")
