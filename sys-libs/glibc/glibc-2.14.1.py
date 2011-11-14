@@ -2,7 +2,7 @@ metadata = """
 summary @ GNU C Library
 homepage @ http://www.gnu.org/software/libc
 license @ GPL-2
-src_url @ http://ftp.gnu.org/gnu/$name/$fullname.tar.gz
+src_url @ http://ftp.gnu.org/gnu/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
@@ -12,7 +12,7 @@ build @ sys-kernel/linux-api-headers
 """
 
 def prepare():
-    patch(location="%s/2.13" % filesdir, level=1)
+    patch(location="%s/2.14" % filesdir, level=1)
 
 def configure():
     makedirs("../glibc-build"); cd("../glibc-build")
@@ -34,17 +34,23 @@ def build():
 
 def install():
     cd("../glibc-build")
-    raw_install("install_root=%s install" % install_dir)
+    makedirs("/etc")
+    touch("/etc/ld.so.conf")
+    raw_install("install_root=%s" % install_dir)
+
+    rmfile("/etc/ld.so.conf")
 
     makedirs("/usr/lib/locale")
+    
     insfile("%s/nscd.conf" % filesdir, "/etc/nscd.conf")
     insexe("%s/locale-gen" % filesdir, "/usr/sbin/locale-gen")
     insexe("%s/nscd" % filesdir, "/etc/rc.d/nscd")
     insfile("%s/nsswitch.conf" % filesdir, "/etc/nsswitch.conf")
     insfile("%s/locale.gen" % filesdir, "/etc/locale.gen")
-    #insfile("%s/gai.conf" % filesdir, "/etc/gai.conf")
-
     insfile("%s/locale.gen" % filesdir,  "/etc/locale.gen")
+    #FIXME: #insfile("%s/glibc/posix/gai.conf" % build_dir, "/etc/gai.conf")
+    
+    makedirs("/etc/ld.so.conf.d")
 
 def post_install():
     warn("Please don't forget to edit /etc/locale.gen and run locale-gen")
