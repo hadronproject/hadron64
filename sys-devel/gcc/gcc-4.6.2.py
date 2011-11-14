@@ -2,7 +2,7 @@ metadata = """
 summary @ The GNU Compiler Collection
 homepage @ http://gcc.gnu.org/
 license @ GPL-3 LGPL-3
-src_url @ ftp://gcc.gnu.org/pub/gcc/snapshots/4.6-20110408/gcc-4.6-20110408.tar.bz2
+src_url @ ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.6.2/gcc-4.6.2.tar.bz2
 arch @ ~x86
 """
 
@@ -11,8 +11,6 @@ common @ sys-devel/binutils dev-libs/mpc sys-apps/sed >=sys-libs/zlib-1.1.4
 >=dev-libs/mpfr-2.4.2
 build @ >=sys-apps/texinfo-4.8 >=sys-devel/bison-1.875 >=sys-devel/flex-2.5.4
 """
-
-srcdir = name+"-4.6-20110408"
 
 def configure():
     system("sed -i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in")
@@ -29,7 +27,7 @@ def configure():
         "--disable-bootstrap",
         "--with-system-zlib",
         "--with-pkgversion='Hadron'",
-        "--with-bugurl=http://bugzilla.hadronproject.org",
+        "--with-bugurl=http://trac.seqizz.net",
         run_dir=build_dir)
 
 def build():
