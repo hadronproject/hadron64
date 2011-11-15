@@ -8,7 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc x11-proto/xproto
-build @ x11-libs/xtrans
+build @ x11-libs/xtrans sys-apps/grep sys-devel/make
 """
 
 def install():

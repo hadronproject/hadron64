@@ -6,7 +6,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-lang/python:2.7 dev-python/catbox net-misc/wget
+runtime @ dev-lang/python:2.7 dev-python/catbox net-misc/wget sys-apps/file
 build @ dev-lang/python
 """
 

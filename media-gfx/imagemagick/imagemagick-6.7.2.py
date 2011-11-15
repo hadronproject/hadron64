@@ -2,7 +2,7 @@ metadata = """
 summary @ A collection of tools and libraries for many image formats
 homepage @ http://www.imagemagick.org/
 license @ custom
-src_url @ ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-$version-9.tar.bz2
+src_url @ ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-$version-10.tar.bz2
 arch @ ~x86
 options @ bzip2 fontconfig jpeg lcms perl png svg tiff truetype X xml lzma zlib static-libs
 """
@@ -27,7 +27,7 @@ zlib @ sys-libs/zlib
 svg @ gnome-base/librsvg
 """
 
-srcdir = "ImageMagick-"+version+"-9"
+srcdir = "ImageMagick-"+version+"-10"
 
 def configure():
     conf("--with-modules",
