@@ -7,8 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-apps/util-linux
-build @ sys-apps/util-linux
+common @ sys-apps/util-linux app-shells/bash
 """
 
 def configure():
