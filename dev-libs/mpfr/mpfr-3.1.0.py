@@ -11,7 +11,7 @@ runtime @ dev-libs/gmp
 """
 
 def prepare():
-    patch(level=1)
+    patch("mpfr-3.1.0.p3.patch", level=1)
 
 def configure():
     conf("--enable-thread-safe"
