@@ -2,7 +2,7 @@ metadata = """
 summary @ Linux dynamic and persistent device naming support
 homepage @ http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
 license @ GPL-2
-src_url @ http://ftp.eu.openbsd.org/pub/mirrors/ftp.kernel.org/linux/utils/kernel/hotplug/$fullname.tar.bz2
+src_url @ http://people.freedesktop.org/~kay/$name/$fullname.tar.bz2
 options @ extras introspection gudev keymap
 """
 
@@ -17,9 +17,6 @@ introspection @ dev-libs/gobject-introspection
 extras @ sys-apps/acl sys-libs/glib dev-libs/gobject-introspection dev-libs/libusb:0 dev-util/gperf
 keymap @ dev-util/gperf
 """
-
-#def prepare():
-#    patch(level=1)
 
 def configure():
     raw_configure("--sysconfdir=/etc",
