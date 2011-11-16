@@ -8,6 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc dev-lang/perl x11-libs/cairo
+build @ dev-perl/ExtUtils-Depends dev-perl/ExtUtils-PkgConfig
 """
 
 def configure():

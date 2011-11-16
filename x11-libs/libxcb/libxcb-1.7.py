@@ -23,7 +23,12 @@ def configure():
     automake("--add-missing")
     conf("--enable-xinput")
 
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
+
 def install():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install("DESTDIR=%s" % install_dir)
 
     insdoc("COPYING")
