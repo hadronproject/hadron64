@@ -14,3 +14,7 @@ sys-apps/initscripts
 net-misc/wget
 sys-apps/sysvinit
 app-admin/syslog-ng
+app-arch/xz
+sys-process/procps
+sys-apps/less
+net-misc/openssh
