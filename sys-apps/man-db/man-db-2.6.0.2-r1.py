@@ -7,10 +7,12 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/gdbm sys-libs/zlib sys-libs/libpipeline sys-apps/groff
-
-build @ sys-libs/gdbm sys-libs/libpipeline
+common @ sys-libs/gdbm sys-libs/libpipeline
+runtime @ sys-libs/zlib sys-apps/groff
 """
+
+def prepare():
+    patch("1361_1360.diff")
 
 def configure():
     conf("--with-db=gdbm",
@@ -20,4 +22,8 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    rmfile("/usr/bin/zsoelim")
+    # script from LFS to convert manpages, see
+    # http://www.linuxfromscratch.org/lfs/view/6.4/chapter06/man-db.html
+    insexe("%s/convert-mans" % filesdir, "/usr/bin/convert-mans")
     insdoc("README")
