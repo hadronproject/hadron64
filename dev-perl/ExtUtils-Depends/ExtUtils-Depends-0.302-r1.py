@@ -19,4 +19,4 @@ def build():
 
 def install():
 	raw_install("DESTDIR=%s" % install_dir)
-
+        rmfile("/usr/lib/perl5/core_perl/perllocal.pod")
