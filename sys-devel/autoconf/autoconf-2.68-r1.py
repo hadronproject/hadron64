@@ -12,3 +12,5 @@ runtime @ sys-devel/m4 dev-lang/perl sys-apps/diffutils
 
 def install():
     raw_install('DESTDIR=%s' % install_dir)
+    insdoc("COPYING.EXCEPTION")
+    rmfile("/usr/share/info/standards.info")
