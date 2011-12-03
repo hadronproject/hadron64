@@ -18,6 +18,16 @@
 import os
 import lpms
 
+def fixlocalpod():
+    if not system("find %s -type f -name perllocal.pod -delete" % install_dir):
+        warn("fixlocalpod failed.")
+        return False
+    else:
+        if not system("find %s -depth -mindepth 1 -type d -empty -delete" % install_dir):
+            warn("fixlocalpod failed.")
+            return False
+    return True
+
 def perl_utils_configure(*params):
     '''Configures the package using perl specific ways'''
     export("PERL_MM_USE_DEFAULT", "1")
