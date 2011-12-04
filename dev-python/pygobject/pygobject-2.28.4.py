@@ -15,6 +15,9 @@ def prepare():
     patch(level=1)
     autoreconf("-fi")
 
+def configure():
+    conf("--disable-introspection")
+
 def install():
     linstall()
     #raw_install("DESTDIR=%s" % install_dir)
