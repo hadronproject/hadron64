@@ -39,3 +39,7 @@ def install():
     for x in ('chage', 'chfn', 'chsh', 'groupadd', 'groupdel', 'groupmod',
             'shadow', 'useradd', 'usermod', 'userdel'):
         insfile("%s/defaults.pam" % filesdir, "/etc/pam.d/%s" % x)
+
+    # these files are shipped by coreutils
+    rmfile("/bin/su")
+    rmfile("/usr/share/man/man1/su.1")

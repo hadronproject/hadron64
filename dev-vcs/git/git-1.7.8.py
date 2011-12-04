@@ -13,6 +13,10 @@ runtime @ dev-lang/perl dev-perl/Error
 build @ dev-lang/perl dev-perl/Error
 """
 
+get("perl_utils")
+
+standard_procedure = False
+
 def build():
     make("gitexecdir=/usr/lib/git-core")
 
@@ -32,3 +36,6 @@ def install():
             for manpage in ls("%s/%s" % (dirname(build_dir), mansect)):
                 insfile("%s/%s/%s" % (dirname(build_dir), mansect, manpage), \
                         "/usr/share/man/%s/%s" % (mansect, basename(manpage)))
+    
+    # remove /usr/lib/perl5/core_perl/perllocal.pod
+    fixlocalpod()

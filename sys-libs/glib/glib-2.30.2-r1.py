@@ -18,7 +18,6 @@ xattr @ sys-apps/attr
 def prepare():
     patch("glib-2.30.2-machine-id.patch", level=1)
     patch("glib-2.30.1-homedir-env.patch", level=1)
-    patch("glib-2.30.1-external-gdbus-codegen.patch")
     rmfile("py-compile")
     makesym("/bin/true", "py-compile")
 

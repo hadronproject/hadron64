@@ -8,7 +8,7 @@ arch @ ~x86
 """
 
 depends = """
-build @ dev-util/pkg-config sys-devel/flex sys-libs/glib
+build @ dev-util/pkg-config sys-devel/flex sys-libs/glib dev-libs/eventlog
 """
 
 opt_build = """

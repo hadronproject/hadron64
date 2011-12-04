@@ -17,6 +17,6 @@ def configure():
 def build():
     make()
     make("test")
+    
+install = lambda: (linstall(), rmfile("/usr/lib/perl5/core_perl/perllocal.pod"))
 
-#def install():
-#    raw_install("DESTDIR=%s" % install_dir)

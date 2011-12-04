@@ -9,12 +9,8 @@ options @ xinerama engines
 """
 
 depends = """
-build @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
-        x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo
-        x11-libs/gdk-pixbuf
-
-runtime @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
-          x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo
+common @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
+          x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo[svg]
           x11-libs/gdk-pixbuf
 """
 
