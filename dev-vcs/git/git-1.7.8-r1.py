@@ -9,20 +9,20 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-lang/perl dev-perl/Error
-build @ dev-lang/perl dev-perl/Error
+common @ dev-lang/perl dev-perl/Error net-misc/curl dev-libs/expat 
+        dev-libs/openssl dev-libs/pcre
 """
-
-get("perl_utils")
 
 standard_procedure = False
 
 def build():
-    make("gitexecdir=/usr/lib/git-core")
+    make('prefix=/usr CFLAGS="%s" LDFLAGS="%s" USE_LIBPCRE=1 NO_CROSS_DIRECTORY_HARDLINKS=1 \
+            gitexecdir=/usr/lib/git-core' % (get_env('CFLAGS'), get_env('LDFLAGS')))
 
 def install():
-    raw_install("gitexecdir=/usr/lib/git-core \
-            NO_CROSS_DIRECTORY_HARDLINKS=1 INSTALLDIRS=vendor DESTDIR=%s" % install_dir)
+    raw_install('prefix=/usr CFLAGS="%s" LDFLAGS="%s" USE_LIBPCRE=1 \
+            gitexecdir=/usr/lib/git-core NO_CROSS_DIRECTORY_HARDLINKS=1 \
+            INSTALLDIRS=vendor DESTDIR=%s' % (get_env('CFLAGS'), get_env('LDFLAGS'), install_dir))
 
     makedirs("/etc/bash_completion.d/")
     insfile("./contrib/completion/git-completion.bash", "/etc/bash_completion.d/git")
@@ -37,5 +37,4 @@ def install():
                 insfile("%s/%s/%s" % (dirname(build_dir), mansect, manpage), \
                         "/usr/share/man/%s/%s" % (mansect, basename(manpage)))
     
-    # remove /usr/lib/perl5/core_perl/perllocal.pod
-    fixlocalpod()
+    rmdir("/usr/lib/perl5")
