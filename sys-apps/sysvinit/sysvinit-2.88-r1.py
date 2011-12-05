@@ -14,3 +14,5 @@ srcdir = fullname+"dsf"
 
 def install():
     raw_install("ROOT=%s" % install_dir)
+    rmfile("/bin/mountpoint")
+    rmfile("/usr/share/man/man1/mountpoint.1")
