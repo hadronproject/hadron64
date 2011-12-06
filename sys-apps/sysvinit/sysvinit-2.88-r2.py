@@ -12,7 +12,13 @@ sys-apps/coreutils sys-libs/glibc
 """
 srcdir = fullname+"dsf"
 
-def install():
-    raw_install("ROOT=%s" % install_dir)
-    rmfile("/bin/mountpoint")
-    rmfile("/usr/share/man/man1/mountpoint.1")
+def prepare():
+    sed("-i 's@Sending processes@& configured via /etc/inittab@g' \
+            src/init.c")
+    sed("-i -e 's/utmpdump wall/utmpdump/' \
+            -e '/= mountpoint/d' \
+            -e 's/mountpoint.1 wall.1//' src/Makefile")
+
+build = lambda: make("-C src")
+install = lambda: raw_install("-C src ROOT=%s" % install_dir)
+
