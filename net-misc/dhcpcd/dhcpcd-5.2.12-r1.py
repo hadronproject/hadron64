@@ -6,6 +6,8 @@ src_url @ http://roy.marples.name/downloads/$name/$fullname.tar.bz2
 arch @ ~x86
 """
 
+prepare = lambda: patch(level=1)
+
 def configure():
     raw_configure("--libexecdir=/usr/lib/dhcpcd",
             "--dbdir=/var/lib/dhcpcd")
@@ -17,4 +19,4 @@ def install():
 
     insfile("%s/dhcpcd.conf.d" % filesdir, "/etc/conf.d/dhcpcd")
 
-    echo("noipv4ll", "%s/etc/dhcpcd.conf" % install_dir)
+    echo("noipv4ll", "/etc/dhcpcd.conf")
