@@ -34,8 +34,7 @@ def configure():
         config_enable("gudev"),
         config_enable("keymap"),
         "--enable-floppy",
-        "--enable-edd",
-        "--enable-action_modeswitch")
+        "--enable-edd")
 
 def build():
     export("HOME", build_dir)
