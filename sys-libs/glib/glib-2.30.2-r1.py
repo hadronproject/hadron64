@@ -22,6 +22,7 @@ def prepare():
     makesym("/bin/true", "py-compile")
 
 def configure():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     conf("--enable-regex",
             "--with-pcre=system",
             "--with-threads=posix",

@@ -11,6 +11,7 @@ runtime @ sys-libs/glib dev-libs/libffi dev-lang/python
 """
 
 def configure():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     export("HOME", build_dir)
     #autoreconf("-fi")
     conf(

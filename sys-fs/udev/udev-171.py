@@ -41,6 +41,7 @@ def configure():
         "--enable-action_modeswitch")
 
 def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     export("HOME", build_dir)
     make()
 

@@ -23,6 +23,10 @@ def configure():
         "--enable-unicode=ucs4",
         "--with-system-expat")
 
+def build():
+    export("PYTHONDONTWRITEBYTECODE", "1")
+    make()
+
 def install():
     raw_install("DESTDIR=%s altinstall maninstall" % install_dir)
 
