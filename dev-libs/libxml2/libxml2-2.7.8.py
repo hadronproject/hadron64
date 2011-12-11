@@ -9,6 +9,7 @@ options @ icu debug ipv6 readline
 
 depends = """
 runtime @ sys-libs/glibc sys-libs/ncurses sys-libs/zlib
+build @ dev-lang/perl[ithreads]
 """
 
 opt_runtime = """
