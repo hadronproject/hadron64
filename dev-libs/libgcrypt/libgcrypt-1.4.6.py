@@ -10,6 +10,9 @@ depends = """
 runtime @ sys-libs/glibc >dev-libs/libgpg-error-1.9
 """
 
+def prepare():
+    sed(""" -i 's/basic_LDADD = $(LDADD)/basic_LDADD = $(LDADD) -lgpg-error/' tests/Makefile.in """)
+
 def configure():
     conf(
     "--prefix=/usr",
