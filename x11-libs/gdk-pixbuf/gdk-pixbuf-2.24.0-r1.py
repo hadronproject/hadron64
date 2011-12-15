@@ -4,7 +4,7 @@ homepage @ http://www.gtk.org/
 license @ GPL2
 src_url @ http://download.gnome.org/sources/gdk-pixbuf/2.24/$fullname.tar.bz2
 arch @ ~x86
-options @ debug introspection X jpeg tiff
+options @ debug X jpeg tiff
 """
 
 depends = """
@@ -16,7 +16,6 @@ opt_runtime = """
 jpeg @ media-libs/jpeg
 X @ x11-libs/libX11
 tiff @ media-libs/tiff
-introspection @ dev-libs/gobject-introspection
 """
 
 def prepare():
@@ -34,10 +33,10 @@ def configure():
     "--without-libjasper",
     "--with-included-loaders=png",
     "--with-libpng",
+    "--disable-introspection",
     config_with("jpeg", "libjpeg"),
     config_with("tiff", "libtiff"),
-    config_with("X", "x11"),
-    config_enable("introspection"), myconf)
+    config_with("X", "x11"), myconf)
 
 
 def build():
