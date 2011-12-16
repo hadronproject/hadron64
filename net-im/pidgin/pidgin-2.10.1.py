@@ -40,6 +40,13 @@ def prepare():
     patch("pidgin-2.7.4-icq-html-regression.patch")
 
 def configure():
+    myconf = ""
+    if opt("msn"):
+        if opt("gnutls"):
+            myconf += " --enable-nss=no --enable-gnutls=yes --with-gnutls-includes=/usr/include/gnutls "
+        else:
+            myconf += " --enable-gnutls=no --enable-nss=yes "
+    
     prpls = ""
     if opt("silc"):
         prpls += ",silc"
@@ -72,10 +79,9 @@ def configure():
     config_enable("spell", "gtkspell"),
     config_enable("ncurses", "consoleui"),
     config_enable("meanwhile"),
-    config_enable("gnutls"),
     config_enable("sasl", "cyrus-sasl"),
     config_enable("tcl"),
-    config_enable("idn"))
+    config_enable("idn"), myconf)
 
 
 def install():
