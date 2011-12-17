@@ -11,11 +11,9 @@ runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils
           sys-apps/findutils sys-apps/coreutils sys-apps/sed
 """
 
-#srcdir = name + "-" + version + "+nmu1"
-
-import glob
-
 def install():
+    import glob
+    
     for i in ("/etc/ca-certificates/update.d", "/usr/sbin",
             "/usr/share/ca-certificates", "/etc/ssl/certs"):
         makedirs(i)
@@ -25,14 +23,12 @@ def install():
     mycontent = ""
     for d in ls("%s/usr/share/ca-certificates" % install_dir):
         for crt in glob.glob("%s/usr/share/ca-certificates/%s/*.crt" % (install_dir, d)):
-            mycontent += crt.split(install_dir)[1]+"\n"
+            mycontent += crt.split(install_dir+"/usr/share/ca-certificates/")[1]+"\n"
 
-    #system("echo \"%s\" >> %s/etc/ca-certificates.conf" % (mycontent, install_dir))
-    system("ln -s /usr/share/ca-certificates/*/*.crt %s/etc/ssl/certs/" % install_dir)
 
-    #Temp Fix
-    rmfile("/etc/ssl/certs/*Sertifika_Hizmet*")
+    echo("%s" % mycontent, "/etc/ca-certificates.conf")
 
 def post_install():
-    system("lpms -c ca-certificates | grep crt | sed 's#/usr/share/ca-certificates/##g' | grep -Ev \"\*\.crt\" > /etc/ca-certificates.conf")
-    system("update-ca-certificates")
+    # FIXME: lpms must do something about external command fails
+    if not system("update-ca-certificates"):
+        error("update-ca-certificates failed.")
