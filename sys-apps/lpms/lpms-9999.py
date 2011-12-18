@@ -39,7 +39,21 @@ def install():
     insinto("data/*", "/etc/lpms")
 
     for directories in ('/var/db/lpms', '/var/cache/lpms/sources',
-            '/var/tmp/lpms', '/var/lib/lpms', '/var/tmp/merge-conf'):
+            '/var/tmp/lpms', '/var/lib/lpms', '/var/tmp/merge-conf',
+            '/etc/lpms/user'):
         makedirs(directories)
+
+    user_readme = """
+    # this is the directory for fucking with options like 'app-editors/nano nls'
+    # the files that you can define 
+    # * lock
+    # * unlock
+    # * options
+    # * ldflags
+    # * cflags
+    # * cxxflags 
+    """
+    
+    echo(user_readme, "/etc/lpms/user/README")
 
     insdoc("COPYING", "AUTHORS", "README", "TODO")
