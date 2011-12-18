@@ -18,3 +18,5 @@ app-arch/xz
 sys-process/procps
 sys-apps/less
 net-misc/openssh
+dev-vcs/git
+sys-devel/libtool
