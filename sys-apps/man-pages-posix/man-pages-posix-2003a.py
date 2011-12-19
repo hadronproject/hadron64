@@ -6,10 +6,6 @@ src_url @ http://hadronproject.org/distfiles/$fullname.tar.bz2
 arch @ ~x86
 """
 
-depends = """
-conflict @ sys-apps/man-pages
-"""
-
 standard_procedure = False
 
 srcdir = "man-pages-posix-2003-a"
