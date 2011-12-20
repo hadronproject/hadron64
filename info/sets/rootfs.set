@@ -4,8 +4,14 @@ sys-devel/automake
 sys-devel/autoconf
 app-editors/nano
 app-arch/tar
+app-arch/bzip2
+app-arch/gzip
 sys-apps/grep
+sys-apps/gawk
+sys-apps/diffutils
+sys-apps/baselayout
 sys-apps/initscripts
+net-misc/wget
 sys-apps/sysvinit
 app-admin/syslog-ng
 app-arch/xz
