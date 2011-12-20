@@ -25,6 +25,7 @@ def prepare():
         cpan/Compress-Raw-Zlib/config.in')
 
 def configure():
+    mythreading=""
     myndbm='U'; mygdbm='U'; mydb='U'
 
     if opt("berkdb"): 
@@ -37,7 +38,7 @@ def configure():
     myconf = '-%si_ndbm -%si_gdbm  -%si_db' % (myndbm, mygdbm, mydb)
 
     if opt("ithreads"):
-        myconf += " -Dusethreads"
+        mythreading += " -Dusethreads"
 
     if opt("debug"):
         append_cflags("-g")
@@ -49,6 +50,7 @@ def configure():
 
     system("sh Configure \
     -des \
+    %s \
     -Duseshrplib  \
     -Doptimize='%s' \
     -Dldflags='%s' \
@@ -75,7 +77,7 @@ def configure():
     -Dmyhostname='localhost' \
     -Dperladmin='root@localhost'\
     -Dpager='/usr/bin/less -isR' \
-    -Dman1ext='1' -Dman3ext='3pm' %s" % (get_env("CFLAGS"), get_env("LDFLAGS"), get_env("LDFLAGS"), myconf))
+    -Dman1ext='1' -Dman3ext='3pm' %s" % (mythreading, get_env("CFLAGS"), get_env("LDFLAGS"), get_env("LDFLAGS"), myconf))
 
 
 build = lambda: (patch(level=1), make())
