@@ -8,7 +8,7 @@ arch @ ~x86
 
 depends = """
 common @ >=sys-libs/glib-2.30 >=dev-libs/gobject-introspection-1.29.16 
-dev-libs/dbus-glib sys-apps/readline x11-libs/cairo 
+dev-libs/dbus-glib sys-libs/readline x11-libs/cairo 
 >=dev-lang/spidermonkey-1.8.5
 """
 

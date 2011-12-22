@@ -9,7 +9,7 @@ arch @ ~x86
 
 depends = """
 common @ sys-libs/ncurses
-build @ sys-apps/readline
+build @ sys-libs/readline
 """
 
 # from Pardus GNU/Linux

@@ -7,7 +7,7 @@ src_url @ http://www.sqlite.org/sqlite-autoconf-3070500.tar.gz
 srcdir="sqlite-autoconf-3070500"
 
 depends = """
-build @ sys-apps/readline
+build @ sys-libs/readline
 """
 
 def configure():

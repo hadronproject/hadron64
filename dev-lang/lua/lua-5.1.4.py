@@ -6,7 +6,7 @@ src_url @ http://www.lua.org/ftp/$fullname.tar.gz
 """
 
 depends = """
-runtime @ sys-apps/readline
+runtime @ sys-libs/readline
 """
 
 def prepare():

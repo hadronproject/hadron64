@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-libs/openssl sys-apps/dbus sys-apps/readline dev-libs/libnl
+runtime @ dev-libs/openssl sys-apps/dbus sys-libs/readline dev-libs/libnl
 """
 
 def prepare():

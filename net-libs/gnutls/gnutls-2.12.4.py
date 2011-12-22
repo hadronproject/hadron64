@@ -7,7 +7,8 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ sys-libs/glibc dev-libs/libtasn1 sys-apps/readline sys-libs/zlib dev-libs/libgcrypt sys-devel/gcc
+runtime @ sys-libs/glibc dev-libs/libtasn1 sys-libs/readline 
+sys-libs/zlib dev-libs/libgcrypt sys-devel/gcc
 """
 
 def configure():

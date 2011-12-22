@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-libs/openssl sys-apps/readline sys-libs/libcap app-misc/iana-etc
+runtime @ dev-libs/openssl sys-libs/readline sys-libs/libcap app-misc/iana-etc
 build @ dev-perl/HTML-Parser
 """
 

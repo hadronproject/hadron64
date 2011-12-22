@@ -13,7 +13,7 @@ build @ dev-lang/perl[ithreads]
 """
 
 opt_runtime = """
-readline @ sys-apps/readline
+readline @ sys-libs/readline
 icu @ dev-libs/icu
 """
 
