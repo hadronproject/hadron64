@@ -3,7 +3,7 @@ summary @ A high-level scripting language
 homepage @ http://www.python.org
 license @ GPL-2
 src_url @ http://www.python.org/ftp/python/$version/Python-$version.tar.bz2
-options @ berkdb gdbm ncurses readline ssl xml ipv6 threads wide-unicode examples
+options @ gdbm berkdb ncurses readline ssl xml ipv6 threads wide-unicode examples
 arch @ ~x86
 slot @ 2.7
 """
@@ -27,20 +27,25 @@ xml @ dev-libs/expat
 """
 
 def prepare():
+    sed('-i "/progname =/s/python/python2.7/" Python/pythonrun.c')
     patch(location="%s/2.7.2" % filesdir)
+    for i in ('expat', 'zlib', '_ctypes/darwin', '_ctypes/libffi'):
+        rmdir('Modules/%s' % i)
 
 def configure():
     disable = []; dbmliborder=[]
     if not opt("berkdb") and not opt("gdbm"):
         disable.append("dbm")
-    if not opt("berkdb"):
-        disable.append("_bsddb")
-    else:
-        dbmliborder.append("bdb")
+    
     if not opt("gdbm"):
         disable.append("gdbm")
     else:
         dbmliborder.append("gdbm")
+    if not opt("berkdb"):
+        disable.append("_bsddb")
+    else:
+        dbmliborder.append("bdb")
+
     if not opt("ncurses"):
         disable.append("_curses _curses_panel")
     if not opt("readline"):
@@ -84,8 +89,8 @@ def install():
         rmdir(joinpath(libdir, item))
 
     if not opt("berkdb"):
-        rmfile(libdir, "dbhash.py")
-        rmfile(libdir, "test/test_bsddb*" % slot)
+        rmfile(joinpath(libdir, "dbhash.py"))
+        rmfile(joinpath(libdir, "test/test_bsddb*"))
         rmdir(joinpath(libdir, "bsddb"))
 
     if not opt("threads"):
