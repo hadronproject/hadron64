@@ -50,6 +50,8 @@ def install():
 
 def post_install():
     system("/sbin/ldconfig -r /")
+    system("pam_tally --reset")
+    system("pam_tally2 --reset")
     notify("Some software with pre-loaded PAM libraries might experience \
 warnings or failures related to missing symbols and/or versions \
 after any update. While unfortunate this is a limit of the \
