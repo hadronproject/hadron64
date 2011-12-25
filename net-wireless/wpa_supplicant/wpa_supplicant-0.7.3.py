@@ -14,7 +14,6 @@ runtime @ dev-libs/openssl sys-apps/dbus sys-libs/readline dev-libs/libnl:1.1
 opt_runtime = """
 readline @ sys-libs/ncurses sys-libs/readline
 gnutls @ net-libs/gnutls
-dbus @ sys-apps/dbus
 """
 
 def prepare():
@@ -45,10 +44,10 @@ def configure():
     echo("CONFIG_EAP_TLS=y", ".config")
     echo("CONFIG_EAP_TTLS=y", ".config")
 
-    if opt("dbus"):
-        echo("CONFIG_CTRL_IFACE_DBUS=y", ".config")
-        echo("CONFIG_CTRL_IFACE_DBUS_NEW=y", ".config")
-        echo("CONFIG_CTRL_IFACE_DBUS_INTRO=y", ".config")
+    #if opt("dbus"): dbus is default
+    echo("CONFIG_CTRL_IFACE_DBUS=y", ".config")
+    echo("CONFIG_CTRL_IFACE_DBUS_NEW=y", ".config")
+    echo("CONFIG_CTRL_IFACE_DBUS_INTRO=y", ".config")
 
     if opt("debug"):
         echo("CONFIG_DEBUG_FILE=y", ".config")
