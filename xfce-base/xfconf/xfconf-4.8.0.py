@@ -9,6 +9,7 @@ options @ debug
 
 depends = """
 runtime @ xfce-base/libxfce4util dev-libs/dbus-glib x11-libs/gtk+:2 
+build @ dev-perl/ExtUtils-Depends dev-perl/ExtUtils-PkgConfig dev-perl/Glib
 """
 
 def configure():
