@@ -42,7 +42,7 @@ def configure():
     
     export("PYTHON", "python2")
 
-    system("python2 setup.py configure --no-install-docs \
+    system("python setup.py configure --no-install-docs \
             --no-install-init \
             --resume=/usr/share/wicd/scripts/ \
             --suspend=/usr/share/wicd/scripts/ \
@@ -51,11 +51,11 @@ def configure():
     pass
 
 def build():
-    system("python2 setup.py build")
+    system("python setup.py build")
     pass
 
 def install():
-    system("python2 setup.py install --optimize=1 --root=%s" % install_dir)
+    system("python setup.py install --optimize=1 --root=%s" % install_dir)
 
     insexe("%s/wicd-daemon" % filesdir, "/etc/rc.d/wicd")
     insinto("%s/build/lib/wicd/*.py" % build_dir, "/usr/lib/wicd/")
