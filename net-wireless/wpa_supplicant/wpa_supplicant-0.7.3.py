@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-libs/openssl sys-apps/dbus sys-libs/readline dev-libs/libnl
+runtime @ dev-libs/openssl sys-apps/dbus sys-libs/readline dev-libs/libnl:1.1
 """
 
 def prepare():
@@ -15,7 +15,8 @@ def prepare():
     patch("dbus.patch", level=2)
     copy("%s/config" % filesdir, "./.config")
     system("sed -i 's@/usr/local@$(PREFIX)@g' Makefile")
-    echo("CONFIG_LIBNL20=y", ".config")
+    #   seems deprecated
+    #    echo("CONFIG_LIBNL20=y", ".config")
 
 def build():
     cd(name)
