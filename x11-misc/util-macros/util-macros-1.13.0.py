@@ -11,4 +11,4 @@ def install():
 
     makedirs("/usr/lib")
 
-    move("%s/usr/share/pkgconfig" % install_dir, "/usr/lib")
+    move("/usr/share/pkgconfig", "/usr/lib")

@@ -55,7 +55,7 @@ def install():
     raw_install("DESTDIR=%s install" % install_dir)
 
     makedirs("/bin")
-    move("%s/usr/bin/bash" % install_dir, "/bin/bash")
+    move("/usr/bin/bash", "/bin/bash")
     makesym("/bin/bash", "/bin/sh")
 
     makedirs("/etc/skel")

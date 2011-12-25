@@ -18,6 +18,6 @@ def install():
     makedirs("/lib")
 
     for l in glob.glob("%s/usr/lib/libsysfs.so.2*" % install_dir):
-        move(l, "/lib/%s" % basename(l))
+        move(l, "/lib/%s" % basename(l), ignore_fix_target=True)
     rmfile("/usr/lib/libsysfs.so")
     makesym("/lib/libsysfs.so.2", "/usr/lib/libsysfs.so")

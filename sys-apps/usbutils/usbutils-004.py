@@ -26,4 +26,4 @@ def configure():
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
-    move("%s/usr/share/pkgconfig" % install_dir, "/usr/lib/pkgconfig")
+    move("/usr/share/pkgconfig", "/usr/lib/pkgconfig")

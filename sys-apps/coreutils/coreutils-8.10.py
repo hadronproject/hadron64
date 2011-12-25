@@ -29,11 +29,11 @@ def install():
             'false', 'ln', 'ls', 'mkdir', 'mknod', 'mv', 'pwd', 'rm', 'rmdir',
             'stty', 'su', 'sync', 'true', 'uname')
     for f in fhs:
-        move("%s/usr/bin/%s" % (install_dir, f), "/bin/%s" %  f)
+        move("/usr/bin/%s" %  f, "/bin/%s" %  f)
 
     bins = ('cut', 'dir', 'dircolors', 'du', 'install', 'mkfifo', 'readlink',
             'shred', 'sleep', 'touch', 'tr', 'vdir')
     for b in bins:
-        move("%s/usr/bin/%s" % (install_dir, b), "/bin/%s" %  b)
+        move("/usr/bin/%s" %  b, "/bin/%s" %  b)
 
-    makesym("%s/bin/sleep", "/usr/bin/sleep")
+    makesym("/bin/sleep", "/usr/bin/sleep")

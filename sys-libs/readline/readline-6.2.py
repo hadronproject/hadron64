@@ -28,10 +28,8 @@ def install():
 
     makedirs("/usr/lib")
 
-    move("%s/lib/libreadline.a" % install_dir, "/usr/lib/libreadline.a")
-    move("%s/lib/libhistory.a" % install_dir, "/usr/lib/libhistroy.a")
-
-    #cd("%s/usr/lib" % install_dir)
+    move("/lib/libreadline.a", "/usr/lib/libreadline.a")
+    move("/lib/libhistory.a", "/usr/lib/libhistroy.a")
 
     makesym("/lib/libreadline.so.6", "/usr/lib/libreadline.so")
     makesym("/lib/libhistory.so.6", "/usr/lib/libhistory.so")

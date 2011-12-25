@@ -18,4 +18,4 @@ def install():
     linstall()
     makedirs("bin")
     for i in ('gunzip', 'gzip', 'uncompress', 'zcat'):
-        move('%s/usr/bin/%s' % (install_dir, i), '/bin/%s' % i)
+        move('/usr/bin/%s' % i, '/bin/%s' % i)
