@@ -24,14 +24,14 @@ def install():
 
     makedirs("/lib")
 
-    move("/usr/lib/libfuse.so.%s" % version, "/lib/libfuse.so.%s" % version)
+    move("%s/usr/lib/libfuse.so.%s" % (install_dir, version), "/lib/libfuse.so.%s" % version)
     makesym("/lib/libfuse.so.%s" % version, "/usr/lib/libfuse.so.%s" % version)
     makesym("libfuse.so.%s" % version, "/lib/libfuse.so.2")
 
-    move("/usr/lib/libulockmgr.so.1.0.1", "/lib/libulockmgr.so.1.0.1")
+    move("%s/usr/lib/libulockmgr.so.1.0.1" % install_dir, "/lib/libulockmgr.so.1.0.1")
     makesym("/lib/libulockmgr.so.1.0.1", "/usr/lib/libulockmgr.so.1.0.1")
     makesym("libulockmgr.so.1.0.1", "/lib/libulockmgr.so.1")
 
     insfile("%s/fuse.conf" % filesdir, "/etc/fuse.conf")
 
-    move("/etc/udev", "/lib/udev")
+    move("%s/etc/udev" % install_dir, "/lib/udev")

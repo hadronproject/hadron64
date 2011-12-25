@@ -44,5 +44,5 @@ def install():
         termfile = f[0] + "/" + f
         if isexists("%s/usr/share/terminfo/%s" % (install_dir, termfile)):
             makedirs("/etc/terminfo/%s" % f[0])
-            move("/usr/share/terminfo/%s" % termfile, "/etc/terminfo/%s" % f[0])
+            move("%s/usr/share/terminfo/%s" % (install_dir, termfile), "/etc/terminfo/%s" % f[0])
             makesym("/etc/terminfo/%s/%s" % (f[0], f), "/usr/share/terminfo/%s/%s" % (f[0], f))
