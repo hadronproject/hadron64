@@ -22,3 +22,4 @@ dev-vcs/git
 sys-devel/libtool
 net-misc/iputils
 net-misc/dhcpcd
+sys-apps/kbd
