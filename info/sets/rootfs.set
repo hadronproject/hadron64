@@ -21,3 +21,4 @@ net-misc/openssh
 dev-vcs/git
 sys-devel/libtool
 net-misc/iputils
+net-misc/dhcpcd
