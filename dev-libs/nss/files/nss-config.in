@@ -2,9 +2,9 @@
 
 prefix=@prefix@
 
-major_version=@MOD_MAJOR_VERSION@
-minor_version=@MOD_MINOR_VERSION@
-patch_version=@MOD_PATCH_VERSION@
+major_version=3
+minor_version=13
+patch_version=1
 
 usage()
 {

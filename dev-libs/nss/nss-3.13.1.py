@@ -2,7 +2,7 @@ metadata = """
 summary @ Mozilla Network Security Services
 homepage @ http://www.mozilla.org/projects/security/pki/nss/
 license @ MPL GPL
-src_url @ ftp://ftp.mozilla.org/pub/security/nss/releases/NSS_3_12_11_RTM/src/nss-3.12.11.tar.gz
+src_url @ ftp://ftp.mozilla.org/pub/security/nss/releases/NSS_3_13_1_RTM/src/nss-3.13.1.tar.gz
 arch @ ~x86
 """
 
@@ -16,10 +16,12 @@ def prepare():
     makedirs("mozilla/dist/pkgconfig")
     copy("%s/nss.pc.in" % filesdir, "dist/pkgconfig/nss.pc.in")
     copy("%s/nss-config.in" % filesdir, "dist/pkgconfig/nss-config.in")
-    patch("distrust-diginotar.patch")
-    patch("add_spi+cacert_ca_certs.patch", level=2)
+    # pathces from archlinux
+    patch("bug702090.patch", level=2)
+    #patch("add_spi+cacert_ca_certs.patch", level=2)
     patch("ssl-renegotiate-transitional.patch", level=2)
     patch("nss-no-rpath.patch", level=2)
+    sed("-e 's/\$(MKSHLIB) -o/\$(MKSHLIB) \$(LDFLAGS) -o/g' -i security/coreconf/rules.mk")
 
 def build():
     cd("mozilla/security/nss/lib/ckfw/builtins")
@@ -27,8 +29,6 @@ def build():
     
     cd(build_dir)
 
-    system("unset CFLAGS")
-    system("unset CXXFLAGS")
     export("BUILD_OPT", "1")
     export("NSS_ENABLE_ECC", "1")
     export("NSS_USE_SYSTEM_SQLITE", "1")
@@ -37,6 +37,7 @@ def build():
     export("PKG_CONFIG_ALLOW_SYSTEM_LIBS", "1")
     export("PKG_CONFIG_ALLOW_SYSTEM_CFLAGS", "1")
     export("NSPR_INCLUDE_DIR", "/usr/include/nspr")
+    export("XCFLAGS", get_env("CFLAGS"))
 
     make("-C mozilla/security/coreconf", j=1)
     make("-C mozilla/security/dbm", j=1)
