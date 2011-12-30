@@ -1,3 +1,5 @@
+http://developer.pidgin.im/ticket/13859
+
 diff -up pidgin-2.7.11/libpurple/network.c.nm09more pidgin-2.7.11/libpurple/network.c
 --- pidgin-2.7.11/libpurple/network.c.nm09more	2011-04-26 12:01:27.700085246 -0500
 +++ pidgin-2.7.11/libpurple/network.c	2011-05-24 13:13:28.185165657 -0500
