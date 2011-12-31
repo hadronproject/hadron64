@@ -19,14 +19,6 @@ def configure():
 def install():
     linstall()
     makedirs("/usr/include/gdbm")
-    if isexists("/usr/include/gdbm/ndbm.h"):
-        rmfile("/usr/include/gdbm/ndbm.h")
     makesym("../ndbm.h", "/usr/include/gdbm/ndbm.h")
-    
-    if isexists("/usr/include/gdbm/gdbm.h"):
-        rmfile("/usr/include/gdbm/gdbm.h")
     makesym("../gdbm.h", "/usr/include/gdbm/gdbm.h")
-
-    if isexists("/usr/include/gdbm/dbm.h"):
-        rmfile("/usr/include/gdbm/dbm.h")
     makesym("../dbm.h", "/usr/include/gdbm/dbm.h")
