@@ -1,7 +1,7 @@
 metadata = """
 summary @ X11 Testing -- Resource extension library
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/libXtst-$version.tar.bz2
 arch @ ~x86
 options @ doc

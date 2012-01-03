@@ -1,7 +1,7 @@
 metadata = """
 summary @ Userspace interface to kernel DRM services
 homepage @ http://dri.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://dri.freedesktop.org/libdrm/$fullname.tar.bz2
 arch @ ~x86
 """

@@ -1,7 +1,7 @@
 metadata = """
 summary @ Library providing generic access to the PCI bus and devices
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/$fullname.tar.gz
 arch @ ~x86
 """
