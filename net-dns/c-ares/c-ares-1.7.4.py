@@ -1,7 +1,7 @@
 metadata = """
 summary @ C library that performs DNS requests and name resolves asynchronously
 homepage @ http://c-ares.haxx.se/
-license @ custom
+license @ MIT
 src_url @ http://c-ares.haxx.se/$fullname.tar.gz
 arch @ ~x86
 """

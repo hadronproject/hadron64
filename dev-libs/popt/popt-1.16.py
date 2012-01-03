@@ -1,7 +1,7 @@
 metadata = """
 summary @ A commandline option parser
 homepage @ http://rpm5.org/
-license @ custom
+license @ MIT
 src_url @ http://rpm5.org/files/$name/$fullname.tar.gz
 arch @ ~x86
 """

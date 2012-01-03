@@ -1,7 +1,7 @@
 metadata = """
-summary @ The Oild Runtime Compiler
+summary @ The Oil Runtime Compiler
 homepage @ http://code.entropywave.com/projects/orc/
-license @ custom
+license @ BSD BSD-2
 src_url @ http://code.entropywave.com/download/$name/$fullname.tar.gz
 arch @ ~x86
 """

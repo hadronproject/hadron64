@@ -1,7 +1,7 @@
 metadata = """
 summary @ XML parsing library, version 2
 homepage @ http://www.xmlsoft.org/
-license @ custom
+license @ MIT
 src_url @ ftp://ftp.xmlsoft.org/libxml2/$fullname.tar.gz
 arch @ ~x86
 options @ icu debug ipv6 readline

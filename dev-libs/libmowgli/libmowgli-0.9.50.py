@@ -1,7 +1,7 @@
 metadata = """
 summary @ Performance and usability-oriented extensions to C
 homepage @ http://www.atheme.org/project/mowgli
-license @ custom
+license @ BSD-2
 src_url @ http://distfiles.atheme.org/$fullname.tar.bz2
 arch @ ~x86
 options @ examples

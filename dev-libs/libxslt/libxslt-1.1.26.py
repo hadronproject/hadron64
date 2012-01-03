@@ -1,7 +1,7 @@
 metadata = """
 summary @ XML stylesheet transformation library
 homepage @ http://xmlsoft.org/XSLT/
-license @ custom
+license @ MIT
 src_url @ftp://xmlsoft.org/libxslt/$fullname.tar.gz
 arch @ ~x86
 """
