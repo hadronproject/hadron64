@@ -14,7 +14,7 @@ def prepare():
     patch("mpfr-3.1.0.p3.patch", level=1)
 
 def configure():
-    conf("--enable-thread-safe"
+    conf("--enable-thread-safe",
         "--enable-shared")
 
 def install():
