@@ -46,6 +46,6 @@ def python_utils_install(*params):
 
     for doc_file in doc_files:
         for doc in glob.glob(doc_file):
-            if not isempty(doc):
+            if not isempty(doc, ignore_fix_target=True):
                 insdoc(doc)
     # END
