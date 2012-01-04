@@ -17,6 +17,6 @@ def build():
     make()
 
 def install():
-    cd(dirname(build_dir))
-    raw_install('DESTDIR=%s install' % install_dir)
+    cd("..")
+    raw_install('DESTDIR=%s' % install_dir)
     rmfile("/usr/share/zoneinfo/localtime")
