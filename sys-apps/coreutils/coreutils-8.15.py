@@ -2,7 +2,7 @@ metadata = """
 summary @ Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)
 license @ GPL-3
 homepage @ http://www.gnu.org/software/coreutils/
-src_url @ http://ftp.gnu.org/gnu/coreutils/$fullname.tar.gz
+src_url @ http://ftp.gnu.org/gnu/coreutils/$fullname.tar.xz
 arch @ ~x86
 options @ caps gmp xattr nls acl pam
 """
@@ -21,8 +21,8 @@ pam @ sys-libs/pam
 """
 
 def prepare():
-    # the patches from gentoo linux, our big brother ;)
-    patch("8.12", level=1)
+    # the patches from gentoo and arch
+    patch(level=1)
     autoreconf("-v")
 
 def configure():
@@ -53,4 +53,4 @@ def install():
     for b in bins:
         move("%s/usr/bin/%s" % (install_dir, b), "/bin/%s" %  b)
 
-    makesym("%s/bin/sleep", "/usr/bin/sleep")
+    makesym("/bin/sleep", "/usr/bin/sleep")
