@@ -61,5 +61,5 @@ def install():
     makesym("libncurses.a", "/usr/lib/libcurses.a")
     
     cd("../ncurses-build")
-    insfile("lib/libncurses.so.%s" % version, "/usr/lib/libncurses.so.%s" % version)
-    makesym("libncurses.so.%s" % version, "/usr/lib/libncurses.so.5")
+    insfile("lib/libncurses.so.5.9", "/usr/lib/libncurses.so.5.9")
+    makesym("libncurses.so.5.9", "/usr/lib/libncurses.so.5")
