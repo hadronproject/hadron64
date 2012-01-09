@@ -2,6 +2,7 @@ metadata = """
 summary @ Package building and distribution system for Hadron GNU/Linux
 homepage @ http://hadronproject.org
 license @ GPL-3
+src_url @ http://hadronproject.org/distfiles/$fullname.tar.gz
 arch @ ~x86
 """
 
@@ -14,18 +15,10 @@ standard_procedure = False
 
 reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
 
-def prepare():
-    notify("cloning git://gitorious.org/hadron/lpms.git")
-    if not system("git -b lpms_1_0 clone git://gitorious.org/hadron/lpms.git"):
-        error("git clone failed.")
-
 def install():
-    install_path = "/usr/lib/python2.7/site-packages/lpms"
-
-    cd("lpms")
-
-    makedirs(install_path[1:])
-
+    install_path = "/usr/lib/%s/site-packages/lpms" % current_python
+    
+    makedirs(install_path)
     insinto("src/*", install_path)
     insinto("bin/*", "/usr/bin")
     insinto("scripts/*", "/usr/sbin")
