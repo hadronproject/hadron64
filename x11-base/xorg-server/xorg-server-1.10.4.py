@@ -1,7 +1,7 @@
 metadata = """
 summary @ The X Server
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/xserver/$fullname.tar.bz2
 arch @ ~x86
 options @ doc ipv6

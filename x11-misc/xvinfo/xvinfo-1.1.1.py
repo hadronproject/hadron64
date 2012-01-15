@@ -1,7 +1,7 @@
 metadata = """
 summary @ Prints out the capabilities of any video adaptors associated with the display that are accessible through the X-Video extension
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/archive/individual/app/$fullname.tar.bz2
 arch @ ~x86
 """

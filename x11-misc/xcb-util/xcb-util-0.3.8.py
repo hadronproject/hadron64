@@ -1,7 +1,7 @@
 metadata = """
 summary @ Utility libraries for XC Binding
 homepage @ http://xcb.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xcb.freedesktop.org/dist/$fullname.tar.bz2
 arch @ ~x86
 """

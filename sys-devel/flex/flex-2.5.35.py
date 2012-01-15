@@ -1,7 +1,7 @@
 metadata = """
 summary @ A tool for generating text-scanning programs
 homepage @ http://flex.sourceforge.net
-license @ custom
+license @ FLEX
 src_url @ http://downloads.sourceforge.net/sourceforge/flex/flex-$version.tar.bz2
 arch @ ~x86
 """

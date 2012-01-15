@@ -1,7 +1,7 @@
 metadata = """
 summary @ X11 miscellaneous micro-utility library
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/libXmu-$version.tar.bz2
 arch @ ~x86
 """

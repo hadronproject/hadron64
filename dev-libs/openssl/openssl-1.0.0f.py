@@ -20,8 +20,9 @@ def prepare():
 
 
 def configure():
-    system("./config --prefix=/usr --openssldir=/etc/ssl \
-            --libdir=lib shared zlib enable-md2 -Wa,--noexecstack")
+    system("./Configure --prefix=/usr --openssldir=/etc/ss \
+            --libdir=lib shared zlib enable-md2 linux-elf \
+            -Wa,--noexecstack %s %s" % (get_env('CFLAGS'), get_env('LDFLAGS')))
 
 def build():
     make("depend")
@@ -30,3 +31,4 @@ def build():
 
 def install():
     raw_install("INSTALL_PREFIX=%s MANDIR=%s install" % (install_dir, "/usr/share/man"))
+    insdoc("LICENSE")

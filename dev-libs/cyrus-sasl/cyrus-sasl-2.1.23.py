@@ -1,7 +1,7 @@
 metadata = """
 summary @ Cyrus Simple Authentication Service Layer (SASL) library
 homepage @ http://cyrusimap.web.cmu.edu/downloads.html#sasl
-license @ custom
+license @ as-is
 src_url @ ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/$fullname.tar.gz
 arch @ ~x86
 """

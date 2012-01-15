@@ -1,7 +1,7 @@
 metadata = """
 summary @ X.Org Xxf86misc library
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/$fullname.tar.bz2
 arch @ ~x86
 """

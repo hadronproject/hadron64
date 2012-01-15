@@ -1,7 +1,7 @@
 metadata = """
 summary @ List interned atoms defined on server
 homepage @ http://xorg.freedesktop.org/
-license @ custom
+license @ MIT
 src_url @ http://xorg.freedesktop.org/archive/individual/app/xlsatoms-$version.tar.bz2
 arch @ ~x86
 """

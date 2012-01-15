@@ -1,7 +1,7 @@
 metadata = """
 summary @ Lists open files for running Unix processes
 homepage @ http://people.freebsd.org/~abe/
-license @ custom
+license @ lsof
 src_url @ ftp://sunsite.ualberta.ca/pub/Mirror/lsof/$name_$version.tar.bz2
 arch @ ~x86
 """

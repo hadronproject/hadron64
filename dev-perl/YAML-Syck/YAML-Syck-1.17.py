@@ -1,7 +1,7 @@
 metadata = """
 summary @ Fast, lightweight YAML loader and dumper
 homepage @ http://search.cpan.org/dist/YAML-Syck
-license @ custom
+license @ MIT
 src_url @ http://www.cpan.org/authors/id/A/AV/AVAR/$fullname.tar.gz
 arch @ ~x86
 """

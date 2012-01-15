@@ -1,7 +1,7 @@
 metadata = """
 summary @ A rewrite of NASM to allow for multiple syntax supported (NASM, TASM, GAS, etc.)
 homepage @ http://www.tortall.net/projects/yasm/
-license @ custom
+license @ BSD-2 BSD
 src_url @ http://www.tortall.net/projects/yasm/releases/$fullname.tar.gz
 arch @ ~x86
 options @ nls
