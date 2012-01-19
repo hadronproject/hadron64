@@ -80,15 +80,29 @@ def cmake_config(cmake_option):
 def cmake_conf(*params, **kwargs):
     '''Configures the package with given parameters'''
     installdir = kwargs.get("installdir", "/usr")
-    if os.access("CMakeLists.txt", os.F_OK):
-        args = 'cmake -DCMAKE_INSTALL_PREFIX=%s \
-                -DCMAKE_C_FLAGS="%s" \
-                -DCMAKE_CXX_FLAGS="%s" \
-                -DCMAKE_LD_FLAGS="%s" \
-                -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % (installdir, 
-                        get_env("CFLAGS"),
-                        get_env("CXXFLAGS"),
-                        get_env("LDFLAGS"), " ".join(params), build_dir)
+    sourcedir = kwargs.get("sourcedir", None)
+    cmakelist = "CMakeLists.txt"
+    if sourcedir:
+        cmakelist = os.path.join(sourcedir, "CMakeLists.txt")
+    if os.access(cmakelist, os.F_OK):
+        if not sourcedir:
+            args = 'cmake -DCMAKE_INSTALL_PREFIX=%s \
+                    -DCMAKE_C_FLAGS="%s" \
+                    -DCMAKE_CXX_FLAGS="%s" \
+                    -DCMAKE_LD_FLAGS="%s" \
+                    -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % (installdir, 
+                            get_env("CFLAGS"),
+                            get_env("CXXFLAGS"),
+                            get_env("LDFLAGS"), " ".join(params), build_dir)
+        else:
+            args = 'cmake %s -DCMAKE_INSTALL_PREFIX=%s \
+                    -DCMAKE_C_FLAGS="%s" \
+                    -DCMAKE_CXX_FLAGS="%s" \
+                    -DCMAKE_LD_FLAGS="%s" \
+                    -DCMAKE_BUILD_TYPE=RelWithDebInfo %s %s' % (sourcedir, installdir, 
+                            get_env("CFLAGS"),
+                            get_env("CXXFLAGS"),
+                            get_env("LDFLAGS"), " ".join(params), build_dir)
     else:
         error("no configure script found for cmake.")
         lpms.terminate()
