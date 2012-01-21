@@ -2,13 +2,13 @@ metadata = """
 summary @ The Shared MIME-info Database specification
 homepage @ http://freedesktop.org/wiki/Software/shared-mime-info
 license @ GPL
-src_url @ http://freedesktop.org/~hadess/$fullname.tar.bz2
+src_url @ http://freedesktop.org/~hadess/$fullname.tar.xz
 arch @ ~x86
 """
 
 depends = """
 runtime @ dev-libs/libxml2 sys-libs/glib
-build @ dev-util/intltool dev-util/pkg-config
+build @ dev-util/intltool dev-util/pkg-config dev-perl/XML-Parser
 """
 
 
