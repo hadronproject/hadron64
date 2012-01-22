@@ -115,16 +115,12 @@ def cmake_utils_configure():
     '''Runs cmake command with standard parameters'''
     cmake_conf()
 
-def cmake_utils_build(*params):
-    '''Builds the package with given parameters'''
-    # TODO: verbose and debug options will be added
-    if not system("make %s" % " ".join(params)):
-        error("building failed.")
-        lpms.terminate()
-
 def cmake_utils_install(*params, **kwargs):
     '''Installs the package with given parameters'''
     argument = kwargs.get("argument", "install")
+    builddir = kwargs.get("builddir", None)
+    currentdir = os.getcwd()
+    if builddir: cd(builddir)
     args = 'make DESTDIR="%(destdir)s" \
                  %(parameters)s \
                  %(argument)s' % {
@@ -136,3 +132,5 @@ def cmake_utils_install(*params, **kwargs):
     if not system(args):
         error("installation failed.")
         lpms.terminate()
+
+    if builddir: cd(currentdir)

@@ -17,14 +17,21 @@
 
 import lpms
 
-from lpms import out
-from lpms import shelltools
+def xdg_icon_resource(theme="hicolor"):
+    notify("updating xdg icon resource for %s theme" % theme)
+    if not system("xdg-icon-resource forceupdate --theme %s" % theme):
+        warn("xdg-icon-resource failed.")
 
 def desktop_database_update(*args):
     parameters = "-q"
     if args:
         parameters = " ".join(args)
 
-    out.notify("updating desktop database...")
-    if not shelltools.system("update-desktop-database %s" % parameters):
-        out.write(out.color("\tFAILED", "red"))
+    notify("updating desktop database...")
+    if not system("update-desktop-database %s" % parameters):
+        write(out.color("\tFAILED", "red"))
+
+def update_mime_database(*args):
+    out.notify("updating mime database...")
+    if not system("update-mime-database /usr/share/mime"):
+        warn("update-mime-database failed.")
