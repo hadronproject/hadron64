@@ -19,4 +19,4 @@ prepare = lambda: makedirs("build")
 
 configure = lambda: (cd("build"), cmake_conf())
 
-install = (cd("build"), installd())
+install = lambda: (cd("build"), installd())
