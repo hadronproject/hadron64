@@ -8,7 +8,7 @@ arch @ ~x86
 
 depends = """
 runtime @ x11-apps/xkbcomp
-build @ dev-util/intltool
+build @ dev-util/intltool dev-perl/XML-Parser
 """
 
 def configure():
