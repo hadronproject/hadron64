@@ -4,7 +4,7 @@ homepage @ http://www.gnu.org/software/emacs/emacs.html
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/emacs/emacs-23.3b.tar.gz
 arch @ ~x86
-options @ x ns gif tiff
+options @ X ns gif tiff
 """
 
 # options will be added. gtk+, X and etc...
@@ -16,7 +16,8 @@ common @ sys-libs/ncurses
 srcdir = "emacs-23.3"
 
 def configure():
-    conf(config_with("x ns gif tiff"))
+    conf(config_with("X", "x"),
+         config_with("ns gif tiff"))
 
 def install():
     installd()
