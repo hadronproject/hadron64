@@ -16,7 +16,7 @@ reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
 
 def prepare():
     notify("cloning git://gitorious.org/hadron/lpms.git")
-    if not system("git -b lpms_1_0 clone git://gitorious.org/hadron/lpms.git"):
+    if not system("git clone -b lpms_1_0 git://gitorious.org/hadron/lpms.git"):
         error("git clone failed.")
 
 def install():
