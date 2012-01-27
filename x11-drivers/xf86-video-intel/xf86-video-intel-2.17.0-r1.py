@@ -13,7 +13,7 @@ sna @ >=x11-base/xorg-server-1.10 >=x11-libs/pixman-0.23
 
 depends = """
 common @ x11-libs/libXext x11-libs/libXfixes x11-libs/libXvMC >=x11-libs/libxcb-1.5
-        x11-proto/fontsproto x11-proto/xf86driproto x11-libs/libdrm
+        x11-proto/fontsproto x11-proto/xf86driproto x11-libs/libdrm x11-misc/xcb-util
 build @ >=x11-proto/dri2proto-2.6
 """
 
