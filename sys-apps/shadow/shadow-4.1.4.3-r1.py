@@ -28,7 +28,7 @@ def configure():
 def install():
     raw_install("DESTDIR=%s install" % install_dir)
 
-    insfile("%s/adduser" % filesdir, "/usr/sbin/adduser")
+    insexe("%s/adduser" % filesdir, "/usr/sbin/adduser")
     insfile("%s/useradd.defaults" % filesdir, "/etc/default/useradd")
     insfile("%s/login.defs" % filesdir, "/etc/login.defs")
 
