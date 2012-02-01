@@ -92,8 +92,3 @@ def install():
     rmdir("/var/log")
 
     insdoc("COPYING")
-
-def post_install():
-    warn("Don't forget to re-install these packages:")
-    command = """ls /var/db/lpms/filesdb/x11-drivers/xf86* | grep '\.xml' | sed 's/.xml//g' | awk -F "-" {print'$1"-"$2"-"$3'}"""
-    system(command)
