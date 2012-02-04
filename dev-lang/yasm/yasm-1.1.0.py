@@ -16,6 +16,7 @@ nls @ sys-devel/gettext
 """
 
 def configure():
+    export("PYTHONDONTWRITEBYTECODE", "1")
     conf(
     config_enable("nls"),
     "--disable-dependency-tracking")
