@@ -8,6 +8,10 @@ arch @ ~x86
 
 # FIXME: zsh, bash, emacs and vim options will be added.
 
+depends = """
+common @ dev-lang/python:2.7
+"""
+
 get("python_utils")
 
 standard_procedure = False

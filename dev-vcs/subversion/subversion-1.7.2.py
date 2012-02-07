@@ -2,9 +2,9 @@ metadata = """
 summary @ Advanced version control system
 homepage @ http://subversion.apache.org/
 license @ Subversion
-src_url @ http://subversion.tigris.org/downloads/$fullname.tar.bz2
+src_url @ http://apache.mirror.rafal.ca/subversion/$fullname.tar.bz2
 arch @ ~x86
-options @ berkdb perl python sasl sqlite
+options @ berkdb perl python sasl
 """
 
 
@@ -16,23 +16,21 @@ build @ sys-devel/autoconf
 opt_build = """
 python @ dev-lang/python
 perl @ dev-lang/perl
-sqlite @ dev-db/sqlite
+#sqlite @ dev-db/sqlite
 berkdb @ sys-libs/db
 sasl @ dev-libs/cyrus-sasl
 """
 
 def prepare():
     patch("subversion.rpath.fix.patch")
-    patch("subversion.suppress.deprecation.warnings.patch", level=1)
-
     autoreconf()
 
 def configure():
     myconf = ""
-    if opt("sqlite"):
-        myconf += "--with-sqlite=/usr "
-    else:
-        myconf += "--without-sqlite "
+    #if opt("sqlite"):
+    #    myconf += "--with-sqlite=/usr "
+    #else:
+    #    myconf += "--without-sqlite "
 
     if opt("berkdb"):
         myconf += "--with-berkeley-db=:/usr/include/:/usr/lib:db-5.1 "
@@ -41,6 +39,7 @@ def configure():
 
     conf("--with-apr-util=/usr",
             "--with-apr=/usr",
+            "--with-sqlite=/usr",
             config_with("berkdb", "berkeley-db"),
             config_enable("nls"),
             config_with("sasl"),
