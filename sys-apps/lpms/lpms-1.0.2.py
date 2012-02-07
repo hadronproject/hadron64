@@ -20,7 +20,7 @@ get("extract_utils")
 extract = lambda: tar_extract("%s.tar.gz" % fullname)
 
 def install():
-    install_path = "/usr/lib/%s/site-packages/lpms" % current_python()
+    install_path = "/usr/lib/%s/site-packages/lpms" % "python2.7"
 
     makedirs(install_path)
     insinto("src/*", install_path)
