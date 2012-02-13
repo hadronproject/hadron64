@@ -5,17 +5,17 @@ license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/$fullname.tar.bz2
 arch @ ~x86
 slot @ 2
-options @ xinerama engines
+options @ xinerama engines introspection
 """
 
 depends = """
-common @ dev-libs/atk media-libs/pango x11-libs/libXcursor x11-libs/libXrandr
-          x11-libs/libXi x11-libs/libXcomposite x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo[svg]
-          x11-libs/gdk-pixbuf
+common @ x11-libs/libXcursor x11-libs/libXrandr x11-libs/libXi x11-libs/libXcomposite
+    x11-libs/libXdamage x11-misc/shared-mime-info x11-libs/cairo[svg]
 """
 
 opt_runtime = """
 xinerama @ x11-libs/libXinerama
+introspection @ x11-libs/gdk-pixbuf[introspection] media-libs/pango[introspection] dev-libs/atk[introspection]  || x11-libs/gdk-pixbuf media-libs/pango dev-libs/atk
 """
 
 opt_postmerge = """
