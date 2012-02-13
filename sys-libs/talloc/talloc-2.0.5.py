@@ -10,7 +10,7 @@ arch @ ~x86
 
 depends = """
 runtime @ sys-libs/glibc
-build @ dev-lang/python[threads]
+build @ dev-lang/python:2.7[threads]
 """
 
 def configure():
