@@ -27,12 +27,6 @@ def prepare():
     patch("gtk2-dont-ellipsize-filters.diff", level=1)
 
 def configure():
-    intro = ""
-    if opt("introspection"):
-        intro += " --enable-introspection=yes "
-    else:
-        intro += " --enable-introspection=no "
-
     conf(
     "--with-gdktarget=x11",
     "--with-xinput=yes",
@@ -40,7 +34,7 @@ def configure():
     "--enable-shm",
     "--enable-silent-rules",
     "--disable-papi",
-    config_enable("xinerama"), intro)
+    config_enable("xinerama"))
     #system("sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool")
 
 def build():
