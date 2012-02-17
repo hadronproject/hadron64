@@ -62,3 +62,4 @@ def install():
 
 def post_install():
     warn("If you get error about obsoleted conf file, please remove the old syslog-ng.conf and re-install package")
+    warn("And don't forge to use merge-conf")
