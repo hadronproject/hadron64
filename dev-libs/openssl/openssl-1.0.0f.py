@@ -9,6 +9,7 @@ arch @ ~x86
 depends = """
 runtime @ dev-lang/perl sys-apps/gawk
 build @ x11-misc/makedepend
+conflict @ dev-libs/openssl:0.9.8
 """
 
 def prepare():
