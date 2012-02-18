@@ -6,7 +6,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-themes/murrine
+runtime @ x11-themes/gtk-engines-murrine
 """
 
 standard_procedure = False
