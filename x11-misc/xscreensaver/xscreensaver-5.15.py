@@ -23,4 +23,4 @@ def install():
     insfile("%s/LICENSE" % filesdir, "/usr/share/licenses/xscreensaver/LICENSE")
     insfile("%s/xscreensaver.pam" % filesdir, "/etc/pam.d/xscreensaver")
     setmod("755", "%s/usr/bin/xscreensaver" % install_dir)
-    echo("NotShowIn=KDE;GNOME;", "%s/usr/share/applications/xscreensaver-properties.desktop" % install_dir)
+    echo("NotShowIn=KDE;GNOME;", "/usr/share/applications/xscreensaver-properties.desktop")
