@@ -40,6 +40,7 @@ def configure():
 "--enable-gpl",
 "--enable-version3",
 "--disable-debug",
+"--disable-doc",
 config_enable("vdpau"),
 config_enable("vaapi"),
 config_enable("rtmp", "librtmp"),
