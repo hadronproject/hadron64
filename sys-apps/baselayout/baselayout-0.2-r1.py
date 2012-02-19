@@ -57,4 +57,5 @@ def post_install():
                 if not c.split("-g")[0].strip() in c:
                     system("/usr/sbin/groupadd %s >/dev/null" % c)
     system("/usr/sbin/grpconv")
-    system("chmod 777 /var/tmp")
+def post_install():    
+    setmod("777 /var/tmp")
