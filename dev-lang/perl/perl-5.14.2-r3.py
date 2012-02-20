@@ -87,8 +87,8 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
     makedirs("/etc/ld.so.conf.d")
     echo("/usr/lib/perl5/core_perl/CORE", "/etc/ld.so.conf.d/perl.conf")
-    insfile("%s/perlbin.csh" % filesdir,"/etc/profile.d/perlbin.csh")
-    insfile("%s/perlbin.sh" % filesdir,"/etc/profile.d/perlbin.sh")
+    insfile("%s/perlbin.csh" % filesdir, "/etc/profile.d/perlbin.csh")
+    insfile("%s/perlbin.sh" % filesdir, "/etc/profile.d/perlbin.sh")
 
 def post_install():
     warn("Don't forget to refer /etc/profile.d or re-login")
