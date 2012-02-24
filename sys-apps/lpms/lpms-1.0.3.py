@@ -2,7 +2,7 @@ metadata = """
 summary @ Package building and distribution system for Hadron GNU/Linux
 homepage @ http://hadronproject.org
 license @ GPL-3
-src_url @ http://hadronproject.org/distfiles/$fullname.tar.gz
+src_url @ http://hadronproject.org/distfiles/$name/$fullname.tar.gz
 arch @ ~x86
 """
 
@@ -15,9 +15,13 @@ standard_procedure = False
 
 reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
 
+get("extract_utils")
+
+extract = lambda: tar_extract("%s.tar.gz" % fullname)
+
 def install():
-    install_path = "/usr/lib/%s/site-packages/lpms" % current_python
-    
+    install_path = "/usr/lib/%s/site-packages/lpms" % current_python()
+
     makedirs(install_path)
     insinto("src/*", install_path)
     insinto("bin/*", "/usr/bin")
