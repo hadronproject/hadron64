@@ -6,7 +6,7 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-lang/python:2.7 dev-python/fermion net-misc/wget sys-apps/file
+runtime @ dev-lang/python:2.7 sys-apps/sydbox net-misc/wget sys-apps/file
 build @ dev-lang/python
 """
 
