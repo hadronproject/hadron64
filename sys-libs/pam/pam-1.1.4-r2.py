@@ -16,7 +16,7 @@ cracklib @ sys-libs/cracklib
 berkdb @ sys-libs/db
 """
 
-srcdir = "Linux-PAM-%s" % version
+srcdir = "Linux-PAM-%s" % raw_version
 
 def configure():
     raw_configure(
