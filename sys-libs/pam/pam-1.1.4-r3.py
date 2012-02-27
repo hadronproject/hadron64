@@ -16,9 +16,8 @@ cracklib @ sys-libs/cracklib
 berkdb @ sys-libs/db
 """
 
-srcdir = "Linux-PAM-%s" % raw_version
-
 def configure():
+    cd("../Linux-PAM-%s" % raw_version)
     raw_configure(
             "--sysconfdir=/etc",
             "--libdir=/lib",
@@ -33,7 +32,10 @@ def configure():
             "--enable-isadir=/lib/security",
             "DESTDIR=%s" % install_dir)
 
+build = lambda: (cd("../Linux-PAM-%s" % raw_version), make())
+
 def install():
+    cd("../Linux-PAM-%s" % raw_version)
     raw_install("INSTALL=/bin/install DESTDIR=%s" % install_dir)
 
     insfile("%s/other" % filesdir, "/etc/pam.d/other")
