@@ -12,6 +12,8 @@ depends = """
 runtime @ sys-apps/baselayout
 """
 
+srcdir = "%s-2.20" % name
+
 def configure():
     sed("-e 's@etc/adjtime@var/lib/hwclock/adjtime@g' \
             -i $(grep -rl '/etc/adjtime' .)")
