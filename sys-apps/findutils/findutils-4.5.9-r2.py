@@ -11,7 +11,7 @@ depends = """
 runtime @ sys-libs/glibc
 """
 
-opt_runtime = """
+opt_postmerge = """
 locate @ sys-apps/mlocate
 """
 
