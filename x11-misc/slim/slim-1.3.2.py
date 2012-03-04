@@ -9,7 +9,7 @@ options @ pam
 
 depends = """
 runtime @ x11-libs/libXmu x11-libs/libX11 x11-libs/libXpm x11-libs/libXft
->=media-libs/libpng-1.4 media-libs/jpeg
+media-libs/libpng:1.2 media-libs/jpeg
 build @ dev-util/pkg-config x11-proto/xproto
 """
 
