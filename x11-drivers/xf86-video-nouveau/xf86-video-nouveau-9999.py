@@ -12,13 +12,14 @@ build @ x11-proto/glproto x11-proto/xf86driproto x11-proto/dri2proto x11-libs/li
 def prepare():
     notify("cloning git://anongit.freedesktop.org/git/nouveau/xf86-video-nouveau.git")
     if not system("git clone git://anongit.freedesktop.org/git/nouveau/xf86-video-nouveau.git"):
-        error("git clone failed.")
-
-def configure():
+        error("git clone failed.")   
     cd(name)
     system("./autogen.sh")
-    conf()
+
+configure = lambda: (cd(name), conf())
+build = lambda: (cd(name), make())
 
 def install():
+    cd(name)
     raw_install("DESTDIR=%s" % install_dir)
     insfile("%s/30-nouveau.conf" % filesdir, "/etc/X11/xorg.conf.d/")
