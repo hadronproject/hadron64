@@ -28,28 +28,16 @@ def configure():
             "--with-gtk=2.0",
             "--without-openldap",
             config_enable("policykit", "defaults-service"),
-            config_enable("debug"),
-            "--enable-defaults-service")
-
-def build():
-    export("HOME", build_dir)
-    make()
+            config_enable("debug"))
 
 def install():
-    export("HOME", build_dir)
-
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("README", "TODO", "NEWS", "ChangeLog", "AUTHORS")
-
     makedirs("/etc/gconf/gconf.xml.system")
-
     insexe("%s/gconf-merge-schema" % filesdir, "/usr/bin/gconf-merge-schema")
-
     insexe("%s/gconfpkg" % filesdir, "/usr/sbin/gconfpkg")
 
 def post_install():
     system("ldconfig -r /")
-
-    system("chmod 755 /etc/gconf/gconf.xml.system")
+    setmod("755 /etc/gconf/gconf.xml.system")
     system("/usr/bin/gio-querymodules /usr/lib/gio/modules")

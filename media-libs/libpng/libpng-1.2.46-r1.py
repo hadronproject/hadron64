@@ -2,7 +2,7 @@ metadata = """
 summary @ A collection of routines used to create PNG format graphics files (ver 1.2)
 homepage @ http://www.libpng.org/pub/png/libpng.html
 license @ custom
-src_url @ http://sourceforge.net/projects/libpng/files/libpng12/$version/libpng-$version.tar.gz
+src_url @ http://pts-mini-gpl.googlecode.com/svn-history/r266/trunk/build-jbig2/libpng-1.2.46.tar.gz
 http://garr.dl.sourceforge.net/project/libpng-apng/libpng-devel/1.5.4/libpng-1.5.4-apng.patch.gz
 options @ apng
 arch @ ~x86

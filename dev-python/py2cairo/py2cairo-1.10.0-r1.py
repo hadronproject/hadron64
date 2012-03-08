@@ -9,5 +9,5 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ x11-libs/cairo dev-lang/python
+runtime @ x11-libs/cairo dev-lang/python:2.7
 """
