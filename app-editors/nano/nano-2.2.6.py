@@ -18,7 +18,7 @@ def configure():
         "--disable-wrapping-as-root")
 
 def install():
-    raw_install("DESTDIR=%s install" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
     makesym("/usr/bin/nano", "/bin/nano")
     insdoc("ChangeLog*", "README", "doc/nanorc.sample", "AUTHORS",
             "BUGS", "NEWS", "TODO", "COPYING*", "THANKS", "UPGRADE")
