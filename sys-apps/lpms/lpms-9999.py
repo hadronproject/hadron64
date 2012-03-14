@@ -10,14 +10,14 @@ runtime @ dev-lang/python:2.7 sys-apps/sydbox net-misc/wget sys-apps/file
 build @ dev-lang/python
 """
 
+get("git_utils")
+
 standard_procedure = False
 
 reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
 
 def prepare():
-    notify("cloning git://gitorious.org/hadron/lpms.git")
-    if not system("git clone -b lpms_1_0 git://gitorious.org/hadron/lpms.git"):
-        error("git clone failed.")
+    git_clone("-b lpms_1_0 git://gitorious.org/hadron/lpms.git", subdir=name)
 
 def install():
     install_path = "/usr/lib/python2.7/site-packages/lpms"
