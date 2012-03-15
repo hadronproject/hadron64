@@ -20,20 +20,20 @@ import lpms
 
 def python_utils_configure(*params):
     '''Configures the package using setup.py configure command'''
-    if not system("python setup.py configure %s" % " ".join(params)):
+    if not system("python -B setup.py configure %s" % " ".join(params)):
         error("configuration failed.")
         lpms.terminate()
 
 
 def python_utils_build(*params):
     '''Builds the package by running setup.py build with given parameters'''
-    if not system("python setup.py build %s" % " ".join(params)):
+    if not system("python -B setup.py build %s" % " ".join(params)):
         error("building failed.")
         lpms.terminate()
 
 def python_utils_install(*params):
     '''Installs the package with given parameters'''
-    if not system("python setup.py install --root=%s \
+    if not system("python -B setup.py install --root=%s \
             --no-compile -O0 %s" % (install_dir, " ".join(params))):
         error("installation failed.")
         lpms.terminate()
