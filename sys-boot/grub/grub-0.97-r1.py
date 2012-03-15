@@ -14,11 +14,16 @@ def prepare():
     patch(level=1)
 
 def configure():
+    export("CFLAGS", "-fno-strict-aliasing")
     raw_configure("--prefix=/usr",
             "--bindir=/bin",
             "--sbindir=/sbin",
             "--mandir=/usr/share/man",
             "--infodir=/usr/share/info")
+
+def build():
+    unset_env_variable("CFLAGS")
+    make()
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
