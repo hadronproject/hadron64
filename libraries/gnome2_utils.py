@@ -32,5 +32,5 @@ def gnome2_icon_cache_update(*args, **kwargs):
             target = kwargs["target"]
 
     out.notify("updating GTK+ icon cache...")
-    if not shelltools.system("gtk-update-icon-cache %s %s" % (parameters, target)):
-        out.write(out.color("\tFAILED", "red"))
+    if not shelltools.system("gtk-update-icon-cache %s %s" % (parameters, target), sandbox=False):
+        out.write(out.color("\n\tFAILED\n", "red"))
