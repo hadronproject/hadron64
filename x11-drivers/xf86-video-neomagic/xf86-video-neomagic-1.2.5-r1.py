@@ -11,8 +11,8 @@ runtime @ sys-libs/glibc
 build @ dev-util/pkg-config x11-base/xorg-server x11-proto/fontsproto x11-proto/randrproto x11-proto/renderproto x11-proto/xextproto x11-proto/xproto x11-proto/xf86dgaproto
 """
 
-def prepare():
-    patch("git-fixes.diff", level=1)
+#def prepare():
+#    patch("git-fixes.diff", level=1)
 
 def configure():
     conf(
