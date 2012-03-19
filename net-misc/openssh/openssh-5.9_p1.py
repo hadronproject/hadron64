@@ -10,7 +10,7 @@ options @ libedit tcpd
 srcdir = name+"-5.9p1"
 
 depends = """
-runtime @ sys-libs/glibc dev-libs/openssl
+runtime @ sys-libs/glibc >=dev-libs/openssl-1.0.1
 """
 
 opt_runtime = """
