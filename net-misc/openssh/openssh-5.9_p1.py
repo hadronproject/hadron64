@@ -2,12 +2,12 @@ metadata = """
 summary @ Free version of the SSH connectivity tools
 homepage @ http://www.openssh.org/portable.html
 license @ BSD
-src_url @ ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-5.8p2.tar.gz
+src_url @ ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-5.9p1.tar.gz
 arch @ ~x86
 options @ libedit tcpd
 """
 
-srcdir = name+"-5.8p2"
+srcdir = name+"-5.9p1"
 
 depends = """
 runtime @ sys-libs/glibc dev-libs/openssl
