@@ -8,6 +8,10 @@ arch @ ~x86
 
 # FIXME python3 support
 
+depends = """
+common @ dev-lang/python:2*
+conflict @ dev-python/setuptools
+"""
 get("main/python_utils")
 
 standard_procedure = False

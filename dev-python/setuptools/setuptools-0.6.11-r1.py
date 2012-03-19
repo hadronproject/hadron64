@@ -7,7 +7,8 @@ arch @ ~x86
 """
 
 depends = """
-runtime @ dev-lang/python:2.7
+runtime @ dev-lang/python:2*
+conflict @ dev-python/distribute
 """
 
 get("python_utils")
