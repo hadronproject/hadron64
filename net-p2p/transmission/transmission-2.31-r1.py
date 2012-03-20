@@ -4,7 +4,7 @@ homepage @ http://www.transmissionbt.com/
 license @ MIT
 src_url @ http://mirrors.m0k.org/transmission/files/$name-$version.tar.bz2
 arch @ ~x86
-options @ gtk libnotify libcanberra utp qt nls
+options @ gtk libnotify libcanberra utp qt4 nls
 """
 
 depends = """
@@ -16,7 +16,7 @@ opt_runtime = """
 gtk @ x11-libs/gtk+:2 dev-libs/dbus-glib
     libnotify @ x11-libs/libnotify
     libcanberra @ media-libs/libcanberra
-qt @ x11-libs/qt
+qt4 @ x11-libs/qt
 nls @ sys-devel/gettext dev-util/intltool
 """
 
