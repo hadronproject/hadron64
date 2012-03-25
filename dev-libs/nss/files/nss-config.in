@@ -4,7 +4,7 @@ prefix=@prefix@
 
 major_version=3
 minor_version=13
-patch_version=1
+patch_version=3
 
 usage()
 {

@@ -18,15 +18,14 @@ runtime @ x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes
 
 srcdir = "Mesa-%s" % version
 
-def prepare():
-    patch("nouveau-fix-header.patch", level=1)
+#def prepare():
+#    patch("nouveau-fix-header.patch", level=1)
 
 def configure():
-    conf("--with-dri-driverdir=/usr/lib/xorg/modules/dri \
-            --disable-gallium-radeon \
-            --disable-gallium-r600 \
-            --disable-gallium-nouveau \
-            --disable-gallium-swrast \
+    """conf("--with-dri-driverdir=/usr/lib/xorg/modules/dri \
+            --with-gallium-drivers=r300,r600,nouveau,svga,swrast \
+            --enable-gallium-llvm \
+            --enable-gallium-egl --enable-shared-glapi\
             --enable-glx-tls \
             --with-driver=dri \
             --enable-xcb \
@@ -58,6 +57,22 @@ def configure():
         #    --with-dri-driverdir=/usr/lib/xorg/modules/dri \
         #    --with-dri-drivers=i810,i915,i965,mach64,nouveau,r128,r200,r600,radeon,sis,tdfx \
         #    --with-state-trackers=dri,glx")
+    """
+    conf("--with-dri-driverdir=/usr/lib/xorg/modules/dri",
+            "--with-gallium-drivers=nouveau,svga,swrast",
+            "--disable-gallium-llvm",
+            "--enable-gallium-egl", 
+            "--enable-shared-glapi",
+            "--enable-glx-tls",
+            "--enable-dri",
+            "--enable-glx",
+            "--enable-osmesa",
+            "--enable-gles1",
+            "--enable-gles2",
+            "--enable-egl",
+            "--enable-texture-float",
+            "--enable-xa",
+            "--enable-shared-dricore")
 
 def build():
     export("PYTHONDONTWRITEBYTECODE", "1")
