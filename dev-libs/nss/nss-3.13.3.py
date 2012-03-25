@@ -2,7 +2,7 @@ metadata = """
 summary @ Mozilla Network Security Services
 homepage @ http://www.mozilla.org/projects/security/pki/nss/
 license @ MPL GPL
-src_url @ ftp://ftp.mozilla.org/pub/security/nss/releases/NSS_3_13_1_RTM/src/nss-3.13.1.tar.gz
+src_url @ ftp://ftp.mozilla.org/pub/security/nss/releases/NSS_3_13_3_RTM/src/nss-3.13.3.tar.gz
 arch @ ~x86
 """
 
@@ -17,7 +17,7 @@ def prepare():
     copy("%s/nss.pc.in" % filesdir, "dist/pkgconfig/nss.pc.in")
     copy("%s/nss-config.in" % filesdir, "dist/pkgconfig/nss-config.in")
     # pathces from archlinux
-    patch("bug702090.patch", level=2)
+    #patch("bug702090.patch", level=2)
     #patch("add_spi+cacert_ca_certs.patch", level=2)
     patch("ssl-renegotiate-transitional.patch", level=2)
     patch("nss-no-rpath.patch", level=2)
