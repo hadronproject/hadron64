@@ -2,9 +2,8 @@ metadata = """
 summary @ Userspace tools for the kernel cpufreq subsystem
 homepage @ http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 license @ GPL
-src_url @ http://linux.mirrors.es.net/pub/linux/utils/kernel/cpufreq/$fullname.tar.gz
+src_url @ ftp://ftp.archlinux.org/other/$name/$fullname.tar.bz2
 arch @ ~x86
-options @
 """
 
 depends = """
