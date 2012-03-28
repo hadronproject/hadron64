@@ -7,6 +7,7 @@ arch @ ~x86
 options @ berkdb perl python sasl
 """
 
+get("perl_utils")
 
 depends = """
 runtime @ net-libs/neon dev-libs/apr-util dev-libs/apr
@@ -79,4 +80,4 @@ def install():
     insexe("%s/tools/client-side/bash_completion" % build_dir, \
             "/etc/bash_completion.d/subversion")
 
-    insdoc("COPYING", "README")
+    fixlocalpod()
