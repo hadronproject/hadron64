@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-common @ dev-lang/python:2*
+common @ dev-lang/python:2* dev-python/setuptools
 """
 
 get("python_utils")

@@ -4,7 +4,6 @@ homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/driver/$fullname.tar.bz2
 arch @ ~x86
-options @ debug
 """
 
 depends = """
@@ -17,6 +16,6 @@ def configure():
     "--prefix=/usr")
 
 def install():
-    raw_install("DESTDIR=%s" % install_dir)
+    installd()
 
     insdoc("COPYING")

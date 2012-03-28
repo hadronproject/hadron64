@@ -7,7 +7,7 @@ arch @ ~x86
 
 depends = """
 runtime @ media-libs/alsa-lib dev-util/desktop-file-utils gnome-base/gconf
-x11-libs/libXtst x11-misc/libxss media-libs/libpng:1.2 net-print/cups dev-libs/nss
+x11-libs/libXtst x11-misc/libxss media-libs/libpng:1.2 dev-libs/nss net-print/cups
 """
 
 get("fdo_mime", "gnome2_utils")
@@ -22,7 +22,7 @@ def extract():
     try:
         donk = urllib.urlopen("http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/LAST_CHANGE")
     except:
-        warning("Couldn't read the version info, this is going to fail.")
+        warn("Couldn't read the version info, this is going to fail.")
     lastver = donk.read()
     notify("Revision %s" % lastver)
     system("rm -fr chrome-linux.zip")
