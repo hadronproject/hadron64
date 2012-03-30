@@ -7,7 +7,7 @@ arch @ ~x86
 """
 
 depends = """
-common @ dev-libs/pinktrace
+common @ dev-libs/pinktrace[ipv6]
 """
 
 def install():
