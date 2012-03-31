@@ -24,10 +24,10 @@ cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sb
 # END
 
 def prepare():
-    for i in xrange(1, 21):
+    for i in xrange(1, 25):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.2-patches/bash42-%03d" % i, location=build_dir)
 
-    for f in xrange(1, 21):
+    for f in xrange(1, 25):
         patch("bash42-%03d" % f, location=build_dir)
 
 def configure():
