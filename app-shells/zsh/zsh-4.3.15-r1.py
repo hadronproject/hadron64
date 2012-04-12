@@ -2,7 +2,7 @@ metadata = """
 summary @ A POSIX compliant shell
 homepage @ http://www.zsh.org/
 license @ ZSH
-src_url @ ftp://ftp.zsh.org/pub/$fullname.tar.bz2
+src_url @ ftp://ftp.zsh.org/pub/old/$fullname.tar.bz2
 arch @ ~x86
 options @ gdbm pcre maildir caps debug lpms-completion
 """
