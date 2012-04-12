@@ -119,6 +119,7 @@ def configure():
     "--disable-optimizations",
     "--without-tuning",
     "--enable-fast-install",
+    "--disable-swscale",
     "--enable-dbus --enable-dbus-control",
     "--enable-sout")
 
