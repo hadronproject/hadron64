@@ -2,7 +2,7 @@ metadata = """
 summary @ File transfer program to keep remote files into sync
 homepage @ http://rsync.samba.org/
 license @ GPL-3
-src_url @ http://rsync.samba.org/ftp/rsync/$fullname.tar.gz
+src_url @ http://rsync.samba.org/ftp/rsync/src/rsync-3.0.8.tar.gz
 arch @ ~x86
 """
 
@@ -11,7 +11,6 @@ runtime @ sys-apps/acl
 """
 
 def configure():
-    system("prepare-source")
     conf("--with-included-popt",
             "--enable-acl-support",
             "--enable-xattr-support")
