@@ -16,7 +16,7 @@ standard_procedure = False
 
 srcdir = "chrome-linux"
 
-def extract():
+def prepare():
     color("** Determining latest build version **", "green")
     import urllib   
     try:
