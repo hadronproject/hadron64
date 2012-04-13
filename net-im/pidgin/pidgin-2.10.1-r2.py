@@ -4,6 +4,7 @@ license @ GPL-2
 homepage @ http://pidgin.im
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tar.bz2
 options @ gstreamer meanwhile tcl spell python perl dbus sasl gtk ncurses zeroconf networkmanager gnutls debug zephyr idn
+arch @ ~x86
 """
 
 depends = """

@@ -3,6 +3,7 @@ summary @ A C library that implements an SQL database engine
 homepage @ http://www.sqlite.org
 license @ as-is
 src_url @ http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz
+arch @ ~x86
 """
 srcdir="sqlite-autoconf-3070900"
 
