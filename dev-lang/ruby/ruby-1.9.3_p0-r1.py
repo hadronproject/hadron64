@@ -4,6 +4,7 @@ homepage @ http://www.ruby-lang.org/en
 src_url @ http://mirrors.ibiblio.org/pub/mirrors/$name/$name-1.9.3-p0.tar.bz2
 license @ GPL-2
 options @ berkdb gdbm ssl ncurses readline doc yaml
+arch @ ~x86
 """
 
 depends = """
