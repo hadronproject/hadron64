@@ -4,6 +4,7 @@ homepage @ http://www.gnu.org/software/texinfo/
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/pub/gnu/$name/$fullname.tar.gz
 options @ nls static
+arch @ ~x86
 """
 
 depends = """
