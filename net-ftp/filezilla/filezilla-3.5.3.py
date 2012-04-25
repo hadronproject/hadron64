@@ -26,6 +26,7 @@ def configure():
     config_with("dbus"),
     config_enable("nls", "locales"),
     "--disable-autoupdatecheck",
+    "--disable-manualupdatecheck",
     "--with-tinyxml=builtin")
 
 def install():
