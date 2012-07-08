@@ -2,11 +2,12 @@ metadata = """
 summary @ Filesystem baselayout
 homepage @ http://hadronproject.org
 license @ GPL-3
-arch @ ~x86
+arch @ ~x86_64
 """
 
+#app-misc/iana-etc
 depends = """
-common @ app-misc/iana-etc app-shells/bash sys-apps/coreutils
+common @ app-shells/bash sys-apps/coreutils
 """
 
 standard_procedure = False
@@ -33,7 +34,7 @@ def install():
     for f in ('gshadow', 'shadow'):
         system("install -m600 %s/%s %s/etc" % (filesdir, f, install_dir))
 
-    echo("Hadron Base System Release 0.2", "/etc/hadron-release")
+    echo("Hadron Base System Release 0.3", "/etc/hadron-release")
 
     for i in ('cache/man', 'local', 'opt', 'run', 'log/old', 'lib/misc', 'empty'):
         makedirs("/var/%s" % i)

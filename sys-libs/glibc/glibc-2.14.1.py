@@ -3,7 +3,7 @@ summary @ GNU C Library
 homepage @ http://www.gnu.org/software/libc
 license @ GPL-2
 src_url @ http://ftp.gnu.org/gnu/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
@@ -25,7 +25,7 @@ def configure():
         "--without-gd",
         "--without-cvs",
         "--disable-profile",
-        "--disable-multi-arch",
+        "--enable-multi-arch",
         run_dir = build_dir)
 
 def build():
@@ -51,6 +51,13 @@ def install():
     #FIXME: #insfile("%s/glibc/posix/gai.conf" % build_dir, "/etc/gai.conf")
     
     makedirs("/etc/ld.so.conf.d")
+
+    #sed("-i '/RTLDLIST/s%lib64%lib%'"+"%s/usr/bin/ldd" % install_dir)
+    makedirs("/lib64")
+    for lib in glob.glob("%s/lib/ld*" % install_dir):
+        lib = lib.replace(install_dir, "")
+        if not lib.startswith("/"): lib = "/"+lib
+        makesym(lib, "/lib64/"+basename(lib))
 
 def post_install():
     warn("Please don't forget to edit /etc/locale.gen and run locale-gen")

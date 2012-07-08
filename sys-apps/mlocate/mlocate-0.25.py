@@ -3,7 +3,7 @@ summary @ Faster merging drop-in for slocate
 license @ GPL
 homepage @ http://carolina.mff.cuni.cz/~trmac/blog/mlocate
 src_url @ https://fedorahosted.org/releases/m/l/mlocate/$fullname.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 options @ nls
 """
 

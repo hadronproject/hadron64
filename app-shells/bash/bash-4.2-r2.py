@@ -4,7 +4,7 @@ homepage @ http://tiswww.case.edu/php/chet/bash/bashtop.html
 license @ GPL-3
 src_url @ http://ftp.gnu.org/gnu/$name/$fullname.tar.gz
 options @ net nls afs mem-scramble plugins
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
@@ -24,10 +24,10 @@ cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sb
 # END
 
 def prepare():
-    for i in xrange(1, 25):
+    for i in xrange(1, 30):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.2-patches/bash42-%03d" % i, location=build_dir)
 
-    for f in xrange(1, 25):
+    for f in xrange(1, 30):
         patch("bash42-%03d" % f, location=build_dir)
 
 def configure():

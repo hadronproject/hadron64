@@ -3,7 +3,7 @@ summary @ System V Release 4.0 curses emulation library
 homepage @  http://www.gnu.org/software/ncurses/
 license @ MIT
 src_url @ http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
@@ -39,11 +39,11 @@ def install():
     cd("ncursesw-build")
     raw_install()
     
-    makedirs("/lib")
-    for item in glob.glob("%s/usr/lib/libncursesw.so.5*" % install_dir):
-        move(item, "/lib/"+basename(item))
-    rmfile("/usr/lib/libncursesw.so")
-    makesym("/lib/libncursesw.so.5", "/usr/lib/libncursesw.so")
+    #makedirs("/lib64")
+    #for item in glob.glob("%s/usr/lib/libncursesw.so.5*" % install_dir):
+    #    move(item, "/lib64/"+basename(item))
+    #rmfile("/usr/lib/libncursesw.so")
+    #makesym("/lib64/libncursesw.so.5", "/usr/lib/libncursesw.so")
     
     for lib in ('ncurses', 'form', 'panel', 'menu'):
         if isexists("/usr/lib/lib"+lib+".so"):

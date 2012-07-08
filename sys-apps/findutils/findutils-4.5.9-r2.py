@@ -2,8 +2,8 @@ metadata = """
 summary @ GNU utilities for finding files
 homepage @ http://www.gnu.org/software/findutils/
 license @ GPL-2
-src_url @ ftp://alpha.gnu.org/gnu/findutils/findutils-4.5.9.tar.gz
-arch @ ~x86
+src_url @ ftp://alpha.gnu.org/gnu/$name/$fullname.tar.gz
+arch @ ~x86_64
 options @ locate
 """
 

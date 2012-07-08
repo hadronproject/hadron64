@@ -4,7 +4,7 @@ homepage @ http://www.balabit.com/network-security/syslog-ng/
 license @ GPL-2
 src_url @ http://www.balabit.com/downloads/files/$name/sources/$version/source/$name_$version.tar.gz
 options @ pcre ssl caps ipv6 tcpd static json
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

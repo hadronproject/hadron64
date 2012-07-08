@@ -1,0 +1,12 @@
+--- configure.ac.orig	2012-07-07 21:04:16.509737351 +0000
++++ configure.ac	2012-07-07 21:05:14.546407386 +0000
+@@ -105,6 +105,9 @@
+  AC_MSG_ERROR([gmp.h can't be found, or is unusable.])
+ ])
+ 
++m4_pattern_allow([AM_PROG_AR])
++AM_PROG_AR
++
+ dnl Check for GMP CFLAGS in gmp.h
+ if test -z "$user_redefine_cc" ; then
+    MPC_GMP_CC_CFLAGS

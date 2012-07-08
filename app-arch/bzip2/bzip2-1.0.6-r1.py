@@ -3,7 +3,7 @@ summary @ A high-quality data compressor
 homepage @ http://www.bzip2.org
 license @ BZIP2
 src_url @ http://bzip.org/$version/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 depends = """runtime @ sys-libs/glibc"""
 

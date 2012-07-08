@@ -3,7 +3,7 @@ summary @ A network utility to retrieve files from the Web
 homepage @ http://www.gnu.org/software/wget/wget.html
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ ipv6 idn debug nls ssl gnutls ntlm
 """
 

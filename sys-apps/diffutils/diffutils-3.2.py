@@ -4,7 +4,7 @@ homepage @ http://www.gnu.org/software/diffutils
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.gz
 options @ nls static-libs
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

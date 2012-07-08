@@ -4,7 +4,7 @@ homepage @ http://www.gnu.org/software/gettext
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/pub/gnu/$name/$fullname.tar.gz
 options @ nls git static-libs openmp emacs
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # FIXME: Check options and depends

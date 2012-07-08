@@ -3,7 +3,7 @@ summary @ Password Checking library
 homepage @ http://sourceforge.net/projects/cracklib
 license @ GPL-3
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

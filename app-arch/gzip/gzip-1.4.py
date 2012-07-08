@@ -3,7 +3,7 @@ summary @ GNU compression utility
 homepage @ http://www.gnu.org/software/gzip/
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/pub/gnu/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

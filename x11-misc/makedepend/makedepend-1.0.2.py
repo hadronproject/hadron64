@@ -2,8 +2,8 @@ metadata = """
 summary @ Make depend
 homepage @ http://xorg.freedesktop.org/
 license @ custom
-src_url @       http://xorg.freedesktop.org/releases/individual/util/$fullname.tar.bz2
-arch @ ~x86
+src_url @ http://xorg.freedesktop.org/releases/individual/util/$fullname.tar.bz2
+arch @ ~x86_64
 """
 
 depends = """

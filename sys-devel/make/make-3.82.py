@@ -4,11 +4,11 @@ homepage @ http://www.gnu.org/software/make/make.html
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
 options @ nls
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-devel/gettext
+runtime @ sys-devel/gettext sys-libs/glibc
 """
 
 def configure():

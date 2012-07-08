@@ -3,7 +3,7 @@ summary @ IP Routing Utilities
 homepage @ http://www.linux-foundation.org/en/Net:Iproute2
 license @ GPL-2
 src_url @ http://www5.frugalware.org/packages/linuxfromscratch/ftp/lfs-packages/7.0-rc2/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ berkdb
 """
 

@@ -3,12 +3,11 @@ summary @ Perl/CPAN Error module - Error/exception handling in an OO-ish way
 homepage @ http://search.cpan.org/dist/${_realname}/
 license @ PerlArtistic GPL
 src_url @ http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/Error-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
-runtime @ dev-lang/perl
-build @ dev-lang/perl
+common @ dev-lang/perl
 """
 
 srcdir = "Error-%s" % version

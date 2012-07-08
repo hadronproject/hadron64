@@ -1,0 +1,44 @@
+As of 4.6.0 options taking both joined and separate arguments (eg. -DFOO
+and -D FOO) are canonicalized into the separate form before being processed.
+The spec language doesn't know about separated switches so it sees it as
+two different arguments, meaning we can't write spec rules for -D or -U
+options anymore. We require this for -U_FORTIFY_SOURCE and some hardened-
+specific features to work, so force the canonical form of these flags to
+be joined instead.
+
+https://bugs.gentoo.org/361783
+http://gcc.gnu.org/PR48524
+http://gcc.gnu.org/PR47236
+
+jvgenmain was found to only recognize separated options in newer GCC
+versions, so add back support for joined options.
+
+https://bugs.gentoo.org/364319
+
+
+--- a/gcc/java/jvgenmain.c
++++ b/gcc/java/jvgenmain.c
+@@ -128,7 +128,10 @@ main (int argc, char **argv)
+ 	continue;
+ 
+       fprintf (stream, "  \"");
+-      for (p = argv[i]; *p; ++p)
++	  p = &argv[i][2];
++	  if (*p == '\0')
++	    p = &argv[++i][0];
++      for (; *p; ++p)
+ 	{
+ 	  if (! ISPRINT (*p))
+ 	    fprintf (stream, "\\%o", *p);
+--- a/gcc/opts-common.c
++++ b/gcc/opts-common.c
+@@ -276,7 +276,8 @@ generate_canonical_option (size_t opt_index, const char *arg, int value,
+   if (arg)
+     {
+       if ((option->flags & CL_SEPARATE)
+-	  && !(option->flags & CL_SEPARATE_ALIAS))
++	  && !(option->flags & CL_SEPARATE_ALIAS)
++	  && !(opt_text[1] == 'D' || opt_text[1] == 'U'))
+ 	{
+ 	  decoded->canonical_option[0] = opt_text;
+ 	  decoded->canonical_option[1] = arg;

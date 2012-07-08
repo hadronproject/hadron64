@@ -3,14 +3,15 @@ summary @ System V Init
 homepage @ http://savannah.nongnu.org/projects/sysvinit
 license @ GPL
 src_url @ http://download.savannah.gnu.org/releases/sysvinit/$fullnamedsf.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
 runtime @ sys-apps/gawk sys-apps/shadow sys-apps/util-linux 
 sys-apps/coreutils sys-libs/glibc
 """
-srcdir = fullname+"dsf"
+
+srcdir = name+"-"+version+"dsf"
 
 def prepare():
     sed("-i 's@Sending processes@& configured via /etc/inittab@g' \

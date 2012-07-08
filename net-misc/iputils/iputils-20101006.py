@@ -3,7 +3,7 @@ summary @ IP Configuration Utilities (and Ping)
 homepage @ http://www.linuxfoundation.org/en/Net:Iputils
 license @ GPL
 src_url @ http://www.skbuff.net/$name/$name-s$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -84,7 +84,7 @@ func in the linux/arch/<ARCH>/ source tree of the kernel.
 +		#elif defined(__i386__) || defined(__x86_64__)
 +			"model name", "vendor_id"
 +		#elif defined(__ia64__)
-+			"family", "vendor"
++			"model name", "vendor"
 +		#elif defined(__hppa__)
 +			"cpu", "model"
 +		#elif defined(__m68k__)

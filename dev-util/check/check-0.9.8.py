@@ -3,7 +3,7 @@ summary @ A unit test framework for C
 homepage @ http://sourceforge.net/projects/check/
 license @ LGPL-2.1
 src_url @ http://garr.dl.sourceforge.net/project/check/check/$version/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # TODO: add subunit option

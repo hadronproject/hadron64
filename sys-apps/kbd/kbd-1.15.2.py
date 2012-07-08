@@ -3,7 +3,7 @@ summary @ Keytable files and keyboard utilities
 homepage @ ftp://ftp.altlinux.org/pub/people/legion/kbd/
 license @ GPL
 src_url @ ftp://ftp.altlinux.org/pub/people/legion/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

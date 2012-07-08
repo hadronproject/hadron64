@@ -4,7 +4,7 @@ homepage @ http://www.twinsun.com/tz/tz-link.htm
 license @ BSD public-domain
 src_url @ http://www.iana.org/time-zones/repository/releases/tzdata2012c.tar.gz 
 http://www.iana.org/time-zones/repository/releases/tzcode2012b.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

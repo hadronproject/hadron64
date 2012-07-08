@@ -3,7 +3,7 @@ summary @ Utilities for monitoring your system and processes on your system
 homepage @ http://procps.sourceforge.net/
 license @ GPL LGPL
 src_url @ http://procps.sourceforge.net/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

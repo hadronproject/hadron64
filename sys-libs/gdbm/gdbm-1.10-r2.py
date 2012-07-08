@@ -3,7 +3,7 @@ summary @ GNU database library
 homepage @ http://www.gnu.org/software/gdbm/gdbm.html
 license @ GPL-2
 src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

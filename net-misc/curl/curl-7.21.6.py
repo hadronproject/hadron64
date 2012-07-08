@@ -3,7 +3,7 @@ summary @ An URL retrival utility and library
 homepage @ http://curl.haxx.se/
 license @ MIT
 src_url @ http://curl.haxx.se/download/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -4,7 +4,7 @@ homepage @ http://dev.exherbo.org/~alip/pinktrace/
 license @ as-is
 src_url @ http://dev.exherbo.org/~alip/$name/release/$fullname.tar.bz2
 options @ ipv6 python ruby
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

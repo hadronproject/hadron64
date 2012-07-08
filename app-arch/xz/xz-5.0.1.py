@@ -3,6 +3,7 @@ summary @ Library and command line tools for XZ and LZMA compressed files
 homepage @ http://tukaani.org/xz/
 license @ GPL LGPL custom
 src_url @ http://tukaani.org/$name/$fullname.tar.gz
+arch @ ~x86_64
 options @ nls static-libs threads
 """
 

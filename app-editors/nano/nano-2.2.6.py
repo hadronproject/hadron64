@@ -3,7 +3,7 @@ summary @ Pico editor clone with enhancements
 homepage @ http://www.nano-editor.org
 license @ GPL-2
 src_url @ http://www.nano-editor.org/dist/v2.2/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -4,7 +4,7 @@ homepage @ http://www.vim.org
 license @ GPL-2
 src_url @ ftp://ftp.vim.org/pub/$name/unix/$name-7.3.tar.bz2
 http://hadronproject.org/distfiles/$name-patches-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ python perl ruby
 """
 

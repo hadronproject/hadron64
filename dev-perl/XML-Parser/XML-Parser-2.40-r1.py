@@ -3,7 +3,7 @@ summary @ Expat-based XML parser module for perl
 homepage @ http://search.cpan.org/dist/XML-Parser
 license @ GPL PerlArtistic
 src_url @ http://cpan.org/CPAN/authors/id/C/CH/CHORNY/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
@@ -18,5 +18,5 @@ def build():
     make()
     make("test")
     
-install = lambda: (linstall(), rmfile("/usr/lib/perl5/core_perl/perllocal.pod"))
+install = lambda: (linstall())
 

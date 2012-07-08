@@ -1,0 +1,118 @@
+http://gcc.gnu.org/PR52408
+https://bugs.gentoo.org/382075
+
+From 1cd2ad1b2da194ce96e432085dd8892735160daa Mon Sep 17 00:00:00 2001
+From: danglin <danglin@138bc75d-0d04-0410-961f-82ee72b054a4>
+Date: Sun, 4 Mar 2012 16:23:26 +0000
+Subject: [PATCH] 	Backport from mainline 	2012-03-01  John David
+ Anglin  <dave.anglin@nrc-cnrc.gc.ca>
+
+	PR target/52408
+	* config/pa/pa.md (zvdep_imm32): Change type of variable x from int to
+	unsigned HOST_WIDE_INT.
+	(zvdep_imm64): Likewise.
+	(vdepi_ior): Change type of variable x from int to HOST_WIDE_INT.
+	(vdepi_and): Likewise.
+	Likewise for unamed 64-bit patterns.
+	* config/pa/predicates.md (lhs_lshift_cint_operand): Update comment.
+
+
+
+git-svn-id: svn+ssh://gcc.gnu.org/svn/gcc/branches/gcc-4_6-branch@184888 138bc75d-0d04-0410-961f-82ee72b054a4
+---
+ gcc/ChangeLog               |   14 ++++++++++++++
+ gcc/config/pa/pa.md         |   12 ++++++------
+ gcc/config/pa/predicates.md |    6 +++---
+ 3 files changed, 23 insertions(+), 9 deletions(-)
+
+2012-03-04  John David Anglin  <dave.anglin@nrc-cnrc.gc.ca>
+
+	Backport from mainline
+	2012-03-01  John David Anglin  <dave.anglin@nrc-cnrc.gc.ca>
+
+	PR target/52408
+	* config/pa/pa.md (zvdep_imm32): Change type of variable x from int to
+	unsigned HOST_WIDE_INT.
+	(zvdep_imm64): Likewise.
+	(vdepi_ior): Change type of variable x from int to HOST_WIDE_INT.
+	(vdepi_and): Likewise.
+	Likewise for unamed 64-bit patterns.
+	* config/pa/predicates.md (lhs_lshift_cint_operand): Update comment.
+
+diff --git a/gcc/config/pa/pa.md b/gcc/config/pa/pa.md
+index 1bd9f0b..c91e057 100644
+--- a/gcc/config/pa/pa.md
++++ b/gcc/config/pa/pa.md
+@@ -6348,7 +6348,7 @@
+   ""
+   "*
+ {
+-  int x = INTVAL (operands[1]);
++  unsigned HOST_WIDE_INT x = UINTVAL (operands[1]);
+   operands[2] = GEN_INT (4 + exact_log2 ((x >> 4) + 1));
+   operands[1] = GEN_INT ((x & 0xf) - 0x10);
+   return \"{zvdepi %1,%2,%0|depwi,z %1,%%sar,%2,%0}\";
+@@ -6366,7 +6366,7 @@
+   "exact_log2 (INTVAL (operands[1]) + 1) > 0"
+   "*
+ {
+-  int x = INTVAL (operands[1]);
++  HOST_WIDE_INT x = INTVAL (operands[1]);
+   operands[2] = GEN_INT (exact_log2 (x + 1));
+   return \"{vdepi -1,%2,%0|depwi -1,%%sar,%2,%0}\";
+ }"
+@@ -6383,7 +6383,7 @@
+   "INTVAL (operands[1]) == -2"
+   "*
+ {
+-  int x = INTVAL (operands[1]);
++  HOST_WIDE_INT x = INTVAL (operands[1]);
+   operands[2] = GEN_INT (exact_log2 ((~x) + 1));
+   return \"{vdepi 0,%2,%0|depwi 0,%%sar,%2,%0}\";
+ }"
+@@ -6447,7 +6447,7 @@
+   "TARGET_64BIT"
+   "*
+ {
+-  int x = INTVAL (operands[1]);
++  unsigned HOST_WIDE_INT x = UINTVAL (operands[1]);
+   operands[2] = GEN_INT (4 + exact_log2 ((x >> 4) + 1));
+   operands[1] = GEN_INT ((x & 0x1f) - 0x20);
+   return \"depdi,z %1,%%sar,%2,%0\";
+@@ -6465,7 +6465,7 @@
+   "TARGET_64BIT && exact_log2 (INTVAL (operands[1]) + 1) > 0"
+   "*
+ {
+-  int x = INTVAL (operands[1]);
++  HOST_WIDE_INT x = INTVAL (operands[1]);
+   operands[2] = GEN_INT (exact_log2 (x + 1));
+   return \"depdi -1,%%sar,%2,%0\";
+ }"
+@@ -6482,7 +6482,7 @@
+   "TARGET_64BIT && INTVAL (operands[1]) == -2"
+   "*
+ {
+-  int x = INTVAL (operands[1]);
++  HOST_WIDE_INT x = INTVAL (operands[1]);
+   operands[2] = GEN_INT (exact_log2 ((~x) + 1));
+   return \"depdi 0,%%sar,%2,%0\";
+ }"
+diff --git a/gcc/config/pa/predicates.md b/gcc/config/pa/predicates.md
+index ea41169..ff5dc17 100644
+--- a/gcc/config/pa/predicates.md
++++ b/gcc/config/pa/predicates.md
+@@ -421,9 +421,9 @@
+   (ior (match_operand 0 "register_operand")
+        (match_operand 0 "cint_ior_operand")))
+ 
+-;; True iff OP is a CONST_INT of the forms 0...0xxxx or
+-;; 0...01...1xxxx. Such values can be the left hand side x in (x <<
+-;; r), using the zvdepi instruction.
++;; True iff OP is a CONST_INT of the forms 0...0xxxx, 0...01...1xxxx,
++;; or 1...1xxxx. Such values can be the left hand side x in (x << r),
++;; using the zvdepi instruction.
+ 
+ (define_predicate "lhs_lshift_cint_operand"
+   (match_code "const_int")
+-- 
+1.7.9.7

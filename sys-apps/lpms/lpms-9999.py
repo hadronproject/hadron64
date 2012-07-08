@@ -2,12 +2,12 @@ metadata = """
 summary @ Package building and distribution system for Hadron GNU/Linux
 homepage @ http://hadronproject.org
 license @ GPL-3
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
 runtime @ dev-lang/python:2.7 sys-apps/sydbox net-misc/wget sys-apps/file
-build @ dev-lang/python
+common @ dev-lang/python:2.7
 """
 
 get("git_utils")
@@ -17,7 +17,7 @@ standard_procedure = False
 reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
 
 def prepare():
-    git_clone("-b lpms_1_0 git://gitorious.org/hadron/lpms.git", subdir=name)
+    git_clone("git://gitorious.org/hadron/lpms.git", subdir=name)
 
 def install():
     install_path = "/usr/lib/python2.7/site-packages/lpms"

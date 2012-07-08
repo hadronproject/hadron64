@@ -3,12 +3,11 @@ summary @ GNU readline library
 homepage @ http://tiswww.case.edu/php/chet/readline/rltop.html
 license @ GPL
 src_url @ http://ftp.gnu.org/gnu/readline/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/ncurses
-build @ sys-libs/ncurses
+common @ sys-libs/ncurses
 """
 
 def prepare():
