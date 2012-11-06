@@ -17,4 +17,4 @@ def configure():
     sed("-i -e 's/man2//g' man/Makefile")
 
 def install():
-    raw_install("DESTDIR=%s install install-lib install-dev" % install_dir)
+    raw_install("DIST_ROOT=%s install install-lib install-dev" % install_dir)
