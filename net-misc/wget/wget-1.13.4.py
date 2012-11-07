@@ -34,6 +34,8 @@ def configure():
             import lpms
             lpms.terminate("*** You can not use ntlm and gnutls options together, compilation is going to fail ***")
 
+    # fix glibc-2.16 build issue
+    system("sed -i -e '/gets is a/d' lib/stdio.in.h")
     conf(
     config_enable("ssl", "opie"),
     config_enable("ssl", "digest"),
