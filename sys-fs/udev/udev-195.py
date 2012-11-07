@@ -61,7 +61,7 @@ def install():
 
     makedirs("/etc/udev/rules.d")
 
-    insdoc("COPYING", "ChangeLog", "README", "TODO", "extras/keymap/README.keymap.txt")
+    insdoc("LICENSE.LGPL", "README", "TODO", "src/keymap/README.keymap.txt")
 
 def post_install():
     from lpms import shelltools
