@@ -14,6 +14,8 @@ runtime @ sys-libs/glibc app-shells/bash
 def configure():
     export("FORCE_UNSAFE_CONFIGURE", "1")
     if opt("static"): append-ldflags("-static")
+    # fix build failure with glibc-2.16
+    system("sed -i -e '/gets is a/d' gnu/stdio.in.h")
     conf("--bindir=/bin",
         config_enable('nls'))
 
