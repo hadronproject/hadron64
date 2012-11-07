@@ -13,8 +13,8 @@ runtime @ sys-libs/glib dev-libs/libffi dev-lang/python:2.7[xml]
 def configure():
     export("PYTHONDONTWRITEBYTECODE", "1")
     export("HOME", build_dir)
-    #autoreconf("-fi")
     export("PYTHON", "/usr/bin/python2")
+    #autoreconf("-fi")
     conf(
         "--disable-static",
         "--disable-tests")
