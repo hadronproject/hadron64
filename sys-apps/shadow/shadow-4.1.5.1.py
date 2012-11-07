@@ -12,9 +12,8 @@ runtime @ sys-apps/acl app-shells/bash sys-libs/pam
 
 def prepare():
     sed("-i '/^user\(mod\|add\)_LDADD/s|$| -lattr|' src/Makefile.am")
-    patch("xstrdup.patch", level=1)
-    patch("shadow-strncpy-usage.patch", level=1)
-    patch("write-utmp-wtmp-entries.patch", level=1, reverse=True)
+    patch(level=1)
+    patch(level=1)
     sed("-i '/^SUBDIRS/s/pam.d//' etc/Makefile.in")
 
 def configure():
