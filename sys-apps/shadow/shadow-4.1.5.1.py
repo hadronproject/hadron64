@@ -14,7 +14,6 @@ def prepare():
     sed("-i '/^user\(mod\|add\)_LDADD/s|$| -lattr|' src/Makefile.am")
     patch("xstrdup.patch", level=1)
     patch("shadow-strncpy-usage.patch", level=1)
-    patch("userdel-avoid-bad-mem-access.patch")
     patch("write-utmp-wtmp-entries.patch", level=1, reverse=True)
     sed("-i '/^SUBDIRS/s/pam.d//' etc/Makefile.in")
 
