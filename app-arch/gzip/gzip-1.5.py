@@ -10,9 +10,6 @@ depends = """
 runtime @ sys-libs/glibc app-shells/bash
 """
 
-def prepare():
-    patch(level=1)
-
 def configure():
     conf()
 
