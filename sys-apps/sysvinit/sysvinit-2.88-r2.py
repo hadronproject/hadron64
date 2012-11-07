@@ -11,7 +11,7 @@ runtime @ sys-apps/gawk sys-apps/shadow sys-apps/util-linux
 sys-apps/coreutils sys-libs/glibc
 """
 
-srcdir = name+"-"+version+"dsf"
+srcdir = name+"-2.88dsf"
 
 def prepare():
     sed("-i 's@Sending processes@& configured via /etc/inittab@g' \
