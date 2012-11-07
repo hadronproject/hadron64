@@ -12,6 +12,8 @@ common @ sys-libs/glibc app-shells/bash
 """
 
 def configure():
+    # fix glibc-2.16 build issue
+    system("sed -i -e '/gets is a/d' lib/stdio.in.h")
     if opt('static-libs'): append_ldflags('-static')
     conf("--with-packager='Hadron'",
         config_enable("nls"))
