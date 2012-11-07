@@ -14,6 +14,7 @@ def prepare():
     patch(level=1)
 
 def configure():
+    export("DEFS", "NO_ASM")
     conf()
 
 def install():
