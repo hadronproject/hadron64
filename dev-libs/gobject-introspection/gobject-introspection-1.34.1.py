@@ -2,7 +2,7 @@ metadata = """
 summary @ Introspection system for GObject-based libraries
 homepage @ http://live.gnome.org/GObjectInstrospection
 license @ LGPL + GPL
-src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/1.30/$fullname.tar.bz2
+src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/1.34/$fullname.tar.bz2
 arch @ ~x86
 """
 
@@ -29,3 +29,4 @@ def build():
 def install():
     export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install("DESTDIR=%s" % install_dir)
+    system("sed -i '1s|#!/usr/bin/env python$|&2|' %s/usr/lib/gobject-introspection/giscanner/*.py" %install_dir)
