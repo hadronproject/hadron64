@@ -25,6 +25,7 @@ def configure():
     #export("PCRE_CFLAGS", "-I/usr/include")
     #export("LIBFFI_LIBS", "-lffi")
     #export("LIBFFI_CFLAGS", "-I/usr/lib/libffi-3.0.11/include")
+    export("PYTHON", "/usr/bin/python2")
     conf("--with-pcre=system",
             "--with-threads=posix",
             "--disable-fam",
