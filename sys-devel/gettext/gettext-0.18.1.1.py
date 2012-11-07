@@ -16,6 +16,9 @@ runtime @ sys-apps/acl
 """
 
 def configure():
+    # fix build issue with glibc-2.16
+    system("sed -i -e '/gets is a/d' gettext-*/*/stdio.in.h")
+
     conf(
         "--disable-java",
         "--enable-shared",
