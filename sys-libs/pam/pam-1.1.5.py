@@ -16,6 +16,10 @@ cracklib @ sys-libs/cracklib
 berkdb @ sys-libs/db
 """
 
+def prepare():
+    cd("../Linux-PAM-%s" % version)
+    patch(level=1)
+
 def configure():
     cd("../Linux-PAM-%s" % version)
     raw_configure(
