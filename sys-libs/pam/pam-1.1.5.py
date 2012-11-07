@@ -36,7 +36,7 @@ build = lambda: (cd("../Linux-PAM-%s" % version), make())
 
 def install():
     cd("../Linux-PAM-%s" % version)
-    raw_install("INSTALL=/bin/install DESTDIR=%s" % install_dir)
+    raw_install("DESTDIR=%s" % install_dir)
 
     insfile("%s/other" % filesdir, "/etc/pam.d/other")
     
