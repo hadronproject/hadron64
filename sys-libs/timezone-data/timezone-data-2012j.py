@@ -2,8 +2,8 @@ metadata = """
 summary @ Sources for time zone and daylight saving time data
 homepage @ http://www.twinsun.com/tz/tz-link.htm
 license @ BSD public-domain
-src_url @ http://www.iana.org/time-zones/repository/releases/tzdata2012c.tar.gz 
-http://www.iana.org/time-zones/repository/releases/tzcode2012b.tar.gz
+src_url @ http://www.iana.org/time-zones/repository/releases/tzcode2012j.tar.gz
+http://www.iana.org/time-zones/repository/releases/tzdata2012j.tar.gz
 arch @ ~x86_64
 """
 
@@ -11,7 +11,7 @@ standard_procedure = False
 
 def prepare():
     cd(dirname(build_dir))
-    patch(level=1)
+    patch()
 
 def build():
     cd(dirname(build_dir))
