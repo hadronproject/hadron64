@@ -8,25 +8,36 @@ arch @ ~x86_64
 """
 
 depends = """
-common @ sys-libs/glibc
+common @ >=sys-libs/glibc-2.17
 runtime @ sys-libs/zlib
 """
 
 def configure():
     makedirs("../binutils-build"); cd("../binutils-build")
-    conf("--enable-gold",
-        "--enable-threads",
-        "--enable-ld=default",
-        "--enable-plugins"
-        "--enable-shared",
-        "--disable-werror",
-        "--enable-64-bit-bfd",
-        "--disable-multilib",
+    raw_configure(
+            "--prefix=/usr",
+            "--with-lib-path=/usr/lib:/usr/local/lib",
+            "--enable-gold",
+            "--enable-threads",
+            "--enable-ld=default",
+            "--enable-plugins"
+            "--enable-shared",
+            "--disable-werror",
+            # See the following resources about this parameter
+            # http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/eclass/toolchain-binutils.eclass?revision=1.122&view=markup
+            # http://wiki.osdev.org/GCC_Cross-Compiler_for_x86_64
+            #"--enable-64-bit-bfd",
+            "--disable-multilib",
+            "--with-pic",
         run_dir=build_dir)
 
 def build():
     cd("../binutils-build")
+    # checks the host environment and makes sure all the necessary 
+    # tools are available
     make("configure-host")
+
+    # build binutils
     make("tooldir=%s/usr" % install_dir)
 
 def install():
