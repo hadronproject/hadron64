@@ -12,20 +12,18 @@ build @ sys-kernel/linux-api-headers
 """
 
 def prepare():
-    patch(location="%s/2.14" % filesdir, level=1)
+    patch(location="%s/2.17" % filesdir, level=1)
 
 def configure():
     makedirs("../glibc-build"); cd("../glibc-build")
     echo("slibdir=/lib", "configparms")
     conf("--enable-add-ons=nptl,libidn",
-        "--enable-kernel=2.6.27",
+        "--enable-kernel=2.6.32",
+        "--enable-obsolete-rpc",
         "--with-tls",
-        "--with-__thread",
+        "--enable-stackguard-randomization",
         "--enable-bind-now",
-        "--without-gd",
-        "--without-cvs",
         "--disable-profile",
-        "--enable-multi-arch",
         run_dir = build_dir)
 
 def build():
@@ -35,24 +33,23 @@ def build():
 def install():
     cd("../glibc-build")
     makedirs("/etc")
-    touch("/etc/ld.so.conf")
+
     raw_install("install_root=%s" % install_dir)
 
-    rmfile("/etc/ld.so.conf")
+    for item in ('locale', 'systemd/system', 'tmpfiles.d'):
+        makedirs("/usr/lib/%s" % item)
 
-    makedirs("/usr/lib/locale")
-    
-    insfile("%s/nscd.conf" % filesdir, "/etc/nscd.conf")
-    insexe("%s/locale-gen" % filesdir, "/usr/sbin/locale-gen")
-    insexe("%s/nscd" % filesdir, "/etc/rc.d/nscd")
-    insfile("%s/nsswitch.conf" % filesdir, "/etc/nsswitch.conf")
+    insexe("%s/ld.so.conf" % filesdir, "/etc/ld.so.conf")
+    insfile("%s/nscd/nscd.conf" % build_dir, "/etc/nscd.conf")
+    insexe("%s/locale-gen" % filesdir, "/usr/bin/locale-gen")
+    insfile("%s/nscd.service" % filesdir, "/usr/lib/systemd/system/nscd.service")
+    insfile("%s/nscd.tmpfiles" % filesdir, "/usr/lib/tmpfiles.d/nscd.conf")
     insfile("%s/locale.gen" % filesdir, "/etc/locale.gen")
     insfile("%s/locale.gen" % filesdir,  "/etc/locale.gen")
-    #FIXME: #insfile("%s/glibc/posix/gai.conf" % build_dir, "/etc/gai.conf")
-    
+    insfile("%s/posix/gai.conf" % build_dir, "/etc/gai.conf")
+
     makedirs("/etc/ld.so.conf.d")
 
-    #sed("-i '/RTLDLIST/s%lib64%lib%'"+"%s/usr/bin/ldd" % install_dir)
     makedirs("/lib64")
     for lib in glob.glob("%s/lib/ld*" % install_dir):
         lib = lib.replace(install_dir, "")
