@@ -16,5 +16,5 @@ def configure():
                 "--prefix=/usr")
 
 def install():
-    raw_install('DESTDIR=%s install' % install_dir)
-    insdoc("FAQ", "README", "ChangeLog", "doc/algorithm.txt", "example.c")
+    raw_install('DESTDIR=%s LDCONFIG=: install' % install_dir)
+    insdoc("FAQ", "README", "ChangeLog", "doc/algorithm.txt")
