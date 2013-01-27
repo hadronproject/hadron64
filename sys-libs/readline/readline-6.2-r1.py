@@ -11,7 +11,9 @@ common @ sys-libs/ncurses
 """
 
 def prepare():
-    system("sed -i 's|-Wl,-rpath,$(libdir) ||g' support/shobj-conf")
+    sed("-i '/MV.*old/d' Makefile.in")
+    sed("-i '/{OLDSUFF}/c:' support/shlib-install")
+    patch(level=1)
 
 def configure():
     raw_configure("--prefix=/usr",
@@ -29,8 +31,6 @@ def install():
 
     move("%s/lib/libreadline.a" % install_dir, "/usr/lib/libreadline.a")
     move("%s/lib/libhistory.a" % install_dir, "/usr/lib/libhistroy.a")
-
-    #cd("%s/usr/lib" % install_dir)
 
     makesym("/lib/libreadline.so.6", "/usr/lib/libreadline.so")
     makesym("/lib/libhistory.so.6", "/usr/lib/libhistory.so")
