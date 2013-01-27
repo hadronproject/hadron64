@@ -24,10 +24,10 @@ cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sb
 # END
 
 def prepare():
-    for i in xrange(1, 30):
+    for i in xrange(1, 42):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.2-patches/bash42-%03d" % i, location=build_dir)
 
-    for f in xrange(1, 30):
+    for f in xrange(1, 42):
         patch("bash42-%03d" % f, location=build_dir)
 
 def configure():
@@ -40,8 +40,9 @@ def configure():
         config_with("mem-scramble", "bash-malloc"),
         config_enable("net", "net-redirections"),
         "--with-curses",
+        "--enable-readline",
         "--disable-profiling",
-        "--without-installed-readline",
+        "--with-installed-readline",
         myconf)
 
 def build():
