@@ -1,0 +1,11 @@
+--- modules/pam_namespace/Makefile~	2013-01-30 14:41:14.019712283 +0200
++++ modules/pam_namespace/Makefile	2013-01-30 14:42:11.963042084 +0200
+@@ -869,7 +869,7 @@
+ 
+ 
+ install-data-local:
+-	mkdir -p $(namespaceddir)
++	mkdir -p $(DESTDIR)$(namespaceddir)
+ #README: pam_namespace.8.xml namespace.conf.5.xml
+ #-include $(top_srcdir)/Make.xml.rules
+ 

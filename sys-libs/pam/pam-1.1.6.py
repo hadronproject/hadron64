@@ -16,10 +16,6 @@ cracklib @ sys-libs/cracklib
 berkdb @ sys-libs/db
 """
 
-def prepare():
-    cd("../Linux-PAM-%s" % version)
-    patch(level=1)
-
 def configure():
     cd("../Linux-PAM-%s" % version)
     raw_configure(
@@ -35,6 +31,7 @@ def configure():
             "--enable-securedir=/lib/security",
             "--enable-isadir=/lib/security",
             "DESTDIR=%s" % install_dir)
+    patch()
 
 build = lambda: (cd("../Linux-PAM-%s" % version), make())
 
