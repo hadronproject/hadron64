@@ -10,9 +10,6 @@ depends = """
 runtime @ sys-libs/glibc sys-devel/m4
 """
 
-def prepare():
-    patch(level=1)
-
 def install():
-    linstall()
+    installd()
     insfile(joinpath(filesdir, "lex.sh"), "/usr/bin/lex")
