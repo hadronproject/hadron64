@@ -20,15 +20,15 @@ nls @ >=sys-devel/gettext-0.15
 pam @ sys-libs/pam
 """
 
-def prepare():
-    # the patches from gentoo and arch
-    patch(level=1)
-    autoreconf("-v")
+#def prepare():
+#    # the patches from gentoo and arch
+#    patch(level=1)
+#    autoreconf("-v")
 
 def configure():
     export("FORCE_UNSAFE_CONFIGURE", "1")
     conf("--with-packager='Hadron Project'",
-            "--with-packager-bug-reports='http://trac.seqizz.net'",
+            #"--with-packager-bug-reports='http://trac.seqizz.net'",
             "--enable-install-program=su",
             "--enable-no-install-program=groups,hostname,kill,uptime",
             "--enable-largefile",
@@ -37,7 +37,8 @@ def configure():
             config_enable('acl'),
             config_enable('xattr'),
             config_with('gmp'),
-            config_enable('pam')
+            # unrecognized options: --disable-pam
+            #config_enable('pam')
         )
 
 def install():
@@ -45,7 +46,7 @@ def install():
 
     fhs = ('cat', 'chgrp', 'chmod', 'chown', 'cp', 'date', 'dd', 'df', 'echo',
             'false', 'ln', 'ls', 'mkdir', 'mknod', 'mv', 'pwd', 'rm', 'rmdir',
-            'stty', 'su', 'sync', 'true', 'uname')
+            'stty', 'sync', 'true', 'uname')
     for f in fhs:
         move("%s/usr/bin/%s" % (install_dir, f), "/bin/%s" %  f)
 

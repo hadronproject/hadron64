@@ -2,7 +2,7 @@ metadata = """
 summary @ IP Routing Utilities
 homepage @ http://www.linux-foundation.org/en/Net:Iproute2
 license @ GPL-2
-src_url @ http://www5.frugalware.org/packages/linuxfromscratch/ftp/lfs-packages/7.0-rc2/$fullname.tar.gz
+src_url @ http://www.kernel.org/pub/linux/utils/net/$name/$name-$version.tar.xz
 arch @ ~x86_64
 options @ berkdb
 """
@@ -18,15 +18,15 @@ berkdb @ sys-libs/db
 """
 
 def prepare():
-    patch(level=1)
+    #patch(level=1)
     if not opt("berkdb"):
-        sed(""" -i '/^TARGETS=/s: arpd : :' misc/Makefile""")
+        sed("-i '/^TARGETS/s@arpd@@g' misc/Makefile")
+        sed("-i /ARPD/d Makefile")
+        sed("-i 's/arpd.8//' man/man8/Makefile")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-    system("mkdir %s/sbin" % install_dir)
-    system("ln -s /usr/sbin/ip %s/sbin/ip" % install_dir)
     insfile("include/libnetlink.h", "/usr/include/")
     insfile("lib/libnetlink.a", "/usr/lib/")
     if opt("berkdb"):
-        system("mkdir -p %s/var/lib/arpd" % install_dir)
+        makedirs("/var/lib/arpd")

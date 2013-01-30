@@ -2,17 +2,14 @@ metadata = """
 summary @ Miscellaneous system utilities for Linux
 homepage @ http://userweb.kernel.org/~kzak/util-linux-ng/
 license @ GPL-2
-src_url @ ftp://ftp.kernel.org/pub/linux/utils/$name/v2.21/$name-2.21.tar.xz
+src_url @ http://ftp.kernel.org/pub/linux/utils/$name/v2.22/$name-2.22.2.tar.xz
 arch @ ~x86_64
 """
 
-# FIXME: update, add options and dependencies
-
-#depends = """
-#runtime @ sys-apps/baselayout
-#"""
-
-srcdir = "%s-2.21" % name
+# TODO:
+# * Dependencies 
+# * Options
+# * More configuration
 
 def configure():
     sed("-e 's@etc/adjtime@var/lib/hwclock/adjtime@g' \

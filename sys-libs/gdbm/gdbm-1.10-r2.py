@@ -17,7 +17,7 @@ def configure():
     conf("--enable-libgdbm-compat --disable-static")
 
 def install():
-    linstall()
+    installd()
     makedirs("/usr/include/gdbm")
     makesym("../ndbm.h", "/usr/include/gdbm/ndbm.h")
     makesym("../gdbm.h", "/usr/include/gdbm/gdbm.h")

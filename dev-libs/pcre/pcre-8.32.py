@@ -9,6 +9,7 @@ arch @ ~x86_64
 def configure():
     conf("--enable-utf8",
         "--enable-pcre16",
+        "--enable-pcre32",
         "--enable-jit",
         "--enable-unicode-properties")
 
