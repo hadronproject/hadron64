@@ -5,6 +5,8 @@ license @ GPL-3
 arch @ ~x86_64
 """
 
+# TODO: lpms uses python-file to handle mime types now. So we can remove sys-apps/file dependency
+
 depends = """
 runtime @ dev-lang/python:2.7 sys-apps/sydbox net-misc/wget sys-apps/file
 common @ dev-lang/python:2.7
@@ -17,25 +19,21 @@ standard_procedure = False
 reserve_files = ["/etc/lpms/build.conf", "/etc/lpms/repo.conf"]
 
 def prepare():
-    git_clone("git://gitorious.org/hadron/lpms.git", subdir=name)
+    git_clone("git://github.com/hadronproject/lpms.git", subdir=name)
 
 def install():
-    install_path = "/usr/lib/python2.7/site-packages/lpms"
+    install_path = "/usr/lib/hadron/python/lpms"
 
     cd("lpms")
 
-    makedirs(install_path[1:])
+    makedirs(install_path)
 
-    insinto("src/*", install_path)
-    insinto("bin/*", "/usr/bin")
-    insinto("scripts/*", "/usr/sbin")
-    
-    setmod("+x %s/usr/sbin/create_file_relationsdb.py" % install_dir)
-    setmod("+x %s/usr/sbin/create_reverse_dependsdb.py" % install_dir)
-    setmod("+x %s/usr/sbin/migrate_filesdb.py" % install_dir)
-    setmod("+x %s/usr/sbin/insert_slot_filesdb.py" % install_dir)
+    insinto("lpms/*", install_path)
+    copytree("bin", install_path+"/../")
 
-    makedirs("etc/lpms")
+    makesym("../lib/hadron/python/bin/lpms", "/usr/bin/lpms")
+
+    makedirs("/etc/lpms")
     insinto("data/*", "/etc/lpms")
 
     for directories in ('/var/db/lpms', '/var/cache/lpms/sources',
