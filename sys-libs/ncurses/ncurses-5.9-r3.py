@@ -16,7 +16,7 @@ def configure():
     conf("--with-shared",
             "--with-terminfo-dirs='/etc/terminfo:/usr/share/terminfo'",
             "--without-hashed-db",
-            "--disable-termcap",
+            "--enable-termcap",
             "--enable-symlinks",
             "--with-rcs-ids",
             "--with-manpage-format=normal",
