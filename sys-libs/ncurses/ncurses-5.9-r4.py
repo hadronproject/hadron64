@@ -44,4 +44,19 @@ def configure():
             "--without-pthread",
             "--without-reentrant")
 
-install = lambda: installd()
+def install():
+    installd()
+    for item in ("ncurses", "form", "panel", "menu"):
+        echo("INPUT(-l%sw)" % item, "/usr/lib/lib%s.so" % item)
+        makesym("lib%sw.a" % item, "/usr/lib/lib%s.a" % item)
+    makesym("libncurses++w.a", "/usr/lib/libncurses++.a")
+
+    for item in ("ncurses", "ncurses++", "form", "panel", "menu"):
+        makesym("%sw.pc" % item, "/usr/lib/pkgconfig/%s.pc" % item)
+
+    echo("INPUT(-lncursesw)", "/usr/lib/libcursesw.so")
+    makesym("libncurses.so", "/usr/lib/libcurses.so")
+    makesym("libncursesw.a", "/usr/lib/libcursesw.a")
+    makesym("libncurses.a", "/usr/lib/libcurses.a")
+
+    insdoc("ANNOUNCE", "MANIFEST", "NEWS", "README*", "TO-DO")
