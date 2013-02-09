@@ -18,7 +18,7 @@ def configure():
         "--enable-write",
         "--enable-partx",
         "--disable-wall",
-        "--enable-libmount-mount",
+        "--disable-su --disable-sulogin --disable-login",
         "--enable-raw")
 
 def install():
