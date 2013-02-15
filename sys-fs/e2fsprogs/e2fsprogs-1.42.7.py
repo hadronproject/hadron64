@@ -10,14 +10,17 @@ depends = """
 common @ sys-apps/util-linux app-shells/bash
 """
 
+def prepare():
+    sed("-i '/init\.d/s|^|#|' misc/Makefile.in")
+
 def configure():
-    raw_configure("--enable-elf-shlibs",
+    raw_configure('--prefix=/usr', '--with-root-prefix=""', "--libdir=/usr/lib", "--enable-elf-shlibs",
             "--disable-fsck", "--disable-uuidd",
             "--disable-libuuid", "--disable-libblkid")
 
 def install():
     raw_install("install install-libs LDCONFIG=/bin/true \
-            DESTDIR=%s root_sbindir=/sbin root_libdir=/lib" % install_dir)
+            DESTDIR=%s root_sbindir=/sbin" % install_dir)
 
     sed(""" -i -e 's#^SS_DIR=.*#SS_DIR="/usr/share/ss"#' "%s/usr/bin/mk_cmds" """ % install_dir)
     sed(""" -i -e 's#^ET_DIR=.*#ET_DIR="/usr/share/et"#' "%s/usr/bin/compile_et" """ % install_dir)
