@@ -57,10 +57,6 @@ def install():
     makedirs("/etc/bash_completion.d/")
     insfile("./contrib/completion/git-completion.bash", "/etc/bash_completion.d/git")
 
-    # git daemon script for ArchLinux
-    insexe("%s/git-daemon" % filesdir, "/etc/rc.d/git-daemon")
-    insfile("%s/git-daemon.conf" % filesdir, "/etc/conf.d/git-daemon.conf")
-
     if opt("man"):
         for mansect in ('man1', 'man5', 'man7'):
             for manpage in ls("%s/%s" % (dirname(build_dir, ignore_fix_target=True), mansect), ignore_fix_target=True):
