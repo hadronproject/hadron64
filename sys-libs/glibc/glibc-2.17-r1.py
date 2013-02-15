@@ -16,15 +16,18 @@ def prepare():
 
 def configure():
     makedirs("../glibc-build"); cd("../glibc-build")
-    echo("slibdir=/lib", "configparms")
-    conf("--enable-add-ons=nptl,libidn",
-        "--enable-kernel=2.6.32",
-        "--enable-obsolete-rpc",
-        "--with-tls",
-        "--enable-stackguard-randomization",
-        "--enable-bind-now",
-        "--disable-profile",
-        run_dir = build_dir)
+    echo("slibdir=/usr/lib", "configparms")
+    raw_configure("--prefix=/usr",
+            "--libdir=/usr/lib",
+            "--libexecdir=/usr/lib",
+            "--with-headers=/usr/include",
+            "--enable-add-ons=nptl,libidn",
+            "--enable-kernel=2.6.32",
+            "--enable-obsolete-rpc",
+            "--enable-stackguard-randomization",
+            "--enable-bind-now",
+            "--disable-profile",
+            run_dir = build_dir)
 
 def build():
     cd("../glibc-build")
@@ -49,12 +52,6 @@ def install():
     insfile("%s/posix/gai.conf" % build_dir, "/etc/gai.conf")
 
     makedirs("/etc/ld.so.conf.d")
-
-    makedirs("/lib64")
-    for lib in glob.glob("%s/lib/ld*" % install_dir):
-        lib = lib.replace(install_dir, "")
-        if not lib.startswith("/"): lib = "/"+lib
-        makesym(lib, "/lib64/"+basename(lib))
 
 def post_install():
     warn("Please don't forget to edit /etc/locale.gen and run locale-gen")
