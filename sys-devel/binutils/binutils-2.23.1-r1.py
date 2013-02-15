@@ -38,7 +38,7 @@ def build():
     make("configure-host")
 
     # build binutils
-    make("tooldir=%s/usr" % install_dir)
+    make("tooldir=/usr")
 
 def install():
     cd("../binutils-build")
