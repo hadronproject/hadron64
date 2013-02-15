@@ -18,10 +18,13 @@ def configure():
         "--enable-write",
         "--enable-partx",
         "--disable-wall",
-        "--disable-su --disable-sulogin --disable-login",
+        "--disable-su",
+        "--disable-sulogin",
+        "--disable-login",
+        "--disable-kill",
         "--enable-raw")
 
 def install():
     makedirs("/var/lib/hwclock")
     raw_install("DESTDIR=%s install" % install_dir)
-    insdoc("AUTHORS", "NEWS", "README*", "TODO", "docs/*")
+    insdoc("AUTHORS", "NEWS", "README*", "docs/*")
