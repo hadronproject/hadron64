@@ -13,7 +13,7 @@ runtime @ sys-libs/glibc app-shells/bash dev-libs/openssl sys-apps/debianutils
 
 def install():
     import glob
-    
+
     for i in ("/etc/ca-certificates/update.d", "/usr/sbin",
             "/usr/share/ca-certificates", "/etc/ssl/certs"):
         makedirs(i)
@@ -30,5 +30,6 @@ def install():
 
 def post_install():
     # FIXME: lpms must do something about external command fails
-    if not system("update-ca-certificates"):
+    notify("Updating certificates. This might take a while...")
+    if not system("update-ca-certificates --fresh"):
         error("update-ca-certificates failed.")
