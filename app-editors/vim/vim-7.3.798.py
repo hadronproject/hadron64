@@ -3,7 +3,7 @@ summary @ Vi IMproved, an advanced text editor
 homepage @ http://www.vim.org
 license @ GPL-2
 src_url @ ftp://ftp.vim.org/pub/$name/unix/$name-7.3.tar.bz2
-http://hadronproject.org/distfiles/$name-patches-$version.tar.gz
+http://download.tuxfamily.org/hadron/distfiles/$name-patches-$version.tar.bz2
 arch @ ~x86_64
 options @ python perl ruby
 """
@@ -13,7 +13,7 @@ common @ sys-libs/ncurses
 """
 
 opt_common = """
-python @ dev-lang/python
+python @ dev-lang/python[threads]:2.7
 perl @ dev-lang/perl
 ruby @ dev-lang/ruby
 """
@@ -45,7 +45,7 @@ def configure():
             "--with-x=no",
             "--enable-gui=no",
             "--enable-cscope",
-            "--disable-python3interp", 
+            "--disable-python3interp",
             "--disable-luainterp")
 
 def install():
