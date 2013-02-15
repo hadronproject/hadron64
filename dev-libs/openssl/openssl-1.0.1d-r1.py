@@ -8,17 +8,14 @@ arch @ ~x86_64
 
 depends = """
 runtime @ dev-lang/perl sys-apps/gawk
+build @ x11-misc/makedepend
 """
 
-#def prepare():
-    #patch("openssl-1.0.1-x32.patch", level=1)
-    #patch("openssl-1.0.1-ipv6.patch")
-    #    patch("fix-manpages.patch", level=1)
-#    patch("no-rpath.patch")
-#    patch("ca-dir.patch")
-#    patch("openssl-1.0.0d-fbsd-amd64.patch")
-#    patch("openssl-1.0.0d-windres.patch")
-
+def prepare():
+    patch("fix-manpages.patch", level=1)
+    patch("no-rpath.patch")
+    patch("ca-dir.patch")
+    patch("Fix-IV-check-and-padding-removal.patch", level=1)
 
 def configure():
     if not system("./Configure --prefix=/usr --openssldir=/etc/ssl \
@@ -28,8 +25,7 @@ def configure():
 
 def build():
     make("depend")
-    make("all", j=1)
-    make("rehash")
+    make()
 
 def install():
     raw_install("INSTALL_PREFIX=%s MANDIR=%s install" % (install_dir, "/usr/share/man"))
