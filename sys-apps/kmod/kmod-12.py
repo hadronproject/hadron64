@@ -19,7 +19,7 @@ zlib @ >=sys-libs/zlib-1.2.6
 def configure():
     raw_configure("-prefix=/usr",
             "--bindir=/bin",
-            "--libdir=/lib"
+            "--libdir=/usr/lib",
             "--disable-manpages",
             config_with("xz"),
             config_with("zlib"),
