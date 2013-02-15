@@ -29,6 +29,8 @@ common @ sys-devel/binutils dev-libs/mpc >=sys-libs/zlib-1.1.4 >=dev-libs/mpfr-2
 def configure():
     sed("-i 's/install_to_$(INSTALL_DEST) //' libiberty/Makefile.in")
     sed("-i -e /autogen/d -e /check.sh/d fixincludes/Makefile.in")
+    # Hadron installs x86_64 libraries /lib
+    sed("-i '/m64=/s/lib64/lib/' gcc/config/i386/t-linux64")
 
     makedirs("../gcc-build"); cd("../gcc-build")
 
@@ -67,4 +69,4 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
     # create symlinks
     makesym("/usr/bin/gcc" , "/usr/bin/cc")
-    makesym("/usr/bin/cpp", "/lib/cpp")
+

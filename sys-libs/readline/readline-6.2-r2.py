@@ -17,20 +17,11 @@ def prepare():
 
 def configure():
     raw_configure("--prefix=/usr",
-            "--libdir=/lib")
+            "--libdir=/usr/lib")
 
 def build():
     make("SHLIB_LIBS=-lncurses")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insfile("%s/inputrc" % filesdir, "/etc/inputrc")
-
-    makedirs("/usr/lib")
-
-    move("%s/lib/libreadline.a" % install_dir, "/usr/lib/libreadline.a")
-    move("%s/lib/libhistory.a" % install_dir, "/usr/lib/libhistroy.a")
-
-    makesym("/lib/libreadline.so.6", "/usr/lib/libreadline.so")
-    makesym("/lib/libhistory.so.6", "/usr/lib/libhistory.so")
