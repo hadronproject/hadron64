@@ -1,6 +1,7 @@
-# /etc/skel/.bash_logout
+# Begin ~/.bash_logout
+# Written for Beyond Linux From Scratch
+# by James Robertson <jameswrobertson@earthlink.net>
 
-# This file is sourced when a login shell terminates.
+# Personal items to perform on logout.
 
-# Clear the screen for security's sake.
-clear
+# End ~/.bash_logout

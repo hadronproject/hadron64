@@ -12,17 +12,6 @@ common @ sys-libs/ncurses
 build @ sys-libs/readline
 """
 
-# from Pardus GNU/Linux
-# BEGIN
-cfgsettings = """-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\' \
-                 -DSTANDARD_UTILS_PATH=\'\"/bin:/usr/bin:/sbin:/usr/sbin\"\' \
-                 -DSYS_BASHRC=\'\"/etc/bash/bashrc\"\' \
-                 -DSYS_BASH_LOGOUT=\'\"/etc/bash/bash_logout\"\' \
-                 -DNON_INTERACTIVE_LOGIN_SHELLS \
-                 -DSSH_SOURCE_BASHRC"""
-
-# END
-
 def prepare():
     for i in xrange(1, 42):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.2-patches/bash42-%03d" % i, location=build_dir)
@@ -45,10 +34,6 @@ def configure():
         "--with-installed-readline",
         myconf)
 
-def build():
-    append_cflags("-D_GNU_SOURCE -DRECYCLES_PIDS %s" % cfgsettings)
-    make()
-
 def install():
     if opt("plugins"):
         make("-C examples/loadables all others")
@@ -60,10 +45,10 @@ def install():
     makesym("/bin/bash", "/bin/sh")
 
     makedirs("/etc/skel")
-    insexe(joinpath(filesdir, "bashrc"), "/etc/bash/bashrc")
-    insfile(joinpath(filesdir, "bash_logout"), "/etc/bash/bash_logout")
+    insexe(joinpath(filesdir, "bashrc"), "/etc/bashrc")
     insfile(joinpath(filesdir, "dot-bashrc"), "/etc/skel/.bashrc")
     insfile(joinpath(filesdir, "dot-bash_profile"), "/etc/skel/.bash_profile")
     insfile(joinpath(filesdir, "dot-bash_logout"), "/etc/skel/.bash_logout")
+    insexe(joinpath(filesdir, "dircolors"), "/etc/dircolors")
 
     insdoc("README", "NEWS", "AUTHORS", "CHANGES", "COMPAT", "Y2K", "doc/FAQ", "doc/INTRO")
