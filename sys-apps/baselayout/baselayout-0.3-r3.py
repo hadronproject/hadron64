@@ -58,7 +58,9 @@ def install():
 
     echo("Hadron Base System Release 0.3", "/etc/hadron-release")
 
-    insfile("%s/locale.sh" % filesdir,  "/etc/profile.d/locale.sh")
+    for item in ('locale.sh', 'dircolors.sh', 'extrapaths.sh', \
+            'readline.sh', 'umask.sh'):
+        insfile("%s/%s" % (filesdir, item),  "/etc/profile.d/%s" % item)
 
     for item in ('cache/man', 'local', 'log/old', 'lib/misc', 'empty', 'games'):
         makedirs("/var/%s" % item)
