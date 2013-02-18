@@ -17,24 +17,40 @@
 
 import glob
 import lpms
+from lpms.utils import executable_path
+from lpms.exceptions import BuiltinError
 
-def python_utils_configure(*params):
+
+def set_python_binary():
+    # Use default python executable if python_version keyword is not given
+    python_binary = executable_path("python")
+    if "python_version" in kwargs:
+        python_binary += kwargs["python_version"]
+        if executable_path(python_binary) is None:
+            raise BuiltinError("%s could not found." % python_binary)
+    return python_binary
+
+
+def python_utils_configure(*params, **kwargs):
     '''Configures the package using setup.py configure command'''
-    if not system("python -B setup.py configure %s" % " ".join(params)):
+    python_binary = set_python_binary(kwargs)
+    if not system("%s -B setup.py configure %s" % (python_binary, " ".join(params))):
         error("configuration failed.")
         lpms.terminate()
 
 
-def python_utils_build(*params):
+def python_utils_build(*params, **kwargs):
     '''Builds the package by running setup.py build with given parameters'''
-    if not system("python -B setup.py build %s" % " ".join(params)):
+    python_binary = set_python_binary(kwargs)
+    if not system("%s -B setup.py build %s" % (python_binary, " ".join(params))):
         error("building failed.")
         lpms.terminate()
 
-def python_utils_install(*params):
+def python_utils_install(*params, **kwargs):
     '''Installs the package with given parameters'''
-    if not system("python -B setup.py install --root=%s \
-            --no-compile -O0 %s" % (install_dir, " ".join(params))):
+    python_binary = set_python_binary(kwargs)
+    if not system("%s -B setup.py install --root=%s \
+            --no-compile -O0 %s" % (python_binary, install_dir, " ".join(params))):
         error("installation failed.")
         lpms.terminate()
 
