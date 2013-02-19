@@ -21,7 +21,7 @@ from lpms.utils import executable_path
 from lpms.exceptions import BuiltinError
 
 
-def set_python_binary():
+def set_python_binary(kwargs):
     # Use default python executable if python_version keyword is not given
     python_binary = executable_path("python")
     if "python_version" in kwargs:

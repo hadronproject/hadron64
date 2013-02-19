@@ -13,6 +13,11 @@ runtime @ sys-libs/glibc sys-libs/zlib
 
 get("python_utils")
 
+standard_procedure = False
+
+configure = lambda: conf()
+build = lambda: make()
+
 def install():
     installd()
     insdoc("README", "ChangeLog", "MAINT")
