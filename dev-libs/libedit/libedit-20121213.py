@@ -2,8 +2,8 @@ metadata = """
 summary @ Command line editor library providing generic line editing, history, and tokenization functions
 homepage @ http://www.thrysoee.dk/editline/
 license @ BSD
-src_url @ http://www.thrysoee.dk/editline/$name-20110227-3.0.tar.gz
-arch @ ~x86
+src_url @ http://www.thrysoee.dk/editline/$fullname-3.0.tar.gz
+arch @ ~x86_64
 """
 
 depends = """
