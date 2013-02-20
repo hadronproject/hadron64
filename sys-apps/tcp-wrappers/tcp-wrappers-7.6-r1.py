@@ -1,16 +1,16 @@
 metadata = """
 summary @ Monitors and Controls incoming TCP connections
 homepage @ ftp://ftp.porcupine.org/pub/security/index.html
-license @ custom
+license @ tcp_wrappers_license
 src_url @ ftp://ftp.porcupine.org/pub/security/tcp_wrappers_$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
 runtime @ sys-libs/glibc app-shells/bash
 """
 
-srcdir = "tcp_wrappers_%s" % version
+srcdir = "tcp_wrappers_%s" % raw_version
 
 def prepare():
     patch("shared_lib_plus_plus-1.patch", level=1)
@@ -38,3 +38,5 @@ def install():
 
     insfile("%s/hosts.allow" % filesdir, "/etc/hosts.allow")
     insfile("%s/hosts.deny" % filesdir, "/etc/hosts.deny")
+
+    insdoc("BLURB", "CHANGES", "DISCLAIMER", "README*")
