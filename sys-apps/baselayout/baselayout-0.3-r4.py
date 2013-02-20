@@ -88,7 +88,9 @@ def install():
     # /usr/lib migration
     makesym("usr/lib", "lib")
     makesym("usr/lib", "lib64")
-    makesym("usr/lib", "usr/lib64")
+    # FIXME: This is no good.
+    cd(joinpath(install_dir, "usr"))
+    makesym("lib", "usr/lib64")
 
 # TODO: Write a library function to manage groups, users and passwords
 # FIXME: improve post_install, check group existence 
