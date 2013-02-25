@@ -32,6 +32,7 @@ def install():
     copytree("bin", install_path+"/../")
 
     makesym("../lib/hadron/python/bin/lpms", "/usr/bin/lpms")
+    makesym("../lib/hadron/python/bin/merge-conf", "/usr/bin/merge-conf")
 
     makedirs("/etc/lpms")
     insinto("data/*", "/etc/lpms")
