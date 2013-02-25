@@ -4,6 +4,7 @@ homepage @ https://bitbucket.org/braindamaged/udev
 license @ GPL-2
 src_url @ https://bitbucket.org/braindamaged/udev/downloads/$fullname.tar.gz
 options @ extras introspection gudev keymap
+arch @ ~x86_64
 """
 
 depends = """
