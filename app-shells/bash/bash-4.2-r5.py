@@ -13,10 +13,10 @@ build @ sys-libs/readline
 """
 
 def prepare():
-    for i in xrange(1, 42):
+    for i in xrange(1, 43):
         fetch("http://ftp.gnu.org/gnu/bash/bash-4.2-patches/bash42-%03d" % i, location=build_dir)
 
-    for f in xrange(1, 42):
+    for f in xrange(1, 43):
         patch("bash42-%03d" % f, location=build_dir)
 
 def configure():

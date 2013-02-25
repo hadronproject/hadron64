@@ -2,6 +2,7 @@
 # Written for Beyond Linux From Scratch
 # by James Robertson <jameswrobertson@earthlink.net>
 # updated by Bruce Dubbs <bdubbs@linuxfromscratch.org>
+# modified for Hadron by Burak Sezer <purak@hadronproject.org>
 
 # System wide aliases and functions.
 
@@ -14,6 +15,7 @@
 # /etc/profile.
 
 alias ls='ls --color=auto'
+alias ls='grep --color -n'
 
 # Provides prompt for non-login shells, specifically shells started
 # in the X environment. [Review the LFS archive thread titled
@@ -24,9 +26,9 @@ NORMAL="\[\e[0m\]"
 RED="\[\e[1;31m\]"
 GREEN="\[\e[1;32m\]"
 if [[ $EUID == 0 ]] ; then
-  PS1="$RED\u [ $NORMAL\w$RED ]# $NORMAL"
+  PS1="$RED\u@\h[$NORMAL\w$RED]# $NORMAL"
 else
-  PS1="$GREEN\u [ $NORMAL\w$GREEN ]\$ $NORMAL"
+  PS1="$GREEN\u@\h[$NORMAL\w$GREEN]\$ $NORMAL"
 fi
 
 # End /etc/bashrc
