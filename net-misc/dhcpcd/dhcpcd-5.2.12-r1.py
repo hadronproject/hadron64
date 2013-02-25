@@ -3,7 +3,7 @@ summary @ RFC2131 compliant DHCP client daemon
 homepage @ http://roy.marples.name/dhcpcd/
 license @ BSD
 src_url @ http://roy.marples.name/downloads/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 prepare = lambda: patch(level=1)

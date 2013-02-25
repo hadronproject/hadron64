@@ -3,7 +3,7 @@ summary @ Display information utility for X
 homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/archive/individual/app/xdpyinfo-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

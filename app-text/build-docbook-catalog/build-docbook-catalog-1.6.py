@@ -2,7 +2,7 @@ metadata = """
 summary @ DocBook XML catalog auto-updater
 homepage @ http://www.gentoo.org/
 license @ GPL2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

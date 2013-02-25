@@ -3,7 +3,7 @@ summary @ GNOME default icon themes
 homepage @ http://www.gnome.org
 license @ LGPL3 CCPL-Attribution-ShareAlike-3.0
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/3.0/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

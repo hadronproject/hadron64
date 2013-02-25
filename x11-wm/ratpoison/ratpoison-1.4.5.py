@@ -3,7 +3,7 @@ summary @ A simple keystroke-driven window manager
 homepage @ http://www.nongnu.org/ratpoison/
 license @ GPL
 src_url @ http://savannah.nongnu.org/download/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ debug history xft
 """
 

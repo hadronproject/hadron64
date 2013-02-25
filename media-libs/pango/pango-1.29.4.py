@@ -3,7 +3,7 @@ summary @ A library for layout and rendering of text
 homepage @ http://www.pango.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/pango/1.29/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ introspection X
 """
 

@@ -3,7 +3,7 @@ summary @ A library for portable low-level access to a video framebuffer, audio 
 homepage @ http://www.libsdl.org/
 license @ LGPL
 src_url @ http://www.libsdl.org/release/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ alsa nas X dga xv xinerama static-libs alsa-shared pulseaudio pulseaudio-shared
 """
 

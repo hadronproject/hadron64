@@ -3,7 +3,7 @@ summary @ A programming environment providing object and heap memory sizing, pro
 homepage @ http://http://guppy-pe.sourceforge.net
 license @ MIT
 src_url @ http://pypi.python.org/packages/source/g/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

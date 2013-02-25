@@ -3,7 +3,7 @@ summary @ Handy console-based calculator utility
 homepage @ http://www.gnu.org/software/bc/bc.html
 license @ GPL-2 LGPL-2.1
 src_url @ ftp://alpha.gnu.org/gnu/bc/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ libedit readline static
 """
 

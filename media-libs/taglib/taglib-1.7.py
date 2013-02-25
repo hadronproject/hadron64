@@ -3,7 +3,7 @@ summary @ A Library for reading and editing the meta-data of several popular aud
 homepage @ http://developer.kde.org/~wheeler/taglib.html
 license @ GPL2
 src_url @ http://developer.kde.org/~wheeler/files/src/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ asf debug examples mp4
 """
 

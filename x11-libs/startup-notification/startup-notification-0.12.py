@@ -3,7 +3,7 @@ summary @ Monitor and display application startup
 homepage @ http://www.freedesktop.org/
 license @ LGPL
 src_url @ http://www.freedesktop.org/software/startup-notification/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs
 """
 

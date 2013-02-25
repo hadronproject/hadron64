@@ -3,7 +3,7 @@ summary @ A window manager for X11
 homepage @ http://blackboxwm.sourceforge.net/
 license @ MIT
 src_url @ http://downloads.sourceforge.net/blackboxwm/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ debug truetype nls
 """
 

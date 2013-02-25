@@ -3,7 +3,7 @@ summary @ Fast lightweight tabbed filemanager
 homepage @ http://pcmanfm.sourceforge.net/
 license @ GPL-2
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

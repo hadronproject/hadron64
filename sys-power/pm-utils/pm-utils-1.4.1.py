@@ -3,7 +3,7 @@ summary @ Utilities and scripts for suspend and hibernate power management
 homepage @ http://pm-utils.freedesktop.org
 license @ GPL
 src_url @ http://pm-utils.freedesktop.org/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

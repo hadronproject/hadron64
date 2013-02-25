@@ -3,7 +3,7 @@ summary @ Virtual Terminal Emulator widget for use with
 homepage @ http://www.gnome.org
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/GNOME/sources/vte/0.28/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug introspection
 """
 

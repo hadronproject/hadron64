@@ -4,7 +4,7 @@ homepage @ http://gitorious.org/enca
 license @ GPL-2
 src_url @ http://dl.cihar.com/$name/$name-$version.tar.bz2
 options @ doc recode
-arch @ ~x86
+arch @ ~x86_64
 """
 
 opt_build = """

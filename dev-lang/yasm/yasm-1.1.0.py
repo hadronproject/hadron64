@@ -3,7 +3,7 @@ summary @ A rewrite of NASM to allow for multiple syntax supported (NASM, TASM, 
 homepage @ http://www.tortall.net/projects/yasm/
 license @ BSD-2 BSD
 src_url @ http://www.tortall.net/projects/yasm/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ nls
 """
 

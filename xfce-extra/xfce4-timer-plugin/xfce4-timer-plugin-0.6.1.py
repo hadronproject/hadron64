@@ -3,7 +3,7 @@ summary @ plugin to track time for the Xfce4 panel
 homepage @ http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin
 license @ GPL-2
 src_url @ http://archive.xfce.org/src/panel-plugins/$name/0.6/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug
 """
 

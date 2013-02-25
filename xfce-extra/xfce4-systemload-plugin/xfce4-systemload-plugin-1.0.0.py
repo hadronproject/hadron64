@@ -3,7 +3,7 @@ summary @ A system load plugin for the Xfce4 panel
 homepage @ http://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
 license @ custom
 src_url @ http://archive.xfce.org/src/panel-plugins/$name/1.0/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug
 """
 

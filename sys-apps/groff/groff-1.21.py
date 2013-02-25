@@ -3,7 +3,7 @@ summary @ GNU troff text-formatting system
 homepage @ http://www.gnu.org/software/groff/groff.html
 license @ GPL
 src_url @ ftp://ftp.gnu.org/gnu/groff/$fullname.tar.gz
-arch @ x86_64
+arch @ ~x86_64
 """
 
 depends = """

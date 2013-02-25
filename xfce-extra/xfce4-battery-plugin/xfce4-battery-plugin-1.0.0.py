@@ -3,7 +3,7 @@ summary @ A battery monitor plugin for the Xfce panel
 homepage @ http://xfce-goodies.berlios.de/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/panel-plugins/$name/1.0/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug
 """
 

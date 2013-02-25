@@ -3,7 +3,7 @@ summary @ A utility for reading man pages
 homepage @ http://www.nongnu.org/man-db/
 license @ GPL LGPL
 src_url @ http://savannah.nongnu.org/download/man-db/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

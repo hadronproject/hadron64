@@ -3,7 +3,7 @@ summary @ The Gnome System Monitor
 homepage @ http://www.gnome.org/
 license @ GPL2
 src_url @ ftp://ftp.gnome.org/pub/gnome/sources/gnome-system-monitor/2.28/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

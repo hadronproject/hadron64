@@ -4,7 +4,7 @@ homepage @ http://hunspell.sourceforge.net/
 license @ GPL LGPL MPL
 src_url @ http://downloads.sourceforge.net/hunspell/$fullname.tar.gz
 options @ ncurses nls readline static-libs
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

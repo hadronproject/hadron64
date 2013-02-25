@@ -3,7 +3,7 @@ summary @ A complete 8086 assembler and loader
 homepage @ http://www.debath.co.uk/
 license @ GPL-2
 src_url @ http://www.debath.co.uk/dev86//$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

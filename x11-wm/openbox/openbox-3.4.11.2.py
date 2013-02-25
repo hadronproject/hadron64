@@ -3,7 +3,7 @@ summary @ A window manager for the X11 windowing system
 homepage @ http://openbox.org/
 license @ GPL
 src_url @ http://www.icculus.org/openbox/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ startup-notification nls
 """
 

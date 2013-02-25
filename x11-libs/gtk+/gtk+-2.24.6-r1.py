@@ -3,7 +3,7 @@ summary @ The GIMP Toolkit
 homepage @ http://www.gtk.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 slot @ 2
 options @ xinerama engines introspection
 """

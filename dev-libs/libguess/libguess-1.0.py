@@ -3,7 +3,7 @@ summary @ High-speed character set detection library
 homepage @ http://atheme.org/project/libguess
 license @ BSD
 src_url @ http://distfiles.atheme.org/$fullname.tgz
-arch @ ~x86
+arch @ ~x86_64
 options @ examples
 """
 

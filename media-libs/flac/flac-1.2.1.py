@@ -3,7 +3,7 @@ summary @ Free Lossless Audio Codec
 homepage @ http://flac.sourceforge.net/
 license @ Xiph + LGPL + GPL + FDL
 src_url @ http://downloads.sf.net/sourceforge/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ 3dnow altivec cxx debug ogg sse static-libs
 """
 

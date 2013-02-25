@@ -3,7 +3,7 @@ summary @ A library that makes it possible to implement a filesystem in a usersp
 homepage @ http://fuse.sourceforge.net/
 license @ GPL2
 src_url @ http://downloads.sourceforge.net/fuse/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

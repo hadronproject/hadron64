@@ -3,7 +3,7 @@ summary @ Task Manager for XFCE4
 homepage @ http://goodies.xfce.org/projects/applications/xfce4-taskmanager
 license @ GPL2
 src_url @ http://archive.xfce.org/src/apps/$name/1.0/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

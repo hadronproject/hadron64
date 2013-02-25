@@ -4,7 +4,7 @@ homepage @ http://code.google.com/p/mp4v2
 license @ MPL-1.1
 src_url @ http://mp4v2.googlecode.com/files/mp4v2-1.9.1.tar.bz2
 options @ static-libs utils
-arch @ ~x86
+arch @ ~x86_64
 """
 
 srcdir = "mp4v2-1.9.1"

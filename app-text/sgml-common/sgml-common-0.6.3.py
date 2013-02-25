@@ -3,7 +3,7 @@ summary @ Base ISO character entities and utilities for SGML
 homepage @ http://www.linuxfromscratch.org/blfs/view/svn/pst/sgml-common.html
 license @ GPL-2
 src_url @ http://gd.tuwien.ac.at/hci/kde/devel/docbook/SOURCES/sgml-common-0.6.3.tgz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

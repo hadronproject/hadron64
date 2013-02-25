@@ -3,7 +3,7 @@ summary @ ODBC is an open specification for providing application developers wit
 homepage @ http://www.unixodbc.org/
 license @ GPL2 + LGPL2.1
 src_url @ http://www.unixodbc.org/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

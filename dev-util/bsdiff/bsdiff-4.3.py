@@ -3,7 +3,7 @@ summary @ bsdiff and bspatch are tools for building and applying patches to bina
 homepage @ http://www.daemonology.net/bsdiff/
 license @ BSD
 src_url @ http://www.daemonology.net/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

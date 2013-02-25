@@ -3,7 +3,7 @@ summary @ C library that performs DNS requests and name resolves asynchronously
 homepage @ http://c-ares.haxx.se/
 license @ MIT
 src_url @ http://c-ares.haxx.se/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

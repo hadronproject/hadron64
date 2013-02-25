@@ -3,7 +3,7 @@ summary @ Extensions to Xfce by os-cillation
 homepage @ http://www.xfce.org/projects/exo
 license @ GPL2 + LGPL
 src_url @ http://archive.xfce.org/src/xfce/exo/0.6/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug python
 """
 

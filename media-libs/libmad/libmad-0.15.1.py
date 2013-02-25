@@ -3,7 +3,7 @@ summary @ A high-quality MPEG audio decoder
 homepage @ http://www.underbit.com/products/mad/
 license @ GPL
 src_url @ http://downloads.sourceforge.net/sourceforge/mad/$fullnameb.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ debug
 """
 

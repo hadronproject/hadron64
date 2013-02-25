@@ -3,7 +3,7 @@ summary @ Abstraction for enumerating power devices, listening to device events 
 homepage @ http://upower.freedesktop.org
 license @ GPL
 src_url @ http://upower.freedesktop.org/releases/$fullname.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 options @ introspection debug
 """
 

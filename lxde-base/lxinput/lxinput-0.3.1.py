@@ -3,7 +3,7 @@ summary @ LXDE keyboard and mouse configuration tool
 homepage @ http://lxde.sourceforge.net/
 license @ GPL-2
 src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # FIXME: gtk+ slot needed!

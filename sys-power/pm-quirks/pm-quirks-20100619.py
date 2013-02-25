@@ -3,7 +3,7 @@ summary @ Quirks data for pm-utils
 homepage @ http://pm-utils.freedesktop.org/wiki/
 license @ GPL
 src_url @ http://pm-utils.freedesktop.org/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 srcdir = "video-quirks"

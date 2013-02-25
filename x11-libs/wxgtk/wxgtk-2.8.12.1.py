@@ -3,7 +3,7 @@ summary @ GTK+ implementation of wxWidgets API for GUI
 homepage @ http://wxwidgets.org
 license @ wxWinLL-3 GPL-2
 src_url @ http://downloads.sourceforge.net/wxpython/wxPython-src-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ X debug gstreamer odbc opengl sdl tiff pch
 """
 

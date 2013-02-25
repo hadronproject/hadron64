@@ -3,7 +3,7 @@ summary @ Library which abstracts the storage of configuration settings
 homepage @ http://www.atheme.org/project/mcs
 license @ BSD
 src_url @ http://distfiles.atheme.org/$fullname.tgz
-arch @ ~x86
+arch @ ~x86_64
 options @ gnome
 """
 

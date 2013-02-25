@@ -2,7 +2,7 @@ metadata = """
 summary @ Nouveau driver (GIT)
 homepage @ http://nouveau.freedesktop.org/
 license @ GPL
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

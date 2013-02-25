@@ -3,7 +3,7 @@ summary @ Urwid is a curses-based user interface library
 homepage @ http://excess.org/urwid/
 license @ GPL
 src_url @ http://excess.org/urwid/urwid-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

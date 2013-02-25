@@ -3,7 +3,7 @@ summary @ a general purpose crypto library based on the code used
 homepage @ http://www.gnupg.org/
 license @ LGPL
 src_url @ ftp://ftp.gnupg.org/gcrypt/libgcrypt/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

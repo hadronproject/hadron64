@@ -3,7 +3,7 @@ summary @ Wired and wireless network manager for Linux
 homepage @ http://wicd.sourceforge.net/
 license @ GPL2
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ gtk X libnotify ncurses nls pm-utils
 """
 

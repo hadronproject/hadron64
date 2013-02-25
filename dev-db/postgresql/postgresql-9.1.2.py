@@ -3,7 +3,7 @@ summary @ Sophisticated and powerful Object-Relational DBMS
 homepage @ http://www.postgresql.org/
 license @ POSTGRESQL
 src_url @ ftp://ftp.postgresql.org/pub/source/v$version/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Nvidia VDPAU library
 homepage @ http://cgit.freedesktop.org/~aplattner/libvdpau
 license @ MIT
 src_url @ http://people.freedesktop.org/~aplattner/vdpau/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

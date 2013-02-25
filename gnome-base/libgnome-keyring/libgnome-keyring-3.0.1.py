@@ -3,7 +3,7 @@ summary @ GNOME keyring client library
 homepage @ http://www.gnome.org
 license @ GPL LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/3.0/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

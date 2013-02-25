@@ -3,7 +3,7 @@ summary @ A Python interface to libcurl
 homepage @ http://pycurl.sourceforge.net
 license @ GPL
 src_url @ http://pycurl.sourceforge.net/download/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

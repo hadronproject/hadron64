@@ -3,7 +3,7 @@ summary @ The OpenGL Extension Wrangler Library
 homepage @ http://glew.sourceforge.net
 license @ BSD MIT GPL
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tgz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

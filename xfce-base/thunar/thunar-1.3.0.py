@@ -3,7 +3,7 @@ summary @ File manager for the Xfce desktop environment
 homepage @ http://thunar.xfce.org
 license @ GPL2 LGPL2.1
 src_url @ http://archive.xfce.org/src/xfce/$name/1.3/Thunar-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ dbus libnotify pcre startup-notification udev
 """
 

@@ -3,7 +3,7 @@ summary @ Netscape Portable Runtime
 homepage @ http://www.mozilla.org/projects/nspr/
 license @ MPL + GPL
 src_url @ ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v$version/src/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

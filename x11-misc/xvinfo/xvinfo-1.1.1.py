@@ -3,7 +3,7 @@ summary @ Prints out the capabilities of any video adaptors associated with the 
 homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/archive/individual/app/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

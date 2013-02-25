@@ -3,7 +3,7 @@ summary @ The X Server
 homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/xserver/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ doc ipv6 vesa nv synaptics intel nouveau
 """
 

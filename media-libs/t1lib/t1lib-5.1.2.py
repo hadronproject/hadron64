@@ -3,7 +3,7 @@ summary @ Library for generating character- and string-glyphs from Adobe Type 1 
 homepage @ http://www.ibiblio.org/pub/Linux/libs/graphics/!INDEX.html 
 license @ GPL 
 src_url @ http://www.ibiblio.org/pub/Linux/libs/graphics/$name-$version.tar.gz  
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

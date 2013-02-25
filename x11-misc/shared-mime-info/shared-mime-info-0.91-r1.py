@@ -3,7 +3,7 @@ summary @ The Shared MIME-info Database specification
 homepage @ http://freedesktop.org/wiki/Software/shared-mime-info
 license @ GPL
 src_url @ http://freedesktop.org/~hadess/$fullname.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

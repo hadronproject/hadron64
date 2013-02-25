@@ -2,7 +2,7 @@ metadata = """
 summary @ A low saturation Xfce theme, introduced in the release of Xubuntu 11.04
 homepage @ http://shimmerproject.org/projects/greybird/
 license @ GPL-3 CCPL
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ A tool which allows you to compose wallpapers for X.
 homepage @ http://www.thegraveyard.org/hsetroot.php
 license @ GPL
 src_url @ http://www.thegraveyard.org/files/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

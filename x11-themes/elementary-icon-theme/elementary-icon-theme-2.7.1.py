@@ -4,7 +4,7 @@ homepage @ https://launchpad.net/elementaryicons
 license @ GPL-2
 src_url @ http://launchpad.net/elementaryicons/2.0/$version/+download/$fullname.tar.gz
 options @ monochrome
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Plugins for Audacious
 homepage @ http://audacious-media-player.org/
 license @ GPL
 src_url @ http://distfiles.atheme.org/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ aac alsa aqua cdda cue ffmpeg flac gnome ipv6 lame libnotify libsamplerate mp3 nls scrobbler sndfile sse2 vorbis wavpack
 """
 

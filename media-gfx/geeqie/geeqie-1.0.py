@@ -3,7 +3,7 @@ summary @ A lightweight image browser and viewer (fork of GQview)
 homepage @ http://geeqie.sourceforge.net/
 license @ GPL3
 src_url @ http://downloads.sourceforge.net/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ exif lcms
 """
 

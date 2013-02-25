@@ -4,7 +4,7 @@ homepage @ http://www.mozilla.org/js/spidermonkey/
 license @ NPL-1.1
 src_url @ http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz
 options @ static-libs test
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

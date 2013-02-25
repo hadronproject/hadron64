@@ -3,7 +3,7 @@ summary @ Library to enable user space application programs to communicate with 
 homepage @ http://libusb.sourceforge.net/
 license @ LGPL
 src_url @ http://downloads.sourceforge.net/libusb/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 slot @ 0
 """
 

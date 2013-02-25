@@ -4,7 +4,7 @@ homepage @ http://www.lm-sensors.org/
 license @ GPL-2 LGPL-2.1
 src_url @ http://dl.lm-sensors.org/lm-sensors/releases/$fullname.tar.bz2
 options @ sensord
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

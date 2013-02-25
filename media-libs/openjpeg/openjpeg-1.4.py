@@ -3,7 +3,7 @@ summary @ An open source JPEG 2000 codec
 homepage @ http://www.openjpeg.org 
 license @ BSD 
 src_url @ http://openjpeg.googlecode.com/files/openjpeg_v1_4_sources_r697.tgz 
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

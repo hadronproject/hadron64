@@ -3,7 +3,7 @@ summary @ Midnight Commander is a text based filemanager/shell that emulates Nor
 homepage @ http://www.ibiblio.org/mc/
 license @ GPL
 src_url @ http://www.midnight-commander.org/downloads/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ gpm nls X slang ncurses debug
 """
 

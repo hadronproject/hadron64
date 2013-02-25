@@ -3,7 +3,7 @@ summary @ XML stylesheets for Docbook-xml transformations.
 homepage @ http://docbook.sourceforge.net/
 license @ custom
 src_url @ http://downloads.sourceforge.net/sourceforge/docbook/docbook-xsl-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

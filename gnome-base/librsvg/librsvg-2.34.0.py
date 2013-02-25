@@ -3,7 +3,7 @@ summary @ SAX-based renderer for SVG files into a GdkPixbuf
 homepage @ http://librsvg.sourceforge.net/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.34/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

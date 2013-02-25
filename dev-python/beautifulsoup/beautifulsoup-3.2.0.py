@@ -3,7 +3,7 @@ summary @ A Python HTML/XML parser designed for quick turnaround projects like s
 homepage @ http://www.crummy.com/software/BeautifulSoup/index.html
 license @ PSF
 src_url @ http://www.crummy.com/software/BeautifulSoup/download/3.x/BeautifulSoup-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 slot @ 2
 """
 

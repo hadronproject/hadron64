@@ -3,7 +3,7 @@ summary @ Fast, easy, and free BitTorrent client
 homepage @ http://www.transmissionbt.com/
 license @ MIT
 src_url @ http://mirrors.m0k.org/transmission/files/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ gtk libnotify libcanberra utp qt4 nls
 """
 

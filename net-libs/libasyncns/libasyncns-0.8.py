@@ -3,7 +3,7 @@ summary @ A C library for Linux/Unix for executing name service queries asynchro
 homepage @ http://0pointer.de/lennart/projects/libasyncns
 license @ LGPL
 src_url @ http://0pointer.de/lennart/projects/libasyncns/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

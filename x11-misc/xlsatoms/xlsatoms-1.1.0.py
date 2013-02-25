@@ -3,7 +3,7 @@ summary @ List interned atoms defined on server
 homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/archive/individual/app/xlsatoms-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

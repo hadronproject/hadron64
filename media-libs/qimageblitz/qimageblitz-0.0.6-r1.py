@@ -3,7 +3,7 @@ summary @ An interm image effect library
 homepage @ http://sourceforge.net/projects/qimageblitz
 license @ GPL-2
 src_url @ http://download.kde.org/stable/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

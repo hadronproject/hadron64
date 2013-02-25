@@ -3,7 +3,7 @@ summary @ A high-level Python Web framework.
 homepage @ http://www.djangoproject.com/
 license @ BSD
 src_url @ http://media.djangoproject.com/releases/1.3/Django-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

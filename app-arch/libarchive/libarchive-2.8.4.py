@@ -3,7 +3,7 @@ summary @ Library that can create and read several streaming archive formats
 homepage @ http://libarchive.googlecode.com/
 license @ BSD
 src_url @ http://libarchive.googlecode.com/files/libarchive-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

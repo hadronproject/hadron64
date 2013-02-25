@@ -3,7 +3,7 @@ summary @ XviD is an open source MPEG-4 video codec
 homepage @ http://www.xvid.org/
 license @ GPL
 src_url @ http://downloads.xvid.org/downloads/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ threads pic
 """
 

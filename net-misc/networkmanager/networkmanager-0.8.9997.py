@@ -3,7 +3,7 @@ summary @ Network Management daemon
 homepage @ http://www.gnome.org/projects/NetworkManager/
 license @ GPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.8/NetworkManager-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ gnutls dhcpcd introspection
 """
 

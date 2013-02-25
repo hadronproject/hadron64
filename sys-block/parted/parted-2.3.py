@@ -4,7 +4,7 @@ homepage @ http://www.gnu.org/software/parted/parted.html
 license @ GPL3
 src_url @ http://ftp.gnu.org/gnu/parted/$fullname.tar.gz
 options @ device-mapper
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

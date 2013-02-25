@@ -3,7 +3,7 @@ summary @ A dynamic window manager for X11
 homepage @ http://www.suckless.org/dwm/
 license @ MIT
 src_url @ http://dl.suckless.org/dwm/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ xinerama
 """
 

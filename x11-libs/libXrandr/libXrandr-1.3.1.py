@@ -3,7 +3,7 @@ summary @ X11 RandR extension library
 homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/libXrandr-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

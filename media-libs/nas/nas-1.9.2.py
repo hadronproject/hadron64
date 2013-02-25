@@ -3,7 +3,7 @@ summary @ Network Audio System is a network transparent, client/server audio tra
 homepage @ http://radscan.com/nas.html
 license @ custom
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name-$version.src.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

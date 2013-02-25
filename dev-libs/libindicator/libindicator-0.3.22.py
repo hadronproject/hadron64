@@ -3,7 +3,7 @@ summary @ A set of symbols and convience functions that all indicators would lik
 homepage @ http://launchpad.net/libindicator/
 license @ GPL-3
 src_url @ http://launchpad.net/$name/0.3/$version/+download/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

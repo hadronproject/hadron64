@@ -4,7 +4,7 @@ homepage @ http://www.gnu.org/s/libmicrohttpd/
 license @ LGPL-2.1
 src_url @ http://ftp.cc.uoc.gr/mirrors/gnu/$name/$name-$version.tar.gz
 options @ ssl messages test
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

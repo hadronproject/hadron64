@@ -3,7 +3,7 @@ summary @ Python bindings for DBUS
 homepage @ http://www.freedesktop.org/wiki/Software/DBusBindings
 license @ GPL + LGPL
 src_url @ http://dbus.freedesktop.org/releases/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

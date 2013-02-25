@@ -3,7 +3,7 @@ summary @ Documentation meta-data library, designed as a replacement for Scrollk
 homepage @ http://rarian.freedesktop.org/
 license @ GPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/0.8/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Meanwhile (Sametime protocol) library
 homepage @ http://meanwhile.sourceforge.net/
 license @ LGPL-2
 src_url @ http://downloads.sourceforge.net/project/$name/$name/$version/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ doc debug
 """
 

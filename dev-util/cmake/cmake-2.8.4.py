@@ -3,7 +3,7 @@ summary @ A cross-platform open softwre make system
 homepage @ http://www.cmake.org
 license @ CMake
 src_url @ http://www.cmake.org/files/v2.8/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

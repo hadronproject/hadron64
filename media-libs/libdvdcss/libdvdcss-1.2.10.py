@@ -3,7 +3,7 @@ summary @ A portable abstraction library for DVD decryption
 homepage @ http://www.videolan.org/libdvdcss
 license @ GPL
 src_url @ http://download.videolan.org/pub/libdvdcss/$version/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ doc
 """
 

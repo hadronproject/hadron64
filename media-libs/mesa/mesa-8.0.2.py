@@ -3,7 +3,7 @@ summary @ Mesa 3-D graphics libraries and include files
 homepage @ http://mesa3d.sourceforge.net/
 license @ custom
 src_url @ ftp://ftp.freedesktop.org/pub/mesa/$version/MesaLib-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

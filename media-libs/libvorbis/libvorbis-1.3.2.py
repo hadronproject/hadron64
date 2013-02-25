@@ -3,7 +3,7 @@ summary @ Vorbis codec library
 homepage @ http://www.xiph.org/ogg/vorbis/
 license @ custom
 src_url @ http://downloads.xiph.org/releases/vorbis/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs
 """
 

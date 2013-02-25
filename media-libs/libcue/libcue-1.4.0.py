@@ -3,7 +3,7 @@ summary @ Parses so-called cue sheets and handles the parsed data
 homepage @ http://sourceforge.net/projects/libcue/
 license @ GPL2
 src_url @ http://downloads.sourceforge.net/libcue/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs
 """
 

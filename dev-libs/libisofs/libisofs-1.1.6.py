@@ -4,7 +4,7 @@ homepage @ http://libburnia.pykix.org/
 license @ GPL-2
 src_url @ http://files.libburnia-project.org/releases/$fullname.tar.gz
 options @ debug verbose-debug acl xattr 
-arch @ ~x86
+arch @ ~x86_64
 """
 
 opt_common = """

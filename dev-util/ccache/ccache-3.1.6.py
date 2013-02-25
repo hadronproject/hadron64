@@ -3,7 +3,7 @@ summary @ fast compiler cache
 homepage @ http://ccache.samba.org/
 license @ GPL-3
 src_url @ http://samba.org/ftp/$name/$fullname.tar.bz2
-arch @  ~x86
+arch @ ~x86_64
 """
 
 depends = """

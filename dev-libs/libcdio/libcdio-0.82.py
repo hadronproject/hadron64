@@ -3,7 +3,7 @@ summary @ GNU Compact Disc Input and Control Library
 homepage @ http://www.gnu.org/software/libcdio/
 license @ GPL3
 src_url @ http://ftp.gnu.org/gnu/libcdio/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs cddb
 """
 

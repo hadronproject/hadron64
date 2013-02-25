@@ -3,7 +3,7 @@ summary @ Desktop note-taking application
 homepage @ http://live.gnome.org/Gnote
 license @ GPL3
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/0.7/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ rints out the capabilities of any video adaptors associated with the d
 homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/archive/individual/app/xvinfo-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

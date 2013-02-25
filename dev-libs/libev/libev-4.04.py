@@ -3,7 +3,7 @@ summary @ A full-featured and high-performance event loop
 homepage @ http://software.schmorp.de/pkg/libev.html
 license @ BSD
 src_url @ http://dist.schmorp.de/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs
 """
 

@@ -3,7 +3,7 @@ summary @ Implementation of double-array structure for representing trie, as pro
 homepage @ http://linux.thai.net/~thep/datrie/datrie.html
 license @ LGPL
 src_url @ http://linux.thai.net/pub/thailinux/software/libthai/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

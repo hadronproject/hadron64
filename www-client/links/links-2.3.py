@@ -3,7 +3,7 @@ summary @ A text WWW browser, similar to Lynx
 homepage @ http://links.twibright.com/
 license @ GPL
 src_url @ http://links.twibright.com/download/$name-2.3pre2.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

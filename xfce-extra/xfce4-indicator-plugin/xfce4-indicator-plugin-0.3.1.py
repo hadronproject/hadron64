@@ -4,7 +4,7 @@ homepage @ http://goodies.xfce.org/projects/panel-plugins/xfce4-indicator-plugin
 license @ GPL-2 LGPL-2
 src_url @ http://archive.xfce.org/src/panel-plugins/$name/0.3/$fullname.tar.bz2
 options @ debug
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

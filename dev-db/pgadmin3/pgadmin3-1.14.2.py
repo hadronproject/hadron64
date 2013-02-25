@@ -3,7 +3,7 @@ summary @  A comprehensive design and management interface for PostgreSQL databa
 homepage @ http://www.pgadmin.org
 license @ POSTGRESQL
 src_url @ ftp://ftp.de.postgresql.org/pub/packages/databases/PostgreSQL/pgadmin3/release/v$version/src/pgadmin3-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

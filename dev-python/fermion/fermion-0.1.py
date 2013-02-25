@@ -3,7 +3,7 @@ summary @ Python sandboxing module, formerly catbox
 homepage @ http://hadronproject.org
 license @ GPL-2
 src_url @ http://hadronproject.org/distfiles/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Javascript Bindings for GNOME
 homepage @ http://live.gnome.org/Gjs
 license @ MIT MPL-1.1 LGPL-2 GPL-2
 src_url @ http://download.gnome.org/sources/$name/1.30/$fullname.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

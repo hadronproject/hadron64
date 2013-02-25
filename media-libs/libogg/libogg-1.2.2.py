@@ -3,7 +3,7 @@ summary @ Ogg bitstream and framing library
 homepage @ http://www.xiph.org/ogg/
 license @ BSD
 src_url @ http://downloads.xiph.org/releases/ogg/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs
 """
 

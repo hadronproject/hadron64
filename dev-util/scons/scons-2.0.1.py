@@ -3,7 +3,7 @@ summary @ Extensible Python-based build utility
 homepage @ http://scons.org
 license @ MIT
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

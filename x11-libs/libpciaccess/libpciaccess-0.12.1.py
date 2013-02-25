@@ -3,7 +3,7 @@ summary @ Library providing generic access to the PCI bus and devices
 homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

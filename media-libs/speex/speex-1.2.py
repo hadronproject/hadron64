@@ -3,7 +3,7 @@ summary @ A free codec for free speech
 homepage @ http://www.speex.org/
 license @ BSD
 src_url @ http://downloads.us.xiph.org/releases/$name/$fullnamerc1.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ ogg sse static-libs
 """
 

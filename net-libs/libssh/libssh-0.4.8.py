@@ -3,7 +3,7 @@ summary @ Library for accessing ssh client services through C libraries
 homepage @ http://www.libssh.org/
 license @ LGPL
 src_url @ http://www.libssh.org/files/0.4/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

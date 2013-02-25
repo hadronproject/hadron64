@@ -3,7 +3,7 @@ summary @ Provides functionality for small OpenGL programs
 homepage @ http://freeglut.sourceforge.net/
 license @ MIT
 src_url @ http://downloads.sourceforge.net/freeglut/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

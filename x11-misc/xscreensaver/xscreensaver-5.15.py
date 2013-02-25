@@ -3,7 +3,7 @@ summary @ Screen saver and locker for the X Window System
 homepage @ http://www.jwz.org/xscreensaver/
 license @ BSD
 src_url @ http://www.jwz.org/xscreensaver/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

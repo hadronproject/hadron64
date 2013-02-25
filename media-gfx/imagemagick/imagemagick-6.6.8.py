@@ -3,7 +3,7 @@ summary @ A collection of tools and libraries for many image formats
 homepage @ http://www.imagemagick.org/
 license @ custom
 src_url @ ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-$version-10.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ A generic menu for X
 homepage @ http://tools.suckless.org/dmenu
 license @ MIT
 src_url @ http://dl.suckless.org/tools/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ xinerama
 """
 

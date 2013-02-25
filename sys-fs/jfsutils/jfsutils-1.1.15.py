@@ -3,7 +3,7 @@ summary @ JFS filesystem utilities
 homepage @ http://jfs.sourceforge.net/
 license @ GPL
 src_url @ http://jfs.sourceforge.net/project/pub/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

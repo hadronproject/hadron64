@@ -3,7 +3,7 @@ summary @ Disk Management Service
 homepage @ http://www.freedesktop.org/wiki/Software/udisks
 license @ GPL
 src_url @ http://hal.freedesktop.org/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ A file manager that implements the popular two-pane design
 homepage @ http://emelfm2.net/
 license @ GPL
 src_url @ http://emelfm2.net/rel/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 #TODO: options @ acl policykit spell nls udev gimp
 

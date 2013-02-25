@@ -3,7 +3,7 @@ summary @ A font created by Ascender Corporation for use by the Open Handset All
 homepage @ http://code.google.com/android/
 license @ Apache
 src_url @ ftp://ftp.archlinux.org/other/community/ttf-droid/ttf-droid.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

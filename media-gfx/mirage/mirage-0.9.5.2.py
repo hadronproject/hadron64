@@ -3,7 +3,7 @@ summary @ A simple GTK+ Image Viewer
 homepage @ http://mirageiv.berlios.de/
 license @ GPL
 src_url @ http://download.berlios.de/mirageiv/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

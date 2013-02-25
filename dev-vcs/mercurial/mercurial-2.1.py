@@ -3,7 +3,7 @@ summary @ A scalable distributed SCM tool
 homepage @ http://www.selenic.com/mercurial
 license @ GPL
 src_url @ http://www.selenic.com/mercurial/release/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # FIXME: zsh, bash, emacs and vim options will be added.

@@ -3,7 +3,7 @@ summary @ A C library for reading and writing files containing sampled sound
 homepage @ http://www.mega-nerd.com/libsndfile
 license @ LGPL
 src_url @ http://www.mega-nerd.com/libsndfile/files/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ alsa sqlite static-libs
 """
 

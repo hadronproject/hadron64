@@ -3,7 +3,7 @@ summary @ library for id3 tagging
 homepage @ http://www.underbit.com/products/mad/
 license @ GPL
 src_url @ ftp://ftp.mars.org/pub/mpeg/$name-$versionb.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ static-libs debug
 """
 

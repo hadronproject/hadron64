@@ -3,7 +3,7 @@ summary @ A collection of tools to configure IEEE 802.11 wireless LAN cards
 homepage @ http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
 license @ GPL
 src_url @ http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/$name.$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

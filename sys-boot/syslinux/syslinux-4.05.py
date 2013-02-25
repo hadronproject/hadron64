@@ -3,7 +3,7 @@ summary @ Collection of boot loaders that boot from FAT, ext2/3/4 and btrfs file
 homepage @ http://syslinux.zytor.com/
 license @ GPL2
 src_url @ http://www.kernel.org/pub/linux/utils/boot/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

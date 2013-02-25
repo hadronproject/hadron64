@@ -4,7 +4,7 @@ homepage @ http://clutter-project.org/
 license @ LGPL
 src_url @ http://ftp.acc.umu.se/pub/GNOME/sources/$name/$slot/$fullname.tar.bz2
 slot @ 1.0
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

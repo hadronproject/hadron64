@@ -3,7 +3,7 @@ summary @ Audio compression format with lossless, lossy, and hybrid compression 
 homepage @ http://www.wavpack.com/
 license @ custom
 src_url @ http://www.wavpack.com/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ mmx
 """
 

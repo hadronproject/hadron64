@@ -3,7 +3,7 @@ summary @ PCI bus configuration space access library and tools
 homepage @ http://mj.ucw.cz/pciutils.html
 license @ GPL-2
 src_url @ ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci//$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

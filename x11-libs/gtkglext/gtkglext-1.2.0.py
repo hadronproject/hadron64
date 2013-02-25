@@ -3,7 +3,7 @@ summary @ opengl extensions for gtk2
 homepage @ http://gtkglext.sourceforge.net/
 license @ LGPL
 src_url @ http://downloads.sourceforge.net/sourceforge/gtkglext/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

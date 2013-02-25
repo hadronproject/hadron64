@@ -3,7 +3,7 @@ summary @ Lists open files for running Unix processes
 homepage @ http://people.freebsd.org/~abe/
 license @ lsof
 src_url @ http://repository.timesys.com/buildsources/l/lsof/lsof-4.85/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

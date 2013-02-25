@@ -3,7 +3,7 @@ summary @ DejaVu fonts, bitstream vera with ISO-8859-2 characters
 homepage @ http://dejavu.sourceforge.net/
 license @ custom
 src_url @ http://distfiles.gentoo.org/distfiles/dejavu-fonts-ttf-2.33.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 srcdir = "dejavu-fonts-ttf-%s" % version

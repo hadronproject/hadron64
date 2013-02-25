@@ -3,7 +3,7 @@ summary @ Advanced version control system
 homepage @ http://subversion.apache.org/
 license @ Subversion
 src_url @ http://apache.mirror.rafal.ca/subversion/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ berkdb perl python sasl
 """
 

@@ -3,7 +3,7 @@ summary @ D-Bus interface for user account query and manipulation
 homepage @ http://cgit.freedesktop.org/accountsservice/
 license @ GPL3
 src_url @ http://cgit.freedesktop.org/accountsservice/snapshot/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ introspection
 """
 

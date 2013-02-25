@@ -3,7 +3,7 @@ summary @ Thunar's archive plug-in
 homepage @ http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 license @ LGPL-2
 src_url @ http://archive.xfce.org/src/thunar-plugins/$name/0.3/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

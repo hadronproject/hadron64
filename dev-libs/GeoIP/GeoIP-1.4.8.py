@@ -3,7 +3,7 @@ summary @ Non-DNS IP-to-country resolver C library & utils
 homepage @ http://www.maxmind.com/app/c
 license @ GPL
 src_url @ http://www.maxmind.com/download/geoip/api/c/GeoIP-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ ipv6 perl-geoipupdate
 """
 

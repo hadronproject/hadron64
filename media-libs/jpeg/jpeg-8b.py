@@ -3,7 +3,7 @@ summary @ Library to load, handle and manipulate images in the JPEG format
 homepage @ http://www.ijg.org/
 license @ custom
 src_url @ http://www.ijg.org/files/$namesrc.v$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

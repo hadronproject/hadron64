@@ -5,7 +5,7 @@ summary @ A hierarchical pool based memory allocator with destructors
 homepage @ http://talloc.samba.org/
 license @ GPL3
 src_url @ http://samba.org/ftp/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

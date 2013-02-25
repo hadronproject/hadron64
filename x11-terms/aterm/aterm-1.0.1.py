@@ -3,7 +3,7 @@ summary @ An xterm replacement with transparency support
 homepage @ http://aterm.sourceforge.net/
 license @ GPL
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

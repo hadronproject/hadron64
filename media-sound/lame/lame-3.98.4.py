@@ -3,7 +3,7 @@ summary @ An MP3 encoder and graphical frame analyzer
 homepage @ http://lame.sourceforge.net/
 license @ LGPL
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ mmx sndfile static-libs debug mp3rtp
 """
 

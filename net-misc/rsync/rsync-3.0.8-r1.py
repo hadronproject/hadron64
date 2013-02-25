@@ -3,7 +3,7 @@ summary @ File transfer program to keep remote files into sync
 homepage @ http://rsync.samba.org/
 license @ GPL-3
 src_url @ http://rsync.samba.org/ftp/rsync/src/rsync-3.0.8.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
