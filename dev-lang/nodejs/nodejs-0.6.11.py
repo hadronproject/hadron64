@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-common @ dev-lang/python:2.7[threads]
+common @ dev-lang/python[threads]:2.7
 """
 
 get("waf")
