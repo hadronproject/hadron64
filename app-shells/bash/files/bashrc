@@ -15,7 +15,7 @@
 # /etc/profile.
 
 alias ls='ls --color=auto'
-alias ls='grep --color -n'
+alias grep='grep --color -n'
 
 # Provides prompt for non-login shells, specifically shells started
 # in the X environment. [Review the LFS archive thread titled
