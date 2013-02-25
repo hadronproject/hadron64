@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/glib dev-libs/libffi dev-lang/python:2.7[xml]
+runtime @ sys-libs/glib dev-libs/libffi dev-lang/python[xml]:2.7
 """
 
 def configure():
