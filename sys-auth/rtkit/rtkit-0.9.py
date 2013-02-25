@@ -3,7 +3,7 @@ summary @ Realtime Policy and Watchdog Daemon
 homepage @ http://git.0pointer.de/?p=rtkit.git
 license @ GPL + BSD
 src_url @ http://0pointer.de/public/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

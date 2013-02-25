@@ -3,7 +3,7 @@ summary @ Web Browser by Mozilla
 homepage @ http://www.mozilla.com/en-US/firefox
 license @ MPL-1.1 GPL-2 LGPL-2.1
 src_url @ ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

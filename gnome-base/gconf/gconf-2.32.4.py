@@ -3,7 +3,7 @@ summary @ Gnome Configuration System and Daemon
 homepage @ http://projects.gnome.org/gconf/
 license @ LGPL2
 src_url @ http://ftp.gnome.org/pub/gnome/sources/GConf/2.32/GConf-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug policykit
 """
 

@@ -3,7 +3,7 @@ summary @ X keyboard configuration files
 homepage @ http://www.freedesktop.org/wiki/Software/XKeyboardConfig
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/data/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

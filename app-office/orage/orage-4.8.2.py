@@ -4,7 +4,7 @@ homepage @ http://www.xfce.org/projects/orage/
 license @ GPL-2
 src_url @ http://archive.xfce.org/src/apps/$name/4.8/$fullname.tar.bz2
 options @ dbus libnotify debug plugin berkdb
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

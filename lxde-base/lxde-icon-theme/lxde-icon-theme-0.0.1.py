@@ -3,7 +3,7 @@ summary @ LXDE default icon theme based on nuoveXT2
 homepage @ http://lxde.org
 license @ GPL
 src_url @ http://downloads.sourceforge.net/lxde/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 get("main/gnome2_utils")

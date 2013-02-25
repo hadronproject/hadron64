@@ -3,7 +3,7 @@ summary @ Linux terminal based on classic terminals from first person shooter ga
 homepage @ http://tilda.sourceforge.net/
 license @ GPL-2
 src_url @ http://downloads.sourceforge.net/sourceforge/tilda/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

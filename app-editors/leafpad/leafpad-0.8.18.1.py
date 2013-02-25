@@ -3,7 +3,7 @@ summary @ A notepad clone for GTK+ 2.0
 homepage @ http://tarot.freeshell.org/leafpad/
 license @ GPL
 src_url @ http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ A tool to download rtmp streams
 homepage @ http://rtmpdump.mplayerhq.hu/
 license @ LGPL
 src_url @ http://rtmpdump.mplayerhq.hu/download/$name-$version.tgz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Fast and reliable FTP, FTPS and SFTP client
 homepage @ http://filezilla-project.org/
 license @ GPL
 src_url @ http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/$version/FileZilla_$version_src.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ dbus nls
 """
 

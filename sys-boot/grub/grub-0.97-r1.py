@@ -3,7 +3,7 @@ summary @ A GNU multiboot boot loader
 homepage @ http://www.gnu.org/software/grub/
 license @ GPL
 src_url @ ftp://alpha.gnu.org/gnu/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ NTP (Network Time Protocol) tries to keep servers in sync
 homepage @ http://www.ntp.org/
 license @ as-is
 src_url @ http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.6p4.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

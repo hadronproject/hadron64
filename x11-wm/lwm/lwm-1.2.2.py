@@ -3,7 +3,7 @@ summary @ The ultimate lightweight window manager
 homepage @ http://www.jfc.org.uk/software/lwm.html
 license @ GPL-2
 src_url @ http://www.jfc.org.uk/files/lwm/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

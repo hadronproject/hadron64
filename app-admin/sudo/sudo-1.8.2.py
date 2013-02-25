@@ -3,7 +3,7 @@ summary @ Give certain users the ability to run some commands as root
 homepage @ http://www.sudo.ws/sudo/
 license @ as-is BSD
 src_url @ ftp://ftp.sudo.ws/pub/sudo/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ libmpeg2 is a library for decoding MPEG-1 and MPEG-2 video streams
 homepage @ http://libmpeg2.sourceforge.net/
 license @ GPL2
 src_url @ http://libmpeg2.sourceforge.net/files/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ X sdl
 """
 

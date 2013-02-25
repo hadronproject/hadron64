@@ -3,7 +3,7 @@ summary @ Cairo vector graphics library
 homepage @ http://cairographics.org/
 license @ LGPL + MPL
 src_url @ http://cairographics.org/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ X debug opengl svg xcb drm static-libs
 """
 

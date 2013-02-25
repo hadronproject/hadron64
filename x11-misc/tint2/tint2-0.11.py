@@ -3,7 +3,7 @@ summary @ A basic, good-looking task manager for WMs
 homepage @ http://code.google.com/p/tint2/
 license @ GPL2
 src_url @ http://$name.googlecode.com/files/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

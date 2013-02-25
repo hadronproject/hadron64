@@ -3,7 +3,7 @@ summary @ Desktop-independent graphical login manager for X11
 homepage @ http://slim.berlios.de/
 license @ GPL2
 src_url @ http://download.berlios.de/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ pam
 """
 

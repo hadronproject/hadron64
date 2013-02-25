@@ -2,7 +2,7 @@ metadata = """
 summary @ A dark, smooth Xfce theme, introduced in the release of Xubuntu 9.10
 homepage @ http://shimmerproject.org/projects/albatross/
 license @ GPL-3 CCPL
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

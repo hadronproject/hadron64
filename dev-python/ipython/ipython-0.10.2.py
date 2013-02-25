@@ -3,7 +3,7 @@ summary @ An enhanced Interactive Python shell.
 homepage @ http://ipython.scipy.org/
 license @ custom
 src_url @ http://ipython.scipy.org/dist/$version/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

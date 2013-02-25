@@ -3,7 +3,7 @@ summary @ A utility providing key negotiation for WPA wireless networks
 homepage @ http://hostap.epitest.fi/wpa_supplicant
 license @ GPL
 src_url @ http://hostap.epitest.fi/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ dbus debug eap-sim readline gnutls 
 """
 

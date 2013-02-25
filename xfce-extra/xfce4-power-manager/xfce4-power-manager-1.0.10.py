@@ -3,7 +3,7 @@ summary @ Power Manager for XFCE4 Desktop
 homepage @ http://xfce-goodies.berlios.de/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/apps/$name/1.0/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ policykit debug
 """
 

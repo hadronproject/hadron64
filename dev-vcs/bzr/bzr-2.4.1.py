@@ -3,7 +3,7 @@ summary @ Bazaar is a next generation distributed version control system.
 homepage @ http://bazaar-vcs.org/
 license @ GPL-2
 src_url @ http://launchpad.net/bzr/2.4/$version/+download/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

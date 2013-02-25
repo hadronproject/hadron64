@@ -3,7 +3,7 @@ summary @ USB Device Utilities
 homepage @ http://linux-usb.sourceforge.net/
 license @ GPL
 src_url @ http://pkgs.fedoraproject.org/repo/pkgs/$name/$fullname.tar.gz/481e1de453bcabbd5f43125bb4df2ab7/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

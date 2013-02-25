@@ -3,7 +3,7 @@ summary @ Creates PKZIP-compatible .zip files
 homepage @ http://www.info-zip.org/pub/infozip/Zip.html
 license @ Info-ZIP
 src_url @ ftp://ftp.info-zip.org/pub/infozip/src/$name30.zip
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

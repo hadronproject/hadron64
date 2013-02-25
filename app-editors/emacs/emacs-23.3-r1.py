@@ -3,7 +3,7 @@ summary @ The extensible, customizable, self-documenting real-time display edito
 homepage @ http://www.gnu.org/software/emacs/emacs.html
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/emacs/emacs-23.3b.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ X ns gif tiff
 """
 

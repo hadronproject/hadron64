@@ -2,7 +2,7 @@ metadata = """
 summary @ System initialization/bootup scripts
 homepage @ http://hadronproject.org
 license @ GPL-3
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

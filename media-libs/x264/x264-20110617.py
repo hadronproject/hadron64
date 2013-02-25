@@ -3,7 +3,7 @@ summary @ free library for encoding H264/AVC video streams
 homepage @ http://www.videolan.org/developers/x264.html
 license @ GPL
 src_url @ ftp://ftp.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-$version-2245.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ threads pic debug
 """
 

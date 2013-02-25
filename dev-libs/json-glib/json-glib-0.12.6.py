@@ -3,7 +3,7 @@ summary @ JSON library built on GLib
 homepage @ http://live.gnome.org/JsonGlib
 license @ GPL
 src_url @ http://ftp.gnome.org/pub/GNOME/sources/$name/0.12/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ introspection
 """
 

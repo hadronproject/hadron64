@@ -3,7 +3,7 @@ summary @ Mozilla runtime package that can be used to bootstrap XUL+XPCOM applic
 homepage @ http://developer.mozilla.org/en/docs/XULRunner
 license @ MPL-1.1 GPL-2 LGPL-2.1
 src_url @ ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$version/source/firefox-$version.source.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # FIXME: our nss package seems problematic. So I have commented system-nss line in the mozconfig file and removed nss dependency

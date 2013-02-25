@@ -3,7 +3,7 @@ summary @ Lightweight Directory Access Protocol (LDAP) client libraries
 homepage @ http://www.openldap.org/
 license @ OPENLDAP
 src_url @ ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-$version.tgz
-arch @ ~x86
+arch @ ~x86_64
 options @ icu berkdb perl ssl gnutls tcpd sasl odbc iodbc debug ipv6 syslog 
 """
 

@@ -3,7 +3,7 @@ summary @  The GTK+ Toolkit (v3)
 homepage @  http://www.gtk.org/
 license @  LGPL
 src_url @  http://ftp.gnome.org/pub/gnome/sources/gtk+/3.2/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 slot @ 3
 options @ xinerama cups introspection
 """

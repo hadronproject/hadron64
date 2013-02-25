@@ -3,7 +3,7 @@ summary @ C++ bindings for the Cairo vector graphics library
 homepage @ http://cairographics.org/cairomm
 license @ LGPL-2
 src_url @ http://cairographics.org/releases/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

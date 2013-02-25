@@ -4,7 +4,7 @@ homepage @ http://www.clutter-project.org/
 license @ GPL-2
 src_url @ http://download.gnome.org/sources/$name/1.8/$fullname.tar.xz
 options @ introspection pango
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ XFS filesystem utilities
 homepage @ http://oss.sgi.com/projects/xfs/
 license @ LGPL
 src_url @ ftp://ftp.archlinux.org/other/xfsprogs/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

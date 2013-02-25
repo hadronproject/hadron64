@@ -3,7 +3,7 @@ summary @ Video Acceleration (VA) API for Linux
 homepage @ http://freedesktop.org/wiki/Software/vaapi
 license @ MIT
 src_url @ http://cgit.freedesktop.org/libva/snapshot/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ vdpau opengl intelvideo
 """
 

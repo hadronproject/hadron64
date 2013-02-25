@@ -3,7 +3,7 @@ summary @ Evented I/O for V8 javascript
 homepage @ http://nodejs.org/
 license @ MIT
 src_url @ http://nodejs.org/dist/v$version/node-v$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

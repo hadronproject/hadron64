@@ -3,7 +3,7 @@ summary @ gkernel ethtool
 homepage @ http://www.kernel.org/pub/software/network/ethtool/
 license @ GPL
 src_url @ http://ftp.eu.openbsd.org/pub/mirrors/ftp.kernel.org/software/network/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

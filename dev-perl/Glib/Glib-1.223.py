@@ -3,7 +3,7 @@ summary @ Perl wrappers for glib 2.x, including GObject
 homepage @ http://gtk2-perl.sourceforge.net/
 license @ LGPL
 src_url @ http://downloads.sourceforge.net/sourceforge/gtk2-perl/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

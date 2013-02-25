@@ -3,7 +3,7 @@ summary @ Python interface to the OpenSSL library
 homepage @ http://pyopenssl.sourceforge.net/
 license @ Apache-2.0
 src_url @ http://pypi.python.org/packages/source/p/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ python3
 """
 

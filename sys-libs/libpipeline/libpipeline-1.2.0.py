@@ -3,7 +3,7 @@ summary @ a C library for manipulating pipelines of subprocesses in a flexible a
 homepage @ http://libpipeline.nongnu.org/
 license @ GPL
 src_url @ http://download.savannah.gnu.org/releases/libpipeline/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

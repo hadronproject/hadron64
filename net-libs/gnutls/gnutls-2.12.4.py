@@ -3,7 +3,7 @@ summary @ A library which provides a secure layer over a reliable transport laye
 homepage @ http://www.gnu.org/software/gnutls/
 license @ GPL3 + LGPL
 src_url @ ftp://ftp.gnu.org/gnu/gnutls/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

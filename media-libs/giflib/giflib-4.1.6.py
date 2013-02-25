@@ -3,7 +3,7 @@ summary @ A library for reading and writing gif images
 homepage @ http://sourceforge.net/projects/giflib/
 license @ MIT
 src_url @ http://downloads.sourceforge.net/sourceforge/giflib/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ X static-libs
 """
 

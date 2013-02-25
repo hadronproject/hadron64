@@ -3,7 +3,7 @@ summary @ C-library for parsing configuration files
 homepage @ http://www.nongnu.org/confuse
 license @ LGPL
 src_url @ http://savannah.nongnu.org/download/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ nls static-libs
 """
 

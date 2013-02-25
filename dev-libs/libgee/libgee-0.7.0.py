@@ -4,7 +4,7 @@ homepage @ http://live.gnome.org/Libgee
 license @ LGPL-2.1
 src_url @ http://ftp.gnome.org/pub/GNOME/sources/libgee/0.7/$fullname.tar.xz
 options @ introspection static
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

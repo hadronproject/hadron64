@@ -9,7 +9,7 @@ $url_prefix/MurrinaLoveGray.tar.bz2 $url_prefix/MurrineThemePack.tar.bz2 $url_pr
 $url_prefix/MurrinaVerdeOlivo.tar.bz2 $url_prefix/MurrinaGilouche.tar.bz2
 $url_prefix/MurrinaCream.tar.gz $url_prefix/NOX-svn-r22.tar.gz $url_prefix/MurrinaFancyCandy.tar.bz2
 http://gnome-look.org/CONTENT/content-files/93558-Murreza.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

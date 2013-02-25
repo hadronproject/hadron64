@@ -3,7 +3,7 @@ summary @ the core of next generation file manager PCManFM
 homepage @ http://pcmanfm.sourceforge.net/
 license @ GPL-3
 src_url @ http://downloads.sourceforge.net/pcmanfm/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

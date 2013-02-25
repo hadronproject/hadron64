@@ -3,7 +3,7 @@ summary @ Perl wrappers for the GLib utility and Object libraries
 homepage @ http://gtk2-perl.sf.net/
 license @ LGPL-2.1
 src_url @ http://downloads.sourceforge.net/sourceforge/gtk2-perl/Glib-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Library for writing single instance applications
 homepage @ http://live.gnome.org/LibUnique
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/3.0/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ introspection
 """
 

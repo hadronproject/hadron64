@@ -3,7 +3,7 @@ summary @ A daemon for delivering ACPI power management events with netlink supp
 homepage @ http://tedfelix.com/linux/acpid-netlink.html
 license @ GPL
 src_url @ http://www.tedfelix.com/linux/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

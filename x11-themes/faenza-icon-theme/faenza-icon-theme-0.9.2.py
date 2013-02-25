@@ -3,7 +3,7 @@ summary @ A scalable icon theme called Faenza
 homepage @ http://code.google.com/p/faenza-icon-theme/
 license @ GPL3
 src_url @ http://faenza-icon-theme.googlecode.com/files/$name_$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

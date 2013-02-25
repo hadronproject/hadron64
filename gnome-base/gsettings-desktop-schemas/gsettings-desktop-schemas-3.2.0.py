@@ -3,7 +3,7 @@ summary @ Shared GSettings schemas for the desktop
 homepage @ http://live.gnome.org/ 
 license @ GPL 
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/3.2/$name-$version.tar.bz2 
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

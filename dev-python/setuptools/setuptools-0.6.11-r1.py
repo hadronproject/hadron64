@@ -3,7 +3,7 @@ summary @ A collection of enhancements to the Python distutils
 homepage @ http://peak.telecommunity.com/DevCenter/setuptools
 license @ PSF
 src_url @ http://cheeseshop.python.org/packages/source/s/$name/$name-0.6c11.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

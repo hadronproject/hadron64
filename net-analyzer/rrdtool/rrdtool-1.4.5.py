@@ -4,7 +4,7 @@ homepage @ http://www.rrdtool.org
 license @ GPL-2
 src_url @ http://oss.oetiker.ch/rrdtool/pub/$fullname.tar.gz
 options @ lua perl ruby tcl python rrdcgi
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

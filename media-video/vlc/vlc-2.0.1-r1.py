@@ -3,7 +3,7 @@ summary @ A multi-platform MPEG, VCD/DVD, and DivX player
 homepage @ http://www.videolan.org/vlc/
 license @ LGPL2.1 + GPL2
 src_url @ http://download.videolan.org/pub/videolan/$name/$version/$fullname.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 options @ a52 aac alsa altivec avcodec avformat cddb dc1394 dvbpsi dvd dvdnav dts flac fontconfig gcrypt gnutls ieee1394 libnotify libsamplerate mp3 mpeg ncurses ogg opengl png qt4 schroedinger sdl sdl-image sqlite svg taglib theora truetype vaapi vorbis X x264 xcb xml lua postproc skins debug kde media-library mmx neon optimisememory run-as-root sse xv
 """
 

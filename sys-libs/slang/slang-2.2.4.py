@@ -3,7 +3,7 @@ summary @ S-Lang is a powerful interpreted language
 homepage @ http://www.jedsoft.org/slang/
 license @ GPL
 src_url @ ftp://ftp.fu-berlin.de/pub/unix/misc/slang/v2.2/$name-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ pcre png readline zlib
 """
 

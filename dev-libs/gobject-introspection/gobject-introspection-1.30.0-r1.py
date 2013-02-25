@@ -3,7 +3,7 @@ summary @ Introspection system for GObject-based libraries
 homepage @ http://live.gnome.org/GObjectInstrospection
 license @ LGPL + GPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/1.30/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

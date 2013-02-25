@@ -3,7 +3,7 @@ summary @ A network exploration tool and security/port scanner
 homepage @ http://www.nmap.org
 license @ GPL
 src_url @ http://www.nmap.org/dist/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ gtk ssl lua
 """
 

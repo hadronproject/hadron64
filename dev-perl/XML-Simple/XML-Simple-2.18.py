@@ -3,7 +3,7 @@ summary @ Simple XML parser for stupid Perl
 homepage @ http://search.cpan.org/dist/XML-Simple
 license @ PerlArtistic
 src_url @ ftp://ftp.cpan.org/pub/CPAN/authors/id/G/GR/GRANTM/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

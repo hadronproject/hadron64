@@ -3,7 +3,7 @@ summary @ X.org Bitmap files
 homepage @ http://xorg.freedesktop.org/
 license @ custom
 src_url @ http://xorg.freedesktop.org/releases/individual/data/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

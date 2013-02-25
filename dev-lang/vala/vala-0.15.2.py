@@ -5,7 +5,7 @@ license @ LGPL-2.1
 src_url @ http://download.gnome.org/sources/vala/$slot/vala-$version.tar.xz
 options @ vapigen
 slot @ 0.15
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

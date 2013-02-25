@@ -3,7 +3,7 @@ summary @ A library that read information about processes and the running system
 homepage @ http://www.gnome.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.28/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Library that does image file loading and saving as well as rendering, 
 homepage @ http://sourceforge.net/projects/enlightenment/
 license @ BSD
 src_url @ http://downloads.sourceforge.net/enlightenment/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ bzip2 gif jpeg mp3 png tiff zlib X
 """
 

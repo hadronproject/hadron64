@@ -3,7 +3,7 @@ summary @ portmap replacement which supports RPC over various protocols
 homepage @ http://sourceforge.net/projects/rpcbind/
 license @ BSD
 src_url @ http://downloads.sourceforge.net/sourceforge/rpcbind/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 prepare = lambda: patch(level=1)

@@ -5,7 +5,7 @@ license @ custom
 src_url @ http://downloads.sourceforge.net/sourceforge/libpng/$fullname.tar.bz2  
 http://garr.dl.sourceforge.net/project/libpng-apng/libpng-devel/1.5.4/libpng-1.5.4-apng.patch.gz
 options @ apng
-arch @ ~x86
+arch @ ~x86_64
 slot @ 1.5
 """
 

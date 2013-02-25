@@ -3,7 +3,7 @@ summary @ Transport Independent RPC library (SunRPC replacement)
 homepage @ http://libtirpc.sourceforge.net/
 license @ BSD
 src_url @ http://downloads.sourceforge.net/sourceforge/libtirpc/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -4,7 +4,7 @@ homepage @ http://www.abisource.com/enchant/
 license @ LGPL-2.1
 src_url @ http://www.abisource.com/downloads/$name/$version/$fullname.tar.gz
 options @ aspell myspell zemberek
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Framework for defining and tracking users, login sessions and seats.
 homepage @ http://www.freedesktop.org/wiki/Software/ConsoleKit
 license @ GPL
 src_url @ http://www.freedesktop.org/software/ConsoleKit/dist/ConsoleKit-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Lightweight, GTK2-based advanced audio player focused on audio quality
 homepage @ http://audacious-media-player.org/
 license @ GPL3
 src_url @ http://distfiles.atheme.org/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ altivec chardet nls session sse2
 """
 

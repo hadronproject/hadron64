@@ -3,7 +3,7 @@ summary @ GtkSpell provides word-processor-style highlighting and replacement of
 homepage @ http://gtkspell.sourceforge.net/
 license @ GPL
 src_url @ http://gtkspell.sourceforge.net/download/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

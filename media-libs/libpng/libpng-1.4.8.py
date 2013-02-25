@@ -5,7 +5,7 @@ license @ custom
 src_url @ http://downloads.sourceforge.net/sourceforge/libpng/$fullname.tar.bz2
 http://ftp.heanet.ie/mirrors/sourceforge/l/project/li/libpng-apng/libpng-master/1.4.8/libpng-1.4.8-apng.patch.gz
 options @ apng
-arch @ ~x86
+arch @ ~x86_64
 slot @ 1.4
 """
 

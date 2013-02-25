@@ -3,7 +3,7 @@ summary @ High level XKB library
 homepage @ http://www.freedesktop.org/Software/LibXklavier
 license @ LGPL-2
 src_url @ http://ftp.acc.umu.se/pub/gnome/sources/libxklavier/5.1/libxklavier-5.1.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

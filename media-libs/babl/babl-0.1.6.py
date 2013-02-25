@@ -3,7 +3,7 @@ summary @ Dynamic, any to any, pixel format conversion library
 homepage @ http://gegl.org/babl/
 license @ LGPL3
 src_url @ http://mirror.csclub.uwaterloo.ca/gentoo-distfiles/distfiles/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ altivec mmx sse introspection
 """
 

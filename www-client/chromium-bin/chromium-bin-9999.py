@@ -2,7 +2,7 @@ metadata = """
 summary @ Chromium Browser Latest Developer Build
 homepage @ http://chromium.org/
 license @ GPL
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

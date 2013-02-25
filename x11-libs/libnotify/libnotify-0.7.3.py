@@ -4,7 +4,7 @@ homepage @ http://library.gnome.org/devel/notification-spec/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/GNOME/sources/$name/0.7/$fullname.tar.bz2
 options @ test introspection
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Unpacks .zip archives such as those made by PKZIP
 homepage @ http://www.info-zip.org/
 license @ Info-ZIP
 src_url @ http://downloads.sourceforge.net/infozip/unzip60.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ GNU Image Manipulation Program
 homepage @ http://www.gimp.org/
 license @ GPL LGPL
 src_url @ http://mirror.csclub.uwaterloo.ca/gentoo-distfiles/distfiles/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ alsa aalib altivec curl dbus debug doc exif gnome jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf udev
 slot @ 2
 """

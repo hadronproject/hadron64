@@ -3,7 +3,7 @@ summary @ This little program lets you change your Gtk+ 2.0 theme. A better alte
 homepage @ http://plasmasturm.org/programs/gtk-chtheme/
 license @  GPL
 src_url @  http://plasmasturm.org/programs/gtk-chtheme/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

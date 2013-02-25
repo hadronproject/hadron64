@@ -3,7 +3,7 @@ summary @ Graph based image processing framework
 homepage @ http://www.gegl.org/
 license @ GPL3 LGPL3
 src_url @ http://mirror.csclub.uwaterloo.ca/gentoo-distfiles/distfiles/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ cairo exif ffmpeg graphviz jpeg jpeg2k lua openexr png sdl svg debug mmx sse
 """
 

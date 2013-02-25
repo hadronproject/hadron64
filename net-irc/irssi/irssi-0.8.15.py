@@ -3,7 +3,7 @@ summary @ Modular text mode IRC client with Perl scripting
 homepage @ http://irssi.org/
 license @ GPL
 src_url @ http://irssi.org/files/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ ipv6 ssl
 """
 

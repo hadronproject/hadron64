@@ -3,7 +3,7 @@ summary @ An implemenation of the Dirac video codec in ANSI C code
 homepage @ http://www.diracvideo.org/
 license @ GPL2 LGPL2 MPL MIT
 src_url @ http://www.diracvideo.org/download/schroedinger/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

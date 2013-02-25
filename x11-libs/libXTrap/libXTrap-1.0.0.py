@@ -3,7 +3,7 @@ summary @ X.Org XTrap library
 homepage @ http://xorg.freedesktop.org/
 src_url @ http://xorg.freedesktop.org/releases/individual/lib/$fullname.tar.bz2
 license @ MIT
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

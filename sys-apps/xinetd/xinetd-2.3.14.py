@@ -3,7 +3,7 @@ summary @ A secure replacement for inetd
 homepage @ http://www.xinetd.org/
 license @ custom
 src_url @ http://www.xinetd.org/xinetd-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ perl
 """
 

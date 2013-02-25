@@ -3,7 +3,7 @@ summary @ A collection of routines used to create and manipulate MNG format grap
 homepage @ http://www.libmng.com/
 license @ custom
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ lcms static-libs
 """
 

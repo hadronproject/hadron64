@@ -4,7 +4,7 @@ homepage @ http://goodies.xfce.org/projects/applications/xfburn
 license @ GPL-2
 src_url @ http://www.xfce.org/archive/src/apps/xfburn/0.4/$fullname.tar.bz2
 options @ debug gstreamer
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

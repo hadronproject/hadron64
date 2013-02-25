@@ -3,7 +3,7 @@ summary @ Application development toolkit for controlling system-wide privileges
 homepage @ http://www.freedesktop.org/wiki/Software/PolicyKit
 license @ LGPL
 src_url @ http://hal.freedesktop.org/releases/$fullname.tar.gz
-arch @ ~x86 
+arch @ ~x86_64
 options @ introspection
 """
 

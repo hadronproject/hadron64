@@ -3,7 +3,7 @@ summary @ Userspace interface to kernel DRM services
 homepage @ http://dri.freedesktop.org/
 license @ MIT
 src_url @ http://dri.freedesktop.org/libdrm/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

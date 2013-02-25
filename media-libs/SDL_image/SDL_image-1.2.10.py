@@ -3,7 +3,7 @@ summary @ A simple library to load images of various formats as SDL surfaces
 homepage @ http://www.libsdl.org/projects/SDL_image/
 license @ LGPL
 src_url @ http://www.libsdl.org/projects/SDL_image/release/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ gif jpeg png static-libs tiff
 """
 

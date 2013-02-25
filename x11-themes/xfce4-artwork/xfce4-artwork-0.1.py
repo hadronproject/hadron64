@@ -3,7 +3,7 @@ summary @ Backdrops for the Xfce4 desktop
 homepage @ http://xfce-goodies.berlios.de/
 license @ GPL2
 src_url @ http://download2.berlios.de/xfce-goodies/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 standard_procedure = False

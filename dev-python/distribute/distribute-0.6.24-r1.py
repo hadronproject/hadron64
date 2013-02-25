@@ -3,7 +3,7 @@ summary @ Distribute (fork of Setuptools) is a collection of extensions to Distu
 homepage @ http://pypi.python.org/pypi/distribute
 license @ PSF-2
 src_url @ http://pypi.python.org/packages/source/d/distribute/distribute-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # FIXME python3 support

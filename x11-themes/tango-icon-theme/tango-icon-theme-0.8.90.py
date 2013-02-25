@@ -4,7 +4,7 @@ homepage @ http://tango.freedesktop.org
 license @ public-domain
 src_url @ http://tango.freedesktop.org/releases/$fullname.tar.gz
 options @ png
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

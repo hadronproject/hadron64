@@ -3,7 +3,7 @@ summary @ Thunderbird Mail Client
 homepage @ http://www.mozilla.com/en-US/thunderbird/
 license @ MPL-1.1 GPL-2 LGPL-2.1
 src_url @ ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/latest/source/thunderbird-$version.source.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

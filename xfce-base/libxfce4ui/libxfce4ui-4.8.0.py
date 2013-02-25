@@ -3,7 +3,7 @@ summary @ Share commonly used Xfce widgets among the Xfce applications
 homepage @ http://www.xfce.org
 license @ GPL2
 src_url @ http://archive.xfce.org/src/xfce/libxfce4ui/4.8/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

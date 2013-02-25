@@ -3,7 +3,7 @@ summary @ Tools to deal with shar archives
 homepage @ http://www.gnu.org/software/sharutils/
 license @ GPL-3
 src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ nls
 """
 

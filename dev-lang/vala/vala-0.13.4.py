@@ -5,7 +5,7 @@ license @ LGPL-2.1
 src_url @ http://download.gnome.org/sources/$name/0.13/$name-$version.tar.bz2
 options @ vapigen
 slot @ 0.14
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

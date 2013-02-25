@@ -3,7 +3,7 @@ summary @ System and kernel log daemons
 homepage @ http://www.infodrom.org/projects/sysklogd/
 license @ GPL BSD
 src_url @ http://www.infodrom.org/projects/sysklogd/download/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 # FIXME: logrotate will be added 

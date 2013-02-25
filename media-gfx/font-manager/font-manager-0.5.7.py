@@ -3,7 +3,7 @@ summary @ A font management application for the GNOME desktop
 homepage @ http://code.google.com/p/font-manager
 license @ GPL3
 src_url @ http://font-manager.googlecode.com/files/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

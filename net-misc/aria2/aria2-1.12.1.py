@@ -3,7 +3,7 @@ summary @ Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 homepage @ http://aria2.sourceforge.net/
 license @ GPL
 src_url @ http://downloads.sourceforge.net/aria2/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ ssl gnutls ares bittorrent sqlite scripts nls expat metalink xmlrpc
 """
 

@@ -3,7 +3,7 @@ summary @ Open source implementation of the Adaptive Multi Rate (AMR) speech cod
 homepage @ http://opencore-amr.sourceforge.net/
 license @ APACHE
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

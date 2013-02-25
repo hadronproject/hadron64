@@ -3,7 +3,7 @@ summary @ The Console Display Manager
 homepage @ http://cdm.ghost1227.com/X11
 license @ GPL
 src_url @ http://cdm.ghost1227.com/repo/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

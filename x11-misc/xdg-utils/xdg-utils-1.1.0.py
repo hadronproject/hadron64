@@ -3,7 +3,7 @@ summary @ Command line tools that assist applications with a variety of desktop 
 homepage @ http://portland.freedesktop.org/
 license @ custom
 src_url @ http://portland.freedesktop.org/download/$fullname-rc1.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

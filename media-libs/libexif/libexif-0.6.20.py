@@ -3,7 +3,7 @@ summary @ A library to parse an EXIF file and read the data from those tags
 homepage @ http://sourceforge.net/projects/libexif
 license @ LGPL
 src_url @ http://downloads.sf.net/sourceforge/$name/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 def install():

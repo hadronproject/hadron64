@@ -3,7 +3,7 @@ summary @ Secret Rabbit Code - aka Sample Rate Converter for audio
 homepage @ http://www.mega-nerd.com/SRC/index.html
 license @ GPL
 src_url @ http://www.mega-nerd.com/SRC/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ sndfile
 """
 

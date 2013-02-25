@@ -3,7 +3,7 @@ summary @ An extremely fast library for FFT
 homepage @ http://cr.yp.to/djbfft.html
 license @ public-domain
 src_url @ http://cr.yp.to/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 ver = "0.7.6"

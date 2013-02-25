@@ -3,7 +3,7 @@ summary @ Perl wrappers for cairo
 homepage @ http://gtk2-perl.sourceforge.net/
 license @ LGPL
 src_url @ http://downloads.sourceforge.net/sourceforge/gtk2-perl/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ A small and lightweight implementation of the XDG Sound Theme Specific
 homepage @ http://0pointer.de/lennart/projects/libcanberra
 license @ LGPL
 src_url @ http://0pointer.de/lennart/projects/libcanberra/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ gstreamer gtk alsa udev tdb gtk3
 """
 

@@ -3,7 +3,7 @@ summary @ X Terminal Emulator
 homepage @ http://invisible-island.net/xterm/
 license @ custom
 src_url @ ftp://invisible-island.net/xterm/$fullname.tgz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

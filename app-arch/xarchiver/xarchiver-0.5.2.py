@@ -3,7 +3,7 @@ summary @ GTK+ frontend to various command line archivers
 homepage @ http://xarchiver.sourceforge.net
 license @ GPL
 src_url @ http://downloads.sourceforge.net/xarchiver/xarchiver-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

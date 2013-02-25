@@ -3,7 +3,7 @@ summary @ A daemon which implements the Point-to-Point Protocol for dial-up netw
 homepage @ http://www.samba.org/ppp/
 license @ custom:GPL/BSD
 src_url @ ftp://ftp.samba.org/pub/ppp/ppp-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ activefilter ipv6
 """
 

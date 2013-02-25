@@ -3,7 +3,7 @@ summary @ Complete and free Internet live audio and video broadcasting solution 
 homepage @ http://ffmpeg.org/
 license @ GPL
 src_url @ http://www.ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ lame rtmp vdpau vorbis xvid x264 vpx theora amr schroedinger jpeg2k cpudetection ieee1394 X vaapi
 """
 

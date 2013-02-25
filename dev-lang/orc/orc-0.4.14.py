@@ -3,7 +3,7 @@ summary @ The Oil Runtime Compiler
 homepage @ http://code.entropywave.com/projects/orc/
 license @ BSD BSD-2
 src_url @ http://code.entropywave.com/download/$name/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

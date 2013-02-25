@@ -2,7 +2,7 @@ metadata = """
 summary @ Utility to fix your .la files
 homepage @ http://www.gentoo.org/
 license @ MIT
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

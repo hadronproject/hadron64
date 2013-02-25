@@ -3,7 +3,7 @@ summary @ Perl HTML parser class
 homepage @ http://search.cpan.org/dist/HTML-Parser
 license @ LGPL
 src_url @ http://www.cpan.org/authors/id/G/GA/GAAS/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

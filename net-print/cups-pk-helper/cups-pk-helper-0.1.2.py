@@ -3,7 +3,7 @@ summary @ A helper that makes system-config-printer use PolicyKit
 homepage @ http://www.freedesktop.org/software/cups-pk-helper/releases/ 
 license @ GPL 
 src_url @ http://www.freedesktop.org/software/$name/releases/$name-$version.tar.bz2 
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

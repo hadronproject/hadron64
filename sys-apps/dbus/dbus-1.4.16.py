@@ -3,7 +3,7 @@ summary @ Freedesktop.org message bus system
 homepage @ http://www.freedesktop.org/Software/dbus
 license @ GPL-2
 src_url @ http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ X static-libs debug
 """
 

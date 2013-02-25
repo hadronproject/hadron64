@@ -3,7 +3,7 @@ summary @ A cross-platform audio output library and plugins
 homepage @ http://www.xiph.org/ao
 license @ GPL
 src_url @ http://downloads.xiph.org/releases/ao/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ alsa nas mmap static-libs
 """
 

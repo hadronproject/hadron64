@@ -3,7 +3,7 @@ summary @ A GObject based library for creating fast, visually rich graphical use
 homepage @ http://clutter-project.org/
 license @ LGPL
 src_url @ http://download.gnome.org/sources/$name/1.8/$fullname.tar.xz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

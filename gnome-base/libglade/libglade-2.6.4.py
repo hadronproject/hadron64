@@ -3,7 +3,7 @@ summary @ Allows you to load glade interface files in a program at runtime
 homepage @ http://www.gnome.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.6/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

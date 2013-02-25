@@ -3,7 +3,7 @@ summary @ GStreamer Multimedia Framework Base Plugins + Libraries
 homepage @ http://gstreamer.freedesktop.org/
 license @ LGPL
 src_url @ http://gstreamer.freedesktop.org/src/gst-plugins-base/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Encoding data for the poppler PDF rendering library
 homepage @ http://poppler.freedesktop.org/ 
 license @ custom GPL2 
 src_url @ http://poppler.freedesktop.org/$name-$version.tar.gz 
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

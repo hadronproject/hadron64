@@ -3,7 +3,7 @@ summary @ Python bindings for libnotify
 homepage @ http://www.galago-project.org/
 src_url @ http://www.galago-project.org/files/releases/source/$name/$fullname.tar.bz2
 license @ LGPL2.1
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

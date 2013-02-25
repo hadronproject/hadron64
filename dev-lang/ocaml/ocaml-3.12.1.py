@@ -3,7 +3,7 @@ summary @ A functional language with OO extensions
 homepage @ http://caml.inria.fr/
 license @ LGPL-2 QPL-1.0
 src_url @ http://caml.inria.fr/distrib/ocaml-3.12/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

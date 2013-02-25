@@ -3,7 +3,7 @@ summary @ Thai language support routines
 homepage @ http://linux.thai.net/projects/libthai
 license @ LGPL
 src_url @ http://linux.thai.net/pub/thailinux/software/libthai/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

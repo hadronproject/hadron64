@@ -3,7 +3,7 @@ summary @ Emacs color theme
 homepage @ http://www.nongnu.org/color-theme/
 license @ GPL-2
 src_url @ http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

@@ -3,7 +3,7 @@ summary @ Xfce's freedesktop.org specification compatible menu implementation li
 homepage @ http://wiki.xfce.org/dev/garcon
 license @ LGPL
 src_url @ http://archive.xfce.org/src/libs/garcon/0.1/garcon-$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug
 """
 

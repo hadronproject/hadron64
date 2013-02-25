@@ -3,7 +3,7 @@ summary @ Boost Libraries for C++
 homepage @ http://www.boost.org/
 license @ Boost-1.0
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name_1_46_1.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

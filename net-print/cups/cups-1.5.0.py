@@ -3,7 +3,7 @@ summary @ The CUPS Printing System
 homepage @ http://www.cups.org/
 license @ GPL
 src_url @ ftp://ftp.easysw.com/pub/cups/$version/$fullname-source.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ ssl gnutls dbus jpeg pam perl png acl tiff usb X threads debug static-libs
 """
 

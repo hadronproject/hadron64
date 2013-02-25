@@ -3,7 +3,7 @@ summary @ An image loading library for GTK+ V2
 homepage @ http://www.gtk.org/
 license @ GPL2
 src_url @ http://download.gnome.org/sources/gdk-pixbuf/2.24/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ debug introspection X jpeg tiff
 """
 

@@ -4,7 +4,7 @@ homepage @ https://fedorahosted.org/elfutils
 license @ GPL-2-with-exceptions
 src_url @ https://fedorahosted.org/releases/e/l/elfutils/$version/$fullname.tar.bz2
 options @ zlib bzip2 lzma nls
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

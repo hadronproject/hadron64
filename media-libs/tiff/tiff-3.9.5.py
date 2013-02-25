@@ -3,7 +3,7 @@ summary @ Library for manipulation of TIFF images
 homepage @ http://www.remotesensing.org/libtiff/
 license @ custom
 src_url @ ftp://ftp.remotesensing.org/pub/libtiff/tiff-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

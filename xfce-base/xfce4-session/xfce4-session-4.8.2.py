@@ -3,7 +3,7 @@ summary @ A session manager for Xfce
 homepage @ http://www.xfce.org/
 license @ GPL2
 src_url @ http://archive.xfce.org/src/xfce/$name/4.8/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ consolekit policykit debug udev
 """
 

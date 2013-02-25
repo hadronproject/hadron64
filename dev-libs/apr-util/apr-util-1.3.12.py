@@ -3,7 +3,7 @@ summary @ The Apache Portable Runtime
 homepage @ http://apr.apache.org/
 license @ APACHE
 src_url @ http://www.apache.org/dist/apr/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ berkdb sqlite3
 """
 

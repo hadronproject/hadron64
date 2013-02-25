@@ -3,7 +3,7 @@ summary @ Command-line interface to various pastebins
 homepage @ http://wgetpaste.zlin.dk/
 license @ public-domain
 src_url @ http://wgetpaste.zlin.dk/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ zsh-completion
 """
 

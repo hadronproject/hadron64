@@ -3,7 +3,7 @@ summary @ VDPAU backend for VA API
 homepage @ http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/
 license @ GPL
 src_url @ http://www.splitted-desktop.com/~gbeauchesne/vdpau-video/$name-$version.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

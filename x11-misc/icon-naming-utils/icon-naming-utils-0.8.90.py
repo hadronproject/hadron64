@@ -3,7 +3,7 @@ summary @ Maps the new names of icons for Tango to the legacy names used by the 
 homepage @ http://tango.freedesktop.org/
 license @ GPL
 src_url @ http://tango.freedesktop.org/releases/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 

@@ -3,7 +3,7 @@ summary @ The VP8 Codec SDK
 homepage @ http://www.webmproject.org/
 license @ BSD
 src_url @ http://webm.googlecode.com/files/$name-v$version.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ altivec debug mmx postproc sse sse2 sse3 ssse3 sse4_1 threads cpudetection
 """
 

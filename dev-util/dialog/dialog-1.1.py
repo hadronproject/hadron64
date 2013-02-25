@@ -3,7 +3,7 @@ summary @ A tool to display dialog boxes from shell scripts
 homepage @ http://invisible-island.net/dialog/
 license @ LGPL2.1
 src_url @ ftp://invisible-island.net/$name/$fullname-20110302.tgz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

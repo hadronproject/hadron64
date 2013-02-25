@@ -3,7 +3,7 @@ summary @ A system-independent interface for user-level packet capture
 homepage @ http://www.tcpdump.org/
 license @ BSD
 src_url @ http://www.tcpdump.org/release/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 options @ ipv6 libnl
 """
 

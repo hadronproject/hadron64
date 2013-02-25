@@ -3,7 +3,7 @@ summary @ User-land utilities for LVM2 (device-mapper) software.
 homepage @ http://sourceware.org/lvm2/
 license @ LGPL2.1
 src_url @ ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

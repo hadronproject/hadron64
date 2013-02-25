@@ -3,7 +3,7 @@ summary @ A library for configuring and customizing font access
 homepage @ http://www.fontconfig.org/release/
 license @ custom
 src_url @ http://www.fontconfig.org/release/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

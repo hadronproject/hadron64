@@ -3,7 +3,7 @@ summary @ A bootloader for Linux
 homepage @ https://alioth.debian.org/projects/lilo/
 license @ BSD
 src_url @ http://lilo.alioth.debian.org/ftp/sources/$fullname.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

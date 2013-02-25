@@ -3,7 +3,7 @@ summary @ Mozilla Network Security Services
 homepage @ http://www.mozilla.org/projects/security/pki/nss/
 license @ MPL GPL
 src_url @ ftp://ftp.mozilla.org/pub/security/nss/releases/NSS_3_13_3_RTM/src/nss-3.13.3.tar.gz
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """

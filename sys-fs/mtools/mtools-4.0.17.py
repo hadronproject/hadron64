@@ -3,7 +3,7 @@ summary @ A collection of utilities to access MS-DOS disks
 homepage @ http://www.gnu.org/software/mtools/
 license @ GPL-2
 src_url @ http://ftp.gnu.org/gnu/mtools/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 def prepare():

@@ -3,7 +3,7 @@ summary @ Window Navigator Construction Kit
 homepage @ http://www.gnome.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.30/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 options @ introspection startup-notification
 """
 

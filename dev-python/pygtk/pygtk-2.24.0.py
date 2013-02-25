@@ -3,7 +3,7 @@ summary @ Python bindings for the GTK widget set
 homepage @ http://www.pygtk.org/
 license @ LGPL
 src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.24/$fullname.tar.bz2
-arch @ ~x86
+arch @ ~x86_64
 """
 
 depends = """
