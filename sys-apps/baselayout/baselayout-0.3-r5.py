@@ -59,7 +59,7 @@ def install():
     echo("Hadron Base System Release 0.3", "/etc/hadron-release")
 
     for item in ('locale.sh', 'dircolors.sh', 'extrapaths.sh', \
-            'readline.sh', 'umask.sh'):
+            'readline.sh', 'umask.sh', 'i18n.sh', 'lpms.sh'):
         insfile("%s/%s" % (filesdir, item),  "/etc/profile.d/%s" % item)
 
     for item in ('cache/man', 'local', 'log/old', 'lib/misc', 'empty', 'games'):
