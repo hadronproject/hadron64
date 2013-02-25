@@ -3,7 +3,7 @@ summary @ Programs for reading man pages.
 license @ GPL
 homepage @ http://primates.ximian.com/~flucifredi/man/
 src_url @ http://primates.ximian.com/~flucifredi/man/man-1.6g.tar.gz
-arch @ x86
+arch @ ~x86_64
 """
 
 depends = """
