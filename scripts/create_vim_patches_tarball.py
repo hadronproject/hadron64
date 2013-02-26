@@ -1,7 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import os
 import sys
+
+sys.path.insert(0, "/root/Projects/hadron/lpms")
 
 from lpms.fetcher import URLFetcher
 

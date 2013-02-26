@@ -18,8 +18,6 @@ def configure():
         "--enable-write",
         "--enable-partx",
         "--disable-wall",
-        "--disable-su",
-        "--disable-sulogin",
         "--disable-login",
         "--disable-kill",
         "--enable-raw")
