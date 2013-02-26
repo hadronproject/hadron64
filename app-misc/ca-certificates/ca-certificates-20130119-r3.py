@@ -18,7 +18,7 @@ def install():
         makedirs(item)
     raw_install("DESTDIR=%s" % install_dir)
     mycontent = ""
-    for imte in ls("/usr/share/ca-certificates"):
+    for item in ls("/usr/share/ca-certificates"):
         for crt in glob.glob("%s/usr/share/ca-certificates/%s/*.crt" % (install_dir, item)):
             mycontent += crt.split(install_dir+"/usr/share/ca-certificates/")[1]+"\n"
     echo(mycontent, "/etc/ca-certificates.conf")
@@ -26,5 +26,5 @@ def install():
 def post_install():
     # FIXME: lpms must do something about external command fails
     notify("Updating certificates. This might take a while...")
-    if not system("update-ca-certificates --fresh"):
-        error("update-ca-certificates failed.")
+    #if not system("update-ca-certificates --fresh"):
+    #    error("update-ca-certificates failed.")
