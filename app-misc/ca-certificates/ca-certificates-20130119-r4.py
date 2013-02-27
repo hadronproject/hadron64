@@ -26,5 +26,5 @@ def install():
 def post_install():
     # FIXME: lpms must do something about external command fails
     notify("Updating certificates. This might take a while...")
-    #if not system("update-ca-certificates --fresh"):
-    #    error("update-ca-certificates failed.")
+    if not system("update-ca-certificates --fresh"):
+        error("update-ca-certificates failed.")
