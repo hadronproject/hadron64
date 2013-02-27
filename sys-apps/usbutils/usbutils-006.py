@@ -13,7 +13,7 @@ runtime @ dev-libs/libusbx:1 sys-libs/glibc sys-apps/hwids
 """
 
 opt_runtime = """
-zlib @ sys-libs
+zlib @ sys-libs/zlib
 """
 
 def prepare():
