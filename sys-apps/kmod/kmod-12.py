@@ -12,7 +12,7 @@ conflict @ sys-apps/module-init-tools
 """
 
 opt_runtime = """
-xz @ >=app-arch/xz-utils-5.0.4
+xz @ >=app-arch/xz-5.0.4
 zlib @ >=sys-libs/zlib-1.2.6
 """
 
