@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ dev-libs/dbus-glib dev-lang/python
+runtime @ dev-libs/dbus-glib dev-lang/python:2.7
 build @ dev-util/pkg-config
 """
 

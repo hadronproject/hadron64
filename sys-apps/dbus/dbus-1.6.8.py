@@ -12,36 +12,38 @@ build @ dev-libs/expat sys-libs/libcap
 runtime @ dev-libs/expat sys-libs/libcap
 """
 
-opt_runtime = """
-X @ x11-libs/libX11 x11-libs/libXt
-"""
+#opt_runtime = """
+#X @ x11-libs/libX11 x11-libs/libXt
+#"""
 
 def configure():
-    #autoreconf("-vif")
-    conf("--with-xml=expat",
-        "--with-system-pid-file=/var/run/dbus.pid",
-        "--with-system-socket=/var/run/dbus/system_bus_socket",
-        "--with-session-socket-dir=/tmp",
-        "--with-dbus-user=81",
-        "--libexecdir=/usr/lib/dbus-1.0",
-        "--disable-selinux",
-        "--disable-tests",
-        "--disable-doxygen-docs",
-        "--disable-xml-docs",
-        "--enable-shared",
-        config_with("X", "x"),
-        config_enable("debug", "verbose-mode"),
-        config_enable("debug", "asserts"),
-        config_enable("static-libs", "static"))
-
-def build():
-    make()
-    make("-C tools dbus-launch")
+    raw_configure("--prefix=/usr",
+            "--sysconfdir=/etc",
+            "--localstatedir=/var",
+            "--libexecdir=/usr/lib/dbus-1.0",
+            "--with-dbus-user=dbus",
+            "--with-system-pid-file=/run/dbus/pid",
+            "--with-system-socket=/run/dbus/system_bus_socket",
+            "--with-console-auth-dir=/run/console/",
+            "--enable-inotify",
+            "--disable-dnotify",
+            "--disable-verbose-mode",
+            "--disable-static",
+            "--disable-tests",
+            "--disable-asserts",
+            "--with-systemdsystemunitdir=/usr/lib/systemd/system",
+            #"--enable-systemd"
+            )
+    patch("systemd-user-session.patch", level=1)
+        #config_with("X", "x"),
+        #config_enable("debug", "verbose-mode"),
+        #config_enable("debug", "asserts"),
+        #config_enable("static-libs", "static"))
 
 def install():
     raw_install('DESTDIR=%s' % install_dir)
-
-
+    """
+    rmdir("/var/run")
     for dirpath in ('/var/run/dbus', '/var/lib/dbus',
             '/usr/share/dbus-1/services',
             '/usr/share/dbus-1/system-services',
@@ -57,7 +59,7 @@ def install():
     insexe("%s/dbus" % filesdir, "/etc/rc.d/dbus")
 
     sed("-i -e 's|<user>81</user>|<user>dbus</user>|' %s/etc/dbus-1/system.conf" % install_dir)
-
+    """
     insdoc("AUTHORS", "ChangeLog", "HACKING", "NEWS",
             "README", "doc/TODO", "doc/*.txt")
 

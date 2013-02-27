@@ -29,4 +29,3 @@ def build():
 def install():
     export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install("DESTDIR=%s" % install_dir)
-    system("sed -i '1s|#!/usr/bin/env python$|&2|' %s/usr/lib/gobject-introspection/giscanner/*.py" %install_dir)

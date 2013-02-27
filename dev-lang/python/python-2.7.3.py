@@ -76,15 +76,15 @@ def configure():
             "--with-system-expat",
             "--with-system-ffi")
 
-def build():
-    export("PYTHONDONTWRITEBYTECODE", "1")
-    make()
+#def build():
+    #export("PYTHONDONTWRITEBYTECODE", "1")
+    #make()
 
 def install():
     raw_install("DESTDIR=%s altinstall maninstall" % install_dir)
 
     libdir = "/usr/lib/python%s" % slot
-    
+ 
     # the spec no support tk
     rmfile("/usr/bin/idle")
     for item in ('idlelib', 'lib-tk'):
