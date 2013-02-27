@@ -26,8 +26,10 @@ sys-apps/acl >=sys-apps/kmod-12 sys-libs/pam sys-apps/attr
 
 def prepare():
     sed("-i -e '1s/python/&2.7/' src/analyze/systemd-analyze")
+    patch(level=1)
 
 def configure():
+    # TODO: To get man pages, enable gtk-doc?
     raw_configure("--localstatedir=/var",
             "--with-rootprefix=/usr",
             "--with-rootlibdir=/usr/lib",
@@ -45,9 +47,14 @@ def configure():
             "--with-sysvinit-path=",
             "--with-sysvrcnd-path=")
 
+def build():
+    # I use export to prevent sandbox violations
+    export("HOME", build_dir)
+    make()
+
 def install():
     installd()
-    echo("d /run/console 0755 root root\n", "/usr/lib/tmpfiles.d/console.conf")
+    echo("d /run/console 0755 root root", "/usr/lib/tmpfiles.d/console.conf")
     sed("""-i 's#GROUP="dialout"#GROUP="uucp"#g;
                 s#GROUP="tape"#GROUP="storage"#g;
                 s#GROUP="cdrom"#GROUP="optical"#g' %s/usr/lib/udev/rules.d/*.rules""" % install_dir)
@@ -56,3 +63,24 @@ def install():
     makesym("../usr/lib/systemd/systemd", "/bin/systemd")
     makedirs("/var/log/journal")
 
+def post_install():
+    notify("running systemd-machine-id-setup")
+    if not system("systemd-machine-id-setup"):
+        error("systemd-machine-id-setup has failed.")
+
+    notify("running udevadm hwdb --update")
+    if not system("udevadm hwdb --update"):
+        error("udevadm hwdb --update has failed.")
+
+    notify("running journalctl --update-catalog")
+    if not system("journalctl --update-catalog"):
+        error("journalctl --update-catalog has failed.")
+
+    if isexists("/sys/fs/cgroup/systemd"):
+        notify("running systemctl --system daemon-reexec")
+        if not system("systemctl --system daemon-reexec"):
+            error("systemctl --system daemon-reexec has failed.")
+
+    notify("running systemctl enable getty@.service")
+    if not system("systemctl enable getty@.service"):
+        error("systemctl enable getty@.service has failed.")
