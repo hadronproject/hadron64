@@ -9,7 +9,7 @@ options @ zlib
 
 depends = """
 build @ app-arch/xz
-runtime @ dev-libs/libusb:1 sys-libs/glibc sys-apps/hwids
+runtime @ dev-libs/libusbx:1 sys-libs/glibc sys-apps/hwids
 """
 
 opt_runtime = """
