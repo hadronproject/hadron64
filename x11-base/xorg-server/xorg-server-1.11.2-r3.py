@@ -4,7 +4,7 @@ homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/xserver/$fullname.tar.bz2
 arch @ ~x86_64
-options @ doc ipv6 vesa nv synaptics intel nouveau
+options @ doc ipv6 vesa nv synaptics intel nouveau, evdev
 """
 
 depends = """
@@ -28,7 +28,7 @@ x11-proto/xf86rushproto >=x11-proto/xf86vidmodeproto-2.2.99.1
 >=x11-proto/xineramaproto-1.1.3 >=x11-proto/xproto-7.0.22 >=media-fonts/font-util-1.1
 >=x11-proto/dmxproto-2.2.99.1 >=x11-misc/util-macros-1.14
 >=x11-proto/xf86driproto-2.1.0 >=x11-proto/dri2proto-2.6 >=x11-libs/libdrm-2.4.20
-postmerge @ x11-drivers/xf86-input-evdev media-fonts/fonts-type1 media-fonts/dejavu
+postmerge @ media-fonts/fonts-type1 media-fonts/dejavu
 media-fonts/freefonts x11-misc/xinit
 """
 
@@ -37,6 +37,7 @@ doc @ app-text/xmlto www-client/links
 """
 
 opt_postmerge = """
+evdev @ x11-drivers/xf86-input-evdev 
 intel @ x11-drivers/xf86-video-intel
 synaptics @ x11-drivers/xf86-input-synaptics
 nv @ x11-drivers/xf86-video-nv

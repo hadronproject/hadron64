@@ -7,11 +7,10 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ dev-lang/python dev-libs/libxml2
+build @ dev-lang/python:2.7 dev-libs/libxml2
 """
 
 def install():
-    export("PYTHONDONTWRITEBYTECODE", "1")
+    #export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")
