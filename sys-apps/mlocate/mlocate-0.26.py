@@ -33,8 +33,5 @@ def post_install():
 
     notify("Edit /etc/updatedb.conf if you want and run updatedb as root.")
 
-def post_upgrade():
-    post_install()
-
 #TODO: lpms-ize the post install
 #TODO: when we can manage cronjobs and/or have a policy for it, use cronjob file
