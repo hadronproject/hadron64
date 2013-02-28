@@ -7,5 +7,5 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ dev-libs/libusb
+runtime @ dev-libs/libusbx
 """

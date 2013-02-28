@@ -8,7 +8,7 @@ options @ X doc
 """
 
 depends = """
-runtime @ sys-libs/libraw1394 dev-libs/libusb
+runtime @ sys-libs/libraw1394 dev-libs/libusbx
 """
 
 opt_runtime = """

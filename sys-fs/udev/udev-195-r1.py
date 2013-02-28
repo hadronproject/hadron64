@@ -9,7 +9,7 @@ arch @ ~x86_64
 
 depends = """
 common @ sys-libs/glibc sys-apps/coreutils sys-apps/module-init-tools
-          sys-apps/util-linux dev-libs/libusb:0 
+          sys-apps/util-linux dev-libs/libusbx
 """
 
 opt_common = """
