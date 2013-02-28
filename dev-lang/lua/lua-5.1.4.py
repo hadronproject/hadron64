@@ -3,6 +3,7 @@ summary @ A powerful light-weight programming language designed for extending ap
 homepage @ http://www.lua.org
 license @ MIT
 src_url @ http://www.lua.org/ftp/$fullname.tar.gz
+arch @ ~x86_64
 """
 
 depends = """

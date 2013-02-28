@@ -4,6 +4,7 @@ license @ GPL-2
 homepage @ http://www.xfce.org
 src_url @ http://archive.xfce.org/src/apps/$name/0.4/Terminal-$version.tar.bz2
 options @ debug dbus
+arch @ ~x86_64
 """
 
 depends = """

@@ -4,6 +4,7 @@ homepage @ http://www.freedesktop.org/wiki/Software/hal
 license @ GPL-2
 src_url @ http://hal.freedesktop.org/releases/$fullname.tar.gz
 options @ X acpi apm crypt debug dell disk-partition doc laptop selinux
+arch @ ~x86_64
 """
 
 def configure():
