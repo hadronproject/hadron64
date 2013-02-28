@@ -3,6 +3,7 @@ summary @  Tool Command Language, a weird scripting language
 homepage @ http://tcl.sourceforge.net
 license @ BSD
 src_url @ http://downloads.sourceforge.net/sourceforge/$name/$name$version-src.tar.gz
+arch @ ~x86_64
 options @ debug threads
 """
 

@@ -3,6 +3,7 @@ summary @ Linux dynamic and persistent device naming support
 homepage @ http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
 license @ GPL-2
 src_url @ http://ftp.eu.openbsd.org/pub/mirrors/ftp.kernel.org/linux/utils/kernel/hotplug/$fullname.tar.bz2
+arch @ ~x86_64
 """
 
 depends = """
