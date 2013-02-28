@@ -22,7 +22,7 @@ tiff @ media-libs/tiff
 dbus @ sys-apps/dbus
 jpeg @ media-libs/jpeg
 perl @ dev-lang/perl
-usb @ dev-libs/libusb:0
+usb @ dev-libs/libusbx
 """
 
 #TODO: krb5 ldap perl
