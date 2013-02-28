@@ -5,6 +5,7 @@ summary @ HARMAN is a free software that can be used to merge, split and cut PDF
 homepage @ http://www.istihza.com
 license @ GPL-3
 src_url @ http://istihza.com/$name/$name-$version/anakaynak/$name-$version.tar.gz
+arch @ ~x86_64
 """
 
 def post_install():
