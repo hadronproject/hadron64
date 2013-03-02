@@ -10,3 +10,6 @@ depends = """
 runtime @ sys-libs/glibc
 build @ dev-util/pkg-config
 """
+
+def install():
+    installd()
