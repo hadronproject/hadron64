@@ -2,7 +2,7 @@ metadata = """
 summary @ Give certain users the ability to run some commands as root
 homepage @ http://www.sudo.ws/sudo/
 license @ as-is BSD
-src_url @ ftp://ftp.sudo.ws/pub/sudo/$fullname.tar.gz
+src_url @ ftp://ftp.sudo.ws/pub/$name/$name-1.8.6p7.tar.gz
 arch @ ~x86_64
 """
 
