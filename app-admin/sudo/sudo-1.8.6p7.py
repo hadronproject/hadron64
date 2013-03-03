@@ -14,9 +14,9 @@ reserve_files = ['/etc/sudoers', '/etc/pam.d/sudo']
 
 def configure():
     conf("--with-pam",
-            "--with-env-editor", 
-            "--with-all-insults", 
-            "--with-logfac=auth")
+         "--with-env-editor", 
+         "--with-all-insults", 
+         "--with-logfac=auth")
 
 def install():
     makedirs("/var/lib")
