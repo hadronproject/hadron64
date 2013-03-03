@@ -12,6 +12,8 @@ runtime @ sys-libs/glibc sys-libs/pam
 
 reserve_files = ['/etc/sudoers', '/etc/pam.d/sudo']
 
+srcdir = 'sudo-1.8.6p7'
+
 def configure():
     conf("--with-pam",
          "--with-env-editor", 
