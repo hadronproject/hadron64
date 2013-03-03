@@ -7,11 +7,14 @@ arch @ ~x86_64
 options @ vte
 """
 
-depend =  """
-runtime @ x11-libs/gtk+:2  dev-libs/glib x11-libs/vte
-builr @ dev-util/pkg-config dev-util/intltool
+depends = """
+runtime @ x11-libs/gtk+:2 sys-libs/glib
+build @ dev-util/pkg-config dev-util/intltool
 """
 
+opt_runtime = """
+vte @ x11-libs/vte
+"""
 get("gnome2_utils")
 
 def configure():
@@ -22,3 +25,4 @@ def install():
 
 def post_install():
     gnome2_icon_cache_update()
+
