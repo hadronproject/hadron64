@@ -16,8 +16,6 @@ opt_runtime = """
 doc @ app-text/xmlto
 """
 
-#srcdir = "libXaw-%s" % version
-
 def configure():
     conf(
     "--disable-static",
@@ -26,5 +24,4 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")

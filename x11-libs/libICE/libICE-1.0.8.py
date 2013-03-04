@@ -8,10 +8,9 @@ arch @ ~x86_64
 
 depends = """
 runtime @ sys-libs/glibc x11-proto/xproto
-build @ x11-libs/xtrans sys-apps/grep sys-devel/make
+build @ x11-libs/xtrans
 """
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")

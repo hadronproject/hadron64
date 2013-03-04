@@ -8,27 +8,15 @@ arch @ ~x86_64
 
 depends = """
 runtime @ sys-libs/glibc x11-libs/libXdmcp x11-libs/libXau
-          x11-proto/xcb-proto
-
+          >=x11-proto/xcb-proto-1.7
 build @ dev-util/pkg-config dev-libs/libxslt dev-lang/python:2.7
 """
 
-def prepare():
-    patch(level=1)
+prepare = lambda: patch()
 
 def configure():
-    libtoolize("--force --copy")
-    aclocal()
-    autoconf()
-    automake("--add-missing")
     conf("--enable-xinput")
 
-def build():
-    export("PYTHONDONTWRITEBYTECODE", "1")
-    make()
-
 def install():
-    export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")

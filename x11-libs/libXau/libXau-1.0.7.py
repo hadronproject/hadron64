@@ -10,14 +10,6 @@ depends = """
 runtime @ sys-libs/glibc x11-proto/xproto
 """
 
-#srcdir = "libXau-%s" % version
-
-def configure():
-    conf(
-    "--prefix=/usr",
-    "--sysconfdir=/etc")
-
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")

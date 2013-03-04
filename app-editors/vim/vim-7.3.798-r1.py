@@ -51,3 +51,4 @@ def configure():
 def install():
     raw_install("VIMRCLOC=/etc DESTDIR=%s install" % install_dir)
     copy("%s/vimrc" % filesdir, "/etc/vimrc")
+    makesym("/usr/bin/vim", "/usr/bin/vi")

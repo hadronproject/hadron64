@@ -11,6 +11,5 @@ build @ dev-lang/python:2.7 dev-libs/libxml2
 """
 
 def install():
-    #export("PYTHONDONTWRITEBYTECODE", "1")
     raw_install("DESTDIR=%s" % install_dir)
     insdoc("COPYING")

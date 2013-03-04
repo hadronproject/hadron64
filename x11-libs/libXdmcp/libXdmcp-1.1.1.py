@@ -11,12 +11,9 @@ runtime @ sys-libs/glibc x11-proto/xproto
 build @ x11-misc/util-macros
 """
 
-#srcdir = "libXdmcp-%s" % version
-
 def configure():
     conf("--disable-static")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")
