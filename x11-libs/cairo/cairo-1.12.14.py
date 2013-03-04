@@ -2,15 +2,14 @@ metadata = """
 summary @ Cairo vector graphics library
 homepage @ http://cairographics.org/
 license @ LGPL + MPL
-src_url @ http://cairographics.org/releases/$fullname.tar.gz
+src_url @ http://cairographics.org/releases/$fullname.tar.xz
 arch @ ~x86_64
 options @ X debug opengl svg xcb drm static-libs
 """
 
 depends = """
-common @ media-libs/fontconfig media-libs/freetype media-libs/libpng sys-libs/zlib
->=x11-libs/pixman-0.18.4 sys-libs/glib 
-build @ dev-util/pkg-config sys-devel/libtool 
+common @ media-libs/fontconfig media-libs/freetype media-libs/libpng:1.2 sys-libs/zlib >=x11-libs/pixman-0.18.4 sys-libs/glib 
+build @ dev-util/pkg-config sys-devel/libtool app-arch/xz
 """
 
 opt_runtime = """
@@ -27,9 +26,6 @@ X @ x11-proto/renderproto
 """
 
 #TODO: Gallium and some opts
-
-def prepare():
-    patch(level=1)
 
 def configure():
     conf(
