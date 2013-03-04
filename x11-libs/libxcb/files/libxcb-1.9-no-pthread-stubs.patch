@@ -1,0 +1,11 @@
+--- configure	2012-10-05 12:54:21.000000000 +0000
++++ configure.new	2013-03-04 16:00:55.204421088 +0000
+@@ -13062,7 +13062,7 @@
+ $as_echo "yes" >&6; }
+ 
+ fi
+-NEEDED="pthread-stubs xau >= 0.99.2"
++NEEDED="xau >= 0.99.2"
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for NEEDED" >&5
