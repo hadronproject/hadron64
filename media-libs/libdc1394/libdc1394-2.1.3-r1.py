@@ -27,4 +27,5 @@ def build():
     if opt("doc"):
         make("doc")
 
-#doc problem install?
+def install():
+    installd()
