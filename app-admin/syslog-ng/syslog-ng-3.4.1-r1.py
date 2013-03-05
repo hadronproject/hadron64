@@ -44,6 +44,8 @@ def configure():
             "--with-pidfile-dir=/var/run",
             "--disable-spoof-source",
             "--disable-dependency-tracking",
+            "--with-systemdsystemunitdir=/usr/lib/systemd/system",
+            "--enable-systemd",
             config_enable("caps", "linux-caps"),
             config_enable("pcre"),
             config_enable("ssl"),
@@ -57,7 +59,7 @@ def install():
     raw_install("DESTDIR=%s install" % install_dir)
     insfile("%s/syslog-ng.conf" % filesdir, "/etc/syslog-ng/syslog-ng.conf")
     insfile("%s/syslog-ng.logrotate" % filesdir, "/etc/logrotate.d/syslog-ng")
-    insexe("%s/syslog-ng.rc" % filesdir, "/etc/rc.d/syslog-ng")
+    #insexe("%s/syslog-ng.rc" % filesdir, "/etc/rc.d/syslog-ng")
     makedirs("/var/lib/syslog-ng")
 
 def post_install():
