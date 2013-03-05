@@ -16,13 +16,12 @@ def prepare():
 
 def configure():
     autoreconf("--force --install")
-    conf(
-    "--prefix=/usr",
-    "--enable-udev",
-    "--enable-intel",
-    "--enable-radeon",
-    "--enable-vmwgfx-experimental-api",
-    "--enable-nouveau-experimental-api")
+    conf("--enable-udev",
+      "--enable-omap-experimental-api",
+      "--enable-exynos-experimental-api")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
+    # This is no good.
+    copy("%s/COPYING" % filesdir, build_dir, ignore_fix_target=True)
+    insdoc("COPYING")

@@ -10,12 +10,9 @@ depends = """
 runtime @ x11-libs/libXfixes x11-libs/libXrender
 """
 
-#srcdir = "libXcursor-%s" % version
-
 def configure():
     conf("--disable-static")
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")
