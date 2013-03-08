@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ app-text/docbook-xsl-stylesheets app-shells/bash sys-apps/util-linux sys-fs/udev dev-libs/libxslt
+runtime @ app-text/docbook-xsl-stylesheets app-shells/bash sys-apps/util-linux app-text/asciidoc dev-libs/libxslt
 """
 
 standard_procedure = False
