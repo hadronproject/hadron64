@@ -62,6 +62,12 @@ def install():
     makesym("../usr/bin/udevadm", "/sbin/udevadm")
     makesym("../usr/lib/systemd/systemd", "/bin/systemd")
     makedirs("/var/log/journal")
+    insfile("%s/udev.conf" % filesdir, "/etc/udev/udev.conf")
+    makedirs("/sbin")
+    for tool in ('runlevel', 'reboot', 'shutdown', 'poweroff', 'halt', 'telinit'):
+        makesym('../usr/bin/systemctl', '/sbin/%s' % tool)
+        
+    makesym('../usr/lib/systemd/systemd', '/sbin/init')
 
 def post_install():
     notify("running systemd-machine-id-setup")
