@@ -24,18 +24,15 @@ def prepare():
 def install():
     install_path = "/usr/lib/hadron/python/lpms"
 
-    cd("lpms")
-
     makedirs(install_path)
-
-    insinto("lpms/*", install_path)
-    copytree("bin", install_path+"/../")
+    insinto("%s/lpms/lpms/*" % build_dir, install_path)
+    copytree("%s/lpms/bin/" % build_dir, install_path+"/../")
 
     makesym("../lib/hadron/python/bin/lpms", "/usr/bin/lpms")
     makesym("../lib/hadron/python/bin/merge-conf", "/usr/bin/merge-conf")
 
     makedirs("/etc/lpms")
-    insinto("data/*", "/etc/lpms")
+    insinto("%s/lpms/data/*" % build_dir, "/etc/lpms")
 
     for directories in ('/var/db/lpms', '/var/cache/lpms/sources',
             '/var/tmp/lpms', '/var/lib/lpms', '/var/tmp/merge-conf',
@@ -55,4 +52,4 @@ def install():
     
     echo(user_readme, "/etc/lpms/user/README")
 
-    insdoc("COPYING", "AUTHORS", "README", "TODO")
+    insdoc("lpms/COPYING", "lpms/AUTHORS", "lpms/README", "lpms/TODO")
