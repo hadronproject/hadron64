@@ -23,5 +23,5 @@ def configure():
 def install():
     raw_install("DESTDIR=%s" % install_dir)
     # This is no good.
-    copy("%s/COPYING" % filesdir, build_dir, ignore_fix_target=True)
+    copy("%s/COPYING" % filesdir, build_dir)
     insdoc("COPYING")
