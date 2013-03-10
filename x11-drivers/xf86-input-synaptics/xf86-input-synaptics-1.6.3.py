@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ x11-base/xorg-server x11-libs/libXi x11-libs/libX11
+build @ x11-base/xorg-server x11-libs/libXi x11-libs/libX11 sys-libs/mtdev
 """
 
 def install():
