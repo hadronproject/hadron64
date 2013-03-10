@@ -27,7 +27,7 @@ def git_clone(*params, **kwargs):
         raise BuiltinError("you must give subdir parameter.")
     subdir = kwargs['subdir']
     clone_dir = joinpath(src_cache, fullname)
-    makedirs(clone_dir)
+    shelltools.makedirs(clone_dir)
     current_dir = pwd()
     cd(clone_dir)
     if isdir(subdir):
