@@ -59,9 +59,9 @@ def install():
 
     if opt("man"):
         for mansect in ('man1', 'man5', 'man7'):
-            for manpage in ls("%s/%s" % (dirname(build_dir, ignore_fix_target=True), mansect), ignore_fix_target=True):
-                insfile("%s/%s/%s" % (dirname(build_dir, ignore_fix_target=True), mansect, manpage), \
-                        "/usr/share/man/%s/%s" % (mansect, basename(manpage, ignore_fix_target=True)))
+            for manpage in ls("%s/%s" % (dirname(build_dir), mansect)):
+                insfile("%s/%s/%s" % (dirname(build_dir), mansect, manpage), \
+                        "/usr/share/man/%s/%s" % (mansect, basename(manpage)))
     
     insexe("contrib/fast-import/import-tars.perl", "/usr/bin/import-tars")
     insexe("contrib/git-resurrect.sh", "/usr/bin/git-resurrect")
