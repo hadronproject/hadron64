@@ -2,13 +2,13 @@ metadata = """
 summary @ A desktop manager for Xfce
 homepage @ http://www.xfce.org/
 license @ GPL2
-src_url @ http://archive.xfce.org/src/xfce/$name/4.8/$fullname.tar.bz2
+src_url @ http://archive.xfce.org/src/xfce/$name/4.10/$fullname.tar.bz2
 arch @ ~x86_64
 options @ libnotify thunar debug
 """
 
 depends = """
-runtime @ xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
+runtime @ >=xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
 build @ xfce-base/xfce4-panel dev-util/intltool
 """
 
