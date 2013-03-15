@@ -7,10 +7,8 @@ arch @ ~x86_64
 options @ doc ipv6 vesa nv synaptics intel nouveau evdev
 """
 
-#>=x11-apps/iceauth-1.0.2
-
 depends = """
-runtime @ dev-libs/openssl media-libs/freetype x11-apps/rgb
+runtime @ dev-libs/openssl media-libs/freetype x11-apps/rgb >=x11-apps/iceauth-1.0.2
 x11-apps/xauth x11-apps/xkbcomp >=x11-libs/libpciaccess-0.10.3
 >=x11-libs/libXau-1.0.4 >=x11-libs/libXdmcp-1.0.2 >=x11-libs/libXfont-1.4.2
 >=x11-libs/libxkbfile-1.0.4 >=x11-libs/pixman-0.21.8 >=x11-libs/xtrans-1.2.2
