@@ -4,7 +4,7 @@ homepage @ http://www.videolan.org/vlc/
 license @ LGPL2.1 + GPL2
 src_url @ http://download.videolan.org/pub/videolan/$name/$version/$fullname.tar.xz
 arch @ ~x86_64
-options @ a52 aac alsa altivec avcodec avformat cddb dc1394 dvd dvdnav flac fontconfig gcrypt gnutls libnotify libsamplerate mp3 mpeg ncurses ogg opengl png schroedinger sdl sdl-image sqlite svg taglib theora truetype vaapi vorbis X x264 xcb xml lua postproc skins debug media-library mmx neon optimisememory run-as-root sse xv
+options @ a52 aac alsa altivec avcodec avformat cddb dc1394 dvd dvdnav flac fontconfig gcrypt gnutls libnotify libsamplerate mp3 mpeg ncurses ogg opengl png schroedinger sdl sdl-image sqlite svg taglib theora truetype vaapi vorbis X x264 xcb xml postproc skins debug media-library mmx neon optimisememory run-as-root sse xv
 """
 
 depends = """
@@ -27,7 +27,6 @@ gcrypt @ >=dev-libs/libgcrypt-1.2.0
     gnutls @ >=net-libs/gnutls-2.0.0
 libnotify @ x11-libs/libnotify x11-libs/gtk+:2
 libsamplerate @ media-libs/libsamplerate
-lua @ >=dev-lang/lua-5.1
 media-library @ dev-db/sqlite
 mp3 @ media-libs/libmad
 mpeg @ >=media-libs/libmpeg2-0.3.2
@@ -38,7 +37,7 @@ opengl @ media-libs/mesa >=x11-libs/libX11-1.3.99.901
 png @ media-libs/libpng sys-libs/zlib
 postproc @ media-video/ffmpeg
 schroedinger @ >=media-libs/schroedinger-1.0.10
-skins @ x11-libs/libXext x11-libs/libXpm
+skins @ x11-libs/libXext x11-libs/libXpm x11-libs/libXinerama media-libs/freetype
 sqlite @ >=dev-db/sqlite-3.6.0
 svg @ >=gnome-base/librsvg-2.9.0
 taglib @ >=media-libs/taglib-1.5 sys-libs/zlib
@@ -77,7 +76,6 @@ def configure():
     config_enable("ieee1394", "dv"),
     config_enable("libnotify", "notify"),
     config_enable("libsamplerate", "samplerate"),
-    config_enable("lua"),
     config_enable("media-library"),
     config_enable("mmx"),
     config_enable("mp3", "mad"),

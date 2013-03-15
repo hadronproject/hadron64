@@ -8,7 +8,7 @@ options @ introspection startup-notification
 """
 
 depends = """
-runtime @ x11-libs/gtk+:2  x11-libs/libXres x11-libs/libX11 sys-libs/glib
+runtime @ x11-libs/gtk+:2 x11-libs/libXres x11-libs/libX11 sys-libs/glib
 build @ dev-util/intltool x11-libs/libXt sys-devel/gettext dev-util/pkg-config
 """
 

@@ -12,7 +12,7 @@ introspection @ >=dev-libs/gobject-introspection-0.6.8
 """
 
 def prepare():
-    patch(level=1)
+    patch("babl-0.1.4-introspection.patch", level=1)
 
 def configure():
     conf(

@@ -8,12 +8,12 @@ options @ libnotify thunar debug
 """
 
 depends = """
-runtime @ >=xfce-base/libxfce4ui x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
-build @ xfce-base/xfce4-panel dev-util/intltool
+runtime @ >=xfce-base/libxfce4ui-4.9 x11-themes/hicolor-icon-theme x11-libs/libwnck x11-libs/libX11
+build @ >=xfce-base/xfce4-panel-4.9 dev-util/intltool
 """
 
 opt_runtime = """
-thunar @ xfce-base/thunar dev-libs/dbus-glib xfce-base/exo
+thunar @ >=xfce-base/thunar-1.6 dev-libs/dbus-glib >=xfce-base/exo-0.10
 libnotify @ x11-libs/libnotify
 """
 
@@ -21,7 +21,6 @@ def configure():
     conf("--disable-static",
             "--enable-gio-unix",
             config_enable("thunar", "thunarx"),
-            "--enable-exo",
             config_enable("notify", "notifications"),
             config_enable("debug"))
 
