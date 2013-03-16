@@ -9,7 +9,7 @@ options @ introspection X
 
 depends = """
 common @ sys-libs/glib x11-libs/cairo media-libs/freetype media-libs/fontconfig
-build @ dev-util/pkg-config media-libs/libpng:1.4
+build @ dev-util/pkg-config media-libs/libpng:1.5
 """
 
 opt_runtime = """

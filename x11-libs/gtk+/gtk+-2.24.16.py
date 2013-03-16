@@ -15,12 +15,15 @@ common @ x11-libs/libXcursor x11-libs/libXrandr x11-libs/libXi x11-libs/libXcomp
 
 opt_runtime = """
 xinerama @ x11-libs/libXinerama
-introspection @ x11-libs/gdk-pixbuf[introspection] media-libs/pango[introspection] dev-libs/atk[introspection]  || x11-libs/gdk-pixbuf media-libs/pango dev-libs/atk
+introspection @ x11-libs/gdk-pixbuf[introspection] media-libs/pango[introspection] dev-libs/atk[introspection] || x11-libs/gdk-pixbuf media-libs/pango dev-libs/atk
 """
 
 opt_postmerge = """
 engines @ x11-themes/gtk-engines
 """
+
+def prepare():
+    patch("xid-collision-debug.patch", level=1)
 
 def configure():
     conf(

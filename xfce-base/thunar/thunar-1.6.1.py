@@ -2,24 +2,23 @@ metadata = """
 summary @ File manager for the Xfce desktop environment
 homepage @ http://thunar.xfce.org
 license @ GPL2 LGPL2.1
-src_url @ http://archive.xfce.org/src/xfce/$name/1.3/Thunar-$version.tar.bz2
+src_url @ http://archive.xfce.org/src/xfce/$name/1.6/Thunar-$version.tar.bz2
 arch @ ~x86_64
-options @ dbus libnotify pcre startup-notification udev
+options @ dbus libnotify pcre startup-notification udev debug
 """
 
-depends = """
-runtime @ xfce-base/exo sys-libs/glib x11-libs/gtk+:2 xfce-base/libxfce4util xfce-base/libxfce4ui
-    dev-lang/perl x11-misc/shared-mime-info dev-util/desktop-file-utils
-build @ dev-util/intltool dev-util/pkg-config sys-devel/gettext
+depends ="""
+common @ >=dev-lang/perl-5.6 >=sys-libs/glib-2.30 >=x11-libs/gdk-pixbuf-2.14 >=x11-libs/gtk+-2.24:2
+>=xfce-base/exo-0.10 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfconf-4.10
+sys-apps/systemd
 """
 
-opt_runtime = """
-dbus @ dev-libs/dbus-glib
-libnotify @ x11-libs/libnotify
-pcre @ dev-libs/pcre
+opt_common="""
+dbus @ >=dev-libs/dbus-glib-0.100
+exif @ >=media-libs/libexif-0.6.19
+libnotify @ >=x11-libs/libnotify-0.7
+pcre @ >=dev-libs/libpcre-6
 startup-notification @ x11-libs/startup-notification
-udev @ sys-fs/udev
-pcre @ dev-libs/pcre
 """
 
 srcdir = "Thunar-%s" % version
@@ -36,7 +35,7 @@ def configure():
             "--enable-exif",
             config_enable("pcre"),
             "--disable-gtk-doc",
-            "--disable-debug")
+            config_enable("debug"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

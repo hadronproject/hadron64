@@ -16,15 +16,11 @@ opt_runtime = """
 policykit @ sys-auth/polkit
 """
 
-def prepare():
-    patch(level=1)
-
 def configure():
     conf("--disable-network-manager",
             config_enable("policykit", "polkit"),
             "--enable-dpms",
             config_enable("debug"))
-
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
