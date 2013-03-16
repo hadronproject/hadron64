@@ -2,7 +2,7 @@ metadata = """
 summary @ Theme engines for GTK+ 2
 homepage @ http://live.gnome.org/GnomeArt
 license @ GPL LGPL
-src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.20/$fullname.tar.bz2
+src_url @ ftp://ftp.archlinux.org/other/$name/$fullname.tar.gz
 arch @ ~x86_64
 """
 

@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-fs/udev
+runtime @ sys-apps/systemd
 """
 
 def configure():

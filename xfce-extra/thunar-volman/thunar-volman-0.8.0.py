@@ -2,7 +2,7 @@ metadata = """
 summary @ automatic management for removeable devices in thunar
 homepage @ http://foo-projects.org/~benny/projects/thunar-volman
 license @ GPL2
-src_url @ http://archive.xfce.org/src/apps/$name/0.6/$fullname.tar.bz2
+src_url @ http://archive.xfce.org/src/apps/$name/0.8/$fullname.tar.bz2
 arch @ ~x86_64
 options @ debug libnotify
 """

@@ -9,8 +9,7 @@ arch @ ~x86_64
 standard_procedure = False
 
 def install():
-    cd("..")
-    for i in ("Faenza",  "Faenza-Dark",  "Faenza-Darker",  "Faenza-Darkest"):
-        copytree(i, "/usr/share/icons/%s" % i)
+    for item in ("Faenza",  "Faenza-Dark",  "Faenza-Darker",  "Faenza-Darkest"):
+        copytree("../"+item, "/usr/share/icons/%s" % item)
 
     insdoc("AUTHORS", "ChangeLog", "README")
