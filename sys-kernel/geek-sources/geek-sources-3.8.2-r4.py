@@ -8,7 +8,7 @@ arch @ ~x86_64
 options @ bfq fix genpatches ice zen zfs
 """
 
-srcdir = "linux-%s" % version
+srcdir = "linux-%s" % raw_version
 
 standard_procedure = False
 
