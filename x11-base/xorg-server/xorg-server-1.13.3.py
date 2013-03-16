@@ -4,11 +4,11 @@ homepage @ http://xorg.freedesktop.org/
 license @ MIT
 src_url @ http://xorg.freedesktop.org/releases/individual/xserver/$fullname.tar.bz2
 arch @ ~x86_64
-options @ doc ipv6 vesa nv synaptics intel nouveau evdev
+options @ doc ipv6 vesa nv synaptics intel nouveau, evdev
 """
 
 depends = """
-runtime @ dev-libs/openssl media-libs/freetype x11-apps/rgb >=x11-apps/iceauth-1.0.2
+runtime @ dev-libs/openssl media-libs/freetype >=x11-apps/iceauth-1.0.2 x11-apps/rgb
 x11-apps/xauth x11-apps/xkbcomp >=x11-libs/libpciaccess-0.10.3
 >=x11-libs/libXau-1.0.4 >=x11-libs/libXdmcp-1.0.2 >=x11-libs/libXfont-1.4.2
 >=x11-libs/libxkbfile-1.0.4 >=x11-libs/pixman-0.21.8 >=x11-libs/xtrans-1.2.2
@@ -44,6 +44,13 @@ nv @ x11-drivers/xf86-video-nv
 nouveau @ x11-drivers/xf86-video-nouveau
 vesa @ x11-drivers/xf86-video-vesa
 """
+
+def prepare():
+    patch("xserver-1.6.0-less-acpi-brokenness.patch", level=1)
+    patch("bug59825.patch", level=1)
+    patch("autoconfig-sis.patch")
+    patch("autoconfig-nvidia.patch", level=1)
+    patch("git-fixes.patch", level=1)
 
 def configure():
     export("HOME", build_dir)
