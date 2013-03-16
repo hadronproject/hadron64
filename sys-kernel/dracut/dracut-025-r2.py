@@ -8,7 +8,8 @@ arch @ ~x86_64
 
 depends = """
 build @ app-shells/dash
-runtime @ app-text/docbook-xsl-stylesheets app-shells/bash sys-apps/util-linux app-text/asciidoc dev-libs/libxslt
+runtime @ app-text/docbook-xsl-stylesheets app-shells/bash sys-apps/util-linux
+          app-text/asciidoc dev-libs/libxslt app-arch/cpio
 """
 
 standard_procedure = False
