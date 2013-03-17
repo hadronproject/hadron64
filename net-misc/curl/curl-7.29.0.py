@@ -14,8 +14,6 @@ runtime @ sys-libs/glibc sys-libs/zlib dev-libs/openssl
 def configure():
     conf(
     "--with-random=/dev/urandom \
-    --prefix=/usr \
-    --mandir=/usr/share/man \
     --disable-dependency-tracking \
     --enable-ipv6 \
     --disable-ldaps \
@@ -28,5 +26,4 @@ def configure():
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")
