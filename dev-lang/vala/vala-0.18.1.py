@@ -4,7 +4,7 @@ homepage @ http://live.gnome.org/Vala
 license @ LGPL-2.1
 src_url @ http://download.gnome.org/sources/vala/$slot/vala-$version.tar.xz
 options @ vapigen
-slot @ 0.15
+slot @ 0.18
 arch @ ~x86_64
 """
 
