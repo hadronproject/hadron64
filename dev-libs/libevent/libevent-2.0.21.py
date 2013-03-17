@@ -2,7 +2,7 @@ metadata = """
 summary @ An event notification library
 homepage @ http://www.monkey.org/~provos/libevent/
 license @ GPL2
-src_url @ http://www.monkey.org/~provos/libevent-$version-stable.tar.gz
+src_url @ https://github.com/downloads/libevent/libevent/libevent-$version-stable.tar.gz
 arch @ ~x86_64
 """
 
