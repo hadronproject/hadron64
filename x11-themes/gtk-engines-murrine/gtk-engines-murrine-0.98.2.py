@@ -2,7 +2,7 @@ metadata = """
 summary @ GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers.
 homepage @ http://cimitan.com/murrine/project/murrine
 license @ LGPL3
-src_url @ http://ftp.gnome.org/pub/GNOME/sources/murrine/0.98/murrine-$version.tar.bz2
+src_url @ http://ftp.gnome.org/pub/GNOME/sources/murrine/0.98/murrine-$version.tar.xz
 arch @ ~x86_64
 options @ animation-rtl themes
 """
