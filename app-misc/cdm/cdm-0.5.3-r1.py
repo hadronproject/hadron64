@@ -2,7 +2,7 @@ metadata = """
 summary @ The Console Display Manager
 homepage @ http://cdm.ghost1227.com/X11
 license @ GPL
-src_url @ http://cdm.ghost1227.com/repo/$fullname.tar.gz
+src_url @ http://dev.gentoo.org/~gienah/snapshots/$fullname.tar.gz
 arch @ ~x86_64
 """
 
