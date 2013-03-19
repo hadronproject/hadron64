@@ -13,3 +13,6 @@ runtime @ sys-libs/glibc
 
 def prepare():
     patch(level=1)
+
+def install():
+    installd()
