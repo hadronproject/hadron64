@@ -13,6 +13,9 @@ runtime @ sys-libs/glibc media-libs/freetype dev-libs/expat
 def prepare():
     patch(level=1)
 
+def configure():
+    conf("--disable-docs")
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
@@ -20,4 +23,5 @@ def install():
 
 def post_install():
     notify("building fonts.cache")
-    system("/usr/bin/fc-cache -r")
+    if not system("/usr/bin/fc-cache -r"):
+        raise BuildError
