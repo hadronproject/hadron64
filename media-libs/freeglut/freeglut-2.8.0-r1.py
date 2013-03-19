@@ -10,6 +10,9 @@ depends = """
 runtime @ sys-libs/glibc x11-libs/libXxf86vm media-libs/mesa x11-libs/libXi
 """
 
+def prepare():
+    sed('-i "s/smooth_opengl3 //" progs/demos/Makefile.*')
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
 
