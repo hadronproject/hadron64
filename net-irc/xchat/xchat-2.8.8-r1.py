@@ -1,0 +1,57 @@
+metadata = """
+summary @ A GTK+ based IRC client
+homepage @ http://www.xchat.org/
+license @ GPL
+src_url @ http://www.xchat.org/files/source/2.8/$fullname.tar.bz2
+arch @ ~x86_64
+options @ gtk ssl perl python tcl dbus spell libnotify ipv6 fastscroll mmx
+"""
+
+depends = """
+runtime @ sys-libs/glibc
+"""
+
+opt_runtime = """
+gtk @ x11-libs/gtk+:2 
+ssl @ dev-libs/openssl
+dbus @ dev-libs/dbus-glib
+spell @ app-text/gtkspell
+libnotify @ x11-libs/libnotify
+"""
+
+opt_build = """
+tcl @ dev-lang/tcl
+python @ dev-lang/python
+perl @ dev-lang/perl
+"""
+
+get("gnome2_utils")
+
+def prepare():
+    sed("-i 's/GDK_HAND1/GDK_HAND2/' src/fe-gtk/xtext.c")
+    patch(level=1)
+    autoconf()
+    autoheader()
+
+def configure():
+    export("LIBS", "-lgmodule-2.0")
+    conf(
+            config_enable("mmx"),
+            config_enable("perl"),
+            config_enable("dbus"),
+            config_enable("python"),
+            config_enable("spell"),
+            config_enable("spell", "gtkspell"),
+            config_enable("tcl"),
+            config_enable("gtk", "gtkfe"),
+            config_enable("fastscroll", "xft"),
+            config_enable("ssl", "openssl"),
+            config_enable("dbus"),
+            config_enable("ipv6"),
+            "--enable-shm")
+
+def install():
+    raw_install("DESTDIR=%s" % install_dir)
+
+def post_install():
+    gnome2_icon_cache_update()
