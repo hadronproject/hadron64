@@ -21,32 +21,30 @@ X @ x11-proto/xproto
 introspection @ >=dev-libs/gobject-introspection-0.9.5
 """
 
-def prepare():
-    patch(level=1)
-    
 def configure():
     myopts = ""
     if opt("X"):
         myopts += "  --x-includes=/usr/include --x-libraries=/usr/lib "
 
     conf(
-    config_enable("introspection"),
-    config_with("X", "xft"),
-    "--with-included-modules=basic-fc", myopts)
-
-def build():
-    export("HOME", build_dir)
-    make()
+            config_enable("introspection"),
+            config_with("X", "xft"),
+            "--with-included-modules=basic-fc", myopts
+    )
 
 def install():
-    export("HOME", build_dir)
     raw_install("DESTDIR=%s" % install_dir)
+    makedirs("/etc/pango")
     insdoc("AUTHORS", "NEWS", "README", "THANKS")
 
 def post_install():
-    system("/sbin/ldconfig -r / &>/dev/null")
-
     # create pango.modules
     if isfile("/etc/pango/pango.modules"):
         rmfile("/etc/pango/pango.modules")
-    system("/usr/bin/pango-querymodules > /etc/pango/pango.modules")
+    if not system("/usr/bin/pango-querymodules >> /etc/pango/pango.modules"):
+        raise BuildError
+
+def post_remove():
+    if isfile("/etc/pango/pango.modules"):
+        rmfile("/etc/pango/pango.modules")
+

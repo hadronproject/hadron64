@@ -13,7 +13,8 @@ runtime @ >=xfce-base/libxfce4util-4.9.0 x11-libs/gtk+:2 >=xfce-base/xfconf-4.9.
 def configure():
     conf("--disable-static",
             "--disable-gtk-doc",
-            "--disable-debug")
+            "--disable-debug",
+            '--with-vendor-info="Hadron Linux"')
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
