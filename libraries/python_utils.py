@@ -62,6 +62,6 @@ def python_utils_install(*params, **kwargs):
 
     for doc_file in doc_files:
         for doc in glob.glob(doc_file):
-            if not isempty(doc, ignore_fix_target=True):
+            if not isempty(doc):
                 insdoc(doc)
     # END

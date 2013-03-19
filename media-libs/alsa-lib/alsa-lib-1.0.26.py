@@ -1,13 +1,13 @@
 metadata = """
 summary @ An alternative implementation of Linux sound support
 homepage @ http://www.alsa-project.org/
-license @ GPL
+license @ GPL-2
 src_url @ ftp://ftp.alsa-project.org/pub/lib/$fullname.tar.bz2
 arch @ ~x86_64
 """
 
 depends = """
-build @ dev-lang/python
+build @ dev-lang/python:2.7
 """
 
 def configure():

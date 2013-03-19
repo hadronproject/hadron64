@@ -1,7 +1,7 @@
 metadata = """
 summary @ A scalable distributed SCM tool
 homepage @ http://www.selenic.com/mercurial
-license @ GPL
+license @ GPL-2
 src_url @ http://www.selenic.com/mercurial/release/$fullname.tar.gz
 arch @ ~x86_64
 """
@@ -9,7 +9,7 @@ arch @ ~x86_64
 # FIXME: zsh, bash, emacs and vim options will be added.
 
 depends = """
-common @ dev-lang/python:2.7
+common @ dev-lang/python:2*
 """
 
 get("python_utils")
