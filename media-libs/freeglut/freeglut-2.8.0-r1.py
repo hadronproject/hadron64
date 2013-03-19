@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/glibc x11-libs/libXxf86vm media-libs/mesa x11-libs/libXi
+runtime @ sys-libs/glibc x11-libs/libXxf86vm media-libs/mesa x11-libs/libXi media-libs/glu
 """
 
 def prepare():
