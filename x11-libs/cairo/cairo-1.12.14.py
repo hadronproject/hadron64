@@ -15,7 +15,7 @@ build @ dev-util/pkg-config sys-devel/libtool app-arch/xz
 opt_runtime = """
 opengl @ media-libs/mesa
 X @ >=x11-libs/libXrender-0.6 x11-libs/libXext x11-libs/libX11 x11-libs/libXft
-    drm @ sys-fs/udev
+    drm @ sys-apps/systemd
 xcb @ x11-libs/libxcb x11-misc/xcb-util
 svg @ dev-libs/libxml2
 """
