@@ -10,7 +10,7 @@ depends = """
 runtime @ sys-libs/glibc sys-apps/systemd
 """
 
-srcdir = "LVM2.%s" % version
+srcdir = "LVM2.%s" % raw_version
 
 def configure():
     conf("--with-usrlibdir=/usr/lib",
