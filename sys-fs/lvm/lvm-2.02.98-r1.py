@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/glibc
+runtime @ sys-libs/glibc sys-apps/systemd
 """
 
 srcdir = "LVM2.%s" % version
@@ -26,8 +26,6 @@ def configure():
 def install():
     raw_install("DESTDIR=%s" % install_dir, arg='install_lvm2')
 
-    cd("liblvm")
-    raw_install("DESTDIR=%s" % install_dir)
+    make("-C liblvm DESTDIR=%s install" % install_dir)
 
-    cd("..")
-    raw_install("DESTDIR=%s install_device-mapper" % install_dir)
+    make("DESTDIR=%s install_device-mapper" % install_dir)
