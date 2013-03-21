@@ -2,7 +2,7 @@ metadata = """
 summary @ Documentation tool for public library API
 homepage @ http://www.gtk.org/gtk-doc/
 license @ GPL + FDL
-src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/$version/$fullname.tar.bz2
+src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/$version/$fullname.tar.xz
 arch @ ~x86_64
 """
 
