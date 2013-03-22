@@ -11,6 +11,11 @@ depends = """
 runtime @ x11-libs/libX11 x11-misc/xcb-util
 """
 
+def configure():
+    system("sed -i -e '/AC_PATH_XTRA/d' configure.in")
+    autoreconf("--force --install")
+    conf() 
+
 def install():
     raw_install("DESTDIR=%s" % install_dir)
     insdoc("AUTHORS", "ChangeLog", "NEWS", "doc/startup-notification.txt")
