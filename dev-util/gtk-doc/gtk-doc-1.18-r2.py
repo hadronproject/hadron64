@@ -7,7 +7,8 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ app-text/docbook-xsl-stylesheets dev-lang/perl
+common @ app-text/docbook-xsl-stylesheets
+runtime @ dev-lang/perl
 build @ dev-util/pkg-config
 """
 
