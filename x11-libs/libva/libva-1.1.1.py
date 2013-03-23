@@ -19,7 +19,7 @@ opt_runtime = """
 intelvideo @ x11-drivers/xf86-video-intel
 """
 
-def configure():
+def configure(): 
     conf(
     config_enable("intelvideo", "i965-driver"),
     config_enable("opengl", "glx"))
