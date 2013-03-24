@@ -16,9 +16,6 @@ jpeg @ media-libs/jpeg
 tiff @ media-libs/tiff
 """
 
-def prepare():
-    patch()
-
 def configure():
     conf(
     "--disable-jpg-shared",
