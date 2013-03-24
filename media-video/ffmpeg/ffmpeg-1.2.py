@@ -30,6 +30,8 @@ vaapi @ x11-libs/libva
 vdpau @ x11-libs/libvdpau
 """
 
+export("PATH", "%s:/usr/bin/core_perl" % get_env('PATH'))
+
 def configure():
     raw_configure(
     "--prefix=/usr",
