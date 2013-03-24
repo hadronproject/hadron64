@@ -32,7 +32,7 @@ idn @ net-dns/libidn
 
 # FIXME: the options and configure function will be improved. Take a look at msn for example: http://goo.gl/ps05p
 
-get("main/gnome2_utils")
+get("gnome2_utils")
 
 # patches from gentoo
 prepare = lambda: patch(level=1)
