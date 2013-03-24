@@ -78,8 +78,14 @@ def install():
 
     libdir = "/usr/lib/python%s" % slot
     
+    # Fix collisions between different slots of Python.
     rmfile("/usr/bin/2to3")
-    
+    rmfile("/usr/bin/pydoc3")
+    rmfile("/usr/bin/python3-config")
+    rmfile("/usr/lib/pkgconfig/python3.pc")
+    rmfile("/usr/lib/libpython3.so")
+    rmfile("/usr/bin/python3")
+
     # the spec no support tk
     rmdir(joinpath(libdir, "tkinter"))
     rmdir(joinpath(libdir, "idlelib"))
