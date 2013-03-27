@@ -1,0 +1,10 @@
+--- Makefile.pre.in.bak	2012-09-30 15:57:38.120801061 +0200
++++ Makefile.pre.in	2012-09-30 15:57:53.969442891 +0200
+@@ -475,7 +475,6 @@
+ 
+ # Build the shared modules
+ sharedmods: $(BUILDPYTHON) $(SYSCONFIGDATA)
+-	case $$MAKEFLAGS in *s*) quiet=-q; esac; \
+ 	$(RUNSHARED) CC='$(CC)' LDSHARED='$(BLDSHARED)' OPT='$(OPT)' \
+ 		$(PYTHON_FOR_BUILD) $(srcdir)/setup.py $$quiet build
+ 

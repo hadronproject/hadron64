@@ -4,7 +4,7 @@ homepage @ http://www.infradead.org/~tgr/libnl/
 license @ GPL
 src_url @ http://www.infradead.org/~tgr/libnl/files/$fullname.tar.gz
 arch @ ~x86_64
-slot @ 2.0
+slot @ 3.0
 """
 
 depends = """

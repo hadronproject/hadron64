@@ -2,7 +2,7 @@ metadata = """
 summary @ A library providing a set of interfaces for accesibility
 homepage @ http://www.gtk.org
 license @ LGPL
-src_url @ http://ftp.acc.umu.se/pub/gnome/sources/$name/2.2/$fullname.tar.bz2
+src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/2.6/$fullname.tar.xz
 arch @ ~x86_64
 options @ introspection nls 
 """
@@ -21,7 +21,6 @@ nls @ sys-devel/gettext
 """
 
 def configure():
-    system("sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' -i atk/Makefile.am atk/Makefile.in tests/Makefile.am tests/Makefile.in")
     conf(config_enable("introspection"))
 
 def build():
