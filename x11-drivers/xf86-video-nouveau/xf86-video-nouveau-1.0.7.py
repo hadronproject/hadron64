@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ x11-proto/glproto x11-proto/xf86driproto x11-proto/dri2proto x11-libs/libdrm
+build @ x11-proto/glproto x11-proto/xf86driproto x11-proto/dri2proto x11-libs/libdrm[nouveau]
 """
 
 def install():
