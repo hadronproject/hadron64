@@ -7,8 +7,11 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/glibc x11-libs/libXxf86vm media-libs/mesa x11-libs/libXi
+runtime @ sys-libs/glibc x11-libs/libXxf86vm media-libs/mesa x11-libs/libXi media-libs/glu
 """
+
+def prepare():
+    sed('-i "s/smooth_opengl3 //" progs/demos/Makefile.*')
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)

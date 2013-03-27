@@ -12,6 +12,7 @@ djbfft @ sci-libs/djbfft
 """
 
 def prepare():
+    sed("-i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in")
     patch("a52dec-0.7.4-build.patch",level=1)
     autoreconf("-fi")
 

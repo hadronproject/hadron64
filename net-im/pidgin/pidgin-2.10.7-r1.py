@@ -20,7 +20,7 @@ spell @ app-text/gtkspell
 ncurses @ sys-libs/ncurses
         dbus @ x11-libs/gtk+:2 
                 x11-libs/libSM
-gnutls @ net-libs/gnutls
+gnutls @ net-libs/gnutls || dev-libs/nss
 gtk @ x11-libs/gtk+:2 
 sasl @ dev-libs/cyrus-sasl
 meanwhile @ net-libs/meanwhile
@@ -32,27 +32,27 @@ idn @ net-dns/libidn
 
 # FIXME: the options and configure function will be improved. Take a look at msn for example: http://goo.gl/ps05p
 
-get("main/gnome2_utils")
+get("gnome2_utils")
 
 # patches from gentoo
 prepare = lambda: patch(level=1)
 
 def configure():
-    dynamic_prpls="irc,jabber,oscar,yahoo,simple,msn,myspace"
+    dynamic_prpls="irc,jabber"
     myconf = ""
     if opt("gnutls"):
         myconf += " --enable-nss=no --enable-gnutls=yes --with-gnutls-includes=/usr/include/gnutls "
     else:
         myconf += " --enable-gnutls=no --enable-nss=yes "
-    
-    if opt("silc"):
-        dynamic_prpls += ",silc"
+
+    _dynamic_prpls = ["oscar","yahoo","simple","msn","myspace","silc","zephyr"]
+    for prpl in _dynamic_prpls:
+        if opt("%s" % prpl):
+            dynamic_prpls += ",%s" % prpl
     if opt("meanwhile"):
         dynamic_prpls += ",sametime"
     if opt("groupwise"):
         dynamic_prpls += ",novell"
-    if opt("zephyr"):
-        dynamic_prpls += ",zephyr"
     if opt("zeroconf") or opt("avahi"):
         notify("we still don't have a avahi package, so disabling zeroconf/bonjour support for now")
         #dynamic_prpls += ",bonjour"

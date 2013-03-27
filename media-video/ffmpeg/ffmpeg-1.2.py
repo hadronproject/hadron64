@@ -2,7 +2,7 @@ metadata = """
 summary @ Complete and free Internet live audio and video broadcasting solution for Linux/Unix
 homepage @ http://ffmpeg.org/
 license @ GPL
-src_url @ http://www.ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
+src_url @ http://www.ffmpeg.org/releases/$fullname.tar.bz2
 arch @ ~x86_64
 options @ lame rtmp vdpau vorbis xvid x264 vpx theora amr schroedinger jpeg2k cpudetection ieee1394 X vaapi
 """
@@ -30,7 +30,7 @@ vaapi @ x11-libs/libva
 vdpau @ x11-libs/libvdpau
 """
 
-srcdir = "ffmpeg"
+export("PATH", "%s:/usr/bin/core_perl" % get_env('PATH'))
 
 def configure():
     raw_configure(
