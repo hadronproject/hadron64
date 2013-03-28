@@ -2,10 +2,10 @@ metadata = """
 summary @ Library for writing single instance applications
 homepage @ http://live.gnome.org/LibUnique
 license @ LGPL
-src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/3.0/$name-$version.tar.bz2
+src_url @ http://ftp.gnome.org/pub/gnome/sources/$name/1.1/$fullname.tar.bz2
 arch @ ~x86_64
 options @ introspection
-slot @ 3
+slot @ 1
 """
 
 depends = """
@@ -18,7 +18,7 @@ introspection @ >=x11-libs/gtk+-2.90.0[introspection] || >=x11-libs/gtk+-2.90.0
 """
 
 def prepare():
-    system("sed -i -e '/DG.*_DISABLE_DEPRECATED/d' unique/Makefile.in")
+    patch(level='1')
 
 def configure():
     conf(
@@ -30,3 +30,6 @@ def configure():
 def build():
     export("HOME", build_dir)
     make()
+
+def install():
+    installd()
