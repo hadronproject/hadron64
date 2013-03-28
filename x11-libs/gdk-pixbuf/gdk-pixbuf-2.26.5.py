@@ -2,7 +2,7 @@ metadata = """
 summary @ An image loading library for GTK+ V2
 homepage @ http://www.gtk.org/
 license @ GPL2
-src_url @ http://download.gnome.org/sources/gdk-pixbuf/2.24/$fullname.tar.bz2
+src_url @ ftp://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.26/gdk-pixbuf-$version.tar.xz
 arch @ ~x86_64
 options @ debug introspection X jpeg tiff
 """
@@ -18,11 +18,6 @@ X @ x11-libs/libX11
 tiff @ media-libs/tiff
 introspection @ dev-libs/gobject-introspection
 """
-
-def prepare():
-    patch("gdk-pixbuf-2.21.4-fix-automagic-x11.patch")
-    sed("-i -e 's:libpng15:libpng libpng15:' configure.ac")
-    libtoolize(); autoreconf()
 
 def configure():
     export("HOME", build_dir)
@@ -52,4 +47,5 @@ def install():
     insdoc("COPYING", "AUTHORS")
 
 def post_install():
-    system("/usr/bin/gdk-pixbuf-query-loaders --update-cache")
+    if not system("/usr/bin/gdk-pixbuf-query-loaders --update-cache"):
+        raise BuildError
