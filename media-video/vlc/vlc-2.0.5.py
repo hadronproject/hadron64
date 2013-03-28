@@ -10,7 +10,7 @@ options @ a52 aac alsa altivec avcodec avformat cddb dc1394 dvd dvdnav flac font
 depends = """
 build @ app-arch/xz
 runtime @ sys-libs/zlib dev-util/pkg-config sys-apps/dbus
-common @ dev-lang/lua-5.1.4
+common @ <=dev-lang/lua-5.1.4
 """
 
 opt_runtime = """
