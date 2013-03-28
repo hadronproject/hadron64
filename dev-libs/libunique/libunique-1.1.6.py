@@ -13,7 +13,7 @@ build @ >=dev-util/pkg-config-0.17
 """
 
 def prepare():
-    patch(level='1')
+    patch(level=1)
 
 def configure():
     conf(
