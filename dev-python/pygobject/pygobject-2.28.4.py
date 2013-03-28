@@ -8,7 +8,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ sys-libs/glib dev-libs/gobject-introspection
-build @ dev-lang/python dev-python/py2cairo
+build @ dev-lang/python:2.7 dev-python/py2cairo
 """
 
 def prepare():
