@@ -8,16 +8,13 @@ options @ gif jpeg png static-libs tiff
 """
 
 depends = """
-runtime @ media-libs/SDL sys-libs/zlib
+common @ >=media-libs/SDL-1.2.13 sys-libs/zlib
 """
 opt_runtime = """
 png @ media-libs/libpng
 jpeg @ media-libs/jpeg
 tiff @ media-libs/tiff
 """
-
-def prepare():
-    patch()
 
 def configure():
     conf(

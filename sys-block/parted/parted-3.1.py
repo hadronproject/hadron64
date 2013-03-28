@@ -2,7 +2,7 @@ metadata = """
 summary @ A program for creating, destroying, resizing, checking and copying partitions
 homepage @ http://www.gnu.org/software/parted/parted.html
 license @ GPL3
-src_url @ http://ftp.gnu.org/gnu/parted/$fullname.tar.gz
+src_url @ http://ftp.gnu.org/gnu/parted/$fullname.tar.xz
 options @ device-mapper
 arch @ ~x86_64
 """
@@ -12,7 +12,7 @@ runtime @ sys-fs/e2fsprogs sys-fs/lvm
 """
 
 def configure():
-    conf("--enable-device-mapper",
+    conf(config_enable("device-mapper"),
     "--disable-debug \
             --disable-rpath \
             --disable-Werror")

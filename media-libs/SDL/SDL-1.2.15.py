@@ -23,9 +23,6 @@ nas @ x11-proto/xextproto x11-proto/xproto
 X @ x11-proto/xextproto x11-proto/xproto
 """
 
-def prepare():
-    patch(level=1)
-
 def configure():
 
     myconf = ""

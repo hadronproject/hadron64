@@ -2,7 +2,7 @@ metadata = """
 summary @ Utility used to store, backup and transport files
 homepage @ http://www.gnu.org/software/tar/tar.html
 license @ GPL-3
-src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.bz2
+src_url @ ftp://ftp.gnu.org/gnu/$name/$fullname.tar.xz
 options @ nls static
 arch @ ~x86_64
 """

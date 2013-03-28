@@ -19,6 +19,6 @@ def configure():
     "--disable-gtk-doc")
 
 def install():
-    #raw_install("DESTDIR=%s" % install_dir)
-    linstall()
+    installd()
+    #~ linstall()
     insfile("libglade-convert", "/usr/bin/")
