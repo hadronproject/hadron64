@@ -14,7 +14,7 @@ build @ >=dev-util/pkg-config-0.17
 """
 
 opt_build = """
-introspection @ >=x11-libs/gtk+-2.90.0[introspection] || >=x11-libs/gtk+-2.90.0
+introspection @ x11-libs/gtk+:2[introspection] || x11-libs/gtk+:2
 """
 
 def prepare():
