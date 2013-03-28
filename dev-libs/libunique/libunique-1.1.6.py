@@ -27,3 +27,4 @@ def build():
 
 def install():
     installd()
+    rmfile('%s/usr/share/gtk-doc' % install_dir)
