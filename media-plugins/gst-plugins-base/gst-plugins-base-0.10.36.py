@@ -15,7 +15,9 @@ build @ media-libs/gstreamer:0 x11-libs/libXv media-libs/alsa-lib media-libs/lib
 def configure():
     sed("-i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac")
     system("sed -i '/AC_PATH_XTRA/d' configure.ac")
-    autoreconf()
+    system('aclocal -I m4 -I common/m4')
+    autoconf()
+    automake('--add-missing')
     conf(
     '--prefix=/usr --sysconfdir=/etc --localstatedir=/var \
     --disable-static --enable-experimental --disable-gnome_vfs \
