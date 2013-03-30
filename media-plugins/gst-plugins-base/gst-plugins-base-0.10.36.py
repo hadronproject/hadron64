@@ -25,6 +25,7 @@ def configure():
     --with-package-origin="http://www.hadronproject.org/"')
 
 def build():
+    export("HOME", build_dir)
     make()
     system("sed -e 's/^SUBDIRS_EXT =.*/SUBDIRS_EXT =/' -i Makefile")
 
