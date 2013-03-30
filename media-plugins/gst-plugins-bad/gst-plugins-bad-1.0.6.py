@@ -5,10 +5,11 @@ license @ LGPL
 src_url @ http://gstreamer.freedesktop.org/src/$name/$fullname.tar.xz
 arch @ ~x86_64
 options @ orc
+slot @ 1
 """
 
 depends = """
-common @ media-libs/gstreamer media-plugins/gst-plugins-base sys-libs/glib
+common @ media-libs/gstreamer:1 media-plugins/gst-plugins-base:1 sys-libs/glib
 """
 
 opt_build = """
