@@ -11,7 +11,7 @@ runtime @ dev-libs/openssl sys-libs/readline sys-libs/libcap app-misc/iana-etc
 build @ dev-perl/HTML-Parser
 """
 
-srcdir = '%s-%sp5' % (name, version)
+srcdir = '%s-%sp5' % (name, raw_version)
 
 def configure():
     conf("--enable-linux-caps")
