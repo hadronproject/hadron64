@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ dev-util/pkg-config media-plugins/gst-plugins-base media-sound/lame media-libs/libmpeg2
+build @ dev-util/pkg-config media-plugins/gst-plugins-base:0 media-sound/lame media-libs/libmpeg2
     media-libs/libmad media-libs/a52dec media-libs/libid3tag dev-libs/libcdio media-libs/libdvdread
     media-libs/opencore-amr media-libs/x264
 """

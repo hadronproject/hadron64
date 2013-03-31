@@ -7,13 +7,16 @@ arch @ ~x86_64
 """
 
 depends = """
-build @ >media-libs/gstreamer-0.10.34 x11-libs/libXv media-libs/alsa-lib media-libs/libvorbis media-libs/pango
+build @ media-libs/gstreamer:0 x11-libs/libXv media-libs/alsa-lib media-libs/libvorbis media-libs/pango
         dev-libs/gobject-introspection dev-util/pkg-config dev-lang/orc
 """
 
 def configure():
+    sed("-i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac")
     system("sed -i '/AC_PATH_XTRA/d' configure.ac")
-    autoreconf()
+    system('aclocal -I m4 -I common/m4')
+    autoconf()
+    automake('--add-missing')
     conf(
     '--prefix=/usr --sysconfdir=/etc --localstatedir=/var \
     --disable-static --enable-experimental --disable-gnome_vfs \
@@ -21,6 +24,7 @@ def configure():
     --with-package-origin="http://www.hadronproject.org/"')
 
 def build():
+    export("HOME", build_dir)
     make()
     system("sed -e 's/^SUBDIRS_EXT =.*/SUBDIRS_EXT =/' -i Makefile")
 

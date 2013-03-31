@@ -5,10 +5,11 @@ license @ LGPL
 src_url @ http://gstreamer.freedesktop.org/src/gst-plugins-base/$fullname.tar.xz
 arch @ ~x86_64
 options @ alsa introspection ogg pango theora vorbis X orc
+slot @ 1
 """
 
 depends = """
-common @ >=media-libs/gstreamer-1.0.6
+common @ media-libs/gstreamer:1
 build @ dev-util/pkg-config dev-util/gtk-doc
 """
 
