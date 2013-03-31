@@ -18,7 +18,7 @@ def configure():
     config_enable("debug"))
 
 def install():
-    install()
+    installd()
 
 def post_install():
     system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")
