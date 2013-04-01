@@ -9,7 +9,7 @@ options @ debug
 
 
 depends = """
-common @ dev-libs/libunique:1 media-plugins/gst-plugins-base xfce-base/xfce4-panel
+common @ dev-libs/libunique:1 media-plugins/gst-plugins-base:0 xfce-base/xfce4-panel
 build @ dev-util/intltool
 """
 
@@ -18,7 +18,7 @@ def configure():
     config_enable("debug"))
 
 def install():
-    install()
+    installd()
 
 def post_install():
     system("gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor")

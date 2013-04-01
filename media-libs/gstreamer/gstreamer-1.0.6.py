@@ -2,9 +2,10 @@ metadata = """
 summary @ GStreamer Multimedia Framework
 homepage @ http://gstreamer.freedesktop.org/
 license @ LGPL
-src_url @  http://gstreamer.freedesktop.org/src/gstreamer/$fullname.tar.xz
+src_url @ http://gstreamer.freedesktop.org/src/gstreamer/$fullname.tar.xz
 arch @ ~x86_64
 options @ introspection nls
+slot @ 1
 """
 
 depends = """

@@ -9,7 +9,7 @@ arch @ ~x86_64
 
 depends = """
 runtime @ gnome-base/librsvg
-build @ x11-misc/icon-naming-utils dev-util/intltool dev-util/pkg-config dev-lang/python
+build @ x11-misc/icon-naming-utils dev-util/intltool dev-util/pkg-config dev-lang/python:2.7 media-gfx/imagemagick
 """
 
 def configure():

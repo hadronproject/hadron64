@@ -5,11 +5,12 @@ license @ LGPL
 src_url @ http://gstreamer.freedesktop.org/src/gst-plugins-ugly/$fullname.tar.xz
 arch @ ~x86_64
 options @ orc
+slot @ 1
 """
 
 depends = """
 build @ dev-util/pkg-config 
-common @ media-plugins/gst-plugins-base media-sound/lame media-libs/libmpeg2
+common @ media-plugins/gst-plugins-base:1 media-sound/lame media-libs/libmpeg2
     media-libs/libmad media-libs/a52dec media-libs/libid3tag dev-libs/libcdio
     media-libs/libdvdread media-libs/opencore-amr media-libs/x264
 """
