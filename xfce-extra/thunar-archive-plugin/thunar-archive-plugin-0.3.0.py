@@ -10,7 +10,7 @@ depends = """
 runtime @ >=xfce-base/libxfce4util-4.8 >=xfce-base/exo-0.6 >=xfce-base/thunar-1.2
 """
 
-get("main/gnome2_utils")
+get("gnome2_utils")
 
 def configure():
     raw_configure("--prefix=/usr",
