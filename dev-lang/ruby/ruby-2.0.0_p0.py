@@ -1,10 +1,11 @@
 metadata = """
 summary @ An object oriented language for quick and easy programming
 homepage @ http://www.ruby-lang.org/en
-src_url @ http://mirrors.ibiblio.org/pub/mirrors/$name/$name-1.9.3-p125.tar.bz2 http://dev.gentoo.org/~flameeyes/ruby-team/ruby-patches-1.9.3_p125.tar.bz2
+src_url @ ftp://ftp.ruby-lang.org/pub/ruby/ruby-2.0.0-p0.tar.gz
 license @ GPL-2
 options @ berkdb gdbm ssl ncurses readline doc yaml
 arch @ ~x86_64
+slot @ 2
 """
 
 depends = """
@@ -20,14 +21,12 @@ readline @ sys-libs/readline
 yaml @ dev-libs/libyaml
 """
 
-srcdir = "ruby-1.9.3-p125"
+srcdir = "ruby-2.0.0-p0"
 
-# the patches from gentoo, thanks...
-
-def prepare():
-    for item in ("004_gfbsd7.patch", "005_no-undefined-ext.patch", "009_no-gems.patch"):
-        patch(item, location="%s/patches" % dirname(build_dir), level=1)
-    autoreconf()
+# TODO: We need a mechanism for handling different ruby versions. 
+# Like 1.9, 1.8 and 2.0. So these versions of ruby can co-exist in Hadron
+# Main problem is in our case, slotting mechanism cannot deal with differend ruby versions
+# Because of that situation, I remove old 1.9.x packages from main repository for now.
 
 def configure():
     conf("--enable-shared",
@@ -49,3 +48,13 @@ def install():
     raw_install("DESTDIR=%s" % install_dir)
     if opt("doc"):
         raw_install("DESTDIR=%s install-doc install-capi" % install_dir)
+    insfile("%s/gemrc" % filesdir, "/etc/gemrc")
+    insdoc("LICENSE", "BSDL")
+
+def post_install():
+    notify('The default location of gem installs is $HOME/.gem/ruby')
+    notify('Add the following line to your PATH if you plan to install using gem')
+    notify('$(ruby -rubygems -e "puts Gem.user_dir")/bin')
+    notify('If you want to install to the system wide location, you must either:')
+    notify('edit /etc/gemrc or run gem with the --no-user-install flag.')
+

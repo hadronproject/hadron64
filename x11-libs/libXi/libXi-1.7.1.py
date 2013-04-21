@@ -7,7 +7,7 @@ arch @ ~x86_64
 """
 
 depends = """
-runtime @ sys-libs/glibc x11-libs/libXext x11-proto/inputproto
+runtime @ sys-libs/glibc x11-libs/libXext >=x11-proto/inputproto-2.3
 build @ x11-misc/util-macros
 """
 

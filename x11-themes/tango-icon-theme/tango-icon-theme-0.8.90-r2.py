@@ -9,13 +9,17 @@ arch @ ~x86_64
 
 depends = """
 runtime @ gnome-base/librsvg
-build @ x11-misc/icon-naming-utils dev-util/intltool dev-util/pkg-config dev-lang/python:2.7 media-gfx/imagemagick
+build @ x11-misc/icon-naming-utils dev-util/intltool dev-util/pkg-config dev-lang/python:2.7 media-gfx/imagemagick[png]
 """
+
+get("gnome2_utils")
 
 def configure():
     conf(config_enable("png"))
 
 def install():
     raw_install("DESTDIR=%s" % install_dir)
-
     insdoc("COPYING")
+
+post_install = lambda: gnome2_icon_cache_update()
+
